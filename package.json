@@ -1,9 +1,8 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "learning-platform-gatsby",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Strawbees Learning Platform (Static site version)",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@material-ui/core": "^4.7.0",
     "frontmatter": "0.0.3",
@@ -44,9 +43,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/murilopolese/learning-platform-gatsby"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/murilopolese/learning-platform-gatsby/issues"
   }
 }
