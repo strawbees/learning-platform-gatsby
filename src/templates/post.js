@@ -1,6 +1,7 @@
 import React from "react"
 import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../components/typography'
+import SEO from '../components/seo'
 import LayoutMenu from './partials/layoutmenu'
 import LayoutHero from './partials/layouthero_post'
 import LayoutFooter from './partials/layoutfooter'
@@ -16,6 +17,7 @@ const IndexPage = (e) => {
 	let body = mdToReact(post.content)
 	return (
 		<Grid container direction="column">
+			<SEO title={post.title} description={post.description} />
 			<Grid item><LayoutMenu /></Grid>
 			<Grid item>
 				<LayoutHero

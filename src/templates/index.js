@@ -4,6 +4,7 @@ import { Container, Grid, Box } from '@material-ui/core'
 import Palette from '../components/palette.js'
 import Typography from '../components/typography.js'
 import Card from '../components/card.js'
+import SEO from '../components/seo.js'
 import '../globalStyles.css'
 
 import LayoutMenu from './partials/layoutmenu'
@@ -19,6 +20,7 @@ const categoryColors = {
 function LayoutFeed({ posts }) {
 	return (
 		<Box py={4}>
+			<SEO title="Strawbees Learning Platform" />
 			<Container maxWidth="lg">
 				<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
 					{posts.map((post, i) => {
