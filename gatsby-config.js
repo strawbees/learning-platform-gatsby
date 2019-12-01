@@ -1,4 +1,5 @@
 module.exports = {
+	pathPrefix: '/learning-platform-gatsby',
   siteMetadata: {
     title: `Learning Platform Gatsby`,
     description: `Strawbees: The future of education`,
