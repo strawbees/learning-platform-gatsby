@@ -1,7 +1,7 @@
 ---
-path: '/lesson-plan/geometric-world'
+path: '/lesson-plan/mechanical-inventions'
 title: 'Mechanical Inventions'
-description: 'Play with kinetic and potential energy, making connections between how it is generated, stored, moved, and can transform'
+description: 'Play with kinetic and potential energy, making connections between how it is generated, stored, moved and can be transformed'
 thumbnail: '/mechanicalinvention.jpg'
 header: '/mechanicalinvention.jpg'
 category: 'Lesson Plan'
@@ -10,7 +10,7 @@ category: 'Lesson Plan'
 # Learning Objectives
 
 * Identify and apply simple principles of movement to build mechanisms.
-* Play with kinetic and potential energy, making connections between how it is generated, stored, moved, and can transform
+* Play with kinetic and potential energy, making connections between how it is generated, stored, moved and can be transformed
 * Gain better understanding of mechanisms and design by reverse-engineering existing inventions
 
 
@@ -26,18 +26,18 @@ category: 'Lesson Plan'
 * “What is a mechanism?”
 * “Do all mechanisms move? Why or why not?”
 * “What are the mechanisms around you? Have you used one recently, and if so, to do what?” Here are a few examples:
-	* Lever - a pair of scissors
-	* Wheel and axle - doorknob or an elevator lift
-	* Pulley and belts - an escalator or conveyor belt at a grocery store
-	* Inclined plane - a wheelchair ramp or road up a steep hill
-	* Wedge - a doorstop or a shovel
-	* Screw - hardware used for holding pieces of a bookshelf together
-	* Gears - steering wheel of a car or foot pedals on a bicycle
+  * Lever - a pair of scissors
+  * Wheel and axle - doorknob or an elevator lift
+  * Pulley and belts - an escalator or conveyor belt at a grocery store
+  * Inclined plane - a wheelchair ramp or road up a steep hill
+  * Wedge - a doorstop or a shovel
+  * Screw - hardware used for holding pieces of a bookshelf together
+  * Gears - steering wheel of a car or foot pedals on a bicycle
 * “Why do we need mechanisms, what mechanical advantages can people gain?” For example:
-* To increase physical capabilities such as lifting or removing large amounts of concrete   
-* To amplify or reduce a force, like when using levers
-* To use as tools in harsh environments to complete difficult repairs, like in outer space or when travelling deep under the ocean
-* To be precise, to be consistent throughout highly repetitive tasks, to do jobs in harsh environments that would otherwise be impossible or put humans in harm's-way, and to not endure fatigue
+  * To increase physical capabilities such as lifting or removing large amounts of concrete   
+  * To amplify or reduce a force, like when using levers
+  * To use as tools in harsh environments to complete difficult repairs, like in outer space or when travelling deep under the ocean
+  * To be precise, to be consistent throughout highly repetitive tasks, to do jobs in harsh environments that would otherwise be impossible or put humans in harm's-way, and to not endure fatigue
 * “Can you combine mechanisms together to become ‘compound mechanisms’? Can you think of an example?”
 * “Can a mechanism move on its own? How?”
 
@@ -76,10 +76,10 @@ If applicable, create a spot to display each group’s creation. If the class co
 **Ask your class:**
 
 * “What other goals/challenges can you imagine for these machines? What else could this/these inventions do?”
-* Discuss these inventions/mechanisms as prototypes. 
+* Discuss these inventions/mechanisms as prototypes.
 * “If this/these machines were built to their full potential, how could they help people in your school? ...in your community?”
 * “Did you reverse-engineer anything to build your machine? If so, what did you learn from doing so?”
 * “How can we continue to improve the classroom machine?”
-* “What challenges did you experience when combining all of these machines?” 
+* “What challenges did you experience when combining all of these machines?”
 * “Are you a machine? What are the arguments for and against the assertion that humans are machines?”
 * “What other kinds of problems or obstacles do you think machines could help us solve?”
