@@ -35,14 +35,14 @@ function MyGallery(props) {
 }
 function MyThumbnails(props) {
 	return (
-		<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
+		<Grid container spacing={3} direction="row" justify="center">
 			{props.children}
 		</Grid>
 	)
 }
 function MyThumbnail(props) {
 	return (
-		<Grid item xs={12} md={6}>
+		<Grid item xs={12} sm={6} lg={4}>
 			<Link to={props.path}>
 				<Card {...props}>
 					<p><Typography variant="card header">{props.title}</Typography></p>
