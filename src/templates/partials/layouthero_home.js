@@ -1,4 +1,5 @@
 import React from "react"
+import { withPrefix } from "gatsby"
 import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../../components/typography.js'
 import Hero from '../../components/hero.js'
@@ -6,7 +7,7 @@ import Button from '../../components/button.js'
 
 function LayoutHero() {
 	return (
-		<Hero shadeColor="#525252" bgimage="/header-sierpinski.png">
+		<Hero shadecolor="#525252" shadeopacity={0.2} bgimage={withPrefix("/header-sierpinski.png")}>
 			<Box py={{xs: 4, md: 0}}>
 				<Container maxWidth="lg">
 					<Grid container direction="row" style={{minHeight: '400px'}}>

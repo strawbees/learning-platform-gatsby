@@ -1,4 +1,5 @@
 module.exports = {
+	// pathPrefix: '/public',
 	pathPrefix: '/learning-platform-gatsby',
   siteMetadata: {
     title: `Learning Platform Gatsby`,

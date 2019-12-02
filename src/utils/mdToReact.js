@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Container, Grid } from '@material-ui/core'
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import Typography from '../components/typography'
 import Button from '../components/button'
 import Youtube from '../components/youtubedisplay'
@@ -16,7 +16,7 @@ import rehype2react from 'rehype-react'
 import raw from 'rehype-raw'
 
 function MyImage(props) {
-	return <ImageDisplay {...props} />
+	return <ImageDisplay src={withPrefix(props.src)} {...props} />
 }
 function MyLink(props) {
 	return <Link to={props.href} {...props}>{props.children}</Link>
@@ -31,6 +31,9 @@ function MyGallery(props) {
 		}
 	})
 	images = images.props.children.filter((child) => typeof child === 'object')
+	images = images.map((image) => {
+		return <ImageDisplay src={withPrefix(image.props.src)} alt={image.props.alt} />
+	})
 	return <Gallery>{images}</Gallery>
 }
 function MyThumbnails(props) {
@@ -45,8 +48,8 @@ function MyThumbnail(props) {
 		<Grid item xs={12} sm={6} lg={4}>
 			<Link to={props.path}>
 				<Card {...props}>
-					<p><Typography variant="card header">{props.title}</Typography></p>
-					<p><Typography variant="body condensed">{props.description}</Typography></p>
+					<Typography variant="card header">{props.title}</Typography>
+					<Typography variant="body condensed">{props.description}</Typography>
 				</Card>
 			</Link>
 		</Grid>
@@ -56,7 +59,7 @@ function MyThumbnail(props) {
 function MySection(props) {
 	const { component } = props
 	switch (component) {
-		case 'hero': return <Hero {...props}>{props.children}</Hero>
+		case 'hero': return <Hero bgimage={withPrefix(props.bgimage)} {...props}>{props.children}</Hero>
 		case 'youtube': return <Youtube url={props.url} />
 		case 'gallery': return <MyGallery>{props.children}</MyGallery>
 		case 'thumbnail': return <MyThumbnail {...props}>{props.children}</MyThumbnail>

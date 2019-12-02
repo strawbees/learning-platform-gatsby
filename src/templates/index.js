@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, withPrefix } from "gatsby"
 import { Container, Grid, Box } from '@material-ui/core'
 import Palette from '../components/palette.js'
 import Typography from '../components/typography.js'
@@ -29,7 +29,7 @@ function LayoutFeed({ posts }) {
 								<Link to={post.path}>
 									<Card
 										hover
-										image={post.thumbnail}
+										image={withPrefix(post.thumbnail)}
 										labelText={post.category}
 										labelBgcolor={categoryColors[post.category]}>
 										<Typography variant="card header">
