@@ -16,7 +16,7 @@ import rehype2react from 'rehype-react'
 import raw from 'rehype-raw'
 
 function MyImage(props) {
-	return <ImageDisplay src={withPrefix(props.src)} {...props} />
+	return <ImageDisplay src={withPrefix(props.src)} alt={props.alt} />
 }
 function MyLink(props) {
 	return <Link to={props.href} {...props}>{props.children}</Link>
