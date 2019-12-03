@@ -8,7 +8,7 @@ import Hero from '../../components/hero.js'
 function LayoutHero(props) {
 	let { title, description, bgimage } = props
 	return (
-		<Hero shadecolor="#525252" shadeopacity={0.2} bgimage={withPrefix(bgimage)} blur>
+		<Hero bgimage={withPrefix(bgimage)}>
 			<Box py={{xs: 4, md: 0}}>
 				<Container maxWidth="lg">
 					<Grid container direction="row" style={{minHeight: '400px'}}>

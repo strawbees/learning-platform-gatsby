@@ -7,7 +7,7 @@ import Button from '../../components/button.js'
 
 function LayoutHero() {
 	return (
-		<Hero shadecolor="#525252" shadeopacity={0.2} bgimage={withPrefix("/header-sierpinski.png")}>
+		<Hero shadecolor="#525252" shadeopacity={0.2} bgimage={withPrefix("/homepageheader.jpg")}>
 			<Box py={{xs: 4, md: 0}}>
 				<Container maxWidth="lg">
 					<Grid container direction="row" style={{minHeight: '400px'}}>

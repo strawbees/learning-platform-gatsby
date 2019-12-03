@@ -1,5 +1,5 @@
 import React from "react"
-import { Box, Container, Grid } from '@material-ui/core'
+import { Grid } from '@material-ui/core'
 import { Link, withPrefix } from "gatsby"
 import Typography from '../components/typography'
 import Button from '../components/button'
@@ -44,10 +44,18 @@ function MyThumbnails(props) {
 	)
 }
 function MyThumbnail(props) {
+	// props.image = withPrefix(props.image)
 	return (
 		<Grid item xs={12} sm={6} lg={4}>
 			<Link to={props.path}>
-				<Card {...props}>
+				<Card
+					image={withPrefix(props.image)}
+					title={props.title}
+					description={props.description}
+					labelText={props.labelText}
+					labelColor={props.labelColor}
+					labelBgcolor={props.labelBgcolor}
+					>
 					<Typography variant="card header">{props.title}</Typography>
 					<Typography variant="body condensed">{props.description}</Typography>
 				</Card>

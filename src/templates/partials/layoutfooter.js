@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import { Container, Grid, Box } from '@material-ui/core'
 import Palette from '../../components/palette.js'
 import Typography from '../../components/typography.js'
-import StrawbeesLogo from '../../images/StrawbeesLogo.png'
+import StrawbeesLogo from '../../images/learninglogo.svg'
 
 function LayoutFooter() {
 	return (
