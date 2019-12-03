@@ -1,4 +1,5 @@
 import React from "react"
+import { withPrefix } from 'gatsby'
 import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../components/typography'
 import SEO from '../components/seo'
@@ -17,7 +18,11 @@ const IndexPage = (e) => {
 	let body = mdToReact(post.content)
 	return (
 		<Grid container direction="column">
-			<SEO title={post.title} description={post.description} />
+			<SEO
+				title={post.title}
+				description={post.description}
+				image={withPrefix(post.thumbnail)}
+				/>
 			<Grid item><LayoutMenu /></Grid>
 			<Grid item>
 				<LayoutHero
