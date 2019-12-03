@@ -22,8 +22,11 @@ exports.createPages = async function(e) {
 	const createPage = e.actions.createPage
 	const activities = await getContent('activities')
 	const lessonPlans = await getContent('lesson-plans')
+	const explorations = await getContent('explorations')
 	const pages = await getContent('pages')
-	const posts = lessonPlans.concat(activities)
+	let posts = [
+		...lessonPlans, ...activities, ...explorations
+	]
 
 	createPage({
 		path: '/',
@@ -46,4 +49,6 @@ exports.createPages = async function(e) {
 			context: { post: post }
 		})
 	})
+
+	return Promise.resolve()
 }
