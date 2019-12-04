@@ -16,7 +16,7 @@ function LayoutMenu() {
 					<Link to="/"><img width="270" src={StrawbeesLogo} alt="Strawbees Logo" /></Link>
 				</Grid>
 				<Grid item xs={12} md={'auto'}>
-					<a href="//strawbees.com/store/" target="_blank">
+					<a href="//strawbees.com/store/" target="_blank" rel="noopener noreferrer">
 						<Button variant="text">Store</Button>
 					</a>
 					<Link to="/">

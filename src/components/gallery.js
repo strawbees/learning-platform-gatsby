@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import { Box, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import ArrowLeft from './icons/arrow-left.svg'
 import ArrowRight from './icons/arrow-right.svg'
-import ImageDisplay from './imagedisplay.js'
 
 function Gallery(props) {
 	const [index, setIndex] = useState(0)

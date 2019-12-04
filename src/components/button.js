@@ -7,7 +7,6 @@ function icon(iconName) {
 	switch (iconName) {
 		case 'pdf':
 			return <img alt="pdf icon" src={IconPDF} />
-			return ''
 		default:
 			return ''
 	}

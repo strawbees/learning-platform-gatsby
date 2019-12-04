@@ -19,7 +19,11 @@ function MyImage(props) {
 	return <ImageDisplay src={withPrefix(props.src)} alt={props.alt} />
 }
 function MyLink(props) {
-	return <Link to={props.href} {...props}>{props.children}</Link>
+	if (props.href.indexOf('http')) {
+		return <a {...props}>{props.children}</a>
+	} else {
+		return <Link to={props.href} {...props}>{props.children}</Link>
+	}
 }
 function MyGallery(props) {
 	let images = props.children.filter((child) => typeof child === 'object')

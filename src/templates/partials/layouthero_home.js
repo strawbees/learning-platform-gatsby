@@ -3,7 +3,6 @@ import { withPrefix } from "gatsby"
 import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../../components/typography.js'
 import Hero from '../../components/hero.js'
-import Button from '../../components/button.js'
 
 function LayoutHero() {
 	return (
