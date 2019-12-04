@@ -6,6 +6,8 @@ import SEO from '../components/seo'
 import LayoutMenu from './partials/layoutmenu'
 import LayoutHero from './partials/layouthero_post'
 import LayoutFooter from './partials/layoutfooter'
+import '../globalStyles.css'
+
 /*
 Because the humans didn't write javascript we can't use it on `gatsby-node.js`
 so we have to add this here instead. :facepalm:
