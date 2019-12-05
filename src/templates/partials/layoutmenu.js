@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import { Container, Grid } from '@material-ui/core'
+import { Container, Grid, Box } from '@material-ui/core'
 import Button from '../../components/button.js'
 import StrawbeesLogo from '../../images/learninglogo.svg'
 
@@ -13,7 +13,9 @@ function LayoutMenu() {
 				justify="space-between"
 				alignItems="flex-end">
 				<Grid item xs={12} md={'auto'}>
-					<Link to="/"><img width="270" src={StrawbeesLogo} alt="Strawbees Logo" /></Link>
+					<Box mb={1}>
+						<Link to="/"><img width="270" src={StrawbeesLogo} alt="Strawbees Logo" /></Link>
+					</Box>
 				</Grid>
 				<Grid item xs={12} md={'auto'}>
 					<a href="//strawbees.com/store/" target="_blank" rel="noopener noreferrer">
