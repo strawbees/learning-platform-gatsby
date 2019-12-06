@@ -11,7 +11,7 @@ category: 'Lesson Plan'
 
 * Discuss and explore different community needs, including ways to connect individual neighborhoods into a unified city
 * Learn how to implement concepts of sustainability into a city’s development
-* Design a city around different scenarios such as geographic location, population growth, conservation and preservation, or prevention against natural disasters
+* Design a city around different scenarios such as geographic location, population growth, conservation, preservation, or prevention against natural disasters
 * Reproduce different architectural features in a variety of scales
 * Gain a hands-on, kinesthetic understanding of the science and engineering needed to build structures
 * Practice communication skills through a collaborative large-scale project
@@ -33,7 +33,7 @@ category: 'Lesson Plan'
   * Skyscrapers, apartments, houses, restaurants
   * Museums, places of worship, parks, city hall
   * Police stations, fire stations, schools, stores
-* “Do you know when and how this city, ______, started?”
+* “Do you know when and how this city started?"
 * Engage in stories about how the city has changed. Use this conversation to guide students through thinking about how cities are planned, including things like public transportation, water, and roads
 * “What types of planning are involved when building a city? Do all cities have the same needs?” For example:
 * Housing, architecture, waste management
@@ -46,7 +46,7 @@ category: 'Lesson Plan'
 Break students into groups of 3-5 to start building structures for a neighborhood, either imaginary or from the real world. Encourage groups to talk to each other about their plans, and discuss how to solve any city-building problems that come up.
 
 <section component="thumbnails">
-<section component="thumbnail" title="Build a Stacking Tower" description="Build big by stacking Strawbees cubes and add custom shapes to style it" image="/tower.jpg" path="/activity/build-a-stacking-tower"></section>
+<section component="thumbnail" title="Build a Stacking Tower" description="Build big by stacking Strawbees cubes and add custom shapes to style it." image="/tower.jpg" path="/activity/build-a-stacking-tower"></section>
 <section component="thumbnail" title="Build a Truss Bridge" description="Build a truss bridge and use your hands to understand structural integrity." image="/truss.jpg" path="/activity/build-a-truss-bridge"></section>
 </section>
 
@@ -66,8 +66,8 @@ Break students into groups of 3-5 to start building structures for a neighborhoo
 **You can:**
 
 * Inspire playfulness and tinkering! Suggest...
-  * new ways to commute (such as ziplines or jetpacks)
-  * constructing novel places to play with friends (like a clubhouse or a playground of the future)
+  * New ways to commute (such as zip lines or jetpacks)
+  * Constructing novel places to play with friends (like a clubhouse or a playground of the future)
 * Introduce difficult community situations such as the opening of a big factory nearby, a drastic change in water levels, or some kind of natural or manmade disaster to highlight features of their city design
 * Have students design new structures or replace old ones to address whatever difficult community situation you introduce, such as:
 * Constructing a large dome to filter pollution
@@ -83,7 +83,7 @@ Break students into groups of 3-5 to start building structures for a neighborhoo
 * The inhabitants of their neighborhood
 * Something that their local community celebrates
 * Their dream city ideas and what else they would add or change in their neighborhood to realize those dreams
-* Make a video tour of their neighborhood and/or city. This could be aerial footage, or street-view video from placing a camera or cellphone on a car (or other support) that drives through the city
+* Make a video tour of their neighborhood and/or city. This could be aerial footage or street-view video from placing a camera or cellphone on a car (or other support) that drives through the city
 
 # Reflect
 

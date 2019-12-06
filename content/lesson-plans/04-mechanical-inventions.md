@@ -1,7 +1,7 @@
 ---
 path: '/lesson-plan/mechanical-inventions'
 title: 'Mechanical Inventions'
-description: 'Play with kinetic and potential energy, making connections between how it is generated, stored, moved and can be transformed'
+description: 'Play with kinetic and potential energy, making connections between how it is generated, stored, moved and can be transformed.'
 thumbnail: '/mechanicalinvention.jpg'
 header: '/mechanicalinvention.jpg'
 category: 'Lesson Plan'
@@ -11,8 +11,7 @@ category: 'Lesson Plan'
 
 * Identify and apply simple principles of movement to build mechanisms.
 * Play with kinetic and potential energy, making connections between how it is generated, stored, moved and can be transformed
-* Gain better understanding of mechanisms and design by reverse-engineering existing inventions
-
+* Gain a better understanding of mechanisms and design by reverse-engineering existing inventions
 
 # Preparation
 
@@ -34,13 +33,12 @@ category: 'Lesson Plan'
   * Screw - hardware used for holding pieces of a bookshelf together
   * Gears - steering wheel of a car or foot pedals on a bicycle
 * “Why do we need mechanisms, what mechanical advantages can people gain?” For example:
-  * To increase physical capabilities such as lifting or removing large amounts of concrete   
+  * To increase physical capabilities such as lifting or removing large amounts of concrete
   * To amplify or reduce a force, like when using levers
-  * To use as tools in harsh environments to complete difficult repairs, like in outer space or when travelling deep under the ocean
-  * To be precise, to be consistent throughout highly repetitive tasks, to do jobs in harsh environments that would otherwise be impossible or put humans in harm's-way, and to not endure fatigue
-* “Can you combine mechanisms together to become ‘compound mechanisms’? Can you think of an example?”
+  * To use as tools in harsh environments to complete difficult repairs, like in outer space or when traveling deep under the ocean
+  * To be precise, to be consistent throughout highly repetitive tasks, to do jobs in harsh environments that would otherwise be impossible or put humans in harm, and to not endure fatigue
+* “Can you combine mechanisms to become ‘compound mechanisms’? Can you think of an example?”
 * “Can a mechanism move on its own? How?”
-
 
 # Create
 
@@ -51,23 +49,21 @@ category: 'Lesson Plan'
 </section>
 
 * Have your students brainstorm what kind of mechanisms and mechanical advantages they would like to build and test. Ask your students to come up with a goal for what the machine should be able to do, such as trapping a critter or grabbing something out of reach.
-* Students can work in small groups to create different mechanical inventions. Once completed, challenge students to combine all of the their different machines into a single large classroom machine. For example, students could build a collaborative Rube Goldberg machine that transports a small ball from one end of the room to the other.
+* Students can work in small groups to create different mechanical inventions. Once completed, challenge students to combine all of their different machines into a single large classroom machine. For example, students could build a collaborative Rube Goldberg machine that transports a small ball from one end of the room to the other.
 
 # Play
 
-* Design a mechanism that helps act out a story, such shipping important supplies from your school to an uninhabitable environment for a deep sea or space exploration mission.
-* Create an animated scene from a story using linkages on a flat surface.. Add paper or cardboard to the construction pipes themselves to make moving animals or characters.
+* Design a mechanism that helps act out a story, such as shipping important supplies from your school to an uninhabitable environment for a deep-sea or space exploration mission.
+* Create an animated scene from a story using linkages on a flat surface. Add paper or cardboard to the construction pipes themselves to make moving animals or characters.
 * Interchange materials inside the machines, such as the pipe sizes to increase range of motion for linkages. For example, observe how a rectangular-shaped linkage can extend vs. a trapezoid-shaped linkage.
 * Create an original challenge and test solutions with other students, such as picking up differently-shaped objects like a cardboard tube or a rubber band.
-
 
 # Share
 
 **You can have your students:**
 
 * Switch individual mechanisms with other groups to test them out and get feedback for improvement.
-* Collaboratively test out the large classroom Rube Goldberg machine, iterating to design until the goal is accomplished!  (ie, trapping a critter or grabbing something out of reach).
-
+* Collaboratively test out the large classroom Rube Goldberg machine, iterating to design until the goal is accomplished! (ie, trapping a critter or grabbing something out of reach).
 
 # Reflect
 
@@ -75,7 +71,7 @@ If applicable, create a spot to display each group’s creation. If the class co
 
 **Ask your class:**
 
-* “What other goals/challenges can you imagine for these machines? What else could this/these inventions do?”
+* “What other goals/challenges can you imagine for these machines? What else could these inventions do?”
 * Discuss these inventions/mechanisms as prototypes.
 * “If this/these machines were built to their full potential, how could they help people in your school? ...in your community?”
 * “Did you reverse-engineer anything to build your machine? If so, what did you learn from doing so?”

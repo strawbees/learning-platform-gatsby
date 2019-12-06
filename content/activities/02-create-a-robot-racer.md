@@ -11,22 +11,21 @@ category: 'Activity'
 
 Creating a robot that walks around is a great activity to gain basic building and language skills. By placing the motor on unexpected places, switching the speed it moves as well as upgrading your Strawbees construction and placing carefully the Quirkbot, you can get many styles of movement. We recommend [uploading the Factory Program to your Quirkbot](https://code.strawbees.com/) before the activity.
 
-Organising the robots on a "race" like situation is a suggestion and can be perfectly replaced by other challenge or constraint.
+Organizing the robots on a "race" like situation is a suggestion and can be perfectly replaced by other challenges or constraints.
 
 <section component="gallery">
 
 ![Running in a straight line can be challenging](/robotracer3.jpg)
 ![Add obstacles and modify the shape of robot bodies to create new situations](/robotracer2.jpg)
-![Changing the surface material and angle can cause dramatic changes on your robot's performance](/robotracer4.jpg)
+![Changing the surface material and angle can cause dramatic changes in your robot's performance](/robotracer4.jpg)
 
 </section>
 
-Once you are able to observe and describe the different types of motor movements, it's easier to describe how else it should move. Use our [CODE programming interface](https://code.strawbees.com/) to translate it to the Quirkbot.
-
+Once you can observe and describe the different types of motor movements, it's easier to describe how else it should move. Use our [CODE programming interface](https://code.strawbees.com/) interface to translate it to the Quirkbot.
 
 <section component="gallery">
 
-![Quirkbot works on Google Chrome Browser and ChromeOS](/robotracer5.jpg)
+![You can program Quirkbot on Google Chrome Browser and ChromeOS](/robotracer5.jpg)
 ![Uploading an empty program to your Quirkbot if you want to start from scratch](/robotracer6.jpg)
 ![Use Flow programming to change how your robot moves](/robotracer7.jpg)
 

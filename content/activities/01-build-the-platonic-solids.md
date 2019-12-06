@@ -9,7 +9,7 @@ category: 'Activity'
 
 <section component="youtube" url="https://youtu.be/ubChdzfykHg"></section>
 
-A Platonic solids are very unique shapes. From all possible convex polyhedra only five can be made with regular polygons as faces. There are many ways to prove there can't be a sixth Platonic solid, one of them is trying it yourself!
+Platonic solids are very unique shapes. From all possible convex polyhedra, only five can be made with regular polygons as faces. There are many ways to prove there can't be a sixth Platonic solid, one of them is trying it yourself!
 
 <section component="gallery">
 

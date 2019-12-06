@@ -13,9 +13,9 @@ A truss is a rigid structure made out of beams. They are everywhere from houses,
 
 <section component="gallery">
 
-![The truss bridge can be build as a group activity](/truss2.jpg)
+![The truss bridge can be built as a group activity](/truss2.jpg)
 ![Splitting tasks and building collaboratively](/truss3.jpg)
-![You can make truss bridges of all sizes and formats, each with their pros and cons.](/truss4.jpg)
-![You can build functional truss bridges that can hold weights much bigger than its own weight.](/truss5.jpg)
+![You can make truss bridges of all sizes and formats, each with their pros and cons](/truss4.jpg)
+![You can build functional truss bridges that can hold weights much bigger than their own](/truss5.jpg)
 
 </section>

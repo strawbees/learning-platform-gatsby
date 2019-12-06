@@ -1,8 +1,8 @@
 ---
 path: '/about'
 title: 'About the Learning Platform'
-thumbnail: '/aboutheader.jpg'
-header: '/aboutheader.jpg'
+thumbnail: '/geometricworld.jpg'
+header: '/geometricworld.jpg'
 category: 'Support Page'
 ---
 

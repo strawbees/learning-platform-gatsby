@@ -1,7 +1,7 @@
 ---
 path: '/lesson-plan/geometric-world'
 title: 'Geometric World'
-description: 'Develop spatial reasoning by creating and identifying geometric shapes'
+description: 'Develop spatial reasoning by creating and identifying geometric shapes.'
 thumbnail: '/geometricworld.jpg'
 header: '/geometricworld.jpg'
 category: 'Lesson Plan'
@@ -40,31 +40,31 @@ category: 'Lesson Plan'
 
 **Students can:**
 
-- Create a set of shapes and trade with another group and see what each group can build with them.
-- Build shapes to make a self-similar structure like a tree full of branches, a snowflake, a cube made out of smaller cubes or the Sierpinski Pyramid. To start, encourage students to draw self-similar shapes and lines on paper.
-- Build collaboratively to make a large geometric structures (such as an enormous honeycomb, snowflake, etc.)
+* Create a set of shapes and trade with another group and see what each group can build with them.
+* Build shapes to make a self-similar structure like a tree full of branches, a snowflake, a cube made out of smaller cubes or the Sierpinski Pyramid. To start, encourage students to draw self-similar shapes and lines on paper.
+* Build collaboratively to make large geometric structures (such as an enormous honeycomb, snowflake, etc.)
 
 <section component="thumbnails">
 <section component="thumbnail" title="Build the Platonic Solids" description="Build the shapes that have intrigued philosophers, mathematicians and scientists for centuries." image="/platonic.jpg" path="/activity/build-the-platonic-solids"></section>
-<section component="thumbnail" title="Construct the Sierpinski Pyramid" description="Construct a modular, fractal structure with tetrahedral shapes." image="/sierpinski.jpg" path="/activity/construct-the-sierpinski-pyramid"></section>
+<section component="thumbnail" title="Construct the Sierpinski Pyramid" description="Construct a modular, fractal structure with tetrahedral shapes." image="/sierpinski.jpg" path="/activity/construct-a-sierpinski-pyramid"></section>
 </section>
 
 # Play
 
 **Students can:**
 
-- Invent a new geometric shape. Try to build a complex or even an impossible shape.
-- Cut and attach paper panels on the faces of shapes. For example, create a “class clubhouse” by cutting out large sheets of triangles from paper and attaching them to the sides of a sierpinski pyramid large enough to have different rooms inside of it.
-- Experiment with changing the construction pipe size, or changing its angle using a different Strawbee connector, and observe and describe what happens.
-- Transform the shapes and lines of your geometric objects into items of your daily life, imagination or to use as a prop on another activity.
-- Have students pair up. One student can be the builder and the other can be the reader. The reader will choose a 3-D geometric image out of a hat. reader must describe the image and how to build it. The builder will try to create the same geometric model based solely on verbal instructions.
+* Invent a new geometric shape. Try to build a complex or even an impossible shape.
+* Cut and attach paper panels on the faces of shapes. For example, create a “class clubhouse” by cutting out large sheets of triangles from paper and attaching them to the sides of a Sierpinski pyramid large enough to have different rooms inside of it.
+* Experiment with changing the construction pipe size, or changing its angle using a different Strawbees connector, and observe and describe what happens.
+* Transform the shapes and lines of your geometric objects into items of your daily life, imagination or to use as a prop on another activity.
+* Have students pair up. One student can be the builder and the other can be the reader. The reader will choose a 3-D geometric image out of a hat. The reader must describe the image and how to build it. The builder will try to create the same geometric model based solely on verbal instructions.
 
 # Share
 
 **You can have your students:**
 
-- Engage in a “show-and-tell”, inviting student groups to describe the various shapes and/or artwork they created.
-- After building and identifying a variety of geometric shapes, collaboratively connect them into a unique “sculpture” the class can move through.
+* Engage in a “show-and-tell”, inviting student groups to describe the various shapes and/or artwork they created.
+* After building and identifying a variety of geometric shapes, collaboratively connect them into a unique “sculpture” the class can move through.
 
 # Reflect
 

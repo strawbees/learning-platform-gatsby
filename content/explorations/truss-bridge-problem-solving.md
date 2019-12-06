@@ -7,13 +7,13 @@ header: '/trussproblemsolving.jpg'
 category: 'Exploration'
 ---
 
-In this exploration we’ll show how to scaffold situations for your students to develop and demonstrate problem solving with a Strawbees Truss Bridge!
+In this exploration, we’ll show how to scaffold situations for your students to develop and demonstrate problem solving with a Strawbees Truss Bridge!
 
 # Step 1: Problem presentation
 
 The problem is **how to build a bridge that connects two cardboard boxes separated by a specific distance**. You can give this distance in any metric system including in straw lengths. We suggest it to be around 3 and half *blue straws*.
 
-It’s also important to know how much weight the bridge can hold. Hanging heavy weight on straws can damage it and we recommend either making a cardboard platform or hanging the probe on connectors.
+It’s also important to know how much weight the bridge can hold. Hanging a weight on straws can damage it and we recommend either making a cardboard platform or hanging the probe on connectors.
 
 Each of your students should receive enough material to complete the task.
 
@@ -39,16 +39,16 @@ Excellent chance to talk about forces and trigonometry, for example.
 
 There are 2 major problems designed for this activity:
 
-* Bridge from original activity or example must be too small to cover the gap distance. We recommend three and half blue straws.
-* There is no specific instructions about how to make the load test, except it should not fold or break the straws.
+* Bridge from original activity or example must be too small to cover the gap distance. We recommend three and a half blue straws.
+* There are no specific instructions about how to make the load test, except it should not fold or break the straws.
 
-**Emerging**: Identify the designed problems.
+**Emerging**: Identify designed problems.
 
-**Proficient**: Is able to describe the design challenges and other problems and constraints.
+**Proficient**: Can describe the design challenges and other problems and constraints.
 
 ## Possible Approaches
 
-*Identifies multiple, diverse approaches to solve the problem*
+*Identifies multiple, diverse approaches to solve the problem.*
 
 <section component="gallery">
 
@@ -68,7 +68,7 @@ There are 2 major problems designed for this activity:
 
 It's easy and quick to iterate over ideas with Strawbees and it might be tempting to just start building.
 
-But making a plan is important to demonstrate the ability to **solve problems systematically**.
+But making a plan is important to demonstrate the ability to solve problems systematically.
 
 There are many ways in which the bridges can be built differently, here are some groups of possibilities:
 
@@ -78,12 +78,11 @@ There are many ways in which the bridges can be built differently, here are some
 
 **Emerging**: Identify a few ways to build the bridge.
 
-**Proficient**: Can describe and categorise a wide range of approaches that can be taken.
-
+**Proficient**: Can describe and categorize a wide range of approaches that can be taken.
 
 ## Choosing and implementing approach
 
-*Analyses factors to choose a reasonable approach and implements it with precision*
+*Analyses factors to choose a reasonable approach and implement it with precision.*
 
 <section component="gallery">
 
@@ -92,21 +91,20 @@ There are many ways in which the bridges can be built differently, here are some
 
 </section>
 
-Strawbees allows for a very practical, fast paced and iterative building process but make sure your students understand they are expected to demonstrate the ability to make educated guesses based on facts in order to choose their approach.
+Strawbees a very practical, fast-paced and iterative building process but make sure your students understand they are expected to demonstrate the ability to make educated guesses based on facts to choose their approach.
 
 A few things that are important to take in consideration:
 
-* The amount of resources provided: A single kit or shared pile?
+* The resources provided: A single kit or shared pile?
 * Understand if there is time to try out all the possibilities.
 
 **Emerging**: Decide on a design.
 
-**Proficient**: Chose an approach that that fits the constraints  of the problem and execute it with precision.
-
+**Proficient**: Chose an approach that that fits the constraints of the problem and execute it with precision.
 
 ## Analysis
 
-*Analyses the outcome by assessing whether the approach led to a reasonable solution*
+*Analyses the outcome by assessing whether the approach led to a reasonable solution.*
 
 <section component="gallery">
 
@@ -131,15 +129,15 @@ After implementing the suggested approach, make sure your students understand th
 Students are expected to:
 
 * Compare approaches and iterations during the process of solving the problem
-* Rank bridge performance and explain the parameter for judgement
+* Rank bridge performance and explain the parameter for judgment
 
-**Emerging**: Identify if bridge behaved as expected.
+**Emerging**: Identify if the bridge behaved as expected.
 
-**Proficient**: Understand and communicate about efficiency of design and based on the answer point out where there should be an improvement or if another design would be a better fit.
+**Proficient**: Understand and communicate about the efficiency of design and based on the answer point out where there should be an improvement or if another design would be a better fit.
 
 ## Reflection
 
-*Reflects on the problem solving process by identifying specific strengths and weaknesses of the selected approach(es)*
+*Reflects on the problem solving process by identifying specific strengths and weaknesses of the selected approach(es).*
 
 <section component="gallery">
 
@@ -156,13 +154,13 @@ Students are expected to:
 
 </section>
 
-Your students should be able to explain where their bridges is excellent and where it failed or could be improved.
+Your students should be able to explain where their bridges are excellent and where it failed or could be improved.
 
 Students are expected to:
 
 * Identify a strategy used to solve a problem
 * Describe something unexpected or learned
-* Reflects if solution was appropriable beyond the designed problems.
+* Reflects if a solution was appropriable beyond the designed problems.
 
 **Emerging**: Point out a problem solving situation
 
@@ -170,7 +168,7 @@ Students are expected to:
 
 # Step 3: Instructions and assessment
 
-We provide full step by step instructions on how to build a basic Truss Bridge and a variety of other examples for inspiration. We also have other Activities that might provide other insights on the bridge making.
+We provide a full step by step instructions on how to build a basic Truss Bridge and a variety of other examples for inspiration. We also have other Activities that might provide other insights on the bridge making.
 
 You can have the instructions available, give a lecture on how to build it, build together with the whole class or all the previous combined. Experiment with what type of instructions and assessment works the best with your group.
 

@@ -6,6 +6,7 @@
   "dependencies": {
     "@material-ui/core": "^4.7.0",
     "@material-ui/styles": "^4.7.1",
+    "@strawbees/s3-publisher": "^0.2.0",
     "frontmatter": "0.0.3",
     "gatsby": "^2.18.4",
     "gatsby-image": "^2.2.34",
@@ -26,24 +27,19 @@
     "remark": "^11.0.2",
     "remark-parse": "^7.0.2",
     "remark-rehype": "^5.0.0",
-    "unified": "^8.4.2"
+    "unified": "^8.4.2",
+		"gh-pages": "^2.1.1"
   },
-  "devDependencies": {
-    "gh-pages": "^2.1.1",
-    "prettier": "^1.19.1"
-  },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy-gh": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy-s3": "gatsby build --prefix-paths && s3-publisher -b strawbees-learning-stage -s ./public --sync",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   },
   "repository": {
