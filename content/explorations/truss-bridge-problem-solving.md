@@ -60,9 +60,8 @@ There are 2 major problems designed for this activity:
 ![](/trussproblemsolving22.jpg)
 ![](/trussproblemsolving23.jpg)
 ![](/trussproblemsolving24.jpg)
-![](/trussproblemsolving30.jpg)
-![](/trussproblemsolving40.jpg)
 ![](/trussproblemsolving42.jpg)
+![](/trussproblemsolving40.jpg)
 
 </section>
 
