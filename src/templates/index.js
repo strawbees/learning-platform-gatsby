@@ -6,6 +6,7 @@ import Typography from '../components/typography.js'
 import Card from '../components/card.js'
 import SEO from '../components/seo.js'
 import '../globalStyles.css'
+import '../utils/unregister_worker.js'
 
 import LayoutMenu from './partials/layoutmenu'
 import LayoutHero from './partials/layouthero_home'

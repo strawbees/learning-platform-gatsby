@@ -7,6 +7,7 @@ import LayoutMenu from './partials/layoutmenu'
 import LayoutHero from './partials/layouthero_post'
 import LayoutFooter from './partials/layoutfooter'
 import '../globalStyles.css'
+import '../utils/unregister_worker.js'
 
 /*
 Because the humans didn't write javascript we can't use it on `gatsby-node.js`
