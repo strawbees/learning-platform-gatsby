@@ -1,6 +1,6 @@
 module.exports = {
 	// pathPrefix: '/public',
-	// pathPrefix: '/learning-platform-gatsby',
+	// pathPrefix: '/learning-platform-gastby',
   siteMetadata: {
     title: `Strawbees Learning Platform`,
     description: `Strawbees: The future of education`,

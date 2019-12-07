@@ -8,7 +8,7 @@ category: 'Support Page'
 
 # Welcome to the Strawbees Learning Platform
 
-This site is a virtual oasis for innovative teachers who embrace hands-on learning with Strawbees. Please come in and explore our digital home for lesson plans, activities, and support materials designed to help you and your students thrive!
+This site is a virtual oasis for innovative teachers who embrace hands-on learning with Strawbees. Please come in and explore our digital home for Lesson Plans, Activities, Explorations and support materials designed to help you and your students thrive!
 
 This platform is here to equip you with the teaching resources and mindset you need to enhance student learning with Strawbees. To help you integrate this project-based approach in your classroom, each lesson guides you through what the Lifelong Kindergarten group at the MIT Media Lab calls the ‘Creative Learning Spiral’: Imagine, Create, Play, Share, Reflect.
 
