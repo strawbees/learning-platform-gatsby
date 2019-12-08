@@ -11,7 +11,7 @@ This is a static website version of the [Strawbees Learning Platform](https://le
 - Build website: `npm run build`
 - Deploy to Github Pages:
 	- Set the correct `prefixPath` on `gatsby-config.js`
-	- `npm run deploy-ghpages`
+	- `npm run deploy-gh`
 - Deploy on Amazon S3:
 	- Create a `.env` file with `S3_KEY`, `S3_SECRET`, `S3_BUCKET` and `S3_REGION`
 	- `npm run deploy-s3`
@@ -45,7 +45,7 @@ import { withPrefix } from 'gatsby'
 export default function() {
 	return (
 		<img src={withPrefix('/image.jpg')} alt="Example image" />
-		)
+	)
 }
 ```
 
@@ -109,7 +109,7 @@ After building, the static website will be created inside the `public` folder (g
 
 We provide 2 deploy scripts in this repository, one for Github pages and to Amazon S3.
 
-For the Github pages, update the `prefixPath` to the name of your repository. You can read more about [Gatsby and Github pages here](https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/). You can run `npm run deploy-ghpages`.
+For the Github pages, update the `prefixPath` to the name of your repository. You can read more about [Gatsby and Github pages here](https://www.gatsbyjs.org/docs/how-gatsby-works-with-github-pages/). You can run `npm run deploy-gh`.
 
 To deploy on Amazon S3 we use [@strawbees/s3-publisher](https://github.com/strawbees/s3-publisher). Create a `.env` file with `S3_KEY`, `S3_SECRET`, `S3_BUCKET` and `S3_REGION` and run `npm run deploy-s3`.
 
