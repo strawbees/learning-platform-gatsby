@@ -26,6 +26,7 @@ function MyLink(props) {
 	}
 }
 function MyGallery(props) {
+	// Flatten children
 	let images = props.children.filter((child) => typeof child === 'object')
 	images = images.reduce((acc, image) => {
 		if (image.props) {
@@ -34,6 +35,7 @@ function MyGallery(props) {
 			return acc
 		}
 	})
+	// Map img to ImageDisplay
 	images = images.props.children.filter((child) => typeof child === 'object')
 	images = images.map((image) => {
 		return <ImageDisplay src={withPrefix(image.props.src)} alt={image.props.alt} />
@@ -48,7 +50,6 @@ function MyThumbnails(props) {
 	)
 }
 function MyThumbnail(props) {
-	// props.image = withPrefix(props.image)
 	return (
 		<Grid item xs={12} sm={6} lg={4}>
 			<Link to={props.path}>

@@ -65,7 +65,39 @@ This library process the markdown content parsing into a tree and then iterate o
 
 There are a few DOM components that will be automatically replaced with React DOM components and you can find the entire list on this file. Currently the `<a>`, `<img>`, `<button>` and `<section>` tags will be replaced.
 
-If you want to add custom React DOM components into the markdown content, use the `<section>` tag with a property `component` specifying which component to load. The currently available `component` options are: `hero`, `youtube`, `gallery`, `thumbnail` and `thumbnails` (for rendering in a row).
+If you want to add custom React DOM components into the markdown content, use the `<section>` tag with a property `component` specifying which component to load. The currently available `component` options are: `youtube`, `gallery`, `thumbnail` and `thumbnails` (for rendering in a row).
+
+#### Usage examples
+
+**Image gallery**
+
+This component mixes Markdown and custom HTML so it requires an empty line between the HTML and Markdown content.
+
+```
+<section component="gallery">
+
+![Image caption](/path-to-static-image.jpg)
+![Other Image caption](https://image.com/abcd)
+
+</section>
+```
+
+**Thumbnails and Thumbnail**
+
+Since this is all custom HTML content, it doesn't require empty lines. The `thumbnails` component wraps the content into a responsive layout row.
+
+```
+<section component="thumbnails">
+<section component="thumbnail" title="Title of card" description="Description under the title." image="/static-image.jpg" path="/where-to-link-this-thumbnail"></section>
+<section component="thumbnail" title="Title of card" description="Description under the title." image="/static-image.jpg" path="/where-to-link-this-thumbnail"></section>
+</section>
+```
+
+**Responsive Youtube Player**
+
+```
+<section component="youtube" url="https://youtu.be/ubChdzfykHg"></section>
+```
 
 ### `unregister_worker`
 
