@@ -11,6 +11,7 @@
     "frontmatter": "0.0.3",
     "gatsby": "^2.18.4",
     "gatsby-image": "^2.2.34",
+    "gatsby-plugin-google-analytics": "^2.1.29",
     "gatsby-plugin-manifest": "^2.2.30",
     "gatsby-plugin-material-ui": "^2.1.6",
     "gatsby-plugin-offline": "^3.0.24",
