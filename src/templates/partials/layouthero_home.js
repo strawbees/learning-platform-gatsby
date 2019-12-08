@@ -3,10 +3,11 @@ import { withPrefix } from "gatsby"
 import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../../components/typography.js'
 import Hero from '../../components/hero.js'
+import config from '../../../gatsby-config.js'
 
 function LayoutHero() {
 	return (
-		<Hero shadecolor="#525252" shadeopacity={0.2} bgimage={withPrefix("/homepageheader.jpg")}>
+		<Hero shadecolor="#525252" shadeopacity={0.5} bgimage={withPrefix("/homepageheader.jpg")}>
 			<Box py={{xs: 4, md: 0}}>
 				<Container maxWidth="lg">
 					<Grid container direction="row" style={{minHeight: '400px'}}>
@@ -20,6 +21,7 @@ function LayoutHero() {
 										Welcome to the Learning Platform
 									</Typography>
 									<Typography variant="hero text">
+										<p>{config.siteMetadata.description}</p>
 									</Typography>
 								</Box>
 							</Grid>

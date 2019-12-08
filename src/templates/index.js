@@ -5,6 +5,7 @@ import Palette from '../components/palette.js'
 import Typography from '../components/typography.js'
 import Card from '../components/card.js'
 import SEO from '../components/seo.js'
+import config from '../../gatsby-config.js'
 import '../globalStyles.css'
 import '../utils/unregister_worker.js'
 
@@ -22,7 +23,11 @@ const categoryColors = {
 function LayoutFeed({ posts }) {
 	return (
 		<Box py={4}>
-			<SEO title="Strawbees Learning Platform" />
+			<SEO
+				title="Strawbees Learning Platform"
+				image={withPrefix('/mechanicalinventions.jpg')}
+				description={config.siteMetadata.description}
+			/>
 			<Container maxWidth="lg">
 				<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
 					{posts.map((post, i) => {
