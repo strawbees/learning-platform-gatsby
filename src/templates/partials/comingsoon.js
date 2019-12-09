@@ -34,6 +34,60 @@ function ComingSoon() {
 					</a>
 				</Grid>
 				<Grid item xs={12} sm={6} md={4}>
+					<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=k5jCdk0WESw">
+						<Card
+							hover
+							image={withPrefix('/musicalxylophone.jpg')}
+							labelText="Activity"
+							labelBgcolor={Palette.blue}>
+							<Typography variant="card header">
+								Create a Musical Xylophone
+							</Typography>
+							<Box pb={1} />
+							<Typography variant="body condensed">
+								Construct a xylophone upcycling materials. Program the musical
+								instrument and play a little melody.
+							</Typography>
+						</Card>
+					</a>
+				</Grid>
+				<Grid item xs={12} sm={6} md={4}>
+					<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=NjBW2pwzM-E">
+						<Card
+							hover
+							image={withPrefix('/dancingrobot.jpg')}
+							labelText="Activity"
+							labelBgcolor={Palette.blue}>
+							<Typography variant="card header">
+								Create a Dancing Robot
+							</Typography>
+							<Box pb={1} />
+							<Typography variant="body condensed">
+								Animate a simple companion and learn more about programming and
+								construction to make movement.
+							</Typography>
+						</Card>
+					</a>
+				</Grid>
+				<Grid item xs={12} sm={6} md={4}>
+					<a target="_blank" rel="noopener noreferrer" href="https://youtu.be/k5jCdk0WESw">
+						<Card
+							hover
+							image={withPrefix('/musicalpianodrum.jpg')}
+							labelText="Activity"
+							labelBgcolor={Palette.blue}>
+							<Typography variant="card header">
+								Create a Musical Piano and Drums
+							</Typography>
+							<Box pb={1} />
+							<Typography variant="body condensed">
+								Rock out programming a simple instrument constructed with
+								conductive materials and play music on the computer.
+							</Typography>
+						</Card>
+					</a>
+				</Grid>
+				<Grid item xs={12} sm={6} md={4}>
 					<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=A-QcsIj6WPo">
 						<Card
 							hover
@@ -51,19 +105,19 @@ function ComingSoon() {
 					</a>
 				</Grid>
 				<Grid item xs={12} sm={6} md={4}>
-					<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=k5jCdk0WESw">
+					<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=GKJ0-leyCRo">
 						<Card
 							hover
-							image={withPrefix('/musicalxylphone.jpg')}
+							image={withPrefix('/rollercoaster.jpg')}
 							labelText="Activity"
 							labelBgcolor={Palette.blue}>
 							<Typography variant="card header">
-								Create a Musical Xylophone
+								Build a Roller Coaster
 							</Typography>
 							<Box pb={1} />
 							<Typography variant="body condensed">
-								Construct a xylophone upcycling materials. Program the musical
-								instrument and play a little melody.
+								Build a track for a ping pong ball to roll and then bring it
+								back to the top with a lift.
 							</Typography>
 						</Card>
 					</a>
