@@ -1,5 +1,5 @@
 // XXX: Hack to build multiple environment variables
-let pathPrefix, siteUrl, label, trackingId, buildEnv
+let pathPrefix, siteUrl, trackingId, buildEnv
 // buildEnv = 'stage'
 
 switch (buildEnv) {
