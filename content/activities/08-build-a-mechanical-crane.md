@@ -1,7 +1,7 @@
 ---
 path: '/activity/build-a-mechanical-crane'
 title: 'Build a Mechanical Crane'
-description: 'Build an operational mechanical crane and control it with your hands.'
+description: 'Build an operational crane with a four-bar linkage and control it with your hands.'
 thumbnail: '/crane.jpg'
 header: '/crane.jpg'
 category: 'Activity'

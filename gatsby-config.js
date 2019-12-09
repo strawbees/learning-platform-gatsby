@@ -31,7 +31,7 @@ module.exports = {
 	pathPrefix: pathPrefix,
   siteMetadata: {
     title: `Strawbees Learning Platform`,
-    description: `Strawbees Learning Platform is an oasis for innovative teachers who embrace hands-on learning with Strawbees.`,
+    description: `Explore our virtual oasis for innovative teachers who embrace creative thinking and hands-on learning with Strawbees.`,
     author: `@strawbees`,
 		siteUrl: siteUrl,
   },
