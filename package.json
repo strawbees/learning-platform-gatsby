@@ -3,6 +3,16 @@
   "private": true,
   "description": "Strawbees Learning Platform (Static site version)",
   "version": "0.1.0",
+	"scripts": {
+		"build": "gatsby build --prefix-paths",
+		"develop": "gatsby develop",
+		"start": "npm run develop",
+		"serve": "gatsby serve",
+		"clean": "gatsby clean",
+		"deploy-gh": "gatsby build --prefix-paths && gh-pages -d public",
+		"deploy-s3": "gatsby build --prefix-paths && strawbees-s3-publisher -b strawbees-learning-stage -s ./public --sync",
+		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+	},
   "dependencies": {
     "@material-ui/core": "^4.7.0",
     "@material-ui/styles": "^4.7.1",
@@ -33,17 +43,6 @@
     "unified": "^8.4.2"
   },
   "license": "MIT",
-  "scripts": {
-    "build": "gatsby build --prefix-paths",
-    "develop": "gatsby develop",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "deploy-gh": "gatsby build --prefix-paths && gh-pages -d public",
-    "deploy-s3": "gatsby build --prefix-paths && strawbees-s3-publisher -b strawbees-learning-stage -s ./public --sync",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/murilopolese/learning-platform-gatsby"
