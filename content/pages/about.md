@@ -1,7 +1,7 @@
 ---
 path: '/about'
 title: 'About the Learning Platform'
-description: 'Strawbees Learning Platform is a virtual oasis for innovative teachers who embrace hands-on learning with Strawbees.'
+description: 'Read more about the Strawbees pedagogical approach, mindset and vision of success.'
 thumbnail: '/geometricworld.jpg'
 header: '/geometricworld.jpg'
 category: 'Support Page'
