@@ -24,7 +24,7 @@ function LayoutMenu() {
 					<Link to="/">
 						<Button variant="text">Lesson Plans and Activities</Button>
 					</Link>
-					<Link to="about">
+					<Link to="/about">
 						<Button variant="text">About</Button>
 					</Link>
 				</Grid>
