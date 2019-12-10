@@ -67,7 +67,7 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-remove-serviceworker`,
 			options: {
-				filename: 'serviceworker.js'
+				filename: 'service-worker.js'
 			}
 		}
   ],
