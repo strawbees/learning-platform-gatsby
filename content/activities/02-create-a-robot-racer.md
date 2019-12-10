@@ -21,7 +21,7 @@ Organizing the robots on a "race" like situation is a suggestion and can be perf
 
 </section>
 
-Once you can observe and describe the different types of motor movements, it's easier to describe how else it should move. Use our [CODE programming interface](https://code.strawbees.com/) interface to translate it to the Quirkbot.
+Once you can observe and describe the different types of motor movements, it's easier to describe how else it should move. Use our [CODE programming interface](https://code.strawbees.com/) to translate it to the Quirkbot.
 
 <section component="gallery">
 
