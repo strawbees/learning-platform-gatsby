@@ -37,9 +37,11 @@ const IndexPage = (e) => {
 			<Grid item>
 				<Box py={3}>
 					<Container maxWidth="md">
-						<Typography>
-							{body}
-						</Typography>
+						<div id="content">
+							<Typography>
+								{body}
+							</Typography>
+						</div>
 					</Container>
 				</Box>
 			</Grid>
