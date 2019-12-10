@@ -52,16 +52,14 @@ function Gallery(props) {
 				direction="row"
 				wrap="wrap"
 				alignItems="flex-start"
-				justifyContent="center">
+				justify="center">
 					{children.map((el, i) => {
 						return (
-							<Grid item xs={4} sm={3} md={2} lg={1}>
+							<Grid key={i} item xs={4} sm={3} md={2} lg={1}>
 								<Box
-									key={i.toString()}
 									width="100%"
 									className={[styles.imageContainer, styles.clickable].join(' ')}
 									onClick={changeIndex(i)}>
-									{/*el*/}
 								</Box>
 							</Grid>
 						)

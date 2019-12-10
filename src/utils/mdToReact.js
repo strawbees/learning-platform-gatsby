@@ -37,8 +37,12 @@ function MyGallery(props) {
 	})
 	// Map img to ImageDisplay
 	images = images.props.children.filter((child) => typeof child === 'object')
-	images = images.map((image) => {
-		return <ImageDisplay src={withPrefix(image.props.src)} alt={image.props.alt} />
+	images = images.map((image, i) => {
+		return <ImageDisplay
+			key={i}
+			src={withPrefix(image.props.src)}
+			alt={image.props.alt}
+			/>
 	})
 	return <Gallery>{images}</Gallery>
 }
