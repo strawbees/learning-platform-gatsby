@@ -19,8 +19,8 @@ function MyImage(props) {
 	return <ImageDisplay src={withPrefix(props.src)} alt={props.alt} />
 }
 function MyLink(props) {
-	if (props.href.indexOf('http')) {
-		return <a {...props}>{props.children}</a>
+	if (props.href.indexOf('http') !== -1) {
+		return <a target="_blank" refer="noreferer noopener" {...props}>{props.children}</a>
 	} else {
 		return <Link to={props.href} {...props}>{props.children}</Link>
 	}
