@@ -1,10 +1,29 @@
 import React, { useState } from 'react'
 import { Box, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
+import Palette from './palette'
 import ArrowLeft from './icons/arrow-left.svg'
 import ArrowRight from './icons/arrow-right.svg'
 
+const useStyles = makeStyles({
+	imageContainer: {
+		'& img': {
+			width: '100%',
+			maxWidth: '100%',
+			display: 'block'
+		}
+	},
+	clickable: {
+		cursor: 'pointer'
+	},
+	selectedThumb: {
+		boxSizing: 'border-box',
+		border: `solid 1px ${Palette.mediumGrey}`
+	}
+})
+
 function Gallery(props) {
+	const styles = useStyles()
 	const [index, setIndex] = useState(0)
 	let children = props.children
 	const length = children.length
@@ -13,24 +32,21 @@ function Gallery(props) {
 			Math.abs( length + i ) % length
 		)
 	}
-	const useStyles = makeStyles({
-		imageContainer: {
-			'& img': {
-				width: '100%',
-				maxWidth: '100%'
-			}
-		},
-		clickable: {
-			cursor: 'pointer'
-		}
-	})
-	const styles = useStyles()
+
 	return (
 		<Box textAlign="center">
 			<Box position="relative"
 				width="100%"
 				className={styles.imageContainer}>
-				{children[index]}
+
+				{children.map((el, i) => {
+					return (
+						<Box hidden={i !== index} bgcolor="#ccc">
+							{el}
+						</Box>
+					)
+				})}
+
 				<Box className={styles.clickable}
 					onClick={changeIndex(index-1)}
 					position="absolute"
@@ -54,12 +70,18 @@ function Gallery(props) {
 				alignItems="flex-start"
 				justify="center">
 					{children.map((el, i) => {
+						let style = [
+							(i === index) ? styles.selectedThumb : '',
+							styles.imageContainer,
+							styles.clickable
+						].join(' ')
 						return (
-							<Grid key={i} item xs={4} sm={3} md={2} lg={1}>
+							<Grid key={i} item xs={4} sm={3} md={2}>
 								<Box
 									width="100%"
-									className={[styles.imageContainer, styles.clickable].join(' ')}
+									className={style}
 									onClick={changeIndex(i)}>
+									<img {...el.props} />
 								</Box>
 							</Grid>
 						)
