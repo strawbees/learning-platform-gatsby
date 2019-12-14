@@ -11,6 +11,7 @@
 		"clean": "gatsby clean",
 		"deploy-gh": "gatsby build --prefix-paths && gh-pages -d public",
 		"deploy-s3": "gatsby build --prefix-paths && strawbees-s3-publisher -b strawbees-learning-stage -s ./public --sync",
+		"deploy-s3-prod": "gatsby build --prefix-paths && strawbees-s3-publisher -b strawbees-learning-production -s ./public --sync",
 		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
 	},
   "dependencies": {
