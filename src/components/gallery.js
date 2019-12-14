@@ -19,6 +19,23 @@ const useStyles = makeStyles({
 	selectedThumb: {
 		boxSizing: 'border-box',
 		border: `solid 1px ${Palette.mediumGrey}`
+	},
+	unselectedThumb: {
+		boxSizing: 'border-box',
+		border: `solid 1px rgba(0,0,0,0)`
+	},
+	arrow: {
+		cursor: 'pointer',
+		top: 'calc(50% - 18px)',
+		background: Palette.lightGrey,
+		width: '30px',
+		height: '30px',
+		padding: '5px',
+		borderRadius: '40px',
+		'& img': {
+			maxWidth: '100%',
+			maxHeight: '100%'
+		}
 	}
 })
 
@@ -47,17 +64,15 @@ function Gallery(props) {
 					)
 				})}
 
-				<Box className={styles.clickable}
+				<Box className={styles.arrow}
 					onClick={changeIndex(index-1)}
 					position="absolute"
-					top="calc(50% - 18px)"
 					left="10px">
 					<img src={ArrowLeft} alt="arrow left" />
 				</Box>
-				<Box className={styles.clickable}
+				<Box className={styles.arrow}
 					onClick={changeIndex(index+1)}
 					position="absolute"
-					top="calc(50% - 18px)"
 					right="10px">
 					<img src={ArrowRight} alt="arrow right" />
 				</Box>
@@ -71,12 +86,12 @@ function Gallery(props) {
 				justify="center">
 					{children.map((el, i) => {
 						let style = [
-							(i === index) ? styles.selectedThumb : '',
+							(i === index) ? styles.selectedThumb : styles.unselectedThumb,
 							styles.imageContainer,
 							styles.clickable
 						].join(' ')
 						return (
-							<Grid key={i} item xs={4} sm={3} md={2}>
+							<Grid key={i} item xs={3} md={2}>
 								<Box
 									width="100%"
 									className={style}
@@ -87,6 +102,7 @@ function Gallery(props) {
 						)
 					})}
 			</Grid>
+			<Box py={1} />
 		</Box>
 	)
 }

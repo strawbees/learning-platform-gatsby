@@ -3,15 +3,16 @@ import { Box } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Typography from './typography.js'
 
-function ImageDisplay(props) {
-	const useStyles = makeStyles({
-		root: {
-			'& img': {
-				width: '100%',
-				maxWidth: '100%'
-			}
+const useStyles = makeStyles({
+	root: {
+		'& img': {
+			width: '100%',
+			maxWidth: '100%'
 		}
-	})
+	}
+})
+
+function ImageDisplay(props) {
 	const styles = useStyles()
 	return (
 		<Box position="relative" textAlign="left" className={styles.root}>
