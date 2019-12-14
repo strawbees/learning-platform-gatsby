@@ -23,7 +23,7 @@ function ImageDisplay(props) {
 				width="100%"
 				bgcolor="rgba(255,255,255,0.7)"
 				position="absolute"
-				bottom="4px"
+				bottom="0"
 				left="0">
 				<Box p={2}>
 					<Typography>{props.alt}</Typography>
