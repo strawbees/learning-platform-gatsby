@@ -36,6 +36,19 @@ const useStyles = makeStyles({
 			maxWidth: '100%',
 			maxHeight: '100%'
 		}
+	},
+	loading: {
+		position: 'absolute',
+		top: 0,
+		bottom: 0,
+		left: 0,
+		right: 0,
+		width: '100%',
+		height: '100%',
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		zIndex: -1
 	}
 })
 
@@ -55,15 +68,14 @@ function Gallery(props) {
 			<Box position="relative"
 				width="100%"
 				className={styles.imageContainer}>
-
 				{children.map((el, i) => {
 					return (
-						<Box hidden={i !== index} bgcolor="#ccc">
+						<Box key={i} hidden={i !== index} bgcolor="#ccc">
+							<Box className={styles.loading}>Loading...</Box>
 							{el}
 						</Box>
 					)
 				})}
-
 				<Box className={styles.arrow}
 					onClick={changeIndex(index-1)}
 					position="absolute"
@@ -96,7 +108,7 @@ function Gallery(props) {
 									width="100%"
 									className={style}
 									onClick={changeIndex(i)}>
-									<img {...el.props} />
+									<img src={el.props.src} alt={el.props.alt} {...el.props} />
 								</Box>
 							</Grid>
 						)
