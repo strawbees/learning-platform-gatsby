@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { Box, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import Palette from './palette'
-import ArrowLeft from './icons/arrow-left.svg'
-import ArrowRight from './icons/arrow-right.svg'
+import ArrowLeft from './icons/gallery-left.svg'
+import ArrowRight from './icons/gallery-right.svg'
 
 const useStyles = makeStyles({
 	imageContainer: {
