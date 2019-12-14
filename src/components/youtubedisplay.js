@@ -19,6 +19,9 @@ class YoutubeDisplay extends React.Component {
 		}
 	}
 	updateDimensions() {
+		if (!this.container.current) {
+			return false
+		}
 		let w = this.container.current.offsetWidth
 		let h = w * this.props.ratio
 		this.setState({
