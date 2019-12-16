@@ -24,7 +24,7 @@ function LayoutFeed({ posts }) {
 	return (
 		<Box py={4}>
 			<SEO
-				title="Strawbees Learning Platform"
+				title="Strawbees Learning"
 				image={withPrefix('/mechanicalinventions.jpg')}
 				description={config.siteMetadata.description}
 			/>
