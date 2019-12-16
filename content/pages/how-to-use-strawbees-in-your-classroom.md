@@ -8,7 +8,7 @@ category: 'Support Page'
 
 At Strawbees we recognize each classroom is unique and that is why we offer a range of equally excellent products and content, balancing personalization and structure without compromising quality.
 
-In the Learning Platform, you will have access to a full range of Activities, Lesson plans, Explorations as well as different ways to navigate through it, highlighting different learning strategies and expected outcomes.
+You will have access to a full range of Activities, Lesson plans, Explorations as well as different ways to navigate through it, highlighting different learning strategies and expected outcomes.
 
 Our learning expectations are tightly coupled with the Sustainable Development Goals and focused mainly on transferable skills, leaving room for you to incorporate the expectations from your local standards.
 

@@ -1,13 +1,13 @@
 ---
 path: '/about'
-title: 'About the Learning Platform'
+title: 'About Strawbees Learning'
 description: 'Read more about the Strawbees pedagogical approach, mindset and vision of success.'
 thumbnail: '/geometricworld.jpg'
 header: '/geometricworld.jpg'
 category: 'Support Page'
 ---
 
-# Welcome to the Strawbees Learning Platform
+# Welcome to Strawbees Learning
 
 This site is a virtual oasis for innovative teachers who embrace hands-on learning with Strawbees. Please come in and explore our digital home for Lesson Plans, Activities, Explorations and support materials designed to help you and your students thrive!
 

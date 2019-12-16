@@ -18,7 +18,7 @@ function LayoutHero() {
 									color="white"
 									px={2}>
 									<Typography variant="hero scream">
-										Welcome to the Learning Platform
+										Welcome to Strawbees Learning
 									</Typography>
 									<Typography variant="hero text">
 										<p>{config.siteMetadata.description}</p>

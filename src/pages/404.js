@@ -10,7 +10,7 @@ import LayoutFooter from '../templates/partials/layoutfooter'
 
 const NotFoundPage = () => (
 	<Grid container direction="column">
-		<SEO title="Strawbees Learning Platform" />
+		<SEO title="Strawbees Learning" />
 		<Grid item><LayoutMenu /></Grid>
 		<Grid item><LayoutHero /></Grid>
 		<Grid item>
