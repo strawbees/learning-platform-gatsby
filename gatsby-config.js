@@ -30,7 +30,7 @@ switch (buildEnv) {
 module.exports = {
 	pathPrefix: pathPrefix,
   siteMetadata: {
-    title: `Strawbees Learning Platform`,
+    title: `Strawbees Learning`,
     description: `Explore our virtual oasis for innovative teachers who embrace creative thinking and hands-on learning with Strawbees.`,
     author: `@strawbees`,
 		siteUrl: siteUrl,
