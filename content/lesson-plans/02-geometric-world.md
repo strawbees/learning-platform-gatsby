@@ -5,6 +5,10 @@ description: 'Develop spatial reasoning by creating and identifying geometric sh
 thumbnail: '/geometricworld.jpg'
 header: '/geometricworld.jpg'
 category: 'Lesson Plan'
+related:
+- '/lesson-plan/city-building'
+- '/lesson-plan/robotic-olympics'
+- '/lesson-plan/mechanical-inventions'
 ---
 
 # Learning Objectives

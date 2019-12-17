@@ -5,6 +5,10 @@ description: 'Make a collapsible grabber using an accordion linkage.'
 thumbnail: '/arm.jpg'
 header: '/arm.jpg'
 category: 'Activity'
+related:
+- '/lesson-plan/mechanical-inventions'
+- '/activity/build-a-mechanical-claw'
+- '/activity/build-a-mechanical-crane'
 ---
 
 <section component="youtube" url="https://youtu.be/nVLp8KnJYAY"></section>

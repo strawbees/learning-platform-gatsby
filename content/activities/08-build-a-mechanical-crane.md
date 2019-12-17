@@ -5,6 +5,10 @@ description: 'Build an operational crane with a four-bar linkage and control it 
 thumbnail: '/crane.jpg'
 header: '/crane.jpg'
 category: 'Activity'
+related:
+- '/lesson-plan/mechanical-inventions'
+- '/activity/build-a-mechanical-claw'
+- '/activity/make-a-mechanical-arm'
 ---
 
 <section component="youtube" url="https://youtu.be/xK5CfWNQJTI"></section>

@@ -5,6 +5,10 @@ description: 'Build the shapes that have intrigued philosophers, mathematicians 
 thumbnail: '/platonic.jpg'
 header: '/platonic.jpg'
 category: 'Activity'
+related:
+- '/lesson-plan/geometric-world'
+- '/activity/construct-a-sierpinski-pyramid'
+- '/activity/build-a-stacking-tower'
 ---
 
 <section component="youtube" url="https://youtu.be/ubChdzfykHg"></section>

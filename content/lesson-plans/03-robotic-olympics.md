@@ -5,6 +5,10 @@ description: 'Create robotic athletes and celebrate diversity in an Olympic even
 thumbnail: '/roboticolympics.jpg'
 header: '/roboticolympics.jpg'
 category: 'Lesson Plan'
+related:
+- '/lesson-plan/city-building'
+- '/lesson-plan/geometric-world'
+- '/lesson-plan/mechanical-inventions'
 ---
 
 # Learning Objectives

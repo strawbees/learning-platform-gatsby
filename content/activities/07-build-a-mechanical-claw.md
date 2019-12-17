@@ -5,6 +5,10 @@ description: 'Make a 3 finger claw to grab objects from any direction moving a s
 thumbnail: '/claw.jpg'
 header: '/claw.jpg'
 category: 'Activity'
+related:
+- '/lesson-plan/mechanical-inventions'
+- '/activity/make-a-mechanical-arm'
+- '/activity/build-a-mechanical-crane'
 ---
 
 <section component="youtube" url="https://youtu.be/QsTzkzfnWfI"></section>

@@ -5,6 +5,10 @@ description: 'Play with kinetic and potential energy, making connections between
 thumbnail: '/mechanicalinvention.jpg'
 header: '/mechanicalinvention.jpg'
 category: 'Lesson Plan'
+related:
+- '/lesson-plan/city-building'
+- '/lesson-plan/geometric-world'
+- '/lesson-plan/robotic-olympics'
 ---
 
 # Learning Objectives

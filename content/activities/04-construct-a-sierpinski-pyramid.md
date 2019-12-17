@@ -5,6 +5,10 @@ description: 'Construct a modular, fractal structure with tetrahedral shapes.'
 thumbnail: '/sierpinski.jpg'
 header: '/sierpinski.jpg'
 category: 'Activity'
+related:
+- '/lesson-plan/geometric-world'
+- '/activity/build-the-platonic-solids'
+- '/activity/build-a-stacking-tower'
 ---
 
 <section component="youtube" url="https://youtu.be/MFlH7minmJU"></section>

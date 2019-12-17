@@ -5,6 +5,10 @@ description: 'Build a robot that walks and then try to make it run.'
 thumbnail: '/robotracer.jpg'
 header: '/robotracer.jpg'
 category: 'Activity'
+related:
+- '/lesson-plan/robotic-olympics'
+- '/activity/build-the-platonic-solids'
+- '/activity/build-a-catapult'
 ---
 
 <section component="youtube" url="https://youtu.be/VaYw4uI3HYE"></section>

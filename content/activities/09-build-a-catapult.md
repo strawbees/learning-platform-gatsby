@@ -5,6 +5,10 @@ description: 'Launch a projectile across the room with a Strawbees catapult.'
 thumbnail: '/catapult.jpg'
 header: '/catapult.jpg'
 category: 'Activity'
+related:
+- '/lesson-plan/mechanical-inventions'
+- '/activity/build-a-mechanical-claw'
+- '/activity/make-a-mechanical-arm'
 ---
 
 <section component="youtube" url="https://youtu.be/NFeHRBD5Jk8"></section>

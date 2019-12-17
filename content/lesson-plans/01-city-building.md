@@ -5,6 +5,10 @@ description: 'Discuss and explore different community needs, including ways to c
 thumbnail: '/citybuilding.jpg'
 header: '/citybuilding.jpg'
 category: 'Lesson Plan'
+related:
+- '/lesson-plan/geometric-world'
+- '/lesson-plan/robotic-olympics'
+- '/lesson-plan/mechanical-inventions'
 ---
 
 # Learning Objectives

@@ -5,6 +5,10 @@ description: 'Build a truss bridge and use your hands to understand structural i
 thumbnail: '/truss.jpg'
 header: '/truss.jpg'
 category: 'Activity'
+related:
+- '/lesson-plan/city-building'
+- '/exploration/truss-bridge-problem-solving'
+- '/activity/build-a-stacking-tower'
 ---
 
 <section component="youtube" url="https://www.youtube.com/watch?v=3cpk0TWXKOU" ></section>

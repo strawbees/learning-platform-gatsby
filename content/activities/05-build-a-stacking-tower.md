@@ -5,6 +5,10 @@ description: 'Build big by stacking Strawbees cubes and add custom shapes to sty
 thumbnail: '/tower.jpg'
 header: '/tower.jpg'
 category: 'Activity'
+related:
+- '/lesson-plan/city-building'
+- '/lesson-plan/geometric-world'
+- '/activity/build-the-platonic-solids'
 ---
 
 <section component="youtube" url="https://youtu.be/yiay9V7Ye7E"></section>
