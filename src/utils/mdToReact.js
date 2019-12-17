@@ -1,5 +1,5 @@
 import React from "react"
-import { Grid } from '@material-ui/core'
+import { Grid, Box } from '@material-ui/core'
 import { Link, withPrefix } from "gatsby"
 import Typography from '../components/typography'
 import Button from '../components/button'
@@ -48,9 +48,11 @@ function MyGallery(props) {
 }
 function MyThumbnails(props) {
 	return (
-		<Grid container spacing={3} direction="row" justify="center">
-			{props.children}
-		</Grid>
+		<Box py={3}>
+			<Grid container spacing={3} direction="row" justify="center">
+				{props.children}
+			</Grid>
+		</Box>
 	)
 }
 function MyThumbnail(props) {
