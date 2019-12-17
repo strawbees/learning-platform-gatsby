@@ -22,9 +22,44 @@ const categoryColors = {
 	'Exploration': Palette.pink
 }
 
+const RelatedContent = function(props) {
+	return (
+		<Box pb={10} bgcolor={Palette.lightGrey}>
+			<Container maxWidth="md">
+				<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
+					<Grid item xs={12}>
+						<Typography><h1>Related content</h1></Typography>
+					</Grid>
+					{props.posts.map((p, i) => {
+						return (
+							<Grid key={i} item xs={12} sm={6} md={4}>
+								<Link to={p.path}>
+									<Card
+										hover
+										image={withPrefix(p.thumbnail)}
+										labelText={p.category}
+										labelBgcolor={categoryColors[p.category]}>
+										<Typography variant="card header">
+											{p.title}
+										</Typography>
+										<Box pb={1} />
+										<Typography variant="body condensed">
+											{p.description}
+										</Typography>
+									</Card>
+								</Link>
+							</Grid>
+						)
+					})}
+				</Grid>
+			</Container>
+		</Box>
+	)
+}
+
 const IndexPage = (e) => {
 	const post = e.pageContext.post
-	const related = e.pageContext.related
+	const related = e.pageContext.related || []
 	// And we use it here
 	let body = mdToReact(post.content)
 	return (
@@ -54,40 +89,7 @@ const IndexPage = (e) => {
 				</Box>
 			</Grid>
 			<Grid item>
-				<Box pb={10}>
-				<Container maxWidth="md">
-				<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
-					{ // This is so ugly :(
-						(related.length) ?
-						<Grid item xs={12}>
-							<Typography><h1>Related content</h1></Typography>
-						</Grid>
-					: ''
-					}
-					{related.map((p, i) => {
-						return (
-							<Grid key={i} item xs={12} sm={6} md={4}>
-								<Link to={p.path}>
-									<Card
-										hover
-										image={withPrefix(p.thumbnail)}
-										labelText={p.category}
-										labelBgcolor={categoryColors[p.category]}>
-										<Typography variant="card header">
-											{p.title}
-										</Typography>
-										<Box pb={1} />
-										<Typography variant="body condensed">
-											{p.description}
-										</Typography>
-									</Card>
-								</Link>
-							</Grid>
-						)
-					})}
-				</Grid>
-				</Container>
-				</Box>
+				{post.related ? <RelatedContent posts={related} /> : ''}
 			</Grid>
 			<Grid item><LayoutFooter /></Grid>
 		</Grid>
