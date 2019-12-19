@@ -2,8 +2,8 @@
 path: '/lesson-plan/mechanical-inventions'
 title: 'Mechanical Inventions'
 description: 'Play with kinetic and potential energy, making connections between how it is generated, stored, moved and can be transformed.'
-thumbnail: '/mechanicalinvention.jpg'
-header: '/mechanicalinvention.jpg'
+thumbnail: '/mechanicalinventions.jpg'
+header: '/mechanicalinventions.jpg'
 category: 'Lesson Plan'
 related:
 - '/lesson-plan/city-building'
