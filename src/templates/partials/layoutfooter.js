@@ -26,22 +26,22 @@ function LayoutFooter() {
 							</p>
 							<Box px={8}>
 								<Grid container spacing={2} direction="row" justify="space-between">
-									<Grid xs={12} sm={3} item>
+									<Grid xs={3} item>
 										<a href="https://twitter.com/strawbees" target="_blank" rel="noreferer noopener">
 											<img width="100%" alt="twitter icon" src={TwitterIcon} />
 										</a>
 									</Grid>
-									<Grid xs={12} sm={3} item>
+									<Grid xs={3} item>
 										<a href="https://www.instagram.com/strawbees/" target="_blank" rel="noreferer noopener">
 											<img width="100%" alt="instagram icon" src={InstagramIcon} />
 										</a>
 									</Grid>
-									<Grid xs={12} sm={3} item>
+									<Grid xs={3} item>
 										<a href="https://www.facebook.com/strawbees/" target="_blank" rel="noreferer noopener">
 											<img width="100%" alt="facebook icon" src={FacebookIcon} />
 										</a>
 									</Grid>
-									<Grid xs={12} sm={3} item>
+									<Grid xs={3} item>
 										<a href="https://www.youtube.com/channel/UCau3nzMP21AAPMPP-9L_LBQ" target="_blank" rel="noreferer noopener">
 											<img width="100%" alt="youtube icon" src={YoutubeIcon} />
 										</a>
