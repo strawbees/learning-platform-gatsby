@@ -49,6 +49,15 @@ function LayoutFooter() {
 								</Grid>
 							</Box>
 						</Box>
+						<Box textAlign="center">
+							<Typography>
+								<p>
+									<a href="https://strawbees.com/store" target="_blank">
+										Visit our store!
+									</a>
+								</p>
+							</Typography>
+						</Box>
 					</Grid>
 					<Grid item xs={12} sm={4}>
 						<Box textAlign="left">
