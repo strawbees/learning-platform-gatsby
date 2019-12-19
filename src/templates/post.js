@@ -25,7 +25,7 @@ const categoryColors = {
 
 const RelatedContent = function(props) {
 	return (
-		<Box pb={10}>
+		<Box py={6}>
 			<Container maxWidth="md">
 				<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
 					<Grid item xs={12}>
@@ -60,7 +60,7 @@ const RelatedContent = function(props) {
 
 const Downloads = function(props) {
 	return (
-		<Box pb={10} bgcolor={Palette.lightGrey}>
+		<Box pb={4} bgcolor={Palette.lightGrey}>
 			<Container maxWidth="md">
 				<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
 					<Grid item xs={12} style={{textAlign: 'center'}}>
@@ -68,16 +68,19 @@ const Downloads = function(props) {
 							<h1>Downloads</h1>
 						</Typography>
 					</Grid>
-					{props.files.map((file, i) => {
-						console.log(file)
-						return (
-							<Box px={1}>
-								<a href={file.path} target="_blank" rel="noreferer noopener">
-									<Button variant="icon" icon="pdf">{file.name}</Button>
-								</a>
-							</Box>
-						)
-					})}
+					<Grid item xs={12}>
+						<Box display="flex" flexDirection="row" justifyContent="center">
+						{props.files.map((file, i) => {
+							return (
+								<Box px={1}>
+									<a href={file.path} target="_blank" rel="noreferer noopener">
+										<Button variant="icon" icon="pdf">{file.name}</Button>
+									</a>
+								</Box>
+							)
+						})}
+						</Box>
+					</Grid>
 				</Grid>
 			</Container>
 		</Box>
@@ -116,10 +119,10 @@ const PostPage = (e) => {
 				</Box>
 			</Grid>
 			<Grid item>
-				{post.related ? <RelatedContent posts={related} /> : ''}
+			{post.downloads ? <Downloads files={post.downloads} /> : ''}
 			</Grid>
 			<Grid item>
-				{post.downloads ? <Downloads files={post.downloads} /> : ''}
+				{post.related ? <RelatedContent posts={related} /> : ''}
 			</Grid>
 			<Grid item><LayoutFooter /></Grid>
 		</Grid>
