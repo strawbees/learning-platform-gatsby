@@ -98,6 +98,24 @@ exports.createPages = async function(e) {
 		context: { posts: posts }
 	})
 
+	createPage({ // Activities
+		path: '/activities',
+		component: require.resolve('./src/templates/index.js'),
+		context: { posts: activities }
+	})
+
+	createPage({ // Lesson Plan
+		path: '/lesson-plans',
+		component: require.resolve('./src/templates/index.js'),
+		context: { posts: lessonPlans }
+	})
+
+	createPage({ // Explorations
+		path: '/explorations',
+		component: require.resolve('./src/templates/index.js'),
+		context: { posts: explorations }
+	})
+
 	posts.forEach(function(post) {
 		let related = post.related.map((postId) => {
 			return postsHash[postId]
