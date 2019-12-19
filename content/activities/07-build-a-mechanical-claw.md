@@ -9,6 +9,9 @@ related:
 - '/lesson-plan/mechanical-inventions'
 - '/activity/make-a-mechanical-arm'
 - '/activity/build-a-mechanical-crane'
+downloads:
+- name: 'Video instruction'
+  path: http://strawbees-learning-videos.s3.amazonaws.com/Strawbees%20mechanical%20claw.shrink.mp4
 ---
 
 <section component="youtube" url="https://youtu.be/QsTzkzfnWfI"></section>

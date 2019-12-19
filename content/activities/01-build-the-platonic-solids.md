@@ -9,6 +9,12 @@ related:
 - '/lesson-plan/geometric-world'
 - '/activity/construct-a-sierpinski-pyramid'
 - '/activity/build-a-stacking-tower'
+downloads:
+- name: 'Video instruction'
+  path: http://strawbees-learning-videos.s3.amazonaws.com/Strawbees%20platonic%20solids.shrink.mp4
+- name: 'Blueprints'
+  path: /platonicblueprints.pdf
+
 ---
 
 <section component="youtube" url="https://youtu.be/ubChdzfykHg"></section>

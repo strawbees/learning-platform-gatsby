@@ -9,6 +9,9 @@ related:
 - '/lesson-plan/geometric-world'
 - '/activity/build-the-platonic-solids'
 - '/activity/build-a-stacking-tower'
+downloads:
+- name: 'Video instruction'
+  path: http://strawbees-learning-videos.s3.amazonaws.com/Construct%20a%20Sierpinski%20Pyramid%20-%20English.shrink.mp4
 ---
 
 <section component="youtube" url="https://youtu.be/MFlH7minmJU"></section>

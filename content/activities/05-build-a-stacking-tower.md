@@ -9,6 +9,9 @@ related:
 - '/lesson-plan/city-building'
 - '/lesson-plan/geometric-world'
 - '/activity/build-the-platonic-solids'
+downloads:
+- name: 'Video instruction'
+  path: http://strawbees-learning-videos.s3.amazonaws.com/Build%20a%20Stacking%20Tower.mp4
 ---
 
 <section component="youtube" url="https://youtu.be/yiay9V7Ye7E"></section>

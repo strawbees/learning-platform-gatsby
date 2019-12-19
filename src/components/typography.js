@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import './globalStyles.css'
 
 const baseStyle = {
 	display: 'inline-block',

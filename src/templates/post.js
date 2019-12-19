@@ -2,6 +2,7 @@ import React from "react"
 import { Link, withPrefix } from 'gatsby'
 import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../components/typography'
+import Button from '../components/button'
 import Palette from '../components/palette'
 import Card from '../components/card'
 import SEO from '../components/seo'
@@ -24,7 +25,7 @@ const categoryColors = {
 
 const RelatedContent = function(props) {
 	return (
-		<Box pb={10} bgcolor={Palette.lightGrey}>
+		<Box pb={10}>
 			<Container maxWidth="md">
 				<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
 					<Grid item xs={12}>
@@ -57,7 +58,33 @@ const RelatedContent = function(props) {
 	)
 }
 
-const IndexPage = (e) => {
+const Downloads = function(props) {
+	return (
+		<Box pb={10} bgcolor={Palette.lightGrey}>
+			<Container maxWidth="md">
+				<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
+					<Grid item xs={12} style={{textAlign: 'center'}}>
+						<Typography>
+							<h1>Downloads</h1>
+						</Typography>
+					</Grid>
+					{props.files.map((file, i) => {
+						console.log(file)
+						return (
+							<Box px={1}>
+								<a href={file.path} target="_blank" rel="noreferer noopener">
+									<Button variant="icon" icon="pdf">{file.name}</Button>
+								</a>
+							</Box>
+						)
+					})}
+				</Grid>
+			</Container>
+		</Box>
+	)
+}
+
+const PostPage = (e) => {
 	const post = e.pageContext.post
 	const related = e.pageContext.related || []
 	// And we use it here
@@ -91,9 +118,12 @@ const IndexPage = (e) => {
 			<Grid item>
 				{post.related ? <RelatedContent posts={related} /> : ''}
 			</Grid>
+			<Grid item>
+				{post.downloads ? <Downloads files={post.downloads} /> : ''}
+			</Grid>
 			<Grid item><LayoutFooter /></Grid>
 		</Grid>
 	)
 }
 
-export default IndexPage
+export default PostPage

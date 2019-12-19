@@ -9,6 +9,9 @@ related:
 - '/lesson-plan/robotic-olympics'
 - '/activity/build-the-platonic-solids'
 - '/activity/build-a-catapult'
+downloads:
+- name: 'Video instruction'
+  path: http://strawbees-learning-videos.s3.amazonaws.com/Strawbees%20RobotRacer.shrink.mp4
 ---
 
 <section component="youtube" url="https://youtu.be/VaYw4uI3HYE"></section>

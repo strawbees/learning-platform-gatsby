@@ -9,6 +9,9 @@ related:
 - '/lesson-plan/city-building'
 - '/exploration/truss-bridge-problem-solving'
 - '/activity/build-a-stacking-tower'
+downloads:
+- name: 'Video instruction'
+  path: http://strawbees-learning-videos.s3.amazonaws.com/Strawbees%20Bridge.shrink.mp4
 ---
 
 <section component="youtube" url="https://www.youtube.com/watch?v=3cpk0TWXKOU" ></section>
