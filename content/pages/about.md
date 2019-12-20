@@ -13,7 +13,7 @@ This site is a virtual oasis for innovative teachers who embrace hands-on learni
 
 This platform is here to equip you with the teaching resources and mindset you need to enhance student learning with Strawbees. To help you integrate this project-based approach in your classroom, we provide 3 different approaches for [using Strawbees in your classroom](/how-to-use-strawbees-in-your-classroom).
 
-# Understanding the Strawbees Mindset
+## Understanding the Strawbees Mindset
 
 Strawbees is not only about making things, but the environment in which they are made. We want to create a learning environment that helps children engage in projects that reflect their ideas and how they see the world. This is readily done through student-centered projects that invite children to explore the variety and versatility of what Strawbees has to offer.
 
@@ -45,13 +45,13 @@ The beauty for teachers is that most Strawbees basic builds require little or no
 
 This is the kind of learning environment and empowered mindset we want to help you create.
 
-# Our Vision of Success
+## Our Vision of Success
 
 A successful classroom with Strawbees is a dynamic and collaborative playground with opportunities for students to interact, experiment, and create overlapping projects. Designs can evolve from a stationary catapult into one that walks, or from a mechanical arm into a tetrahedron-inspired creature. In this imaginative space of making and playing, children refine their creative thinking while building projects they care about.
 
 Success is defined by seeing your students fully engage in the Creative Learning Spiral. When students are excited to learn, demonstrate a growing understanding of new knowledge, and improve skills such as collaboration and problem-solving through CLS projects, this is the ultimate achievement. Success is seen in students’ process of learning with Strawbees over a final product.
 
-# Connecting Our Community
+## Connecting Our Community
 
 Our lesson plans embrace a wide range of activities that can be scaffolded to a variety of complexities. Because our lessons are agile and invite modification, there is much that our community can learn from one another.
 

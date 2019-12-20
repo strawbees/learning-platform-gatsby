@@ -16,7 +16,7 @@ Our learning expectations are tightly coupled with the Sustainable Development G
 
 Some ideas might resonate with you and your organization, some might be the direction you want to move towards or avoid. In any case, we hope Strawbees can be the bridge between you and ideas that seemed impossible before.
 
-# Creative Learning Content
+## Creative Learning Content
 
 If you are looking for flexible learning opportunities, low entry barriers, wide range of outcomes and high expectations of what can be achieved, you will find the Creative Learning Spiral from MIT’s Lifelong Kindergarten as the backbone of our [Lesson Plans](/lesson-plans).
 
@@ -32,7 +32,7 @@ Strawbees lesson plans can be used as-is, however they also invite innovation. T
 
 Please note: regardless of the activity time suggestions, we encourage you to allow as much time as possible for students to iterate their projects as they travel through the Creative Learning Spiral. It’s important for children to have flexibility in working at their own pace.
 
-## Why the Creative Learning Spiral?
+### Why the Creative Learning Spiral?
 
 There is tremendous power in hands-on project-based learning that encourages students to imagine, create, play, share, and reflect together with the guidance of a caring teacher. The research and success of the Lifelong Kindergarten group at the MIT Media Lab has inspired our pedagogical approach, with a particular emphasis on the 4 P’s of creative learning [3].
 
@@ -42,11 +42,21 @@ It is essential for us to cultivate creative thinking in younger generations, wh
 
 Through creative and collaborative project-based learning, this is exactly what Strawbees aspires to do.
 
-# Competency-Based Content
+## Competency-Based Content
 
-If you have a specific set of goals to be achieved and are searching for ways in which your students can have a tangible and kinesthetic experience with it, we recommend you to have a look at [Explorations](/explorations). You will find clear learning expectations followed by a rubric and a template for you to modify it to your taste.
+If you have a specific set of goals to be achieved and are searching for ways in which your students can have a tangible and kinesthetic experience with it, we recommend you to have a look at [Explorations](/explorations). You will find guides to implement [competency-based education ](https://www.edglossary.org/competency-based-learning/) strategies in your classroom.
 
-The Explorations are examples of situations you can create with a specific Activity to gain or demonstrate proficiency.
+### What is competency-based education?
+
+Competency-based learning refers to systems of instruction, assessment, grading, and academic reporting that are based on students demonstrating that they have learned the knowledge and skills they are expected to learn as they progress through their education.
+
+### How does it work
+
+In public schools, competency-based systems use state learning standards to determine academic expectations and define “competency” or “proficiency” in a given course, subject area, or grade level (although other sets of standards may also be used, including standards developed by districts and schools or by subject-area organizations).
+
+### Why?
+
+The general goal of competency-based learning is to ensure that students are acquiring the knowledge and skills that are deemed to be essential to success in school, higher education, careers, and adult life. If students fail to meet expected learning standards, they typically receive additional instruction, practice time, and academic support to help them achieve competency or meet the expected standards.
 
 # Stand-Alone Activity
 
