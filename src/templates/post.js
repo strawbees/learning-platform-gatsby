@@ -73,7 +73,7 @@ const Downloads = function(props) {
 						{props.files.map((file, i) => {
 							return (
 								<Box px={1}>
-									<a href={file.path} target="_blank" rel="noreferer noopener">
+									<a href={file.path} target="_blank" rel="noopener noreferrer">
 										<Button variant="icon" icon="pdf">{file.name}</Button>
 									</a>
 								</Box>
