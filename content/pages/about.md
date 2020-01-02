@@ -1,6 +1,6 @@
 ---
 path: '/about'
-title: 'About Strawbees Learning'
+title: 'Strawbees Learning'
 description: 'Read more about the Strawbees pedagogical approach, mindset and vision of success.'
 thumbnail: '/geometricworld.jpg'
 header: '/geometricworld.jpg'
@@ -25,7 +25,6 @@ Over the years we have delighted in observing how children play with our materia
 ![](/platonic6.jpg)
 ![](/platonic7.jpg)
 ![](/robotracer8.jpg)
-![](/robotracer9.jpg)
 ![](/robotracer10.jpg)
 ![](/truss2.jpg)
 ![](/truss3.jpg)
@@ -33,8 +32,6 @@ Over the years we have delighted in observing how children play with our materia
 ![](/tower8.jpg)
 ![](/sierpinski3.jpg)
 ![](/sierpinski4.jpg)
-![](/sierpinski5.jpg)
-![](/sierpinski6.jpg)
 ![](/sierpinski7.jpg)
 
 </section>
@@ -49,7 +46,9 @@ This is the kind of learning environment and empowered mindset we want to help y
 
 A successful classroom with Strawbees is a dynamic and collaborative playground with opportunities for students to interact, experiment, and create overlapping projects. Designs can evolve from a stationary catapult into one that walks, or from a mechanical arm into a tetrahedron-inspired creature. In this imaginative space of making and playing, children refine their creative thinking while building projects they care about.
 
-Success is defined by seeing your students fully engage in the Creative Learning Spiral. When students are excited to learn, demonstrate a growing understanding of new knowledge, and improve skills such as collaboration and problem-solving through CLS projects, this is the ultimate achievement. Success is seen in students’ process of learning with Strawbees over a final product.
+![Creative Learning Spiral: Imagine, Create, Play, Share and Reflect](/creativelearningspiral.jpg)
+
+Success is defined by seeing your students fully engage in the Creative Learning Spiral. When students are excited to learn, demonstrate a growing understanding of new knowledge, and improve skills such as collaboration and problem-solving through projects, this is the ultimate achievement. Success is seen in students’ process of learning with Strawbees over a final product.
 
 ## Connecting Our Community
 

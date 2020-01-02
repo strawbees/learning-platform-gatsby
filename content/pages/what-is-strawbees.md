@@ -10,7 +10,14 @@ category: 'Support Page'
 
 ![You can build structures, mechanical contraptions, and robotic mechanisms all with these 4 connectors.](/connectors.png)
 ![There are basic 3 instructions and innumerous ways to combine them.](/operations.png)
-![Everything is built combining fully comprehensible parts.](/mechanicalinventions.jpg)
+![](/platonic.jpg)
+![](/truss.jpg)
+![](/tower.jpg)
+![](/arm.jpg)
+![](/claw.jpg)
+![](/crane.jpg)
+![](/sierpinski.jpg)
+![](/catapult.jpg)
 
 </section>
 
@@ -22,10 +29,11 @@ No additional parts are required. You can build structures, mechanical contrapti
 
 <section component="gallery">
 
-![](/geometricworld.jpg)
-![](/sierpinski.jpg)
-![](/sierpinski5.jpg)
-![](/sierpinski6.jpg)
+![Everything can be built by combining fully comprehensible parts.](/mechanicalinventions.jpg)
+![Change the straws length to build in different scales.](/geometricworld.jpg)
+![Build big by connecting simple and modular parts.](/sierpinski.jpg)
+![Inspect and explore geometric shapes from inside out.](/sierpinski5.jpg)
+![Celebrate team building and collaboration with a massive construction.](/sierpinski6.jpg)
 
 </section>
 
@@ -43,11 +51,11 @@ We want Strawbees to be a way people can read and make sense of the world by mak
 
 <section component="gallery">
 
-![Infinite Kit](/infinitekit.jpg)
+![Sustainability Kit](/infinitekit.jpg)
 ![STEAM School Kit](/schoolkit.jpg)
 ![Coding and Robotics Kit](/codingandroboticskit.jpg)
 ![Crazy Scientist Kit](/crazyscientistkit.jpg)
 
 </section>
 
-Visit our [store](https://strawbees.com/store) to find out more.
+**Visit our [store](https://strawbees.com/store) to find out more.**

@@ -10,7 +10,7 @@ category: 'Support Page'
 
 At Strawbees we recognize each classroom is unique and that is why we offer a range of equally excellent products and content, balancing personalization and structure without compromising quality.
 
-You will have access to a full range of Activities, Lesson plans, Explorations as well as different ways to navigate through it, highlighting different learning strategies and expected outcomes.
+You will have access to a full range of [Lesson Plans](/lesson-plans), [Activities](/activities) and [Explorations](/explorations) as well as different ways to navigate through it, highlighting different learning strategies and expected outcomes.
 
 Our learning expectations are tightly coupled with the Sustainable Development Goals and focused mainly on transferable skills, leaving room for you to incorporate the expectations from your local standards.
 
@@ -18,7 +18,16 @@ Some ideas might resonate with you and your organization, some might be the dire
 
 ## Creative Learning Content
 
-If you are looking for flexible learning opportunities, low entry barriers, wide range of outcomes and high expectations of what can be achieved, you will find the Creative Learning Spiral from MIT’s Lifelong Kindergarten as the backbone of our [Lesson Plans](/lesson-plans).
+If you are looking for flexible learning opportunities, low entry barriers, wide range of outcomes and high expectations of what can be achieved, you will find the Creative Learning Spiral from [MIT’s Lifelong Kindergarten](https://www.media.mit.edu/groups/lifelong-kindergarten/overview/) as the backbone of our [Lesson Plans](/lesson-plans).
+
+<section component="gallery">
+
+![City Building: Discuss and explore different community needs, including ways to connect individual neighborhoods into a unified city.](/citybuilding.jpg)
+![Robotic Olympics: Create robotic athletes and celebrate diversity in an Olympic event!](/roboticolympics.jpg)
+![Geometric World: Develop spatial reasoning by creating and identifying geometric shapes.](/geometricworld.jpg)
+![Mechanical Inventions: Play with kinetic and potential energy, making connections between how it is generated, stored, moved and can be transformed.](/mechanicalinventions.jpg)
+
+</section>
 
 The Lesson Plans are facilitation guides on how to engage in thematic projects and learn along the way, focusing on qualitative measures of learning, student agency and intrinsic motivation. Each lesson includes:
 
@@ -50,6 +59,15 @@ If you have a specific set of goals to be achieved and are searching for ways in
 
 Competency-based learning refers to systems of instruction, assessment, grading, and academic reporting that are based on students demonstrating that they have learned the knowledge and skills they are expected to learn as they progress through their education.
 
+<section component="gallery">
+
+![](/cbeframework.jpg)
+![](/cbeproficiencysystem.jpg)
+
+</section>
+
+Images above by [Great Schools Partnership (2018)](https://www.greatschoolspartnership.org/) is licensed under a [Creative Commons AttributionNonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
 ### How does it work
 
 In public schools, competency-based systems use state learning standards to determine academic expectations and define “competency” or “proficiency” in a given course, subject area, or grade level (although other sets of standards may also be used, including standards developed by districts and schools or by subject-area organizations).
@@ -68,4 +86,4 @@ If you already have a plan and is looking for inspiration, examples to show your
 
 [2] Resnick, M & Robinson, K, (2017). Lifelong Kindergarten: Cultivating Creativity Through Projects, Passion, Peers, and Play.
 
-[3] https://learn.media.mit.edu/lcl/
+[3] Resnick, M (2014). [Give P’s a Chance: Projects, Peers, Passion, Play](https://web.media.mit.edu/~mres/papers/constructionism-2014.pdf)
