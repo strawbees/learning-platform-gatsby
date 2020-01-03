@@ -1,54 +1,64 @@
 {
-	"name": "learning-platform-gatsby",
-	"private": true,
-	"description": "Strawbees Learning Platform (Static site version)",
-	"version": "0.1.0",
-	"scripts": {
-		"build": "gatsby build --prefix-paths",
-		"develop": "gatsby develop",
-		"start": "npm run develop",
-		"serve": "gatsby serve",
-		"clean": "gatsby clean",
-		"deploy-gh": "gatsby build --prefix-paths && gh-pages -d public",
-		"deploy-s3": "gatsby build --prefix-paths && strawbees-s3-publisher -b strawbees-learning-stage -s ./public --sync",
-		"deploy-s3-prod": "gatsby build --prefix-paths && strawbees-s3-publisher -b strawbees-learning-production -s ./public --sync",
-		"test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-	},
-	"dependencies": {
-		"@material-ui/core": "^4.7.0",
-		"@material-ui/styles": "^4.7.1",
-		"@strawbees/s3-publisher": "^0.2.0",
-		"dotenv": "^8.2.0",
-		"frontmatter": "0.0.3",
-		"gatsby": "^2.18.4",
-		"gatsby-image": "^2.2.34",
-		"gatsby-plugin-google-analytics": "^2.1.29",
-		"gatsby-plugin-manifest": "^2.2.30",
-		"gatsby-plugin-material-ui": "^2.1.6",
-		"gatsby-plugin-offline": "^3.0.24",
-		"gatsby-plugin-react-helmet": "^3.1.16",
-		"gatsby-plugin-remove-serviceworker": "^1.0.0",
-		"gatsby-plugin-sharp": "^2.3.4",
-		"gatsby-source-filesystem": "^2.1.39",
-		"gatsby-transformer-sharp": "^2.3.6",
-		"gh-pages": "^2.1.1",
-		"prop-types": "^15.7.2",
-		"react": "^16.12.0",
-		"react-dom": "^16.12.0",
-		"react-helmet": "^5.2.1",
-		"rehype-raw": "^4.0.1",
-		"rehype-react": "^4.0.1",
-		"remark": "^11.0.2",
-		"remark-parse": "^7.0.2",
-		"remark-rehype": "^5.0.0",
-		"unified": "^8.4.2"
-	},
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/murilopolese/learning-platform-gatsby"
-	},
-	"bugs": {
-		"url": "https://github.com/murilopolese/learning-platform-gatsby/issues"
-	}
+  "name": "learning-platform-gatsby",
+  "private": true,
+  "description": "Strawbees Learning Platform (Static site version)",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "gatsby build --prefix-paths",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "deploy-gh": "gatsby build --prefix-paths && gh-pages -d public",
+    "deploy-s3": "gatsby build --prefix-paths && strawbees-s3-publisher -b strawbees-learning-stage -s ./public --sync",
+    "deploy-s3-prod": "gatsby build --prefix-paths && strawbees-s3-publisher -b strawbees-learning-production -s ./public --sync",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.7.0",
+    "@material-ui/styles": "^4.7.1",
+    "@strawbees/s3-publisher": "^0.2.0",
+    "dotenv": "^8.2.0",
+    "frontmatter": "0.0.3",
+    "gatsby": "^2.18.4",
+    "gatsby-image": "^2.2.34",
+    "gatsby-plugin-google-analytics": "^2.1.29",
+    "gatsby-plugin-manifest": "^2.2.30",
+    "gatsby-plugin-material-ui": "^2.1.6",
+    "gatsby-plugin-offline": "^3.0.24",
+    "gatsby-plugin-react-helmet": "^3.1.16",
+    "gatsby-plugin-remove-serviceworker": "^1.0.0",
+    "gatsby-plugin-sharp": "^2.3.4",
+    "gatsby-source-filesystem": "^2.1.39",
+    "gatsby-transformer-sharp": "^2.3.6",
+    "gh-pages": "^2.1.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "rehype-raw": "^4.0.1",
+    "rehype-react": "^4.0.1",
+    "remark": "^11.0.2",
+    "remark-parse": "^7.0.2",
+    "remark-rehype": "^5.0.0",
+    "unified": "^8.4.2"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/murilopolese/learning-platform-gatsby"
+  },
+  "bugs": {
+    "url": "https://github.com/murilopolese/learning-platform-gatsby/issues"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "babel-loader": "^8.0.6"
+  }
 }
