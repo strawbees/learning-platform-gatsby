@@ -17,10 +17,10 @@ function LayoutHero() {
 									textAlign={{xs: 'center', md: 'left'}}
 									color="white"
 									px={2}>
-									<Typography variant="hero scream">
+									<Typography variant="hero-h1">
 										Welcome to Strawbees Learning
 									</Typography>
-									<Typography variant="hero text">
+									<Typography variant="hero-body">
 										<p>{config.siteMetadata.description}</p>
 									</Typography>
 								</Box>

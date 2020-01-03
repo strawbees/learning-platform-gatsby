@@ -19,11 +19,11 @@ function LayoutHero(props) {
 									bgcolor="rgba(255, 255, 255, 0.85)"
 									textAlign={{xs: 'center', md: 'left'}}
 									>
-									<Typography variant="hero header">
+									<Typography variant="hero-h1">
 										{title}
 									</Typography>
-									<Typography variant="hero text">
-										{description}
+									<Typography variant="hero-body">
+										<p>{description}</p>
 									</Typography>
 								</Box>
 							</Grid>

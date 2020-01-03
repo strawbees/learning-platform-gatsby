@@ -11,7 +11,7 @@ function ComingSoon() {
 			<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
 				<Grid item xs={12}>
 					<Box pt={6} pb={3} textAlign="center">
-						<Typography variant="hero header">
+						<Typography variant="hero-h1">
 							Coming soon
 						</Typography>
 					</Box>
@@ -23,11 +23,11 @@ function ComingSoon() {
 							image={withPrefix('/blinkingstar.jpg')}
 							labelText="Activity"
 							labelBgcolor={Palette.blue}>
-							<Typography variant="card header">
+							<Typography variant="card-h1">
 								Build a Blinking Star
 							</Typography>
 							<Box pb={1} />
-							<Typography variant="body condensed">
+							<Typography variant="content-body">
 								Build a star and program the LEDs to blink like the night sky.
 							</Typography>
 						</Card>
@@ -40,11 +40,11 @@ function ComingSoon() {
 							image={withPrefix('/musicalxylophone.jpg')}
 							labelText="Activity"
 							labelBgcolor={Palette.blue}>
-							<Typography variant="card header">
+							<Typography variant="card-h1">
 								Create a Musical Xylophone
 							</Typography>
 							<Box pb={1} />
-							<Typography variant="body condensed">
+							<Typography variant="content-body">
 								Construct a xylophone upcycling materials. Program the musical
 								instrument and play a little melody.
 							</Typography>
@@ -58,11 +58,11 @@ function ComingSoon() {
 							image={withPrefix('/dancingrobot.jpg')}
 							labelText="Activity"
 							labelBgcolor={Palette.blue}>
-							<Typography variant="card header">
+							<Typography variant="card-h1">
 								Create a Dancing Robot
 							</Typography>
 							<Box pb={1} />
-							<Typography variant="body condensed">
+							<Typography variant="content-body">
 								Animate a simple companion and learn more about programming and
 								construction to make movement.
 							</Typography>
@@ -76,11 +76,11 @@ function ComingSoon() {
 							image={withPrefix('/musicalpianodrum.jpg')}
 							labelText="Activity"
 							labelBgcolor={Palette.blue}>
-							<Typography variant="card header">
+							<Typography variant="card-h1">
 								Create a Musical Piano and Drums
 							</Typography>
 							<Box pb={1} />
-							<Typography variant="body condensed">
+							<Typography variant="content-body">
 								Rock out programming a simple instrument constructed with
 								conductive materials and play music on the computer.
 							</Typography>
@@ -94,11 +94,11 @@ function ComingSoon() {
 							image={withPrefix('/afraidofthedarkpig.jpg')}
 							labelText="Activity"
 							labelBgcolor={Palette.blue}>
-							<Typography variant="card header">
+							<Typography variant="card-h1">
 								Create an Afraid of the Dark Pig
 							</Typography>
 							<Box pb={1} />
-							<Typography variant="body condensed">
+							<Typography variant="content-body">
 								Construct and code a pig that is sensitive to darkness.
 							</Typography>
 						</Card>
@@ -111,11 +111,11 @@ function ComingSoon() {
 							image={withPrefix('/rollercoaster.jpg')}
 							labelText="Activity"
 							labelBgcolor={Palette.blue}>
-							<Typography variant="card header">
+							<Typography variant="card-h1">
 								Build a Roller Coaster
 							</Typography>
 							<Box pb={1} />
-							<Typography variant="body condensed">
+							<Typography variant="content-body">
 								Build a track for a ping pong ball to roll and then bring it
 								back to the top with a lift.
 							</Typography>

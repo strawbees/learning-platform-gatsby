@@ -51,7 +51,7 @@ function Card(props) {
 		<Box className={classes.card}>
 			<Box className={classes.image}>
 				<Box className={classes.label}>
-					<Typography variant="label">{props.labelText}</Typography>
+					<Typography variant="card-label">{props.labelText}</Typography>
 				</Box>
 			</Box>
 			<Box p={3}>

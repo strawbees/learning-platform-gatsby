@@ -65,10 +65,11 @@ function MyThumbnail(props) {
 					description={props.description}
 					labelText={props.labelText}
 					labelColor={props.labelColor}
-					labelBgcolor={props.labelBgcolor}
-					>
-					<Typography variant="card header">{props.title}</Typography>
-					<Typography variant="body condensed">{props.description}</Typography>
+					labelBgcolor={props.labelBgcolor}>
+					<Typography variant="card-h1">{props.title}</Typography>
+					<Typography variant="card-body">
+						<p>{props.description}</p>
+					</Typography>
 				</Card>
 			</Link>
 		</Grid>

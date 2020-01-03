@@ -17,7 +17,7 @@ const NotFoundPage = () => (
 			<Box py={4} textAlign="center">
 				<Container maxWidth="lg">
 					<p>
-						<Typography variant="header 1">
+						<Typography variant="content-h1">
 							404: Page not found
 						</Typography>
 					</p>

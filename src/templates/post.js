@@ -40,11 +40,11 @@ const RelatedContent = function(props) {
 										image={withPrefix(p.thumbnail)}
 										labelText={p.category}
 										labelBgcolor={categoryColors[p.category]}>
-										<Typography variant="card header">
+										<Typography variant="card-h1">
 											{p.title}
 										</Typography>
 										<Box pb={1} />
-										<Typography variant="body condensed">
+										<Typography variant="card-body">
 											{p.description}
 										</Typography>
 									</Card>
