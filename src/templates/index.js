@@ -5,28 +5,37 @@ import Palette from '../components/palette.js'
 import Typography from '../components/typography.js'
 import Card from '../components/card.js'
 import SEO from '../components/seo.js'
-import config from '../../gatsby-config.js'
 import '../globalStyles.css'
-import '../utils/unregister_worker.js'
 
 import LayoutMenu from './partials/layoutmenu'
-import LayoutHero from './partials/layouthero_home'
+import LayoutHero from './partials/layouthero'
 import LayoutFooter from './partials/layoutfooter'
 import ComingSoon from './partials/comingsoon'
 
-const categoryColors = {
-	'Activity': Palette.blue,
-	'Lesson Plan': Palette.yellow,
-	'Exploration': Palette.pink
+const IndexPage = (e) => {
+	const posts = e.pageContext.posts
+	return (
+		<Grid container direction="column">
+			<Grid item><LayoutMenu /></Grid>
+			<Grid item><LayoutIndexHero /></Grid>
+			<Grid item><LayoutFeed posts={posts} /></Grid>
+			<Grid item><LayoutFooter /></Grid>
+		</Grid>
+	)
 }
 
 function LayoutFeed({ posts }) {
+	const categoryColors = {
+		'Activity': Palette.blue,
+		'Lesson Plan': Palette.yellow,
+		'Exploration': Palette.pink
+	}
 	return (
 		<Box py={4}>
 			<SEO
 				title="Strawbees Learning"
 				image={withPrefix('/mechanicalinventions.jpg')}
-				description={config.siteMetadata.description}
+				description="Explore our virtual oasis for innovative teachers who embrace creative thinking and hands-on learning with Strawbees."
 			/>
 			<Container maxWidth="lg">
 				<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
@@ -56,17 +65,25 @@ function LayoutFeed({ posts }) {
 		</Box>
 	)
 }
-
-
-const IndexPage = (e) => {
-	const posts = e.pageContext.posts
+function LayoutIndexHero() {
 	return (
-		<Grid container direction="column">
-			<Grid item><LayoutMenu /></Grid>
-			<Grid item><LayoutHero /></Grid>
-			<Grid item><LayoutFeed posts={posts} /></Grid>
-			<Grid item><LayoutFooter /></Grid>
-		</Grid>
+		<LayoutHero
+			shadeColor="#525252"
+			shadeOpacity={0.5}
+			bgImage="/homepageheader.jpg"
+			>
+			<Box
+				textAlign={{xs: 'center', md: 'left'}}
+				color="white"
+				px={2}>
+				<Typography variant="hero-h1">
+					Welcome to Strawbees Learning
+				</Typography>
+				<Typography variant="hero-body">
+					<p>Explore our virtual oasis for innovative teachers who embrace creative thinking and hands-on learning with Strawbees.</p>
+				</Typography>
+			</Box>
+		</LayoutHero>
 	)
 }
 

@@ -7,10 +7,9 @@ import Palette from '../components/palette'
 import Card from '../components/card'
 import SEO from '../components/seo'
 import LayoutMenu from './partials/layoutmenu'
-import LayoutHero from './partials/layouthero_post'
+import LayoutHero from './partials/layouthero'
 import LayoutFooter from './partials/layoutfooter'
 import '../globalStyles.css'
-import '../utils/unregister_worker.js'
 /*
 Because the humans didn't write javascript we can't use it on `gatsby-node.js`
 so we have to add this here instead. :facepalm:
@@ -23,6 +22,61 @@ const categoryColors = {
 	'Exploration': Palette.pink
 }
 
+const PostPage = (e) => {
+	const post = e.pageContext.post
+	const related = e.pageContext.related || []
+	// Convert markdown to react with our own components
+	let body = mdToReact(post.content)
+	return (
+		<Grid container direction="column">
+			<SEO
+				title={post.title}
+				description={post.description}
+				image={withPrefix(post.thumbnail)}
+				/>
+			<Grid item><LayoutMenu /></Grid>
+			<Grid item><LayoutHeroPost post={post} /></Grid>
+			<Grid item>
+				<Box py={3}>
+					<Container maxWidth="md">
+						<div id="content">
+							<Typography>
+								{body}
+							</Typography>
+						</div>
+					</Container>
+				</Box>
+			</Grid>
+			<Grid item>
+			{post.downloads ? <Downloads files={post.downloads} /> : ''}
+			</Grid>
+			<Grid item>
+				{post.related ? <RelatedContent posts={related} /> : ''}
+			</Grid>
+			<Grid item><LayoutFooter /></Grid>
+		</Grid>
+	)
+}
+
+const LayoutHeroPost = function({post}) {
+	return (
+		<LayoutHero
+			bgImage={post.header}>
+			<Box p={4} style={{borderRadius: '1em'}}
+				color={Palette.black}
+				bgcolor="rgba(255, 255, 255, 0.85)"
+				textAlign={{xs: 'center', md: 'left'}}
+				>
+				<Typography variant="hero-h1">
+					{post.title}
+				</Typography>
+				<Typography variant="hero-body">
+					<p>{post.description}</p>
+				</Typography>
+			</Box>
+		</LayoutHero>
+	)
+}
 const RelatedContent = function(props) {
 	return (
 		<Box py={6}>
@@ -57,7 +111,6 @@ const RelatedContent = function(props) {
 		</Box>
 	)
 }
-
 const Downloads = function(props) {
 	return (
 		<Box pb={4} bgcolor={Palette.lightGrey}>
@@ -87,46 +140,5 @@ const Downloads = function(props) {
 	)
 }
 
-const PostPage = (e) => {
-	const post = e.pageContext.post
-	const related = e.pageContext.related || []
-	// And we use it here
-	let body = mdToReact(post.content)
-	return (
-		<Grid container direction="column">
-			<SEO
-				title={post.title}
-				description={post.description}
-				image={withPrefix(post.thumbnail)}
-				/>
-			<Grid item><LayoutMenu /></Grid>
-			<Grid item>
-				<LayoutHero
-					title={post.title}
-					description={post.description}
-					bgimage={post.header}
-					/>
-			</Grid>
-			<Grid item>
-				<Box py={3}>
-					<Container maxWidth="md">
-						<div id="content">
-							<Typography>
-								{body}
-							</Typography>
-						</div>
-					</Container>
-				</Box>
-			</Grid>
-			<Grid item>
-			{post.downloads ? <Downloads files={post.downloads} /> : ''}
-			</Grid>
-			<Grid item>
-				{post.related ? <RelatedContent posts={related} /> : ''}
-			</Grid>
-			<Grid item><LayoutFooter /></Grid>
-		</Grid>
-	)
-}
 
 export default PostPage

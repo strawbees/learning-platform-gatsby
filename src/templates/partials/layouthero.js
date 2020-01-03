@@ -1,33 +1,29 @@
 import React from "react"
 import { withPrefix } from "gatsby"
 import { Container, Grid, Box } from '@material-ui/core'
-import Palette from '../../components/palette.js'
 import Typography from '../../components/typography.js'
 import Hero from '../../components/hero.js'
 
-function LayoutHero(props) {
-	let { title, description, bgimage } = props
+function LayoutHero({
+	shadeColor,
+	shadeOpacity,
+	bgImage,
+	children
+}) {
 	return (
-		<Hero bgimage={withPrefix(bgimage)}>
+		<Hero
+			shadecolor={shadeColor}
+			shadeopacity={shadeOpacity}
+			bgimage={withPrefix(bgImage)}>
 			<Box py={{xs: 4, md: 0}}>
 				<Container maxWidth="lg">
 					<Grid container direction="row" style={{minHeight: '400px'}}>
 						<Grid item container xs={12} md={6} direction="column" justify="center">
 							<Grid item>
-								<Box p={4} style={{borderRadius: '1em'}}
-									color={Palette.black}
-									bgcolor="rgba(255, 255, 255, 0.85)"
-									textAlign={{xs: 'center', md: 'left'}}
-									>
-									<Typography variant="hero-h1">
-										{title}
-									</Typography>
-									<Typography variant="hero-body">
-										<p>{description}</p>
-									</Typography>
-								</Box>
+								{children}
 							</Grid>
 						</Grid>
+						<Grid item container xs={12} md={6} direction="column" justify="flex-end"></Grid>
 					</Grid>
 				</Container>
 			</Box>
