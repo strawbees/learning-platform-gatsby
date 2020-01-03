@@ -1,3 +1,7 @@
+@font-face { font-family: 'Brandon Text'; src: url('./fonts/BrandonText-Medium.eot'); src: url('./fonts/BrandonText-Medium.eot?#iefix') format('embedded-opentype'),url('./fonts/BrandonText-Medium.woff2') format('woff2'),url('./fonts/BrandonText-Medium.woff') format('woff'),url('./fonts/BrandonText-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; }
+@font-face { font-family: 'Brandon Text'; src: url('./fonts/BrandonText-Regular.eot'); src: url('./fonts/BrandonText-Regular.eot?#iefix') format('embedded-opentype'),url('./fonts/BrandonText-Regular.woff2') format('woff2'),url('./fonts/BrandonText-Regular.woff') format('woff'),url('./fonts/BrandonText-Regular.ttf') format('truetype'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Brandon Text'; src: url('./fonts/BrandonText-Bold.eot'); src: url('./fonts/BrandonText-Bold.eot?#iefix') format('embedded-opentype'),url('./fonts/BrandonText-Bold.woff2') format('woff2'),url('./fonts/BrandonText-Bold.woff') format('woff'),url('./fonts/BrandonText-Bold.ttf') format('truetype'); font-weight: bold; font-style: normal; }
+
 html, body {
 	margin: 0;
 	color: #303030;
