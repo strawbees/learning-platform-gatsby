@@ -49,6 +49,8 @@ Whether it’s an idea for an automatic food dispenser for your pet or to unders
 
 We want Strawbees to be a way people can read and make sense of the world by making and remaking the world. A tool to develop ourselves as creative thinkers and invention literates.
 
+**Visit our [store](https://strawbees.com/store) to find out more.**
+
 <section component="gallery">
 
 ![Sustainability Kit](/infinitekit.jpg)
@@ -57,5 +59,3 @@ We want Strawbees to be a way people can read and make sense of the world by mak
 ![Crazy Scientist Kit](/crazyscientistkit.jpg)
 
 </section>
-
-**Visit our [store](https://strawbees.com/store) to find out more.**
