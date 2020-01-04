@@ -127,7 +127,7 @@ const Downloads = function(props) {
 							return (
 								<Box px={1}>
 									<a href={file.path} target="_blank" rel="noopener noreferrer">
-										<Button variant="icon" icon="pdf">{file.name}</Button>
+										<Button icon="download">{file.name}</Button>
 									</a>
 								</Box>
 							)

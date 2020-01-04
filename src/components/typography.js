@@ -118,8 +118,9 @@ const variants = {
 function Typography(props) {
 	const useStyles = makeStyles(variants)
 	const classes = useStyles()
+	const classNames = [classes.baseStyle, classes[props.variant]].join(' ')
 	return (
-		<span className={[classes.baseStyle, classes[props.variant]].join(' ')}>{props.children}</span>
+		<span className={classNames}>{props.children}</span>
 	)
 }
 

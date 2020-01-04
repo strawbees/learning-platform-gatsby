@@ -1,102 +1,145 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import Palette from './palette.js'
-import IconPDF from './icons/pdf.svg'
+import { makeStyles } from '@material-ui/core/styles';
+import { Box } from '@material-ui/core'
 
-function icon(iconName) {
-	switch (iconName) {
-		case 'pdf':
-			return <img alt="pdf icon" src={IconPDF} />
-		default:
-			return ''
-	}
-}
+import Palette from './palette'
+import Typography from './typography'
 
-const baseStyle = {
-	display: 'inline-block',
-	border: 'none',
-	borderRadius: '1em',
-	outline: 0,
-	cursor: 'pointer',
-	fontFamily: 'Brandon Text',
-	textDecoration: 'none',
-	padding: '2px 5px',
-	minWidth: '220px',
-	whiteSpace: 'nowrap'
-}
-const defaultStyle = {
-	fontStyle: 'normal',
-	fontWeight: 'bold',
-	fontSize: '18px',
-	lineHeight: '25px',
-	background: Palette.green,
-	color: Palette.white,
-	textTransform: 'uppercase'
-}
-const iconStyle = {
-	float: 'left',
-	marginTop: '8px',
-	marginLeft: '8px'
-}
+import IconPDF from '../images/icons/pdf.svg'
+import IconBack from '../images/icons/back.svg'
+import IconBuy from '../images/icons/buy.svg'
+import IconDownload from '../images/icons/download.svg'
+import IconMore from '../images/icons/more.svg'
+
+/*
+ * Creating a classes for each color on our Palette for background,
+ * foreground and outline colors. They will have the format `backgroundColorcolorname`,
+ * `foregroundColorcolorname`, etc.
+ */
+const foregroundVariants = Object.keys(Palette).reduce(function(acc, colorName) {
+	acc[`foregroundColor${colorName}`] = { color: Palette[colorName] }
+	return acc
+}, {})
+const backgroundVariants = Object.keys(Palette).reduce(function(acc, colorName) {
+	acc[`backgroundColor${colorName}`] = { background: Palette[colorName] }
+	return acc
+}, {})
+const outlineVariants = Object.keys(Palette).reduce(function(acc, colorName) {
+	colorName = colorName || Palette.black
+	acc[`borderColor${colorName}`] = { border: `solid 1px ${Palette[colorName]}` }
+	return acc
+}, {})
+
 const variants = {
-	'text': {
-		background: 'none',
-		color: Palette.black,
-		textTransform: 'none',
-		fontWeight: '390',
-		minWidth: 'none'
-	},
-	'icon': {
-		color: Palette.black,
+	baseStyle: {
 		background: Palette.white,
-		textTransform: 'none'
+		margin: '0',
+		padding: '7.5px',
+		borderRadius: '15px',
+		color: Palette.black,
+		border: 'solid 1px rgba(0, 0, 0, 0)',
+		outline: 'none',
+		cursor: 'pointer'
 	},
-	'grey': {
-		color: Palette.darkGrey,
-		background: Palette.lightGrey,
-		textTransform: 'none',
-		fontWeight: '390'
-	}
+	...foregroundVariants,
+	...backgroundVariants,
+	...outlineVariants,
 }
 
-function InnerText(props) {
-	const isIcon = props.variant === 'icon'
-	const innerTextStyle = {
-		display: 'flex',
-		alignItems: 'center',
-		padding: '1em',
-		justifyContent: isIcon ? 'flex-start' : 'center'
+// Is this a Palette color?
+function isPalette(colorName) {
+	return Palette[colorName] !== undefined
+}
+
+// Forgiveme oh functional Gods for this function that makes side effects
+function getCustomClass(jsCss) {
+	const customStyles = makeStyles({
+		customStyle: jsCss
+	})
+	let customClasses = customStyles()
+	return customClasses.customStyle
+}
+
+function getForegroundClasse(fgColor, classes) {
+	if (fgColor) {
+		if(isPalette(fgColor)) {
+			return classes[`foregroundColor${fgColor}`]
+		} else {
+			const jsCss = { color: fgColor }
+			return getCustomClass(jsCss)
+		}
 	}
-	return (
-		<span>
-			<span style={iconStyle}>
-				{icon(props.icon)}
-			</span>
-			<span style={innerTextStyle}>
-				{props.children}
-			</span>
-		</span>
-	)
+	return ''
+}
+function getBackgroundClasse(bgColor, classes) {
+	let classNames = []
+	if (bgColor) {
+		if(isPalette(bgColor)) {
+			classNames.push(classes[`backgroundColor${bgColor}`])
+		} else {
+			const jsCss = { background: bgColor }
+			classNames.push(getCustomClass(jsCss))
+		}
+	}
+	return classNames
+}
+function getOutlineClass(fgColor, classes) {
+	if (fgColor) {
+		if(isPalette(fgColor)) {
+			return classes[`borderColor${fgColor}`]
+		} else {
+			const jsCss = { border: `solid 1px ${fgColor}` }
+			return getCustomClass(jsCss)
+		}
+	}
+	return ''
 }
 
 function Button(props) {
-	const style = Object.assign(
-		{},
-		baseStyle,
-		defaultStyle,
-		variants[props.variant]
-	)
+	const useStyles = makeStyles(variants)
+	const classes = useStyles()
+
+	const fgClasse = getForegroundClasse(props.foregroundColor, classes)
+	const bgClasse = getBackgroundClasse(props.backgroundColor, classes)
+	let outlineClass = ''
+	if (props.outline) {
+		outlineClass = getOutlineClass(props.foregroundColor || Palette.black, classes)
+	}
+
+	let classNames = [
+		classes.baseStyle, fgClasse, bgClasse, outlineClass
+	]
+
 	return (
-		<button style={style} onClick={props.onClick}>
-			{InnerText(props)}
-		</button>
+		<Box display="inline-flex" alignItems="center" className={classNames.join(' ')} onClick={props.onClick}>
+			<Box hidden={!props.icon} display="inline-flex" mr={1}>
+				<Icon type={props.icon} />
+			</Box>
+			<Box>
+				<Typography variant="card-body">{props.children}</Typography>
+			</Box>
+		</Box>
 	)
 }
 
-Button.propTypes = {
-	variant: PropTypes.oneOf(['text', 'icon', 'grey']),
-	icon: PropTypes.string,
-	onClick: PropTypes.func
+function Icon(props) {
+	let icons = {
+		pdf: IconPDF,
+		more: IconMore,
+		buy: IconBuy,
+		back: IconBack,
+		download: IconDownload
+	}
+	let style = {
+		display: props.type ? 'inline-flex' : 'none',
+		height: `20px`,
+		margin: 0,
+	}
+	if (icons[props.type]) {
+		return <img style={style} src={icons[props.type]} alt={props.type} />
+	} else {
+		return ''
+	}
 }
 
 export default Button

@@ -1,13 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Container, Grid, Box } from '@material-ui/core'
-import FacebookIcon from '../../components/icons/facebook.svg'
-import TwitterIcon from '../../components/icons/twitter.svg'
-import InstagramIcon from '../../components/icons/insta.svg'
-import YoutubeIcon from '../../components/icons/youtube.svg'
+import FacebookIcon from '../../images/icons/facebook.svg'
+import TwitterIcon from '../../images/icons/twitter.svg'
+import InstagramIcon from '../../images/icons/insta.svg'
+import YoutubeIcon from '../../images/icons/youtube.svg'
+import StrawbeesLogo from '../../images/learninglogowhite.svg'
 import Palette from '../../components/palette.js'
 import Typography from '../../components/typography.js'
-import StrawbeesLogo from '../../images/learninglogowhite.svg'
 
 function LayoutFooter() {
 	return (
