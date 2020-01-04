@@ -13,15 +13,15 @@ function Hero(props) {
 			position: 'absolute',
 			width: '100%',
 			height: '100%',
-			backgroundColor: `${props.bgcolor}`,
-			backgroundImage: `url('${props.bgimage}')`,
+			backgroundColor: `${props.bgColor}`,
+			backgroundImage: `url('${props.bgImage}')`,
 			backgroundSize: 'cover',
 			backgroundPosition: 'center center'
 		},
 		bgImageBlurred: {
 			position: 'absolute',
-			backgroundColor: `${props.bgcolor}`,
-			backgroundImage: `url('${props.bgimage}')`,
+			backgroundColor: `${props.bgColor}`,
+			backgroundImage: `url('${props.bgImage}')`,
 			backgroundSize: 'cover',
 			backgroundPosition: 'center center',
 			width: 'calc(100% + 10px)',
@@ -38,10 +38,10 @@ function Hero(props) {
 			height: '100%',
 			top: 0,
 			left: 0,
-			background: props.shadecolor ? props.shadecolor : 'none',
-			opacity: props.shadeopacity,
+			background: props.shadeColor ? props.shadeColor : 'none',
+			opacity: props.shadeOpacity,
 			zIndex: 0,
-			display: props.shadecolor ? 'block' : 'none',
+			display: props.shadeColor ? 'block' : 'none',
 		},
 		content: {
 			width: '100%',
@@ -65,16 +65,16 @@ function Hero(props) {
 
 Hero.propTypes = {
 	blur: PropTypes.bool,
-	bgcolor: PropTypes.string,
-	bgimage: PropTypes.string,
-	shadecolor: PropTypes.string,
-	shadeopacity: PropTypes.number
+	bgColor: PropTypes.string,
+	bgImage: PropTypes.string,
+	shadeColor: PropTypes.string,
+	shadeOpacity: PropTypes.number
 }
 
 Hero.defaultProps = {
 	blur: false,
-	bgcolor: Palette.white,
-	shadeopacity: 0.5
+	bgColor: Palette.white,
+	shadeOpacity: 0.5
 }
 
 export default Hero

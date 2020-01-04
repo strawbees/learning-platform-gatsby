@@ -11,9 +11,9 @@ function LayoutHero({
 }) {
 	return (
 		<Hero
-			shadecolor={shadeColor}
-			shadeopacity={shadeOpacity}
-			bgimage={withPrefix(bgImage)}>
+			shadeColor={shadeColor}
+			shadeOpacity={shadeOpacity}
+			bgImage={withPrefix(bgImage)}>
 			<Box py={{xs: 4, md: 0}}>
 				<Container maxWidth="lg">
 					<Grid container direction="row" style={{minHeight: '400px'}}>
