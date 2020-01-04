@@ -13,6 +13,7 @@ export const PalleteForegroundColor = () => <Button foregroundColor="pink" {...e
 export const PalleteBackgroundColor = () => <Button foregroundColor="white" backgroundColor="pink" {...events}>Palette Background</Button>
 export const HexadecimalForegroundColor = () => <Button foregroundColor="#FF00FF" {...events}>Hexadecimal Foreground</Button>
 export const HexadecimalBackgroundColor = () => <Button foregroundColor="#FFF" backgroundColor="#FF00FF" {...events}>Hexadecimal Background</Button>
+export const Bold = () => <Button bold backgroundColor="lightgrey" {...events}>Bold text.</Button>
 export const Outline = () => (
 	<div>
 		<div><Button outline {...events}>Outlined button</Button></div>

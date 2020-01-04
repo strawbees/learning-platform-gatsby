@@ -43,13 +43,18 @@ function Card(props) {
 		largeImage: {
 			height: '290px',
 			backgroundSize: 'cover'
+		},
+		productImage: {
+			backgroundSize: 'contain',
+			height: '100px'
 		}
 	}
 	const useStyles = makeStyles(variants)
 	const classes = useStyles()
 	const imageClasses = [
 		classes.image,
-		props.variant === 'large-image' ? classes.largeImage : ''
+		props.variant === 'large-image' ? classes.largeImage : '',
+		props.variant === 'product' ? classes.productImage : ''
 	].join(' ')
 	return (
 		<Box className={classes.card}>
@@ -58,7 +63,7 @@ function Card(props) {
 					<Typography variant="card-label">{props.labelText}</Typography>
 				</Box>
 			</Box>
-			<Box p={3}>
+			<Box>
 				{props.children}
 			</Box>
 		</Box>
@@ -73,7 +78,7 @@ Card.propTypes = {
 	labelBgcolor: PropTypes.string,
 	image: PropTypes.string,
 	variant: PropTypes.oneOf(
-		['large-image']
+		['large-image', 'product']
 	)
 }
 

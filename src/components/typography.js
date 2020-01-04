@@ -112,13 +112,20 @@ const variants = {
 		fontWeight: '500',
 		fontSize: '14px',
 		lineHeight: '16px'
-	}
+	},
+	"bold": {
+		fontWeight: 'bold'
+	},
 }
 
 function Typography(props) {
 	const useStyles = makeStyles(variants)
 	const classes = useStyles()
-	const classNames = [classes.baseStyle, classes[props.variant]].join(' ')
+	const classNames = [
+		classes.baseStyle,
+		classes[props.variant],
+		props.bold ? classes.bold : '',
+	].join(' ')
 	return (
 		<span className={classNames}>{props.children}</span>
 	)

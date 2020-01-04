@@ -48,12 +48,15 @@ function LayoutFeed({ posts }) {
 										image={withPrefix(post.thumbnail)}
 										labelText={post.category}
 										labelBgcolor={categoryColors[post.category]}>
-										<Typography variant="card-h1">
-											{post.title}
-										</Typography>
-										<Typography variant="card-body">
-											<p>{post.description}</p>
-										</Typography>
+											<Box p={3} pb={4}>
+												<Typography variant="card-h1">
+													{post.title}
+												</Typography>
+												<Box pb={1} />
+												<Typography variant="card-body">
+													{post.description}
+												</Typography>
+											</Box>
 									</Card>
 								</Link>
 							</Grid>

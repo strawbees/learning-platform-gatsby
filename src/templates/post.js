@@ -94,13 +94,15 @@ const RelatedContent = function(props) {
 										image={withPrefix(p.thumbnail)}
 										labelText={p.category}
 										labelBgcolor={categoryColors[p.category]}>
-										<Typography variant="card-h1">
-											{p.title}
-										</Typography>
-										<Box pb={1} />
-										<Typography variant="card-body">
-											{p.description}
-										</Typography>
+										<Box p={3}>
+											<Typography variant="card-h1">
+												{p.title}
+											</Typography>
+											<Box pb={1} />
+											<Typography variant="card-body">
+												{p.description}
+											</Typography>
+										</Box>
 									</Card>
 								</Link>
 							</Grid>

@@ -41,6 +41,9 @@ const variants = {
 		outline: 'none',
 		cursor: 'pointer'
 	},
+	bold: {
+		fontWeight: 'bold'
+	},
 	...foregroundVariants,
 	...backgroundVariants,
 	...outlineVariants,
@@ -112,11 +115,11 @@ function Button(props) {
 
 	return (
 		<Box display="inline-flex" alignItems="center" className={classNames.join(' ')} onClick={props.onClick}>
-			<Box hidden={!props.icon} display="inline-flex" mr={1}>
+			<Box display={props.icon ? 'inline-flex' : 'none'} mr={1}>
 				<Icon type={props.icon} />
 			</Box>
 			<Box>
-				<Typography variant="card-body">{props.children}</Typography>
+				<Typography bold={props.bold} variant="card-body">{props.children}</Typography>
 			</Box>
 		</Box>
 	)

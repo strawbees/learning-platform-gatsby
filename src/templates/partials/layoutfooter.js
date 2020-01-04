@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-import { Container, Grid, Box } from '@material-ui/core'
+import { Link as InternalLink } from "gatsby"
+import { Container, Grid, Box, Link as ExternalLink } from '@material-ui/core'
 import FacebookIcon from '../../images/icons/facebook.svg'
 import TwitterIcon from '../../images/icons/twitter.svg'
 import InstagramIcon from '../../images/icons/insta.svg'
@@ -22,29 +22,29 @@ function LayoutFooter() {
 					<Grid item xs={12} sm={4}>
 						<Box textAlign="center">
 							<p>
-								<Link to="/"><img src={StrawbeesLogo} width="200" alt="Strawbees Logo" /></Link>
+								<InternalLink to="/"><img src={StrawbeesLogo} width="200" alt="Strawbees Logo" /></InternalLink>
 							</p>
 							<Box px={8}>
 								<Grid container spacing={2} direction="row" justify="space-between">
 									<Grid xs={3} item>
-										<a href="https://twitter.com/strawbees" target="_blank" rel="noopener noreferrer">
+										<ExternalLink href="https://twitter.com/strawbees" target="_blank">
 											<img width="100%" alt="twitter icon" src={TwitterIcon} />
-										</a>
+										</ExternalLink>
 									</Grid>
 									<Grid xs={3} item>
-										<a href="https://www.instagram.com/strawbees/" target="_blank" rel="noopener noreferrer">
+										<ExternalLink href="https://www.instagram.com/strawbees/" target="_blank">
 											<img width="100%" alt="instagram icon" src={InstagramIcon} />
-										</a>
+										</ExternalLink>
 									</Grid>
 									<Grid xs={3} item>
-										<a href="https://www.facebook.com/strawbees/" target="_blank" rel="noopener noreferrer">
+										<ExternalLink href="https://www.facebook.com/strawbees/" target="_blank">
 											<img width="100%" alt="facebook icon" src={FacebookIcon} />
-										</a>
+										</ExternalLink>
 									</Grid>
 									<Grid xs={3} item>
-										<a href="https://www.youtube.com/channel/UCau3nzMP21AAPMPP-9L_LBQ" target="_blank" rel="noopener noreferrer">
+										<ExternalLink href="https://www.youtube.com/channel/UCau3nzMP21AAPMPP-9L_LBQ" target="_blank">
 											<img width="100%" alt="youtube icon" src={YoutubeIcon} />
-										</a>
+										</ExternalLink>
 									</Grid>
 								</Grid>
 							</Box>
@@ -52,9 +52,9 @@ function LayoutFooter() {
 						<Box textAlign="center">
 							<Typography>
 								<p>
-									<a href="https://strawbees.com/store" target="_blank" rel="noopener noreferrer">
+									<ExternalLink href="https://strawbees.com/store" target="_blank">
 										Visit our store!
-									</a>
+									</ExternalLink>
 								</p>
 							</Typography>
 						</Box>
@@ -63,9 +63,9 @@ function LayoutFooter() {
 						<Box textAlign="left">
 						<Typography>
 							<p><strong>STRAWBEES LEARNING</strong></p>
-							<p><Link to="/about">About</Link></p>
-							<p><Link to="/what-is-strawbees">What is Strawbees?</Link></p>
-							<p><Link to="/how-to-use-strawbees-in-your-classroom">How to use Strawbees in your Classroom?</Link></p>
+							<p><InternalLink to="/about">About</InternalLink></p>
+							<p><InternalLink to="/what-is-strawbees">What is Strawbees?</InternalLink></p>
+							<p><InternalLink to="/how-to-use-strawbees-in-your-classroom">How to use Strawbees in your Classroom?</InternalLink></p>
 						</Typography>
 						</Box>
 					</Grid>
@@ -73,9 +73,9 @@ function LayoutFooter() {
 						<Box textAlign="left">
 							<Typography>
 								<p><strong>RESOURCES</strong></p>
-								<p><Link to="/activities">Activities</Link></p>
-								<p><Link to="/lesson-plans">Lesson Plans</Link></p>
-								<p><Link to="/explorations">Explorations</Link></p>
+								<p><InternalLink to="/activities">Activities</InternalLink></p>
+								<p><InternalLink to="/lesson-plans">Lesson Plans</InternalLink></p>
+								<p><InternalLink to="/explorations">Explorations</InternalLink></p>
 							</Typography>
 						</Box>
 					</Grid>

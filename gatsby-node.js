@@ -116,6 +116,12 @@ exports.createPages = async function(e) {
 		context: { posts: explorations }
 	})
 
+	createPage({ // Bridge kit
+		path: '/product/bridge',
+		component: require.resolve('./src/templates/bridge.js'),
+		context: {}
+	})
+
 	posts.forEach(function(post) {
 		let related = post.related.map((postId) => {
 			return postsHash[postId]
