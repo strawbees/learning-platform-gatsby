@@ -1,5 +1,4 @@
 import React from 'react';
-import { linkTo } from '@storybook/addon-links';
 import Typography from '../src/components/typography'
 
 export default {

@@ -1,5 +1,4 @@
 import React from 'react';
-import { linkTo } from '@storybook/addon-links';
 import { actions } from '@storybook/addon-actions';
 import Button from '../src/components/button'
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import { linkTo } from '@storybook/addon-links';
 import { Box } from '@material-ui/core'
 import Hero from '../src/components/hero'
 import Typography from '../src/components/typography'

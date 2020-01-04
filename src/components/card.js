@@ -13,8 +13,8 @@ function Card(props) {
 			boxShadow: `0px 4px 4px rgba(0, 0, 0, 0.25)`,
 			borderRadius: '1em',
 			overflow: 'hidden',
-			color: props.bgcolor ? Palette.white : 'inherit',
-			background: props.bgcolor ? props.bgcolor : Palette.white,
+			color: props.bgColor ? Palette.white : 'inherit',
+			background: props.bgColor ? props.bgColor : Palette.white,
 			transition: 'transform 0.075s linear',
 			'&:hover': {
 				transform: props.hover ? `scale(1.025)` : 'none'
@@ -42,14 +42,18 @@ function Card(props) {
 		},
 		largeImage: {
 			height: '290px',
-			backgroundSize: 'contain'
+			backgroundSize: 'cover'
 		}
 	}
 	const useStyles = makeStyles(variants)
 	const classes = useStyles()
+	const imageClasses = [
+		classes.image,
+		props.variant === 'large-image' ? classes.largeImage : ''
+	].join(' ')
 	return (
 		<Box className={classes.card}>
-			<Box className={classes.image}>
+			<Box className={imageClasses}>
 				<Box className={classes.label}>
 					<Typography variant="card-label">{props.labelText}</Typography>
 				</Box>
@@ -62,14 +66,14 @@ function Card(props) {
 }
 
 Card.propTypes = {
-	bgcolor: PropTypes.string,
+	bgColor: PropTypes.string,
 	hover: PropTypes.bool,
 	labelText: PropTypes.string,
 	labelColor: PropTypes.string,
 	labelBgcolor: PropTypes.string,
 	image: PropTypes.string,
 	variant: PropTypes.oneOf(
-		['largeImage']
+		['large-image']
 	)
 }
 
