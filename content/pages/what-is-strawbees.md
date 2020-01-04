@@ -8,8 +8,10 @@ category: 'Support Page'
 
 <section component="gallery">
 
-![You can build structures, mechanical contraptions, and robotic mechanisms all with these 4 connectors.](/connectors.png)
-![There are basic 3 instructions and innumerous ways to combine them.](/operations.png)
+![You can build structures, mechanical contraptions, and robotic mechanisms all with these 4 connectors.](/connectors.jpg)
+![Strawbees legs fit nicely inside the straws.](/operation_fit.jpg)
+![You can click two or more connectors together, leaving them free to rotate or lock them by clicking all the way through.](/operation_click.jpg)
+![You can also slide a straw through a connector hole. By combining "slide" and "click" you can make a strong lock in case your connectors are slipping out of the straws.](/operation_slide.jpg)
 ![](/platonic.jpg)
 ![](/truss.jpg)
 ![](/tower.jpg)

@@ -12,6 +12,8 @@ related:
 downloads:
 - name: 'Video instruction'
   path: http://strawbees-learning-videos.s3.amazonaws.com/Strawbees%20RobotRacer.shrink.mp4
+- name: 'Tetrahedron poster'
+  path: /pyramid.pdf
 ---
 
 <section component="youtube" url="https://youtu.be/VaYw4uI3HYE"></section>
@@ -35,5 +37,6 @@ Once you can observe and describe the different types of motor movements, it's e
 ![You can program Quirkbot on Google Chrome Browser and ChromeOS](/robotracer5.jpg)
 ![Uploading an empty program to your Quirkbot if you want to start from scratch](/robotracer6.jpg)
 ![Use Flow programming to change how your robot moves](/robotracer7.jpg)
+![You can also use Block and Text programming to change how your robot moves](/robotracer11.jpg)
 
 </section>
