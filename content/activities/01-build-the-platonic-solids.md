@@ -12,8 +12,16 @@ related:
 downloads:
 - name: 'Video instruction'
   path: http://strawbees-learning-videos.s3.amazonaws.com/Strawbees%20platonic%20solids.shrink.mp4
-- name: 'Blueprints'
-  path: /platonicblueprints.pdf
+- name: 'Tetrahedron blueprint'
+  path: /pyramid.pdf
+- name: 'Cube blueprint'
+  path: /cube.pdf
+- name: 'Octahedron blueprint'
+  path: /octahedron.pdf
+- name: 'Dodecahedron blueprint'
+  path: /dodecahedron.pdf
+- name: 'Icosahedron blueprint'
+  path: /icosahedron.pdf
 
 ---
 

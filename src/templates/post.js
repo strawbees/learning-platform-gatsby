@@ -124,10 +124,10 @@ const Downloads = function(props) {
 						</Typography>
 					</Grid>
 					<Grid item xs={12}>
-						<Box display="flex" flexDirection="row" justifyContent="center">
+						<Box display="flex" flexDirection="row" justifyContent="center" flexWrap="wrap">
 						{props.files.map((file, i) => {
 							return (
-								<Box px={1}>
+								<Box m={1}>
 									<a href={file.path} target="_blank" rel="noopener noreferrer">
 										<Button icon="download">{file.name}</Button>
 									</a>

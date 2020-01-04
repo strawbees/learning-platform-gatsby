@@ -12,7 +12,7 @@ related:
 downloads:
 - name: 'Video instruction'
   path: http://strawbees-learning-videos.s3.amazonaws.com/Strawbees%20RobotRacer.shrink.mp4
-- name: 'Tetrahedron poster'
+- name: 'Tetrahedron blueprint'
   path: /pyramid.pdf
 ---
 

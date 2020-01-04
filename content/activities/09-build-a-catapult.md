@@ -12,6 +12,8 @@ related:
 downloads:
 - name: 'Video instruction'
   path: http://strawbees-learning-videos.s3.amazonaws.com/Strawbees%20%20catapult.shrink.mp4
+- name: 'Catapult blueprint'
+  path: '/catapult.pdf'
 ---
 
 <section component="youtube" url="https://youtu.be/NFeHRBD5Jk8"></section>

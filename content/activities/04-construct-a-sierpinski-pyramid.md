@@ -12,6 +12,8 @@ related:
 downloads:
 - name: 'Video instruction'
   path: http://strawbees-learning-videos.s3.amazonaws.com/Construct%20a%20Sierpinski%20Pyramid%20-%20English.shrink.mp4
+- name: 'Tetrahedron blueprint'
+  path: /pyramid.pdf
 ---
 
 <section component="youtube" url="https://youtu.be/MFlH7minmJU"></section>
