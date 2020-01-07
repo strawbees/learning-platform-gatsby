@@ -50,7 +50,8 @@ const Bridge = (e) => {
 		<Grid container direction="column">
 			<SEO
 				title="Strawbees Learning"
-				description="You step in the stream, but the water has moved on. This page is not here."/>
+				image={withPrefix('/truss5.jpg')}
+				description="With this kit you learn the basic concepts of bridge design. An engaging hands-on learning experience!"/>
 			<Grid item><LayoutMenu /></Grid>
 			<Grid item>
 				<LayoutHero
