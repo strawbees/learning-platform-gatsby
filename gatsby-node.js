@@ -75,6 +75,16 @@ const redirectBatch = [
 		f: `/page/about`,
 		t: `/about`
 	},
+	{
+		f: `/product/bridge`,
+		t: `/product/bridges`
+	},
+]
+
+const bridgePostsPaths = [
+	'/exploration/truss-bridge-problem-solving',
+	'/activity/build-a-truss-bridge',
+	'/lesson-plan/city-building'
 ]
 
 exports.createPages = async function(e) {
@@ -91,6 +101,11 @@ exports.createPages = async function(e) {
 	posts.forEach((post) => {
 		postsHash[post.path] = post
 	})
+
+	const bridgePosts = posts.filter((post) => {
+		return bridgePostsPaths.indexOf(post.path) !== -1
+	})
+	const steamSchoolPosts = posts
 
 	createPage({ // Index
 		path: '/',
@@ -117,12 +132,21 @@ exports.createPages = async function(e) {
 	})
 
 	createPage({ // Bridge kit
-		path: '/product/bridge',
+		path: '/product/bridges',
 		component: require.resolve('./src/templates/bridge.js'),
-		context: {}
+		context: {
+			posts: bridgePosts
+		}
+	})
+	createPage({ // STEAM School kit
+		path: '/product/steamschoolkit',
+		component: require.resolve('./src/templates/steamschool.js'),
+		context: {
+			posts: posts
+		}
 	})
 
-	posts.forEach(function(post) {
+	posts.forEach(function(post) { // All single posts
 		let related = post.related.map((postId) => {
 			return postsHash[postId]
 		})
@@ -133,7 +157,7 @@ exports.createPages = async function(e) {
 		})
 	})
 
-	pages.forEach(function(post) {
+	pages.forEach(function(post) { // All pages
 		createPage({ // Pages
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
@@ -141,7 +165,7 @@ exports.createPages = async function(e) {
 		})
 	})
 
-	redirectBatch.forEach(function(redirect) {
+	redirectBatch.forEach(function(redirect) { // Front end redirects
 		// Redirect without trailing slashes
 		createRedirect({
 			fromPath: redirect.f,

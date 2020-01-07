@@ -6,6 +6,7 @@ import Button from '../src/components/button'
 import Palette from '../src/components/palette'
 import Image from '../static/mechanicalinventions.jpg'
 import ProductImage from '../static/bridgekit.png'
+import GradientImage from '../static/steamschoolgradient.svg'
 
 export default {
 	title: 'Card'
@@ -94,6 +95,27 @@ export const OnAResponsiveGrid = () => (
 )
 export const ProductHero = () => (
 	<Card bgColor={Palette.pink} variant="product" image={ProductImage}>
+		<Box p={3}>
+			<Box position="relative">
+				<Box px={3}>
+					<Typography variant="hero-body">
+						With this kit you learn the basic concepts of lorem ipsum. An
+						engaging hands-on learning experience!
+					</Typography>
+				</Box>
+				<Box textAlign="right" pt={1}>
+					<Link href="https://strawbees.com/store" target="_blank">
+						<Button bold icon="buy" foregroundColor="white" backgroundColor="black">
+							BUY KIT
+						</Button>
+					</Link>
+				</Box>
+			</Box>
+		</Box>
+	</Card>
+)
+export const BackgroundImage = () => (
+	<Card bgImage={GradientImage} bgColor={Palette.white}>
 		<Box p={3}>
 			<Box position="relative">
 				<Box px={3}>

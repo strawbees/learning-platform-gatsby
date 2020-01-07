@@ -14,7 +14,10 @@ function Card(props) {
 			borderRadius: '1em',
 			overflow: 'hidden',
 			color: props.bgColor ? Palette.white : 'inherit',
-			background: props.bgColor ? props.bgColor : Palette.white,
+			backgroundColor: props.bgColor ? props.bgColor : Palette.white,
+			backgroundSize: '100% auto',
+			backgroundImage: props.bgImage ? `url('${props.bgImage}')` : 'none',
+			backgroundRepeat: 'repeat-y',
 			transition: 'transform 0.075s linear',
 			'&:hover': {
 				transform: props.hover ? `scale(1.025)` : 'none'
@@ -52,7 +55,7 @@ function Card(props) {
 	const useStyles = makeStyles(variants)
 	const classes = useStyles()
 	const imageClasses = [
-		classes.image,
+		props.image ? classes.image : '',
 		props.variant === 'large-image' ? classes.largeImage : '',
 		props.variant === 'product' ? classes.productImage : ''
 	].join(' ')
@@ -72,6 +75,7 @@ function Card(props) {
 
 Card.propTypes = {
 	bgColor: PropTypes.string,
+	bgImage: PropTypes.string,
 	hover: PropTypes.bool,
 	labelText: PropTypes.string,
 	labelColor: PropTypes.string,
