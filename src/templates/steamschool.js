@@ -32,7 +32,7 @@ const SteamSchool = (e) => {
 					<Container maxWidth="lg">
 						<ProductCard
 							image={withPrefix('/steamschoolkit.png')}
-							bgImage={withPrefix('/steamschoolgradient.svg')}
+							bgImage={withPrefix('/steamschoolgradient.png')}
 							bgColor={Palette.white}
 							description="This kit is an overview of Strawbees construction methods and a resource of  tools and techniques to realize your project ideas!"
 							callToAction="BUY THE KIT"

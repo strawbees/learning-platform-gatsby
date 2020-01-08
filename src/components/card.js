@@ -15,9 +15,9 @@ function Card(props) {
 			overflow: 'hidden',
 			color: props.bgColor ? Palette.white : 'inherit',
 			backgroundColor: props.bgColor ? props.bgColor : Palette.white,
-			backgroundSize: '100% auto',
-			backgroundImage: props.bgImage ? `url('${props.bgImage}')` : 'none',
+			backgroundSize: '100%',
 			backgroundRepeat: 'repeat-y',
+			backgroundImage: props.bgImage ? `url('${props.bgImage}')` : 'none',
 			transition: 'transform 0.075s linear',
 			'&:hover': {
 				transform: props.hover ? `scale(1.025)` : 'none'
