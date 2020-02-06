@@ -43,7 +43,13 @@
     "remark": "^11.0.2",
     "remark-parse": "^7.0.2",
     "remark-rehype": "^5.0.0",
-    "unified": "^8.4.2"
+    "unified": "^8.4.2",
+    "@babel/core": "^7.7.7",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
+    "babel-loader": "^8.0.6"
   },
   "license": "MIT",
   "repository": {
@@ -53,12 +59,5 @@
   "bugs": {
     "url": "https://github.com/murilopolese/learning-platform-gatsby/issues"
   },
-  "devDependencies": {
-    "@babel/core": "^7.7.7",
-    "@storybook/addon-actions": "^5.2.8",
-    "@storybook/addon-links": "^5.2.8",
-    "@storybook/addons": "^5.2.8",
-    "@storybook/react": "^5.2.8",
-    "babel-loader": "^8.0.6"
-  }
+  "devDependencies": {}
 }

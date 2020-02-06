@@ -8,13 +8,14 @@ import Palette from '../../components/palette.js'
 
 function ProductCard({
 	bgColor = Palette.pink,
+	bgImage,
 	image,
 	description,
 	linkTo,
 	callToAction = 'BUY THE KIT'
 }) {
 	return (
-		<Card bgColor={bgColor} variant="product" image={image}>
+		<Card bgColor={bgColor} bgImage={bgImage} variant="product" image={image}>
 			<Box p={3}>
 				<Box position="relative">
 					<Box px={3}>

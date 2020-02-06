@@ -12,7 +12,7 @@ import LayoutHero from '../templates/partials/layouthero'
 import ProductCard from '../templates/partials/productcard'
 import LayoutFooter from '../templates/partials/layoutfooter'
 
-const Bridge = (e) => {
+const SteamSchool = (e) => {
 	const categoryColors = {
 		'Activity': Palette.blue,
 		'Lesson Plan': Palette.yellow,
@@ -23,7 +23,7 @@ const Bridge = (e) => {
 		<Grid container direction="column">
 			<SEO
 				title="Strawbees Learning"
-				image={withPrefix('/truss5.jpg')}
+				image={withPrefix('/steamschoolthumbnail.jpg')}
 				description="With this kit you learn the basic concepts of bridge design. An engaging hands-on learning experience!"/>
 			<Grid item><LayoutMenu /></Grid>
 			<Grid item>
@@ -31,9 +31,10 @@ const Bridge = (e) => {
 					bgImage="/bridgekitheader.jpg">
 					<Container maxWidth="lg">
 						<ProductCard
-							image={withPrefix('/bridgekit.png')}
-							bgColor={Palette.pink}
-							description="With this kit you learn the basic concepts of bridge design. An engaging hands-on learning experience!"
+							image={withPrefix('/steamschoolkit.png')}
+							bgImage={withPrefix('/steamschoolgradient.png')}
+							bgColor={Palette.white}
+							description="This kit is an overview of Strawbees construction methods and a resource of  tools and techniques to realize your project ideas!"
 							callToAction="BUY THE KIT"
 							linkTo="https://mkt.strawbees.com/pipeline/"/>
 					</Container>
@@ -44,13 +45,6 @@ const Bridge = (e) => {
 					<Box py={4}>
 						<Container maxWidth="lg">
 							<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
-								<Grid item xs={12}>
-									<Box textAlign="center">
-										<Typography>
-											<h1>Start the bridge experience</h1>
-										</Typography>
-									</Box>
-								</Grid>
 								{posts.map((post, i) => {
 									return (
 										<Grid key={i} item xs={12} sm={6} md={4}>
@@ -84,4 +78,4 @@ const Bridge = (e) => {
 	)
 }
 
-export default Bridge
+export default SteamSchool
