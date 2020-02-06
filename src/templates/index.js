@@ -10,7 +10,6 @@ import '../globalStyles.css'
 import LayoutMenu from './partials/layoutmenu'
 import LayoutHero from './partials/layouthero'
 import LayoutFooter from './partials/layoutfooter'
-import ComingSoon from './partials/comingsoon'
 
 const IndexPage = (e) => {
 	const posts = e.pageContext.posts
@@ -64,7 +63,6 @@ function LayoutFeed({ posts }) {
 					})}
 				</Grid>
 			</Container>
-			<ComingSoon />
 		</Box>
 	)
 }

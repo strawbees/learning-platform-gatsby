@@ -1,6 +1,6 @@
 // XXX: Hack to build multiple environment variables
 let pathPrefix, siteUrl, trackingId, buildEnv
-buildEnv = 'production'
+buildEnv = 'github'
 
 switch (buildEnv) {
 	case 'stage':
@@ -15,7 +15,7 @@ switch (buildEnv) {
 		break;
 	case 'github':
 		pathPrefix = '/learning-platform-gatsby'
-		siteUrl = 'https://murilopolese.github.io'
+		siteUrl = 'https://strawbees.github.io'
 		break;
 	case 'local':
 		pathPrefix = '/public'

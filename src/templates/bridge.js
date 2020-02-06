@@ -5,6 +5,7 @@ import SEO from '../components/seo.js'
 import Typography from '../components/typography.js'
 import Palette from '../components/palette.js'
 import Card from '../components/card.js'
+import YoutubeDisplay from '../components/youtubedisplay.js'
 import '../globalStyles.css'
 
 import LayoutMenu from '../templates/partials/layoutmenu'
@@ -45,11 +46,7 @@ const Bridge = (e) => {
 						<Container maxWidth="lg">
 							<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
 								<Grid item xs={12}>
-									<Box textAlign="center">
-										<Typography>
-											<h1>Start the bridge experience</h1>
-										</Typography>
-									</Box>
+									<YoutubeDisplay url="https://youtu.be/pL6VYVVXdjw" />
 								</Grid>
 								{posts.map((post, i) => {
 									return (

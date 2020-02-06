@@ -5,6 +5,7 @@ import SEO from '../components/seo.js'
 import Typography from '../components/typography.js'
 import Palette from '../components/palette.js'
 import Card from '../components/card.js'
+import YoutubeDisplay from '../components/youtubedisplay.js'
 import '../globalStyles.css'
 
 import LayoutMenu from '../templates/partials/layoutmenu'
@@ -45,6 +46,9 @@ const SteamSchool = (e) => {
 					<Box py={4}>
 						<Container maxWidth="lg">
 							<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
+								<Grid item xs={12}>
+									<YoutubeDisplay url="https://youtu.be/QtHNYRgqzuI" />
+								</Grid>
 								{posts.map((post, i) => {
 									return (
 										<Grid key={i} item xs={12} sm={6} md={4}>
