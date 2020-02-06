@@ -1,6 +1,6 @@
 // XXX: Hack to build multiple environment variables
 let pathPrefix, siteUrl, trackingId, buildEnv
-buildEnv = 'stage'
+buildEnv = 'production'
 
 switch (buildEnv) {
 	case 'stage':

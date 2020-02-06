@@ -18,7 +18,7 @@ function LayoutFooter() {
 			color={Palette.white}
 			>
 			<Container>
-				<Grid container spacing={2} direction="row" justify="space-between">
+				<Grid container spacing={2} direction="row" justify="center">
 					<Grid item xs={12} sm={4}>
 						<Box textAlign="center">
 							<p>
@@ -79,18 +79,22 @@ function LayoutFooter() {
 							</Typography>
 						</Box>
 					</Grid>
-					<Grid item xs={12}>
+					<Grid item xs={12} md={4}>
 						<Box textAlign="center">
-								<p>
-									<Typography>
-										Strawbees AB, Stenkolsgatan 1B, 417 07 Gothenburg, Sweden.
-									</Typography>
-								</p>
-								<p>
-									<Typography>
-										©2019 STRAWBEES. All rights reserved
-									</Typography>
-								</p>
+							<p>
+								<Typography>
+									Strawbees AB, Stenkolsgatan 1B, 417 07 Gothenburg, Sweden.
+								</Typography>
+							</p>
+							<p>
+								<Typography>
+									<a rel="license noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">
+										<img alt="Creative Commons Licence" style={{borderWidth:0}} src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+									</a>
+									<br />
+									This work is licensed under a <a rel="license noopener noreferrer" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
+								</Typography>
+							</p>
 						</Box>
 					</Grid>
 				</Grid>
