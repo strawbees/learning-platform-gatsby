@@ -79,12 +79,32 @@ const redirectBatch = [
 		f: `/product/bridge`,
 		t: `/product/bridges`
 	},
+	{
+		f: `/product/steam`,
+		t: `/product/steamschoolkit`
+	},
+	{
+		f: `/product/steamschool`,
+		t: `/product/steamschoolkit`
+	},
+	{
+		f: `/product/school`,
+		t: `/product/steamschoolkit`
+	},
 ]
 
 const bridgePostsPaths = [
 	'/exploration/truss-bridge-problem-solving',
 	'/activity/build-a-truss-bridge',
 	'/lesson-plan/city-building'
+]
+const steamSchoolPostsPaths = [
+	'/lesson-plan/city-building',
+	'/lesson-plan/geometric-world',
+	'/lesson-plan/mechanical-inventions',
+	'/activity/build-the-platonic-solids',
+	'/activity/construct-a-sierpinski-pyramid',
+	'/activity/make-a-mechanical-arm'
 ]
 
 exports.createPages = async function(e) {
@@ -105,7 +125,9 @@ exports.createPages = async function(e) {
 	const bridgePosts = posts.filter((post) => {
 		return bridgePostsPaths.indexOf(post.path) !== -1
 	})
-	const steamSchoolPosts = posts
+	const steamSchoolPosts = posts.filter((post) => {
+		return steamSchoolPostsPaths.indexOf(post.path) !== -1
+	})
 
 	createPage({ // Index
 		path: '/',
@@ -142,7 +164,7 @@ exports.createPages = async function(e) {
 		path: '/product/steamschoolkit',
 		component: require.resolve('./src/templates/steamschool.js'),
 		context: {
-			posts: posts
+			posts: steamSchoolPosts
 		}
 	})
 
