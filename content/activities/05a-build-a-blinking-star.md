@@ -13,7 +13,7 @@ downloads:
 - name: 'Coding Cards'
   path: /quirkbotblocks.pdf
 - name: 'Video instruction'
-  path: http://xxx
+  path: https://strawbees-learning-videos.s3.amazonaws.com/Build%20a%20Blinking%20Star.mp4
 ---
 
 <section component="youtube" url="https://youtu.be/4zduly6FhQs"></section>

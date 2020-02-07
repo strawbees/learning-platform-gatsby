@@ -13,7 +13,7 @@ downloads:
 - name: 'Coding Cards'
   path: /quirkbotblocks.pdf
 - name: 'Video instruction'
-  path: http://xxx
+  path: http://strawbees-learning-videos.s3.amazonaws.com/Build%20an%20Afraid%20of%20the%20Dark%20Pig.mp4
 ---
 
 <section component="youtube" url="https://youtu.be/o-oHIgKxDOo"></section>
