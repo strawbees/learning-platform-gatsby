@@ -1,6 +1,6 @@
 // XXX: Hack to build multiple environment variables
 let pathPrefix, siteUrl, trackingId, buildEnv
-buildEnv = 'github'
+buildEnv = 'stage'
 
 switch (buildEnv) {
 	case 'stage':
