@@ -11,7 +11,7 @@ related:
 - '/activity/build-a-robotic-crane-quirkbot'
 downloads:
 - name: 'Coding Cards'
-  path: /quirkbotblocks.pdf
+  path: /codingcards/quirkbotblocks.pdf
 - name: 'Video instruction'
   path: http://strawbees-learning-videos.s3.amazonaws.com/Build%20an%20Afraid%20of%20the%20Dark%20Pig.mp4
 ---
@@ -24,9 +24,9 @@ We all have fears, desires and preferences and we trigger those emotions based o
 
 <section component="gallery">
 
-![](/shake.png)
-![](/backandforth.png)
-![](/sweep.png)
-![](/shakeindark.png)
+![](/codingcards/shake.jpg)
+![](/codingcards/backandforth.jpg)
+![](/codingcards/sweep.jpg)
+![](/codingcards/shakeinthedark.jpg)
 
 </section>

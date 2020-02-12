@@ -11,12 +11,12 @@ related:
 - '/activity/build-a-mechanical-crane'
 downloads:
 - name: 'Coding Cards'
-  path: /quirkbotblocks.pdf
+  path: /codingcards/quirkbotblocks.pdf
 - name: 'Video instruction'
-  path: http://xxx
+  path: https://strawbees-learning-videos.s3.amazonaws.com/Build+a+Robotic+Crane+with+Quirkbot.mp4
 ---
 
-<section component="youtube" url="https://youtu.be/ubChdzfykHg"></section>
+<section component="youtube" url="https://youtu.be/WdAtFaHl-mk"></section>
 
 In many robotic and automated mechanical creations, the movement of the motor matches perfectly the expected result. In other cases the motor movement is not exactly what we want. When this happens we have three options: Change the motor, change the code that controls the motor and adapt the mechanical structure. In this activity you are going to make a very basic mechanical structure that looks somehow like a seesaw and explore how to get different results by changing the mechanism, the code, playing with sizes and positioning of the motor.
 
@@ -24,11 +24,11 @@ In many robotic and automated mechanical creations, the movement of the motor ma
 
 <section component="gallery">
 
-![](/shake.png)
-![](/backandforth.png)
-![](/sweep.png)
-![](/touchtrap.png)
-![](/touchholdposition.png)
-![](/touchtoswitchposition.png)
+![](/codingcards/shake.jpg)
+![](/codingcards/backandforth.jpg)
+![](/codingcards/sweep.jpg)
+![](/codingcards/touchandtrap.jpg)
+![](/codingcards/touchandholdposition.jpg)
+![](/codingcards/touchtoswitchposition.jpg)
 
 </section>

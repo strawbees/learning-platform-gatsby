@@ -11,7 +11,7 @@ related:
 - '/activity/build-a-robotic-crane-quirkbot'
 downloads:
 - name: 'Coding Cards'
-  path: /quirkbotblocks.pdf
+  path: /codingcards/quirkbotblocks.pdf
 - name: 'Video instruction'
   path: https://strawbees-learning-videos.s3.amazonaws.com/Build%20a%20Blinking%20Star.mp4
 ---
@@ -32,11 +32,11 @@ Blinking an LED light may sound trivial but it hides great complexities as you s
 
 <section component="gallery">
 
-![](/blink.png)
-![](/flicker.png)
-![](/switchcolor.png)
-![](/flickercolor.png)
-![](/glow.png)
-![](/fadingcolor.png)
+![](/codingcards/blink.jpg)
+![](/codingcards/flicker.jpg)
+![](/codingcards/switchingcolors.jpg)
+![](/codingcards/flickeringcolor.jpg)
+![](/codingcards/glow.jpg)
+![](/codingcards/fadingcolors.jpg)
 
 </section>
