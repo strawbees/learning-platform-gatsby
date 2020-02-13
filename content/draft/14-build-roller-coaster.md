@@ -1,38 +1,34 @@
 ---
-path: '/activity/build-a-robotic-crane-microbit'
-title: 'Build a Robotic Crane with BBC micro:bit'
-description: 'Use the Robotic Inventions for micro:bit to automate the mechanical movements of a crane.'
-thumbnail: '/roboticcranemicrobit.jpg'
-header: '/roboticcranemicrobit.jpg'
+path: '/activity/build-a-roller-coaster'
+title: 'Build a Roller Coaster'
+description: 'Build a track for a ping pong ball to roll up and down.'
+thumbnail: '/rollercoaster.jpg'
+header: '/rollercoaster.jpg'
 category: 'Activity'
 related:
-- '/activity/build-an-afraid-of-the-dark-pig'
+- '/activity/build-the-platonic-solids'
 - '/activity/build-a-mechanical-crane'
 - '/activity/build-a-robotic-crane-quirkbot'
 downloads:
-- name: 'Coding Cards'
-  path: /quirkbotblocks.pdf
 - name: 'Video instruction'
   path: http://xxx
 ---
 
 
-<section component="youtube" url="https://youtu.be/ubChdzfykHg"></section>
+<section component="youtube" url="https://youtu.be/f186_3nqnSM"></section>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
-<section component="youtube" url="https://youtu.be/4k35qNKpGiI"></section>
+<section component="youtube" url="https://youtu.be/GKJ0-leyCRo"></section>
 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 <section component="gallery">
 
-![](/onboarding/whatarecodingcards.jpg)
-![](/codingcards/shake.jpg)
-![](/codingcards/backandforth.jpg)
-![](/codingcards/sweep.jpg)
-![](/codingcards/touchandtrap.jpg)
-![](/codingcards/touchandholdposition.jpg)
-![](/codingcards/touchtoswitchposition.jpg)
+![](/rollercoaster.jpg)
+![](/rollercoaster1.jpg)
+![](/rollercoaster2.jpg)
+![](/rollercoaster3.jpg)
+![](/rollercoaster4.jpg)
 
 </section>

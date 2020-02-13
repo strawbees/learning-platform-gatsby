@@ -114,6 +114,7 @@ exports.createPages = async function(e) {
 	const lessonPlans = await getContent('lesson-plans')
 	const explorations = await getContent('explorations')
 	const pages = await getContent('pages')
+	const drafts = await getContent('draft')
 	const posts = [
 		...lessonPlans, ...activities, ...explorations
 	]
@@ -153,6 +154,12 @@ exports.createPages = async function(e) {
 		context: { posts: explorations }
 	})
 
+	createPage({ // Drafts
+		path: '/drafts',
+		component: require.resolve('./src/templates/index.js'),
+		context: { posts: drafts }
+	})
+
 	createPage({ // Bridge kit
 		path: '/product/bridges',
 		component: require.resolve('./src/templates/bridge.js'),
@@ -184,6 +191,17 @@ exports.createPages = async function(e) {
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
 			context: { post: post }
+		})
+	})
+
+	drafts.forEach(function(post) { // Drafts
+		let related = post.related.map((postId) => {
+			return postsHash[postId]
+		})
+		createPage({ // Pages
+			path: post.path,
+			component: require.resolve('./src/templates/post.js'),
+			context: { post: post, related: related }
 		})
 	})
 
