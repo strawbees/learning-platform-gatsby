@@ -8,8 +8,10 @@ category: 'Activity'
 related:
 - '/lesson-plan/robotic-olympics'
 - '/activity/build-the-platonic-solids'
-- '/activity/build-a-catapult'
+- '/activity/build-a-robotic-crane-quirkbot'
 downloads:
+- name: 'Coding Cards'
+  path: /codingcards/QuirkbotBlockCodingCards.pdf
 - name: 'Video instruction'
   path: http://strawbees-learning-videos.s3.amazonaws.com/Strawbees%20RobotRacer.shrink.mp4
 - name: 'Tetrahedron blueprint'
@@ -18,9 +20,9 @@ downloads:
 
 <section component="youtube" url="https://youtu.be/VaYw4uI3HYE"></section>
 
-Creating a robot that walks around is a great activity to gain basic building and language skills. By placing the motor on unexpected places, switching the speed it moves as well as upgrading your Strawbees construction and placing carefully the Quirkbot, you can get many styles of movement. We recommend [uploading the Factory Program to your Quirkbot](https://code.strawbees.com/) before the activity.
+Creating a robot that walks around is a great activity to gain basic building and language skills. By placing the motor in unexpected places, switching the speed it moves, upgrading your Strawbees construction and by considering the placement of the Quirkbot in your build, you can get many styles of movement. We recommend [uploading the Factory Program to your Quirkbot](https://code.strawbees.com/) before the activity.
 
-Organizing the robots on a "race" like situation is a suggestion and can be perfectly replaced by other challenges or constraints.
+Organizing the robots in a racing setting is a suggestion and could just as well be replaced by other challenges or constraints.
 
 <section component="gallery">
 
@@ -30,13 +32,23 @@ Organizing the robots on a "race" like situation is a suggestion and can be perf
 
 </section>
 
-Once you can observe and describe the different types of motor movements, it's easier to describe how else it should move. Use our [CODE programming interface](https://code.strawbees.com/) to translate it to the Quirkbot.
+Once you can observe and describe the different types of motor movements, it's easier to describe how else it should move. Use our [CODE programming interface](https://code.strawbees.com/) to program the Quirkbot.
 
 <section component="gallery">
 
-![You can program Quirkbot on Google Chrome Browser and ChromeOS](/robotracer5.jpg)
-![Uploading an empty program to your Quirkbot if you want to start from scratch](/robotracer6.jpg)
-![Use Flow programming to change how your robot moves](/robotracer7.jpg)
-![You can also use Block and Text programming to change how your robot moves](/robotracer11.jpg)
+![](/onboarding/howtoconnectmotorbackpack.jpg)
+![](/onboarding/howtoconnectservomotor.jpg)
+![](/onboarding/howtoattachmountandhorn.jpg)
+![](/onboarding/howtoconnect.jpg)
+![](/onboarding/howtoinstallfactoryprogram.jpg)
+
+</section>
+
+<section component="gallery">
+
+![](/onboarding/whatarecodingcards.jpg)
+![](/codingcards/shake.jpg)
+![](/codingcards/backandforth.jpg)
+![](/codingcards/sweep.jpg)
 
 </section>

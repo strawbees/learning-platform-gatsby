@@ -1,6 +1,6 @@
 ---
 path: '/activity/build-an-afraid-of-the-dark-pig'
-title: 'Build an Afraid of the Dark Pig'
+title: 'Build an Afraid-of-the-Dark Pig'
 description: 'Construct and code a pig that is sensitive to darkness.'
 thumbnail: '/pig.jpg'
 header: '/pig_full.jpg'
@@ -11,7 +11,7 @@ related:
 - '/activity/build-a-robotic-crane-quirkbot'
 downloads:
 - name: 'Coding Cards'
-  path: /codingcards/quirkbotblocks.pdf
+  path: /codingcards/QuirkbotBlockCodingCards.pdf
 - name: 'Video instruction'
   path: http://strawbees-learning-videos.s3.amazonaws.com/Build%20an%20Afraid%20of%20the%20Dark%20Pig.mp4
 ---
@@ -22,8 +22,21 @@ We all have fears, desires and preferences and we trigger those emotions based o
 
 ![This pig starts shaking every time it's dark but you can make yours do whatever you want](/afraidofthedarkpig.gif)
 
+Use our [CODE programming interface](https://code.strawbees.com/) to program the Quirkbot.
+
 <section component="gallery">
 
+![](/onboarding/howtoconnectmotorbackpack.jpg)
+![](/onboarding/howtoconnectservomotor.jpg)
+![](/onboarding/howtoattachmountandhorn.jpg)
+![](/onboarding/howtoconnect.jpg)
+![](/onboarding/howtoinstallfactoryprogram.jpg)
+
+</section>
+
+<section component="gallery">
+
+![](/onboarding/whatarecodingcards.jpg)
 ![](/codingcards/shake.jpg)
 ![](/codingcards/backandforth.jpg)
 ![](/codingcards/sweep.jpg)

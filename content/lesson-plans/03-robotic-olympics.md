@@ -52,7 +52,6 @@ Have your students think about how to design something for your class’ Robotic
 <section component="thumbnails">
 <section component="thumbnail" title="Create a Robot Racer" description="Build a robot that walks and then try to make it run." image="/robotracer.jpg" path="/activity/create-a-robot-racer"></section>
 <section component="thumbnail" title="Build a Robotic Crane with Quirkbot" description="Use Quirkbot to automate the mechanical movements of a crane." image="/roboticcranequirkbot.jpg" path="/activity/build-a-robotic-crane-quirkbot"></section>
-<section component="thumbnail" title="Build a Robotic Crane with BBC micro:bit" description="Use Robotic Inventions for micro:bit to automate the mechanical movements of a crane." image="/roboticcranemicrobit.jpg" path="/activity/build-a-robotic-crane-microbit"></section>
 </section>
 
 **Students can:**

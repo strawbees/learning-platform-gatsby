@@ -11,14 +11,14 @@ related:
 - '/activity/build-a-robotic-crane-quirkbot'
 downloads:
 - name: 'Coding Cards'
-  path: /codingcards/quirkbotblocks.pdf
+  path: /codingcards/QuirkbotBlockCodingCards.pdf
 - name: 'Video instruction'
   path: https://strawbees-learning-videos.s3.amazonaws.com/Build%20a%20Blinking%20Star.mp4
 ---
 
 <section component="youtube" url="https://youtu.be/4zduly6FhQs"></section>
 
-Blinking an LED light may sound trivial but it hides great complexities as you start thinking of synchronizing and adding rhythm to the light show. Ideas such as brightness, luminosity, color intensity and hue can be explored and there are infinite ways in which you can make your star shine. Make sure to [download the CODE offline app](https://strawbees.com/downloads/) to create your own blinking creation.
+Blinking an LED light may sound trivial but it hides great complexities as you start thinking of synchronizing and adding rhythm to the light show. Ideas such as brightness, luminosity, color intensity and hue can be explored and there are infinite ways you can make your star shine.
 
 <section component="gallery">
 
@@ -30,8 +30,22 @@ Blinking an LED light may sound trivial but it hides great complexities as you s
 
 </section>
 
+Use our [CODE programming interface](https://code.strawbees.com/) to program the Quirkbot.
+
 <section component="gallery">
 
+![](/onboarding/ledlegs.jpg)
+![](/onboarding/squeezeledlegs.jpg)
+![](/onboarding/attachledtoarm.jpg)
+![](/onboarding/protectwithstraw.jpg)
+![](/onboarding/howtoconnect.jpg)
+![](/onboarding/howtoinstallfactoryprogram.jpg)
+
+</section>
+
+<section component="gallery">
+
+![](/onboarding/whatarecodingcards.jpg)
 ![](/codingcards/blink.jpg)
 ![](/codingcards/flicker.jpg)
 ![](/codingcards/switchingcolors.jpg)
