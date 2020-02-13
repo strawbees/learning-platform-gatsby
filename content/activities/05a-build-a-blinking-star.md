@@ -18,7 +18,7 @@ downloads:
 
 <section component="youtube" url="https://youtu.be/4zduly6FhQs"></section>
 
-Blinking an LED light may sound trivial but it hides great complexities as you start thinking of synchronizing and adding rhythm to the light show. Ideas such as brightness, luminosity, color intensity and hue can be explored and there are infinite ways you can make your star shine.
+Blinking an LED light may sound trivial, but it hides significant complexities as you start thinking of synchronizing and adding rhythm to the light show. Ideas such as brightness, luminosity, color intensity, and hue can be explored with infinite ways you can make your star shine.
 
 <section component="gallery">
 

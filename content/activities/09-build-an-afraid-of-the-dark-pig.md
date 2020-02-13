@@ -1,7 +1,7 @@
 ---
 path: '/activity/build-an-afraid-of-the-dark-pig'
 title: 'Build an Afraid-of-the-Dark Pig'
-description: 'Construct and code a pig that is sensitive to darkness.'
+description: 'Construct and code a pig sensitive to darkness.'
 thumbnail: '/pig.jpg'
 header: '/pig_full.jpg'
 category: 'Activity'
@@ -18,9 +18,9 @@ downloads:
 
 <section component="youtube" url="https://youtu.be/o-oHIgKxDOo"></section>
 
-We all have fears, desires and preferences and we trigger those emotions based on how we sense the world around us. While we might have eyes, ears, nose, mouth and skin to feel the world around us, robots have different sensors and actuators. In this build you can explore how to sense luminosity and use a motor to react to it.
+We all have fears, desires, and preferences, and we trigger those emotions based on how we sense the world around us. While we might have eyes, ears, nose, mouth, and skin to feel the world around us, robots have different sensors and actuators. In this build, you can explore how to sense luminosity and use a motor to react to it.
 
-![This pig starts shaking every time it's dark but you can make yours do whatever you want](/afraidofthedarkpig.gif)
+![This pig starts shaking every time it's dark, but you can make yours do whatever you want](/afraidofthedarkpig.gif)
 
 Use our [CODE programming interface](https://code.strawbees.com/) to program the Quirkbot.
 

@@ -18,7 +18,9 @@ downloads:
 
 <section component="youtube" url="https://youtu.be/WdAtFaHl-mk"></section>
 
-In many robotic and automated mechanical creations, the movement of the motor matches the expected result perfectly. In other cases the motor movement is not exactly what we want. When this happens we have three options: change the motor, change the code that controls the motor and adapt the mechanical structure. In this activity you are going to make a very basic mechanical structure that looks like a seesaw and explore how to get different results by changing the mechanism, the code, playing with sizes and positioning of the motor.
+In many robotic and automated mechanical creations, the movement of the motor matches the expected result perfectly. In other cases the motor movement is not exactly what we want. When this happens, we have three options: change the motor, change the code that controls the motor, and adapt the mechanical structure.
+
+In this activity, you are going to make a basic mechanical structure that looks like a seesaw. You will explore how to get different results by changing the mechanism, the code, playing with sizes and positioning of the motor.
 
 ![Use this as a base model for all types of automated mechanical interaction](/roboticcranequirkbot.jpg)
 
