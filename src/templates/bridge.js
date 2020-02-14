@@ -23,7 +23,7 @@ const Bridge = (e) => {
 	return (
 		<Grid container direction="column">
 			<SEO
-				title="Strawbees Learning"
+				title="Strawbees Classroom Experience: Bridges"
 				image={withPrefix('/truss5.jpg')}
 				description="With this kit you learn the basic concepts of bridge design. An engaging hands-on learning experience!"/>
 			<Grid item><LayoutMenu /></Grid>
