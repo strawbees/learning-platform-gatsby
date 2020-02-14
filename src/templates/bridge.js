@@ -5,6 +5,8 @@ import SEO from '../components/seo.js'
 import Typography from '../components/typography.js'
 import Palette from '../components/palette.js'
 import Card from '../components/card.js'
+import Gallery from '../components/gallery.js'
+import ImageDisplay from '../components/imagedisplay.js'
 import YoutubeDisplay from '../components/youtubedisplay.js'
 import '../globalStyles.css'
 
@@ -41,12 +43,43 @@ const Bridge = (e) => {
 				</LayoutHero>
 			</Grid>
 			<Grid item>
-				<Container maxWidth="lg">
+				<Container maxWidth="lg" id="content">
 					<Box py={4}>
-						<Container maxWidth="lg">
+						<Container maxWidth="md">
 							<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
 								<Grid item xs={12}>
-									<YoutubeDisplay url="https://youtu.be/pL6VYVVXdjw" />
+									<YoutubeDisplay url="https://youtu.be/9z9ubPyJG2E" />
+								</Grid>
+								<Grid item xs={12}>
+									<Typography>
+										<p>Construct bridges from a small truss design to a strong, large-scale construction collectively made together as a classroom. </p>
+										<p>Learn how to strengthen structures by triangulation and design an environment for where your bridge is based. The Strawbees Classroom Experience thematic kits are designed to encourage student collaboration in activities as they start with their individual kits and combine their projects with other student projects to accomplish challenges and expand construction builds together as a classroom. </p>
+										<p>Comes as a box with 20 student kits inside, plus a teachers kit and a spare parts kit.</p>
+									</Typography>
+								</Grid>
+								<Grid item xs={12}>
+									<Gallery>
+										<ImageDisplay src={withPrefix('/truss.jpg')} />
+										<ImageDisplay src={withPrefix('/truss2.jpg')} />
+										<ImageDisplay src={withPrefix('/truss3.jpg')} />
+										<ImageDisplay src={withPrefix('/truss6.jpg')} />
+										<ImageDisplay src={withPrefix('/trussproblemsolving.jpg')} />
+										<ImageDisplay src={withPrefix('/trussproblemsolving43.jpg')} />
+									</Gallery>
+								</Grid>
+								<Grid item xs={12}>
+									<Box pt={3} pb={2} textAlign="center">
+										<Typography variant="hero-h1">
+											Related Content
+										</Typography>
+									</Box>
+								</Grid>
+								<Grid item xs={12}>
+									<Typography>
+										<p>At Strawbees we recognize each classroom is unique and that is why we offer a range of equally excellent products and content, balancing personalization and structure without compromising quality.</p>
+										<p>You will have access to a full range of <Link href="/lesson-plans">Lesson Plans</Link>, <Link href="/activities">Activities</Link> and <Link href="/explorations">Explorations</Link> as well as different ways to navigate through it, highlighting different learning strategies and expected outcomes.</p>
+										<p>Read more about <Link href="/how-to-use-strawbees-in-your-classroom/">how to use Strawbees in your classroom</Link>.</p>
+									</Typography>
 								</Grid>
 								{posts.map((post, i) => {
 									return (
