@@ -127,7 +127,7 @@ const Downloads = function(props) {
 						<Box display="flex" flexDirection="row" justifyContent="center" flexWrap="wrap">
 						{props.files.map((file, i) => {
 							return (
-								<Box m={1}>
+								<Box m={1} key={i}>
 									<a href={file.path} target="_blank" rel="noopener noreferrer">
 										<Button icon="download">{file.name}</Button>
 									</a>
