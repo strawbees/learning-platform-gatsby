@@ -15,18 +15,18 @@ const useStyles = makeStyles({
 function ImageDisplay(props) {
 	const styles = useStyles()
 	return (
-		<Box position="relative" textAlign="left" className={styles.root}>
-			<Box>
+		<Box component="span" position="relative" textAlign="left" className={styles.root}>
+			<Box component="span">
 				<img alt={props.alt} {...props} />
 			</Box>
-			<Box
+			<Box component="span"
 				hidden={!props.alt ? true : false}
 				width="100%"
 				bgcolor="rgba(255,255,255,0.7)"
 				position="absolute"
 				bottom="0"
 				left="0">
-				<Box p={2}>
+				<Box component="span" p={2}>
 					<Typography>{props.alt}</Typography>
 				</Box>
 			</Box>
