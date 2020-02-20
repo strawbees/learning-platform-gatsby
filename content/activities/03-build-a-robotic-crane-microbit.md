@@ -6,14 +6,15 @@ thumbnail: '/roboticcranemicrobit.jpg'
 header: '/roboticcranemicrobit.jpg'
 category: 'Activity'
 related:
-- '/activity/build-an-afraid-of-the-dark-pig'
-- '/activity/build-a-mechanical-crane'
 - '/activity/build-a-robotic-crane-quirkbot'
+- '/activity/build-a-mechanical-crane'
+- '/activity/build-an-afraid-of-the-dark-pig'
 downloads:
 - name: 'Video instruction'
-  path: http://xxx
+  path: http://strawbees-learning-videos.s3.amazonaws.com/Build%20a%20Robotic%20Crane%20with%20Microbit.mp4
+- name: 'Remote Control Inspiration'
+  path: http://strawbees-learning-videos.s3.amazonaws.com/Build%20a%20Robotic%20Crane%20with%20Microbit.mp4
 ---
-
 
 <section component="youtube" url="https://youtu.be/PPkiXkKwweg"></section>
 
