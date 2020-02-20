@@ -17,9 +17,9 @@ downloads:
 
 <section component="youtube" url="https://youtu.be/f186_3nqnSM"></section>
 
-This activity could also be called marble run, rolling ball contraption, Rube Goldberg machine and many other names, but Roller Coaster translates better the idea behind it: create and enjoy a ride!
+This activity could also be called a marble run, rolling ball contraption, Rube Goldberg machine, and many other names. Still, Roller Coaster translates better the idea behind it: create and enjoy a ride!
 
-You can always build a single, monolitic, structure for the roller coaster but this is the hardest way to do it. We recommend creating separate tracks and picking a design that allows fine adjustments because you will need it. A small change on the track's inclination can have big impact on the speed. You can use a ping pong ball or any spheric object that rolls on the tracks. Paper or [3D printed](https://www.thingiverse.com/thing:859499) shperes will work each one with their own weight and smoothness challenges.
+You can always build a single, monolithic structure for the roller coaster, but this is the hardest way to do it. We recommend creating separate tracks and picking a design that allows fine adjustments because you will need it. A small change in the track's inclination can have a big impact on the speed. You can use a ping pong ball or any spheric object that rolls on the tracks. Paper or [3D printed](https://www.thingiverse.com/thing:859499) spheres will work as each one has its weight and surface smoothness challenges.
 
 <section component="gallery">
 
@@ -31,8 +31,8 @@ You can always build a single, monolitic, structure for the roller coaster but t
 
 </section>
 
-If you want your track to change direction you can align them in a way the ball falls gracefully on the other track. Although the falling aspect of it adds some dramatic moments on the ride, usually it's safer to use a curve track to change direction.
+If you want your track to change direction, you can align them in a way the ball falls gracefully on the other track. Although the falling aspect of it adds some dramatic moments on the ride, usually, it's safer to use a curve track to change direction.
 
 <section component="youtube" url="https://youtu.be/GKJ0-leyCRo"></section>
 
-You can add sensors, lifts and much more with one of our robotic boards like the Quirkbot or BBC micro:bit.
+You can add sensors, lifts, and much more with one of our robotic boards like the Quirkbot or BBC micro:bit.
