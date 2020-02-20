@@ -4,6 +4,9 @@ This is a static website version of the [Strawbees Learning Platform](https://le
 
 ## Quick start
 
+- If you are on Linux you might want to [increase the number of file watchers your OS allows](https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers#the-technical-details).
+	- `sudo sysctl fs.inotify.max_user_watches=524288`
+	- `sudo sysctl -p`
 - Clone repository: `git clone git@github.com:murilopolese/learning-platform-gatsby.git`
 - Navigate to the directory: `cd learning-platform-gatsby`
 - Install dependencies: `npm install`
