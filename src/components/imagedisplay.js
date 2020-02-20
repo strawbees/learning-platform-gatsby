@@ -5,6 +5,9 @@ import Typography from './typography.js'
 
 const useStyles = makeStyles({
 	root: {
+		'& span': {
+			display: 'inline-box'
+		},
 		'& img': {
 			width: '100%',
 			maxWidth: '100%'
