@@ -114,7 +114,10 @@ exports.createPages = async function(e) {
 	const lessonPlans = await getContent('lesson-plans')
 	const explorations = await getContent('explorations')
 	const pages = await getContent('pages')
-	const drafts = await getContent('draft')
+	let drafts = []
+	try {
+		drafts = await getContent('draft')
+	} catch (e) { console.log('no drafts') }
 	const posts = [
 		...lessonPlans, ...activities, ...explorations
 	]
