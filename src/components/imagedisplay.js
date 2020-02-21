@@ -20,7 +20,6 @@ const useStyles = makeStyles({
 
 function ImageDisplay(props) {
 	const styles = useStyles()
-	console.log('alt', props)
 	return (
 		<Box component="span" position="relative" textAlign="left" className={styles.imageDisplay}>
 			<Box component="span">
