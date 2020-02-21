@@ -16,6 +16,9 @@ downloads:
   path: http://strawbees-learning-videos.s3.amazonaws.com/Strawbees%20RobotRacer.shrink.mp4
 - name: 'Tetrahedron blueprint'
   path: /pyramid.pdf
+product:
+- 'quirkbot'
+- 'steamschoolkit'
 ---
 
 <section component="youtube" url="https://youtu.be/VaYw4uI3HYE"></section>

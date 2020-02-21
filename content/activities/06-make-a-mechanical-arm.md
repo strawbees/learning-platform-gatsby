@@ -14,6 +14,8 @@ downloads:
   path: http://strawbees-learning-videos.s3.amazonaws.com/Make%20a%20Mechanical%20Arm%20-%20English.shrink.mp4
 - name: 'Arm blueprint'
   path: '/arm.pdf'
+product:
+- 'steamschoolkit'
 ---
 
 <section component="youtube" url="https://youtu.be/nVLp8KnJYAY"></section>

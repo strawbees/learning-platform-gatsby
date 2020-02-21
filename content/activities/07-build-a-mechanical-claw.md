@@ -12,6 +12,8 @@ related:
 downloads:
 - name: 'Video instruction'
   path: http://strawbees-learning-videos.s3.amazonaws.com/Strawbees%20mechanical%20claw.shrink.mp4
+product:
+- 'steamschoolkit'
 ---
 
 <section component="youtube" url="https://youtu.be/QsTzkzfnWfI"></section>

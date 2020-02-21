@@ -14,6 +14,9 @@ downloads:
   path: /codingcards/QuirkbotBlockCodingCards.pdf
 - name: 'Video instruction'
   path: https://strawbees-learning-videos.s3.amazonaws.com/Build%20a%20Blinking%20Star.mp4
+product:
+- 'quirkbot'
+- 'steamschoolkit'
 ---
 
 <section component="youtube" url="https://youtu.be/4zduly6FhQs"></section>

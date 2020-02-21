@@ -16,6 +16,10 @@ downloads:
   path: https://strawbees-learning-videos.s3.amazonaws.com/Build+a+Robotic+Crane+with+Quirkbot.mp4
 - name: 'Circuit Touch Inspiration'
   path: http://strawbees-learning-videos.s3.amazonaws.com/Circuit%20Touch%20Controlled%20Robotic%20Crane%20with%20Strawbees%20and%20Quirkbot.mp4
+product:
+- 'quirkbot'
+- 'steamschoolkit'
+- 'bridges'
 ---
 
 <section component="youtube" url="https://youtu.be/WdAtFaHl-mk"></section>

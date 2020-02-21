@@ -14,6 +14,10 @@ downloads:
   path: http://strawbees-learning-videos.s3.amazonaws.com/Build%20a%20Robotic%20Crane%20with%20Microbit.mp4
 - name: 'Remote Control Inspiration'
   path: http://strawbees-learning-videos.s3.amazonaws.com/Build%20a%20Robotic%20Crane%20with%20Microbit.mp4
+product:
+- 'microbit'
+- 'steamschoolkit'
+- 'bridges'
 ---
 
 <section component="youtube" url="https://youtu.be/PPkiXkKwweg"></section>

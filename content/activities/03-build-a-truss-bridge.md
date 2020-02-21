@@ -12,6 +12,9 @@ related:
 downloads:
 - name: 'Video instruction'
   path: http://strawbees-learning-videos.s3.amazonaws.com/Strawbees%20Bridge.shrink.mp4
+product:
+- 'bridges'
+- 'steamschoolkit'
 ---
 
 <section component="youtube" url="https://www.youtube.com/watch?v=3cpk0TWXKOU" ></section>

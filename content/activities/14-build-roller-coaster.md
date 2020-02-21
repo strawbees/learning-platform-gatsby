@@ -12,6 +12,8 @@ related:
 downloads:
 - name: 'Video instruction'
   path: http://strawbees-learning-videos.s3.amazonaws.com/Build%20a%20Roller%20Coaster.mp4
+product:
+- 'steamschoolkit'
 ---
 
 

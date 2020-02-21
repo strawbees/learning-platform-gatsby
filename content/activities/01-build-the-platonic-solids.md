@@ -22,7 +22,8 @@ downloads:
   path: /dodecahedron.pdf
 - name: 'Icosahedron blueprint'
   path: /icosahedron.pdf
-
+product:
+- 'steamschoolkit'
 ---
 
 <section component="youtube" url="https://youtu.be/ubChdzfykHg"></section>

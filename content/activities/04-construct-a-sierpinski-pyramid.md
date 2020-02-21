@@ -14,6 +14,8 @@ downloads:
   path: http://strawbees-learning-videos.s3.amazonaws.com/Construct%20a%20Sierpinski%20Pyramid%20-%20English.shrink.mp4
 - name: 'Tetrahedron blueprint'
   path: /pyramid.pdf
+product:
+- 'steamschoolkit'
 ---
 
 <section component="youtube" url="https://youtu.be/MFlH7minmJU"></section>

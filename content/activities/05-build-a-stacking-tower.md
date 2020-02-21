@@ -14,6 +14,9 @@ downloads:
   path: http://strawbees-learning-videos.s3.amazonaws.com/Build%20a%20Stacking%20Tower.mp4
 - name: 'Cube blueprint'
   path: '/cube.pdf'
+product:
+- 'steamschoolkit'
+- 'bridges'
 ---
 
 <section component="youtube" url="https://youtu.be/yiay9V7Ye7E"></section>
