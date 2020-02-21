@@ -27,3 +27,14 @@ In this activity, you are going to make a basic mechanical structure that looks 
 <section component="youtube" url="https://youtu.be/8fDk9Uz-Zs8"></section>
 
 You can use [MakeCode](https://makecode.microbit.org/_KteVxThvbhdE) to program your micro:bit.
+
+<section component="gallery">
+
+![](/makecode/extension.jpg)
+![](/makecode/shake.jpg)
+![](/makecode/backandforth.jpg)
+![](/makecode/sweep.jpg)
+![](/makecode/pressbuttontoholdposition.jpg)
+![](/makecode/pressbuttontoswitchposition.jpg)
+
+</section>
