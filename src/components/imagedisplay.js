@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import Typography from './typography.js'
 
 const useStyles = makeStyles({
-	root: {
+	imageDisplay: {
 		'& span': {
 			display: 'inline-box'
 		},
@@ -12,18 +12,22 @@ const useStyles = makeStyles({
 			width: '100%',
 			maxWidth: '100%'
 		}
+	},
+	hidden: {
+		display: 'none !important'
 	}
 })
 
 function ImageDisplay(props) {
 	const styles = useStyles()
+	console.log('alt', props)
 	return (
-		<Box component="span" position="relative" textAlign="left" className={styles.root}>
+		<Box component="span" position="relative" textAlign="left" className={styles.imageDisplay}>
 			<Box component="span">
 				<img alt={props.alt} {...props} />
 			</Box>
 			<Box component="span"
-				hidden={!props.alt ? true : false}
+				className={!props.alt ? styles.hidden : ``}
 				width="100%"
 				bgcolor="rgba(255,255,255,0.7)"
 				position="absolute"
@@ -33,6 +37,7 @@ function ImageDisplay(props) {
 					<Typography>{props.alt}</Typography>
 				</Box>
 			</Box>
+
 		</Box>
 	)
 }

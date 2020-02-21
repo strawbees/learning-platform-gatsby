@@ -70,8 +70,8 @@ function Gallery(props) {
 				className={styles.imageContainer}>
 				{children.map((el, i) => {
 					return (
-						<Box key={i} hidden={i !== index} bgcolor="#ccc">
-							<Box className={styles.loading}>Loading...</Box>
+						<Box key={i} hidden={i !== index}>
+							<Box className={styles.loading}></Box>
 							{el}
 						</Box>
 					)
