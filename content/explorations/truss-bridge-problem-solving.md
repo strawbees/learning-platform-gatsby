@@ -8,38 +8,33 @@ category: 'Exploration'
 related:
 - '/lesson-plan/city-building'
 - '/activity/build-a-truss-bridge'
-- '/activity/build-a-stacking-tower'
+- '/exploration/roller-coaster-habits-of-learning'
 ---
 
 In this exploration, we’ll show how to scaffold situations for your students to develop and demonstrate problem solving with a Strawbees Truss Bridge!
+
+![](/trussproblemsolving.jpg)
 
 # Step 1: Problem presentation
 
 The problem is **how to build a bridge that connects two cardboard boxes separated by a specific distance**. You can give this distance in any metric system including in straw lengths. We suggest it to be around 3 and half *blue straws*.
 
-It’s also important to know how much weight the bridge can hold. Hanging a weight on straws can damage it and we recommend either making a cardboard platform or hanging the probe on connectors.
+It’s also important to know how much weight the bridge can hold. It's important to remember that hanging a weight on straws can damage it and we recommend either making a cardboard platform or hanging the probe on connectors.
 
 Each of your students should receive enough material to complete the task.
+
+<section component="gallery">
+
+![](/trussproblemsolving01.jpg)
+![](/trussproblemsolving02.jpg)
+
+</section>
 
 # Step 2: Expected learning outcomes
 
 ## Understanding the Problem
 
-*Demonstrates an understanding of the problem by describing the problem to be solved, including constraints or by exploring multiple or prior experiences.*
-
-<section component="gallery">
-
-![](/trussproblemsolving02.jpg)
-![](/trussproblemsolving11.jpg)
-![](/trussproblemsolving28.jpg)
-
-</section>
-
-Make sure students understand they are expected to describe clearly what were the problems they were solving while building the bridge.
-
-Incentivize them to look at multiple ways to describe the problem and to draw from previous knowledge to make sense of what’s happening.
-
-Excellent chance to talk about forces and trigonometry, for example.
+Make sure students understand they are expected to describe clearly what were the problems they were solving while building the bridge. Incentivize them to look at multiple ways to describe the problem and to draw from previous knowledge to make sense of what’s happening. This is an excellent chance to talk about forces and trigonometry, for example.
 
 There are 2 major problems designed for this activity:
 
@@ -52,28 +47,7 @@ There are 2 major problems designed for this activity:
 
 ## Possible Approaches
 
-*Identifies multiple, diverse approaches to solve the problem.*
-
-<section component="gallery">
-
-![](/truss.jpg)
-![](/trussproblemsolving21.jpg)
-![](/trussproblemsolving01.jpg)
-![](/trussproblemsolving18.jpg)
-![](/trussproblemsolving20.jpg)
-![](/trussproblemsolving22.jpg)
-![](/trussproblemsolving23.jpg)
-![](/trussproblemsolving24.jpg)
-![](/trussproblemsolving42.jpg)
-![](/trussproblemsolving40.jpg)
-
-</section>
-
-It's easy and quick to iterate over ideas with Strawbees and it might be tempting to just start building.
-
-But making a plan is important to demonstrate the ability to solve problems systematically.
-
-There are many ways in which the bridges can be built differently, here are some groups of possibilities:
+It's easy and quick to iterate over ideas with Strawbees and it might be tempting to just start building but making a plan is important to demonstrate the ability to solve problems systematically. There are many ways in which the bridges can be built differently, here are some groups of possibilities:
 
 * Different sizes by using different straw sizes
 * Mixed materials such as cardboard and wooden sticks
@@ -85,21 +59,7 @@ There are many ways in which the bridges can be built differently, here are some
 
 ## Choosing and implementing approach
 
-*Analyses factors to choose a reasonable approach and implement it with precision.*
-
-<section component="gallery">
-
-![](/trussproblemsolving43.jpg)
-![](/trussproblemsolving44.jpg)
-
-</section>
-
-Strawbees a very practical, fast-paced and iterative building process but make sure your students understand they are expected to demonstrate the ability to make educated guesses based on facts to choose their approach.
-
-A few things that are important to take in consideration:
-
-* The resources provided: A single kit or shared pile?
-* Understand if there is time to try out all the possibilities.
+Strawbees a very practical, fast-paced and iterative building process but make sure your students understand they are expected to demonstrate the ability to make educated guesses based on facts to choose their approach. Students are expected to take in consideration how much material is available and how much time they have to build.
 
 **Emerging**: Decide on a design.
 
@@ -107,7 +67,21 @@ A few things that are important to take in consideration:
 
 ## Analysis
 
-*Analyses the outcome by assessing whether the approach led to a reasonable solution.*
+After implementing the suggested approach, make sure your students understand they are expected to articulate whether their approach worked or not as expected and why. Students are expected to compare the performance of different approaches during the process as well as rank bridge performance and explain the parameter for judgment.
+
+**Emerging**: Identify if the bridge behaved as expected.
+
+**Proficient**: Understand and communicate about the efficiency of a specific design and if there could be an improvement.
+
+![](/trussproblemsolving26.jpg)
+
+## Reflection
+
+Your students should be able to explain where their bridges are excellent and where it failed or could be improved. Students are expected to identify and communicate about the strategies they used to achieve their goals, describe something unexpected or recently learnt and reflect if the solution was appropriate beyond the designed problems.
+
+**Emerging**: Point out a problem solving situation
+
+**Proficient**: Understand the systematic process of problem solving they went through and point out a situation they might start using problem solving to tackle.
 
 <section component="gallery">
 
@@ -123,51 +97,8 @@ A few things that are important to take in consideration:
 ![](/trussproblemsolving14.jpg)
 ![](/trussproblemsolving15.jpg)
 ![](/trussproblemsolving16.jpg)
-![](/trussproblemsolving26.jpg)
 
 </section>
-
-After implementing the suggested approach, make sure your students understand they are expected to articulate whether their approach worked or not as expected and why.
-
-Students are expected to:
-
-* Compare approaches and iterations during the process of solving the problem
-* Rank bridge performance and explain the parameter for judgment
-
-**Emerging**: Identify if the bridge behaved as expected.
-
-**Proficient**: Understand and communicate about the efficiency of design and based on the answer point out where there should be an improvement or if another design would be a better fit.
-
-## Reflection
-
-*Reflects on the problem solving process by identifying specific strengths and weaknesses of the selected approach(es).*
-
-<section component="gallery">
-
-![](/trussproblemsolving30.jpg)
-![](/trussproblemsolving31.jpg)
-![](/trussproblemsolving32.jpg)
-![](/trussproblemsolving33.jpg)
-![](/trussproblemsolving37.jpg)
-![](/trussproblemsolving38.jpg)
-![](/trussproblemsolving39.jpg)
-![](/trussproblemsolving42.jpg)
-![](/trussproblemsolving40.jpg)
-![](/trussproblemsolving41.jpg)
-
-</section>
-
-Your students should be able to explain where their bridges are excellent and where it failed or could be improved.
-
-Students are expected to:
-
-* Identify a strategy used to solve a problem
-* Describe something unexpected or learned
-* Reflects if a solution was appropriable beyond the designed problems.
-
-**Emerging**: Point out a problem solving situation
-
-**Proficient**: Understand the systematic process of problem solving they went through and point out a situation they might start using problem solving to tackle.
 
 # Step 3: Instructions and assessment
 
@@ -177,4 +108,29 @@ You can have the instructions available, give a lecture on how to build it, buil
 
 <section component="thumbnails">
 <section component="thumbnail" title="Build a Truss Bridge" description="Build a truss bridge and use your hands to understand structural integrity." image="/truss.jpg" path="/activity/build-a-truss-bridge"></section>
+</section>
+
+<br />
+
+<section component="gallery">
+
+![](/trussproblemsolving24.jpg)
+![](/trussproblemsolving11.jpg)
+![](/trussproblemsolving28.jpg)
+![](/trussproblemsolving21.jpg)
+![](/trussproblemsolving18.jpg)
+![](/trussproblemsolving20.jpg)
+![](/trussproblemsolving42.jpg)
+![](/trussproblemsolving40.jpg)
+![](/trussproblemsolving41.jpg)
+![](/trussproblemsolving22.jpg)
+![](/trussproblemsolving23.jpg)
+![](/trussproblemsolving30.jpg)
+![](/trussproblemsolving31.jpg)
+![](/trussproblemsolving32.jpg)
+![](/trussproblemsolving37.jpg)
+![](/trussproblemsolving38.jpg)
+![](/trussproblemsolving39.jpg)
+![](/trussproblemsolving33.jpg)
+
 </section>

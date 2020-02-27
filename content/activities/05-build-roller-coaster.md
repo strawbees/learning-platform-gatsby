@@ -2,8 +2,8 @@
 path: '/activity/build-a-roller-coaster'
 title: 'Build a Roller Coaster'
 description: 'Build a track for a ping pong ball to roll up and down.'
-thumbnail: '/rollercoaster4.jpg'
-header: '/rollercoaster.jpg'
+thumbnail: '/rollercoaster29.jpg'
+header: '/rollercoaster29.jpg'
 category: 'Activity'
 related:
 - '/activity/build-the-platonic-solids'
@@ -26,10 +26,14 @@ You can always build a single, monolithic structure for the roller coaster, but 
 <section component="gallery">
 
 ![](/rollercoaster.jpg)
+![](/rollercoaster11.jpg)
+![](/rollercoaster12.jpg)
+![](/rollercoaster13.jpg)
 ![](/rollercoaster1.jpg)
 ![](/rollercoaster2.jpg)
 ![](/rollercoaster3.jpg)
 ![](/rollercoaster4.jpg)
+![](/rollercoaster9.jpg)
 
 </section>
 

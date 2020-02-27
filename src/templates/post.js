@@ -85,7 +85,7 @@ const RelatedContent = function(props) {
 	return (
 		<Box py={6}>
 			<Container maxWidth="lg">
-				<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
+				<Grid container spacing={3} justify="center">
 					<Grid item xs={12} style={{textAlign: 'center'}}>
 						<Typography><h1>Related content</h1></Typography>
 					</Grid>
@@ -155,7 +155,7 @@ const RelatedProduct = function(props) {
 	return (
 		<Box py={6}>
 			<Container maxWidth="lg">
-				<Grid container spacing={3} direction="row" wrap="wrap" justify="flex-start">
+				<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
 					<Grid item xs={12} style={{textAlign: 'center'}}>
 						<Typography><h1>Strawbees kits</h1></Typography>
 					</Grid>
