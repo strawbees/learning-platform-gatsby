@@ -25,7 +25,7 @@ function Card(props) {
 		},
 		image: {
 			position: 'relative',
-			background: `${Palette.white} url(${props.image}) no-repeat`,
+			background: `${props.imageBg || Palette.white} url(${props.image}) no-repeat`,
 			backgroundSize: 'cover',
 			backgroundPosition: 'center center',
 			display: props.image ? 'inline-block' : 'none',

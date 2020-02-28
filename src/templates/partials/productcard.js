@@ -10,12 +10,13 @@ function ProductCard({
 	bgColor = Palette.pink,
 	bgImage,
 	image,
+	imageBg,
 	description,
 	linkTo,
 	callToAction = 'BUY THE KIT'
 }) {
 	return (
-		<Card bgColor={bgColor} bgImage={bgImage} variant="product" image={image}>
+		<Card bgColor={bgColor} bgImage={bgImage} variant="product" image={image} imageBg={imageBg}>
 			<Box p={3}>
 				<Box position="relative">
 					<Box px={3}>

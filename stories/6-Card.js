@@ -114,6 +114,27 @@ export const ProductHero = () => (
 		</Box>
 	</Card>
 )
+export const ProductHeroWithDifferentBackground = () => (
+	<Card bgColor={Palette.pink} variant="product" image={ProductImage} imageBg={Pallete.darkGrey}>
+		<Box p={3}>
+			<Box position="relative">
+				<Box px={3}>
+					<Typography variant="hero-body">
+						With this kit you learn the basic concepts of lorem ipsum. An
+						engaging hands-on learning experience!
+					</Typography>
+				</Box>
+				<Box textAlign="right" pt={1}>
+					<Link href="https://strawbees.com/store" target="_blank">
+						<Button bold icon="buy" foregroundColor="white" backgroundColor="black">
+							BUY KIT
+						</Button>
+					</Link>
+				</Box>
+			</Box>
+		</Box>
+	</Card>
+)
 export const BackgroundImage = () => (
 	<Card bgImage={GradientImage} bgColor={Palette.white}>
 		<Box p={3}>

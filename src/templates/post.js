@@ -10,6 +10,7 @@ import LayoutMenu from './partials/layoutmenu'
 import LayoutHero from './partials/layouthero'
 import LayoutFooter from './partials/layoutfooter'
 import ProductThumbnail from './partials/productthumbnail'
+import Downloads from './partials/downloads'
 import '../globalStyles.css'
 /*
 Because the humans didn't write javascript we can't use it on `gatsby-node.js`
@@ -26,6 +27,7 @@ const categoryColors = {
 const PostPage = (e) => {
 	const post = e.pageContext.post
 	const related = e.pageContext.related || []
+	const products = e.pageContext.products || []
 	// Convert markdown to react with our own components
 	let body = mdToReact(post.content)
 	return (
@@ -55,7 +57,7 @@ const PostPage = (e) => {
 				{post.related ? <RelatedContent posts={related} /> : ''}
 			</Grid>
 			<Grid item>
-				{post.product && post.product.length ? <RelatedProduct product={post.product} /> : ''}
+				{products.length ? <RelatedProduct products={products} /> : ''}
 			</Grid>
 			<Grid item><LayoutFooter /></Grid>
 		</Grid>
@@ -118,40 +120,7 @@ const RelatedContent = function(props) {
 	)
 }
 const RelatedProduct = function(props) {
-	const products = {
-		'bridges': {
-			path: '/product/bridges',
-			bgColor: 'bridges',
-			image: '/packagebridges.jpg',
-			title: 'Strawbees Classroom Experience: Bridges',
-			description: 'Learn how bridges are made! Experiment with shapes and different loads to test structural integrity.',
-			bgImage: null
-		},
-		'steamschoolkit': {
-			path: '/product/steamschoolkit',
-			bgColor: 'pink',
-			image: '/packagesteamschoolkit.jpg',
-			title: 'STEAM School Kit',
-			description: 'The STEAM School kit provides enough materials and is a storage solution for an entire class. Develop creative thinking skills with open-ended free play and build any Strawbees construction that you imagine with this kit!',
-			bgImage: '/steamschoolgradient.png'
-		},
-		'microbit': {
-			path: '/product/microbit',
-			bgColor: 'microbit',
-			image: '/packagemicrobit.jpg',
-			title: 'Robotic Inventions for micro:bit',
-			description: 'You can build and code robots that move! This kit integrates the micro:bit using the playful world of Strawbees construction to add robotic capabilities.',
-			bgImage: null
-		},
-		'quirkbot': {
-			path: '/product/quirkbot',
-			bgColor: 'quirkbot',
-			image: '/packagemicrobit.jpg',
-			title: 'Code and Robotics with Quirkbot',
-			description: 'You can build and code robots that move! This kit uses our very own Quirkbot to add robotic capabilities to your Strawbees construction.',
-			bgImage: null
-		}
-	}
+	const products = props.products
 	return (
 		<Box py={6}>
 			<Container maxWidth="lg">
@@ -159,43 +128,15 @@ const RelatedProduct = function(props) {
 					<Grid item xs={12} style={{textAlign: 'center'}}>
 						<Typography><h1>Strawbees kits</h1></Typography>
 					</Grid>
-					{props.product.map((p, i) => {
+					{products.map((p, i) => {
 						return (
 							<Grid key={i} item xs={12} sm={6} md={4}>
-								<Link to={products[p].path}>
-									<ProductThumbnail {...products[p]} />
+								<Link to={p.path}>
+									<ProductThumbnail {...p} />
 								</Link>
 							</Grid>
 						)
 					})}
-				</Grid>
-			</Container>
-		</Box>
-	)
-}
-const Downloads = function(props) {
-	return (
-		<Box pb={4} bgcolor={Palette.lightGrey}>
-			<Container maxWidth="md">
-				<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
-					<Grid item xs={12} style={{textAlign: 'center'}}>
-						<Typography>
-							<h1>Downloads</h1>
-						</Typography>
-					</Grid>
-					<Grid item xs={12}>
-						<Box display="flex" flexDirection="row" justifyContent="center" flexWrap="wrap">
-						{props.files.map((file, i) => {
-							return (
-								<Box m={1} key={i}>
-									<a href={file.path} target="_blank" rel="noopener noreferrer">
-										<Button icon="download">{file.name}</Button>
-									</a>
-								</Box>
-							)
-						})}
-						</Box>
-					</Grid>
 				</Grid>
 			</Container>
 		</Box>

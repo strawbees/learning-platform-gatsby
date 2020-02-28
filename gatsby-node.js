@@ -1,5 +1,6 @@
 const getContent = require('./build-src/getContent.js')
 const redirectBatch = require('./build-src/redirects.json')
+const allProducts = require('./build-src/products.json')
 
 const bridgePostsPaths = [
 	'/exploration/truss-bridge-problem-solving',
@@ -13,6 +14,17 @@ const steamSchoolPostsPaths = [
 	'/activity/build-the-platonic-solids',
 	'/activity/construct-a-sierpinski-pyramid',
 	'/activity/make-a-mechanical-arm'
+]
+const quirkbotPostsPaths = [
+	'/lesson-plan/robotic-olympics',
+	'/activity/create-a-robot-racer',
+	'/activity/build-a-blinking-star',
+	'/activity/build-a-robotic-crane-quirkbot',
+	'/activity/build-an-afraid-of-the-dark-pig',
+]
+const microbitPostsPaths = [
+	'/lesson-plan/robotic-olympics',
+	'/activity/build-a-robotic-crane-microbit'
 ]
 
 exports.createPages = async function(e) {
@@ -39,6 +51,12 @@ exports.createPages = async function(e) {
 	})
 	const steamSchoolPosts = posts.filter((post) => {
 		return steamSchoolPostsPaths.indexOf(post.path) !== -1
+	})
+	const quirkbotPosts = posts.filter((post) => {
+		return quirkbotPostsPaths.indexOf(post.path) !== -1
+	})
+	const microbitPosts = posts.filter((post) => {
+		return microbitPostsPaths.indexOf(post.path) !== -1
 	})
 
 	createPage({ // Index
@@ -85,18 +103,38 @@ exports.createPages = async function(e) {
 			posts: steamSchoolPosts
 		}
 	})
+	createPage({ // Quirkbot
+		path: '/product/quirkbot',
+		component: require.resolve('./src/templates/quirkbot.js'),
+		context: {
+			posts: quirkbotPosts
+		}
+	})
+	createPage({ // Microbit
+		path: '/product/microbit',
+		component: require.resolve('./src/templates/microbit.js'),
+		context: {
+			posts: microbitPosts
+		}
+	})
 
 	posts.forEach(function(post) { // All single posts
 		let related = post.related.map((postId) => {
 			return postsHash[postId]
 		})
+		let products = []
+		if (post.product && post.product.length) {
+			products = post.product.map((p) => {
+				return allProducts[p] || {}
+			})
+		}
 		createPage({ // Posts
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
 			context: {
 				post: post,
 				related: related,
-				product: post.product
+				products: products
 			}
 		})
 	})

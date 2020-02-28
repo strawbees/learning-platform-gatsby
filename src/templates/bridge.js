@@ -70,7 +70,7 @@ const Bridge = (e) => {
 								<Grid item xs={12}>
 									<Box pt={3} pb={2} textAlign="center">
 										<Typography variant="hero-h1">
-											Related Content
+											Content for this kit
 										</Typography>
 									</Box>
 								</Grid>
