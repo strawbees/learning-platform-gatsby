@@ -10,6 +10,8 @@ related:
 - '/activity/build-an-afraid-of-the-dark-pig'
 - '/activity/build-a-robotic-crane-quirkbot'
 downloads:
+- name: 'Getting Started with Quirkbot'
+  path: /quirkbotonboarding.pdf
 - name: 'Coding Cards'
   path: /codingcards/QuirkbotBlockCodingCards.pdf
 - name: 'Video instruction'

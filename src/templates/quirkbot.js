@@ -23,6 +23,7 @@ const Quirkbot = (e) => {
 		'Exploration': Palette.pink
 	}
 	const downloads = [
+		{ name: 'Getting Started with Quirkbot', path: '/quirkbotonboarding.pdf' },
 		{ name: 'Coding Cards', path: '/codingcards/QuirkbotBlockCodingCards.pdf' },
 		{ name: 'CODE Programming Interface', path: 'https://code.strawbees.com/download' }
 	]

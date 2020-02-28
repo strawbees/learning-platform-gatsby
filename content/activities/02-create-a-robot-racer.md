@@ -10,6 +10,8 @@ related:
 - '/activity/build-the-platonic-solids'
 - '/activity/build-a-robotic-crane-quirkbot'
 downloads:
+- name: 'Getting Started with Quirkbot'
+  path: /quirkbotonboarding.pdf
 - name: 'Coding Cards'
   path: /codingcards/QuirkbotBlockCodingCards.pdf
 - name: 'Video instruction'
@@ -36,16 +38,6 @@ Organizing the robots in a racing setting is a suggestion and could just as well
 </section>
 
 Once you can observe and describe the different types of motor movements, it's easier to describe how else it should move. Use our [CODE programming interface](https://code.strawbees.com/) to program the Quirkbot.
-
-<section component="gallery">
-
-![](/onboarding/howtoconnectmotorbackpack.jpg)
-![](/onboarding/howtoconnectservomotor.jpg)
-![](/onboarding/howtoattachmountandhorn.jpg)
-![](/onboarding/howtoconnect.jpg)
-![](/onboarding/howtoinstallfactoryprogram.jpg)
-
-</section>
 
 <section component="gallery">
 
