@@ -6,7 +6,8 @@ import Typography from './typography.js'
 const useStyles = makeStyles({
 	imageDisplay: {
 		'& span': {
-			display: 'inline-box'
+			display: 'inline-block',
+			width: '100%',
 		},
 		'& img': {
 			width: '100%',
@@ -21,7 +22,7 @@ const useStyles = makeStyles({
 function ImageDisplay(props) {
 	const styles = useStyles()
 	return (
-		<Box component="span" position="relative" textAlign="left" className={styles.imageDisplay}>
+		<Box component="span" position="relative"  className={styles.imageDisplay}>
 			<Box component="span">
 				<img alt={props.alt} {...props} />
 			</Box>
@@ -32,7 +33,7 @@ function ImageDisplay(props) {
 				position="absolute"
 				bottom="0"
 				left="0">
-				<Box component="span" p={2}>
+				<Box component="span" p={2} textAlign="left">
 					<Typography>{props.alt}</Typography>
 				</Box>
 			</Box>
