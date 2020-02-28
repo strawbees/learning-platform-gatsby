@@ -26,7 +26,7 @@ const Microbit = (e) => {
 		<Grid container direction="column">
 			<SEO
 				title="Robotic Inventions for the micro:bit"
-				image={withPrefix('/roboticcranemicrobit1.jpg')}
+				image={withPrefix('/packagemicrobit.jpg')}
 				description="You can build and code robots that move! This kit integrates the micro:bit using the playful world of Strawbees construction to add robotic capabilities."/>
 			<Grid item><LayoutMenu /></Grid>
 			<Grid item>

@@ -31,7 +31,7 @@ const Quirkbot = (e) => {
 		<Grid container direction="column">
 			<SEO
 				title="Coding & Robotics with the quirkbot"
-				image={withPrefix('/robotracer8.jpg')}
+				image={withPrefix('/packagemicrobit.jpg')}
 				description="This kit covers all Strawbees construction methods, tools and techniques to realize your project ideas!"/>
 			<Grid item><LayoutMenu /></Grid>
 			<Grid item>

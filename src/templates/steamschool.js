@@ -26,7 +26,7 @@ const SteamSchool = (e) => {
 		<Grid container direction="column">
 			<SEO
 				title="Strawbees STEAM School Kit"
-				image={withPrefix('/steamschoolthumbnail.jpg')}
+				image={withPrefix('/packagesteamschoolkit.jpg')}
 				description="This kit covers all Strawbees construction methods, tools and techniques to realize your project ideas!"/>
 			<Grid item><LayoutMenu /></Grid>
 			<Grid item>
