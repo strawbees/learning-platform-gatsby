@@ -119,9 +119,12 @@ exports.createPages = async function(e) {
 	})
 
 	posts.forEach(function(post) { // All single posts
-		let related = post.related.map((postId) => {
-			return postsHash[postId]
-		})
+		let related = []
+		if (post.related) {
+			related = post.related.map((postId) => {
+				return postsHash[postId]
+			})
+		}
 		let products = []
 		if (post.product && post.product.length) {
 			products = post.product.map((p) => {

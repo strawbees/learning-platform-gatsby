@@ -47,7 +47,7 @@ const Quirkbot = (e) => {
 							bgColor={Palette.quirkbot}
 							description="Make a quirky robot out of anything! Transform your Strawbees projects into interactive robots using electronic construction pieces with Quirkbot."
 							callToAction="BUY THE KIT"
-							linkTo="https://mkt.strawbees.com/pipeline/"/>
+							linkTo="https://strawbees.com/store/"/>
 					</Container>
 				</LayoutHero>
 			</Grid>
@@ -67,9 +67,9 @@ const Quirkbot = (e) => {
 							</Grid>
 							<Grid item xs={12}>
 								<Gallery>
-									<ImageDisplay src={withPrefix('/robotracer.jpg')} />
-									<ImageDisplay src={withPrefix('/robotracer2.jpg')} />
 									<ImageDisplay src={withPrefix('/robotracer10.jpg')} />
+									<ImageDisplay src={withPrefix('/robotracer2.jpg')} />
+									<ImageDisplay src={withPrefix('/robotracer.jpg')} />
 									<ImageDisplay src={withPrefix('/robotracer8.jpg')} />
 									<ImageDisplay src={withPrefix('/roboticolympics.jpg')} />
 									<ImageDisplay src={withPrefix('/roboticcranequirkbot.jpg')} />

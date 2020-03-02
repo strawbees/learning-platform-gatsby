@@ -5,10 +5,6 @@ description: 'Gain and demonstrate proficiency in problem solving with this brid
 thumbnail: '/trussproblemsolving.jpg'
 header: '/trussproblemsolving.jpg'
 category: 'Exploration'
-related:
-- '/lesson-plan/city-building'
-- '/activity/build-a-truss-bridge'
-- '/exploration/roller-coaster-habits-of-learning'
 ---
 
 In this exploration, we’ll show how to scaffold situations for your students to develop and demonstrate problem solving with a Strawbees Truss Bridge!

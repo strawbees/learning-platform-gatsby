@@ -39,7 +39,7 @@ const SteamSchool = (e) => {
 							bgColor={Palette.white}
 							description="This kit covers all Strawbees construction methods, tools and techniques to realize your project ideas!"
 							callToAction="BUY THE KIT"
-							linkTo="https://mkt.strawbees.com/pipeline/"/>
+							linkTo="https://strawbees.com/store/"/>
 					</Container>
 				</LayoutHero>
 			</Grid>

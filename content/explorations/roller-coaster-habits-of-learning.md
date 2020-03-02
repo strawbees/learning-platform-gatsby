@@ -5,10 +5,6 @@ description: 'Gain and demonstrate important habits that make a lifelong learner
 thumbnail: '/rollercoaster29.jpg'
 header: '/rollercoaster29.jpg'
 category: 'Exploration'
-related:
-- '/activity/build-the-platonic-solids'
-- '/activity/build-a-truss-bridge'
-- '/exploration/truss-bridge-problem-solving'
 ---
 
 In this exploration, we’ll show how to scaffold situations for your students to develop and demonstrate important lifelong learning habits with a Strawbees Roller Coaster!
@@ -43,7 +39,7 @@ Each of your students should have access to enough material to complete the task
 
 ## Persistence
 
-Breaking down the track in smaller parts and working towards building and testing one after the other is essential in order to the ping ball to go from point A to B in 10 seconds or more. The skill to be developed here is to keep yourself motivated on the main goal even while struggling with the smaller goals.
+Breaking down the track in smaller parts, working towards building and testing one after the other is essential in order to the ping ball to go from point A to B in 10 seconds or more. The skill to be developed here is to keep yourself motivated on the main goal even while struggling with the smaller goals.
 
 **Emerging**: Recognize the value of setting goals and working to accomplish them.
 
@@ -51,9 +47,9 @@ Breaking down the track in smaller parts and working towards building and testin
 
 ## Questioning
 
-Sometimes the hardest part of solving a problem is asking the right question. Learning how to navigate problems through question is a fundamental skill for a learner and it’s a habit to be developed. It’s important for students to demonstrate they can derive important knowledge and learn by following their curiosity.
+Sometimes the hardest part of solving a problem is asking the right question. Learning how to navigate problems through questions is a fundamental skill for a learner and it’s a habit to be developed. It’s important for students to demonstrate they can derive important knowledge and learn by following their curiosity.
 
-**Emerging**: Asks questions
+**Emerging**: Asks questions.
 
 **Proficient**: Integrates curiosity and genuine interest to drive questions that help build the track. Asks questions that promote and uncover new learning, solutions and questions.
 
@@ -61,7 +57,7 @@ Sometimes the hardest part of solving a problem is asking the right question. Le
 
 Failing is an inevitable challenge we face as we grow. Being able to assess stress levels and react to it wisely can be decisive for a healthy development. Students should be able to demonstrate they are able to react in a positive manner to stressors.
 
-**Emerging**: Identifying a situation where they reacted differently facing a challenge or stressor
+**Emerging**: Identifying a situation where they reacted differently facing a challenge or stressor.
 
 **Proficient**: Is able to reflect on personal strengths and challenges. Asked for help when needed and is able to talk about stressors and how to deal with them.
 
@@ -71,25 +67,25 @@ It’s important that everybody participates in building and planning. Sometimes
 
 Learning from how other peers would solve your problems, or how they think about an issue, is sometimes the best and only way to move forward.
 
-**Emerging**: Recognizes the need for individuals to work effectively and appropriately in groups
+**Emerging**: Recognizes the need for individuals to work effectively and appropriately in groups.
 
-**Proficient**: Works interdependently and manages relationships and roles in pairs or groups
+**Proficient**: Works interdependently and manages relationships and roles in pairs or groups.
 
 ## Growth Mindset
 
 Everytime the ball falls off the track is an opportunity to learn a new way to prevent that from happening. Changing your perspective from failing to growing is an important step towards success.
 
-**Emerging**: Recognizes that new learning can be challenging and can identify mistakes
+**Emerging**: Recognizes that new learning can be challenging and can identify mistakes.
 
-**Proficient**: Demonstrates that new learning can be challenging and can accept feedback appropriately. Identifies mistakes and new learning experiences as potential growth opportunities
+**Proficient**: Demonstrates that new learning can be challenging and can accept feedback appropriately. Identifies mistakes and new learning experiences as potential growth opportunities.
 
 ## Precision
 
-Making a marble run out of Strawbees, even though sometimes it might look like, is not a lucky game. Being able to repeatedly succeed and keep a constant time to complete the track is what this is all about.
+Making a marble run out of Strawbees is not a lucky game, even if sometimes it looks like. Students are expected to be able to repeatedly succeed and keep a consistent time to complete the track.
 
-**Emerging**: Recognizes the importance of products that are planned, edited, and completed with care
+**Emerging**: Recognizes the importance of a track that is planned, edited, and completed with care.
 
-**Proficient**: Creates products that are planned, edited, and completed with minimal errors
+**Proficient**: Creates a track that is planned, edited, and completed with minimal errors.
 
 <section component="gallery">
 
@@ -109,7 +105,7 @@ Making a marble run out of Strawbees, even though sometimes it might look like, 
 
 # Step 3: Instructions and assessment
 
-We provide a full step by step instructions on how to build a modular roller coaster platform, a few variations and track examples for inspiration. We also have other Activities that might provide other insights on building with Strawbees.
+We provide a full step by step instructions on how to build a modular roller coaster platform with a few variations and track examples for inspiration. We also have other Activities that might provide other insights on building with Strawbees.
 
 You can have the instructions available, give a lecture on how to build it, build together with the whole class or all the previous combined. Experiment with what type of instructions and assessment works the best with your group.
 
