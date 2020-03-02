@@ -26,8 +26,8 @@
 	"quirkbot": {
 		"path": "/product/quirkbot",
 		"bgColor": "quirkbot",
-		"image": "/packagemicrobit.jpg",
-		"title": "Coding and Robotics with the quirkbot",
+		"image": "/packagequirkbot.jpg",
+		"title": "Coding and Robotics with the Quirkbot",
 		"description": "You can build and code robots that move! This kit uses our very own Quirkbot to add robotic capabilities to your Strawbees construction.",
 		"bgImage": null
 	}
