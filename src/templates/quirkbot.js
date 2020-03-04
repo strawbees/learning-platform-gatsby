@@ -16,12 +16,9 @@ import ProductCard from '../templates/partials/productcard'
 import LayoutFooter from '../templates/partials/layoutfooter'
 import Downloads from '../templates/partials/downloads'
 
+import categoryColors from '../utils/categoryColors'
+
 const Quirkbot = (e) => {
-	const categoryColors = {
-		'Activity': Palette.blue,
-		'Lesson Plan': Palette.yellow,
-		'Exploration': Palette.pink
-	}
 	const downloads = [
 		{ name: 'Getting Started with Quirkbot', path: '/quirkbotonboarding.pdf' },
 		{ name: 'Coding Cards', path: '/codingcards/QuirkbotBlockCodingCards.pdf' },

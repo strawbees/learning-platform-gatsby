@@ -15,12 +15,9 @@ import LayoutHero from '../templates/partials/layouthero'
 import ProductCard from '../templates/partials/productcard'
 import LayoutFooter from '../templates/partials/layoutfooter'
 
+import categoryColors from '../utils/categoryColors'
+
 const Microbit = (e) => {
-	const categoryColors = {
-		'Activity': Palette.blue,
-		'Lesson Plan': Palette.yellow,
-		'Exploration': Palette.pink
-	}
 	const posts = e.pageContext.posts
 	return (
 		<Grid container direction="column">

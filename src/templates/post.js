@@ -17,12 +17,7 @@ Because the humans didn't write javascript we can't use it on `gatsby-node.js`
 so we have to add this here instead. :facepalm:
 */
 import mdToReact from '../utils/mdToReact'
-
-const categoryColors = {
-	'Activity': Palette.blue,
-	'Lesson Plan': Palette.yellow,
-	'Exploration': Palette.pink
-}
+import categoryColors from '../utils/categoryColors'
 
 const PostPage = (e) => {
 	const post = e.pageContext.post

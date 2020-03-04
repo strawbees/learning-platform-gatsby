@@ -11,6 +11,8 @@ import LayoutMenu from './partials/layoutmenu'
 import LayoutHero from './partials/layouthero'
 import LayoutFooter from './partials/layoutfooter'
 
+import categoryColors from '../utils/categoryColors'
+
 const IndexPage = (e) => {
 	const posts = e.pageContext.posts
 	return (
@@ -24,11 +26,6 @@ const IndexPage = (e) => {
 }
 
 function LayoutFeed({ posts }) {
-	const categoryColors = {
-		'Activity': Palette.blue,
-		'Lesson Plan': Palette.yellow,
-		'Exploration': Palette.pink
-	}
 	return (
 		<Box py={4}>
 			<SEO
