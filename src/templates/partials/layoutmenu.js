@@ -67,11 +67,11 @@ function ProductsDropdown(props) {
 				elevation={0}
 				anchorOrigin={{
 					vertical: 'bottom',
-					horizontal: 'left',
+					horizontal: 'center',
 				}}
 				transformOrigin={{
 					vertical: 'top',
-					horizontal: 'left',
+					horizontal: 'center',
 				}}
 				open={Boolean(anchorEl)}
 				onClose={handleClose}
