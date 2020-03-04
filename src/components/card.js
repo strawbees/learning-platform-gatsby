@@ -81,6 +81,7 @@ Card.propTypes = {
 	labelColor: PropTypes.string,
 	labelBgcolor: PropTypes.string,
 	image: PropTypes.string,
+	imageBg: PropTypes.string,
 	variant: PropTypes.oneOf(
 		['large-image', 'product']
 	)

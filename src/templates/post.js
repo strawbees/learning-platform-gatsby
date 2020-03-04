@@ -2,7 +2,6 @@ import React from "react"
 import { Link, withPrefix } from 'gatsby'
 import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../components/typography'
-import Button from '../components/button'
 import Palette from '../components/palette'
 import Card from '../components/card'
 import SEO from '../components/seo'

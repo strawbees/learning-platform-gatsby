@@ -2,31 +2,6 @@ const getContent = require('./build-src/getContent.js')
 const redirectBatch = require('./build-src/redirects.json')
 const allProducts = require('./build-src/products.json')
 
-const bridgePostsPaths = [
-	'/exploration/truss-bridge-problem-solving',
-	'/activity/build-a-truss-bridge',
-	'/lesson-plan/city-building'
-]
-const steamSchoolPostsPaths = [
-	'/lesson-plan/city-building',
-	'/lesson-plan/geometric-world',
-	'/lesson-plan/mechanical-inventions',
-	'/activity/build-the-platonic-solids',
-	'/activity/construct-a-sierpinski-pyramid',
-	'/activity/make-a-mechanical-arm'
-]
-const quirkbotPostsPaths = [
-	'/lesson-plan/robotic-olympics',
-	'/activity/create-a-robot-racer',
-	'/activity/build-a-blinking-star',
-	'/activity/build-a-robotic-crane-quirkbot',
-	'/activity/build-an-afraid-of-the-dark-pig',
-]
-const microbitPostsPaths = [
-	'/lesson-plan/robotic-olympics',
-	'/activity/build-a-robotic-crane-microbit'
-]
-
 exports.createPages = async function(e) {
 	const createPage = e.actions.createPage
 	const createRedirect = e.actions.createRedirect
@@ -34,6 +9,8 @@ exports.createPages = async function(e) {
 	const lessonPlans = await getContent('lesson-plans')
 	const explorations = await getContent('explorations')
 	const pages = await getContent('pages')
+	const products = await getContent('products')
+
 	let drafts = []
 	try {
 		drafts = await getContent('draft')
@@ -41,22 +18,12 @@ exports.createPages = async function(e) {
 	const posts = [
 		...lessonPlans, ...activities, ...explorations
 	]
+
+	// Create a dictionary where the key is the post path and the value is the
+	// the post object
 	let postsHash = {}
 	posts.forEach((post) => {
 		postsHash[post.path] = post
-	})
-
-	const bridgePosts = posts.filter((post) => {
-		return bridgePostsPaths.indexOf(post.path) !== -1
-	})
-	const steamSchoolPosts = posts.filter((post) => {
-		return steamSchoolPostsPaths.indexOf(post.path) !== -1
-	})
-	const quirkbotPosts = posts.filter((post) => {
-		return quirkbotPostsPaths.indexOf(post.path) !== -1
-	})
-	const microbitPosts = posts.filter((post) => {
-		return microbitPostsPaths.indexOf(post.path) !== -1
 	})
 
 	createPage({ // Index
@@ -89,33 +56,16 @@ exports.createPages = async function(e) {
 		context: { posts: drafts }
 	})
 
-	createPage({ // Bridge kit
-		path: '/product/bridges',
-		component: require.resolve('./src/templates/bridge.js'),
-		context: {
-			posts: bridgePosts
+	products.forEach(function(product) {
+		let related = []
+		if (product.related) {
+			related = product.related.map((path) => postsHash[path])
 		}
-	})
-	createPage({ // STEAM School kit
-		path: '/product/steamschoolkit',
-		component: require.resolve('./src/templates/steamschool.js'),
-		context: {
-			posts: steamSchoolPosts
-		}
-	})
-	createPage({ // Quirkbot
-		path: '/product/quirkbot',
-		component: require.resolve('./src/templates/quirkbot.js'),
-		context: {
-			posts: quirkbotPosts
-		}
-	})
-	createPage({ // Microbit
-		path: '/product/microbit',
-		component: require.resolve('./src/templates/microbit.js'),
-		context: {
-			posts: microbitPosts
-		}
+		createPage({
+			path: product.path,
+			component: require.resolve('./src/templates/product.js'),
+			context: { product: product, related: related }
+		})
 	})
 
 	posts.forEach(function(post) { // All single posts
