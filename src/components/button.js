@@ -54,7 +54,6 @@ function isPalette(colorName) {
 	return Palette[colorName] !== undefined
 }
 
-// Forgiveme oh functional Gods for this function that makes side effects
 function getCustomClass(jsCss) {
 	const customStyles = makeStyles({
 		customStyle: jsCss
@@ -63,7 +62,7 @@ function getCustomClass(jsCss) {
 	return customClasses.customStyle
 }
 
-function getForegroundClasse(fgColor, classes) {
+function getForegroundClass(fgColor, classes) {
 	if (fgColor) {
 		if(isPalette(fgColor)) {
 			return classes[`foregroundColor${fgColor}`]
@@ -74,7 +73,7 @@ function getForegroundClasse(fgColor, classes) {
 	}
 	return ''
 }
-function getBackgroundClasse(bgColor, classes) {
+function getBackgroundClass(bgColor, classes) {
 	let classNames = []
 	if (bgColor) {
 		if(isPalette(bgColor)) {
@@ -102,8 +101,8 @@ function Button(props) {
 	const useStyles = makeStyles(variants)
 	const classes = useStyles()
 
-	const fgClasse = getForegroundClasse(props.foregroundColor, classes)
-	const bgClasse = getBackgroundClasse(props.backgroundColor, classes)
+	const fgClasse = getForegroundClass(props.foregroundColor, classes)
+	const bgClasse = getBackgroundClass(props.backgroundColor, classes)
 	let outlineClass = ''
 	if (props.outline) {
 		outlineClass = getOutlineClass(props.foregroundColor || Palette.black, classes)
