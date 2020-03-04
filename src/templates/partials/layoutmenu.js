@@ -1,6 +1,7 @@
 import React from "react"
 import { Link as InternalLink } from "gatsby"
 import { Container, Grid, Box, Menu, MenuItem } from '@material-ui/core'
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import Button from '../../components/button.js'
 import StrawbeesLogo from '../../images/learninglogo.svg'
 
@@ -48,7 +49,17 @@ function ProductsDropdown(props) {
 	const linkStyle = { width: '100%', padding: 10 }
 	return (
 		<React.Fragment>
-			<Button variant="text" aria-controls="products-menu" aria-haspopup="true" onClick={handleClick}>Products</Button>
+			<Box
+				display="flex"
+				alignItems="center"
+				aria-controls="products-menu"
+				aria-haspopup="true"
+				onClick={handleClick}
+				style={{cursor: 'pointer'}}
+				>
+				<Button>Products</Button>
+				<ExpandMoreIcon />
+			</Box>
 			<Menu
 				id="products-menu"
 				anchorEl={anchorEl}
@@ -62,9 +73,9 @@ function ProductsDropdown(props) {
 					vertical: 'top',
 					horizontal: 'center',
 				}}
-				keepMounted
 				open={Boolean(anchorEl)}
 				onClose={handleClose}
+				keepMounted
 				>
 				<MenuItem onClick={handleClose}>
 					<InternalLink to="/product/steamschoolkit" style={linkStyle}>

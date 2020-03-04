@@ -17,9 +17,16 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@babel/core": "^7.7.7",
     "@material-ui/core": "^4.7.0",
+    "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.7.1",
+    "@storybook/addon-actions": "^5.2.8",
+    "@storybook/addon-links": "^5.2.8",
+    "@storybook/addons": "^5.2.8",
+    "@storybook/react": "^5.2.8",
     "@strawbees/s3-publisher": "^0.2.0",
+    "babel-loader": "^8.0.6",
     "dotenv": "^8.2.0",
     "frontmatter": "0.0.3",
     "gatsby": "^2.18.4",
@@ -43,13 +50,7 @@
     "remark": "^11.0.2",
     "remark-parse": "^7.0.2",
     "remark-rehype": "^5.0.0",
-    "unified": "^8.4.2",
-    "@babel/core": "^7.7.7",
-    "@storybook/addon-actions": "^5.2.8",
-    "@storybook/addon-links": "^5.2.8",
-    "@storybook/addons": "^5.2.8",
-    "@storybook/react": "^5.2.8",
-    "babel-loader": "^8.0.6"
+    "unified": "^8.4.2"
   },
   "license": "MIT",
   "repository": {
