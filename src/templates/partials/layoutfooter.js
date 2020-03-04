@@ -24,7 +24,7 @@ function LayoutFooter() {
 							<p>
 								<InternalLink to="/"><img src={StrawbeesLogo} width="200" alt="Strawbees Logo" /></InternalLink>
 							</p>
-							<Box px={8}>
+							<Box px={{xs: 8, sm: 2, md: 8}}>
 								<Grid container spacing={2} direction="row" justify="space-between">
 									<Grid xs={3} item>
 										<ExternalLink href="https://twitter.com/strawbees" target="_blank">
