@@ -111,6 +111,15 @@ exports.createPages = async function(e) {
 		})
 	})
 
+	// Printable Strawbees Learning
+	createPage({
+		path: '/print',
+		component: require.resolve('./src/templates/printable.js'),
+		context: {
+			activities, lessonPlans, explorations, pages
+		}
+	})
+
 	redirectBatch.forEach(function(redirect) { // Front end redirects
 		// Redirect without trailing slashes
 		createRedirect({
