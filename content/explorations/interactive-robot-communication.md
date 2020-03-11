@@ -2,131 +2,135 @@
 path: '/exploration/interactive-robot-communication'
 title: 'Interactive Robot: Communication'
 description: 'Gain and demonstrate communication skills by creating and presenting an interactive robot.'
-thumbnail: '/roboticcranequirkbit.jpg'
-header: '/roboticcranequirkbit.jpg'
+thumbnail: '/roboticcranequirkbot.jpg'
+header: '/roboticcranequirkbot.jpg'
 category: 'Exploration'
+downloads:
+- name: 'Getting Started with Quirkbot'
+  path: /quirkbotonboarding.pdf
+- name: 'Coding Cards'
+  path: /codingcards/QuirkbotBlockCodingCards.pdf
 ---
 
-In this exploration, we’ll show how to scaffold situations for your students to develop and demonstrate problem solving with a Strawbees Truss Bridge!
+In this exploration we’ll show how to scaffold situations for your students to develop and demonstrate communication skills presenting interactive robots made out of Strawbees!
 
-![](/trussproblemsolving.jpg)
+<section component="gallery">
+
+![](/roboticcranequirkbot.jpg)
+![](/roboticcranemicrobit.jpg)
+![](/blinkingstar4.jpg)
+![](/pig_full.jpg)
+![](/robotracer.jpg)
+
+</section>
 
 # Step 1: Problem presentation
 
-The problem is **how to build a bridge that connects two cardboard boxes separated by a specific distance**. You can give this distance in any metric system including in straw lengths. We suggest it to be around 3 and half *blue straws*.
+The problem is to present an **interactive robot** with one of the Strawbees Robotic kits.
+An interactive robot doesn’t need to “look like a robot” but it has to have **inputs and outputs**, **action and reaction**. Robots can react directly or indirectly to their environment. For example reacting to touch or button press or reacting to sunlight and moisture.
 
-It’s also important to know how much weight the bridge can hold. It's important to remember that hanging a weight on straws can damage it and we recommend either making a cardboard platform or hanging the probe on connectors.
+Ask your students to work and **present prototypes**. Prototypes are experiments that you make to communicate an idea that is not yet fully developed. Learning how to read and interpret prototypes is as important as creating them. It’s recommended to give enough time so students can present **at least one prototype** before the final presentation.
 
-Each of your students should receive enough material to complete the task.
-
-<section component="gallery">
-
-![](/trussproblemsolving01.jpg)
-![](/trussproblemsolving02.jpg)
-
-</section>
+For the final presentation, ask your students how would be the best way to **explain to an audience** how the interaction works but also **how they explained to the robot** how to interact.
 
 # Step 2: Expected learning outcomes
 
-## Understanding the Problem
+You should not only show but go through the expected learning outcomes with your students **highlighting** what are the skills you would like them to demonstrate proficiency at.
 
-Make sure students understand they are expected to describe clearly what were the problems they were solving while building the bridge. Incentivize them to look at multiple ways to describe the problem and to draw from previous knowledge to make sense of what’s happening. This is an excellent chance to talk about forces and trigonometry, for example.
+## Collaborative Discussion
 
-There are 2 major problems designed for this activity:
+Whether with team members or with other groups, discussing ideas is an essential part of collaborating. During this process it is important to hear different perspectives and connect previous knowledge in ways that enrich and help guiding ideas towards its desired outcomes.
 
-* Bridge from original activity or example must be too small to cover the gap distance. We recommend three and a half blue straws.
-* There are no specific instructions about how to make the load test, except it should not fold or break the straws.
+**Emerging**: Aware that collaborative discussion involves drawing connections between the ideas of others and posing clarifying questions.
 
-**Emerging**: Identify designed problems.
+**Proficient**: Participate and facilitate discussions that draw upon the knowledge, expertise, and unique perspectives of all participants encouraging growth in understanding and further inquiry.
 
-**Proficient**: Can describe the design challenges and other problems and constraints.
+## Poise
 
-## Possible Approaches
+A good communicator communicates with more than just a message. It’s important to pay attention to body language, and other non-verbal languages, adjusting it to the general intention and audience.
 
-It's easy and quick to iterate over ideas with Strawbees and it might be tempting to just start building but making a plan is important to demonstrate the ability to solve problems systematically. There are many ways in which the bridges can be built differently, here are some groups of possibilities:
+**Emerging**: Aware that making eye contact, and presenting without distracting mannerisms are important for presenting with poise.
 
-* Different sizes by using different straw sizes
-* Mixed materials such as cardboard and wooden sticks
-* It could have a cantilever or pillars to help the structure
+**Proficient**: Modulates volume, pace, intonation, articulation, and physical gestures to provide a compelling presentation for a range of audiences.
 
-**Emerging**: Identify a few ways to build the bridge.
+## Presentation
 
-**Proficient**: Can describe and categorize a wide range of approaches that can be taken.
+Presenting something or the idea behind something is an essential skill of a good communicator. A good presentation engages the audience with interesting content, adequate format and pace.
 
-## Choosing and implementing approach
+**Emerging**: Uses different techniques to present ideas. Aware that evidence is required to support claims.
 
-Strawbees a very practical, fast-paced and iterative building process but make sure your students understand they are expected to demonstrate the ability to make educated guesses based on facts to choose their approach. Students are expected to take in consideration how much material is available and how much time they have to build.
+**Proficient**: Presents complex and original ideas in a way that has a clear purpose and engages the audience using supporting evidence, and alternative or opposing perspectives to illustrate patterns and make meaningful connections.
 
-**Emerging**: Decide on a design.
+## Interpersonal Communication
+A good communicator is expected to adjust what and how to communicate according to the audience and respect the conventions required in different situations.
 
-**Proficient**: Chose an approach that that fits the constraints of the problem and execute it with precision.
+**Emerging**: Aware some modes of communication and conventions are appropriate for different purposes.
 
-## Analysis
-
-After implementing the suggested approach, make sure your students understand they are expected to articulate whether their approach worked or not as expected and why. Students are expected to compare the performance of different approaches during the process as well as rank bridge performance and explain the parameter for judgment.
-
-**Emerging**: Identify if the bridge behaved as expected.
-
-**Proficient**: Understand and communicate about the efficiency of a specific design and if there could be an improvement.
-
-![](/trussproblemsolving26.jpg)
-
-## Reflection
-
-Your students should be able to explain where their bridges are excellent and where it failed or could be improved. Students are expected to identify and communicate about the strategies they used to achieve their goals, describe something unexpected or recently learnt and reflect if the solution was appropriate beyond the designed problems.
-
-**Emerging**: Point out a problem solving situation
-
-**Proficient**: Understand the systematic process of problem solving they went through and point out a situation they might start using problem solving to tackle.
-
-<section component="gallery">
-
-![](/trussproblemsolving03.jpg)
-![](/trussproblemsolving04.jpg)
-![](/trussproblemsolving05.jpg)
-![](/trussproblemsolving11.jpg)
-![](/trussproblemsolving12.jpg)
-![](/trussproblemsolving07.jpg)
-![](/trussproblemsolving08.jpg)
-![](/trussproblemsolving13.jpg)
-![](/trussproblemsolving10.jpg)
-![](/trussproblemsolving14.jpg)
-![](/trussproblemsolving15.jpg)
-![](/trussproblemsolving16.jpg)
-
-</section>
+**Proficient**: Uses flexibly, a variety of modes of communication and maintains appropriate tone and conventions for each.
 
 # Step 3: Instructions and assessment
 
-We provide a full step by step instructions on how to build a basic Truss Bridge and a variety of other examples for inspiration. We also have other Activities that might provide other insights on the bridge making.
+We provide full step by step instructions on how to build basic robots and a variety of coding cards for inspiration. We also have Activities that might provide other valuable insights on Strawbees building.
+
+Additionally we recommend three additional resources to provide engagement for students with different interests and learning dynamics:
+
+- Coding Cards
+- Pair Programming
+- Translation Exercise
 
 You can have the instructions available, give a lecture on how to build it, build together with the whole class or all the previous combined. Experiment with what type of instructions and assessment works the best with your group.
 
-<section component="thumbnails">
-<section component="thumbnail" title="Build a Truss Bridge" description="Build a truss bridge and use your hands to understand structural integrity." image="/truss.jpg" path="/activity/build-a-truss-bridge"></section>
-</section>
+## Coding Cards
 
-<br />
+Coding cards are small snippets of code that can be used to explore different concepts.
+
+They are not meant to be used as they are but for you to tweak the numbers and combine the cards to get the expected result.
+
+You can find the coding cards on the Learning Platform and CODE.
 
 <section component="gallery">
 
-![](/trussproblemsolving24.jpg)
-![](/trussproblemsolving11.jpg)
-![](/trussproblemsolving28.jpg)
-![](/trussproblemsolving21.jpg)
-![](/trussproblemsolving18.jpg)
-![](/trussproblemsolving20.jpg)
-![](/trussproblemsolving42.jpg)
-![](/trussproblemsolving40.jpg)
-![](/trussproblemsolving41.jpg)
-![](/trussproblemsolving22.jpg)
-![](/trussproblemsolving23.jpg)
-![](/trussproblemsolving30.jpg)
-![](/trussproblemsolving31.jpg)
-![](/trussproblemsolving32.jpg)
-![](/trussproblemsolving37.jpg)
-![](/trussproblemsolving38.jpg)
-![](/trussproblemsolving39.jpg)
-![](/trussproblemsolving33.jpg)
+![](/onboarding/whatarecodingcards.jpg)
+![](/codingcards/backandforth.jpg)
+![](/codingcards/blink.jpg)
+![](/codingcards/changecolorinthedark.jpg)
+![](/codingcards/fadingcolors.jpg)
+![](/codingcards/flicker.jpg)
+![](/codingcards/flickeringcolor.jpg)
+![](/codingcards/glow.jpg)
+![](/codingcards/lightswitch.jpg)
+![](/codingcards/moodlightswitch.jpg)
+![](/codingcards/shake.jpg)
+![](/codingcards/shakeinthedark.jpg)
+![](/codingcards/sweep.jpg)
+![](/codingcards/switchingcolors.jpg)
+![](/codingcards/touchandholdposition.jpg)
+![](/codingcards/touchandtrap.jpg)
+![](/codingcards/touchandwink.jpg)
+![](/codingcards/touchandwink.jpg)
+![](/codingcards/touchtochangecolor.jpg)
+![](/codingcards/touchtoshine.jpg)
+![](/codingcards/touchtosirenlight.jpg)
+![](/codingcards/touchtoswitchposition.jpg)
 
 </section>
+
+## Pair Programming
+
+1. One student sits on the computer
+1. Other student sits on the “driver wheel”
+1. The student on the computer does exactly what the driver says. The driver should only give instructions related with the user interface
+		- Good: Move the forever block to the workspace. Set the repeat block to repeat 15 times. Wrap all the blocks on an “if” block.
+		- Bad: Make it work. Make the LED blink. Make the motor move faster.
+1. Students switch places every 5 to 10 minutes
+
+<section component="youtube" url="https://www.youtube.com/watch?v=vgkahOzFH2Q"></section>
+
+## Translation Exercice
+
+1. Upload a random coding card to your robotics board and describe in plain english what you see happening.
+1. Find out how the blocks and numbers on the code alter the behaviour.
+1. Describe how else would you like it to behave.
+		- Good: I would rather make it move faster/slower. I would rather it have a wider range of movement. I would rather make it blink on a different color.
+		- Bad: I would rather have it better. I would rather have it flying.
+1. Find what words, blocks and numbers better describe what you want.

@@ -36,7 +36,7 @@ function Card(props) {
 			background: props.labelBgcolor || Palette.black,
 			borderRadius: '0px 5px 0px 0px',
 			color: props.labelColor || Palette.white,
-			display: props.labelText ? 'inline-block' : 'none',
+			display: props.labelText ? 'inline-flex' : 'none',
 			position: 'absolute',
 			left: 0,
 			bottom: 0,

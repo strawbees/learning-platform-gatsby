@@ -3,10 +3,7 @@ import { Grid, Box } from '@material-ui/core'
 import { Link, withPrefix } from "gatsby"
 import Typography from '../components/typography'
 import Button from '../components/button'
-import Youtube from '../components/youtubedisplay'
 import ImageDisplay from '../components/imagedisplay'
-import Gallery from '../components/gallery'
-import Card from '../components/card'
 
 import unified from 'unified'
 import markdown from 'remark-parse'
@@ -17,7 +14,7 @@ import raw from 'rehype-raw'
 function MyImage(props) {
 	return (
 		<React.Fragment>
-			<img width="100%" src={withPrefix(props.src)} />
+			<img width="100%" alt={props.alt} src={withPrefix(props.src)} />
 			<Typography>{props.alt}</Typography>
 		</React.Fragment>
 	)
@@ -75,7 +72,7 @@ function MyThumbnail(props) {
 	return (
 		<span style={{textAlign: 'center'}}>
 			<p>
-				<img height={360} src={withPrefix(props.image)} />
+				<img height={360} src={withPrefix(props.image)} alt={props.alt}/>
 			</p>
 			<p>
 				<Typography variant="card-h1">{props.title}</Typography>
