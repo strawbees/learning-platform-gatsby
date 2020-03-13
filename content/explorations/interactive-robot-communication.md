@@ -3,7 +3,7 @@ path: '/exploration/interactive-robot-communication'
 title: 'Interactive Robot: Communication'
 description: 'Gain and demonstrate communication skills by creating and presenting an interactive robot.'
 thumbnail: '/roboticcranequirkbot.jpg'
-header: '/roboticcranequirkbot.jpg'
+header: '/roboticcranemicrobit1.jpg'
 category: 'Exploration'
 downloads:
 - name: 'Getting Started with Quirkbot'
@@ -16,8 +16,8 @@ In this exploration we’ll show how to scaffold situations for your students to
 
 <section component="gallery">
 
-![](/roboticcranequirkbot.jpg)
 ![](/roboticcranemicrobit.jpg)
+![](/roboticcranequirkbot.jpg)
 ![](/blinkingstar4.jpg)
 ![](/pig_full.jpg)
 ![](/robotracer.jpg)
