@@ -2,6 +2,7 @@ import React from "react"
 import { Link as InternalLink } from "gatsby"
 import { Container, Grid, Box, Menu, MenuItem } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import Typography from '../../components/typography.js'
 import Button from '../../components/button.js'
 import StrawbeesLogo from '../../images/learninglogo.svg'
 
@@ -79,22 +80,22 @@ function ProductsDropdown(props) {
 				>
 				<MenuItem onClick={handleClose}>
 					<InternalLink to="/product/steamschoolkit" style={linkStyle}>
-						STEAM School Kit
+						<Typography>STEAM School Kit</Typography>
 					</InternalLink>
 				</MenuItem>
 				<MenuItem onClick={handleClose}>
 					<InternalLink to="/product/bridges" style={linkStyle}>
-						Bridges
+						<Typography>Bridges</Typography>
 					</InternalLink>
 				</MenuItem>
 				<MenuItem onClick={handleClose}>
 					<InternalLink to="/product/quirkbot" style={linkStyle}>
-						Quirkbot
+						<Typography>Quirkbot</Typography>
 					</InternalLink>
 				</MenuItem>
 				<MenuItem onClick={handleClose}>
 					<InternalLink to="/product/microbit" style={linkStyle}>
-						BBC micro:bit
+						<Typography>BBC micro:bit</Typography>
 					</InternalLink>
 				</MenuItem>
 			</Menu>
