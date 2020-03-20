@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, withPrefix } from "gatsby"
+import { Link } from "gatsby"
 import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../components/typography.js'
 import Card from '../components/card.js'
@@ -29,7 +29,7 @@ function LayoutFeed({ posts }) {
 		<Box py={4}>
 			<SEO
 				title="Strawbees Learning"
-				image={withPrefix('/mechanicalinventions.jpg')}
+				image={'/mechanicalinventions.jpg'}
 				description="Explore our virtual oasis for innovative teachers who embrace creative thinking and hands-on learning with Strawbees."
 			/>
 			<Container maxWidth="lg">
@@ -40,7 +40,7 @@ function LayoutFeed({ posts }) {
 								<Link to={post.path}>
 									<Card
 										hover
-										image={withPrefix(post.thumbnail)}
+										image={post.thumbnail}
 										labelText={post.category}
 										labelBgcolor={categoryColors[post.category]}>
 											<Box p={3} pb={4}>

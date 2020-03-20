@@ -1,5 +1,4 @@
 import React from "react"
-import { withPrefix } from 'gatsby'
 import { Box } from '@material-ui/core'
 import Typography from '../components/typography'
 import Palette from '../components/palette'
@@ -87,7 +86,7 @@ function PageTemplate(props) {
 	return (
 		<article>
 			<div className="cover" style={coverStyle}>
-				<img src={withPrefix(props.header)} style={backgroundStyle} alt={props.alt} />
+				<img src={props.header} style={backgroundStyle} alt={props.alt} />
 				<Box p={4} style={{width: '50%', borderRadius: '1em'}}
 					color={Palette.black}
 					bgcolor="rgba(255, 255, 255, 0.85)"

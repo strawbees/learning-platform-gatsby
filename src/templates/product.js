@@ -1,6 +1,5 @@
 import React from "react"
 import { Container, Grid, Box, Link } from '@material-ui/core'
-import { withPrefix } from "gatsby"
 import SEO from '../components/seo.js'
 import Typography from '../components/typography.js'
 import Palette from '../components/palette.js'
@@ -27,7 +26,7 @@ const Product = (e) => {
 		<Grid container direction="column">
 			<SEO
 				title={product.title}
-				image={withPrefix(product.thumbnail)}
+				image={product.thumbnail}
 				description={product.description}/>
 			<Grid item><LayoutMenu /></Grid>
 			<Grid id="product-hero" item>
@@ -35,7 +34,7 @@ const Product = (e) => {
 					bgImage={product.header}>
 					<Container maxWidth="lg">
 						<ProductCard
-							image={withPrefix(card.image)}
+							image={card.image}
 							imageBg={Palette[card.imageBackground]}
 							bgImage={card.backgroundImage}
 							bgColor={Palette[card.backgroundColor]}
@@ -81,7 +80,7 @@ const Product = (e) => {
 									<Link href={p.path}>
 										<Card
 											hover
-											image={withPrefix(p.thumbnail)}
+											image={p.thumbnail}
 											labelText={p.category}
 											labelBgcolor={categoryColors[p.category]}>
 												<Box p={3} pb={4}>

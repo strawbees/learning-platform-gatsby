@@ -69,7 +69,8 @@ const variants = {
 		fontStyle: 'normal',
 		fontWeight: '390',
 		fontSize: '18px',
-		lineHeight: '25px'
+		lineHeight: '25px',
+		width: '100%'
 	},
 	'hero-h1': {
 		fontStyle: 'normal',

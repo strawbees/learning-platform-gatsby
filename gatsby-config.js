@@ -39,14 +39,24 @@ module.exports = {
 	plugins: [
 		`gatsby-plugin-react-helmet`,
 		{
+			resolve: "gatsby-source-graphql",
+			options: {
+				// Arbitrary name for the remote schema Query type
+				typeName: "WordPress",
+				// Field under which the remote schema will be accessible. You'll use this in your Gatsby query
+				fieldName: "wordpress",
+				// Url to query from
+				url: "http://localhost:8080/graphql",
+				refetchInterval: 60
+			},
+		},
+		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
 				name: `images`,
 				path: `${__dirname}/src/images`,
 			},
 		},
-		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-plugin-material-ui`,
 			options: {
@@ -61,14 +71,13 @@ module.exports = {
 				trackingId: trackingId
 			},
 		},
-		// this (optional) plugin enables Progressive Web App + Offline functionality
-		// To learn more, visit: https://gatsby.dev/offline
-		// `gatsby-plugin-offline`,
 		{
 			resolve: `gatsby-plugin-remove-serviceworker`,
 			options: {
 				filename: 'service-worker.js'
 			}
-		}
+		},
+		`gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
 	],
 }

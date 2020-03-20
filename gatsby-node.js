@@ -1,23 +1,13 @@
-const getContent = require('./build-src/getContent.js')
+// const getContent = require('./build-src/getContent.js')
+const { getPages, getPosts } = require('./build-src/getContentFromGraphql.js')
 const redirectBatch = require('./build-src/redirects.json')
 const allProducts = require('./build-src/products.json')
 
-exports.createPages = async function(e) {
-	const createPage = e.actions.createPage
-	const createRedirect = e.actions.createRedirect
-	const activities = await getContent('activities')
-	const lessonPlans = await getContent('lesson-plans')
-	const explorations = await getContent('explorations')
-	const pages = await getContent('pages')
-	const products = await getContent('products')
+exports.createPages = async ({ actions, graphql }) => {
+	const { createPage, createRedirect } = actions
 
-	let drafts = []
-	try {
-		drafts = await getContent('draft')
-	} catch (e) { console.log('no drafts') }
-	const posts = [
-		...lessonPlans, ...activities, ...explorations
-	]
+	const pages = await getPages(graphql)
+	const posts = await getPosts(graphql)
 
 	// Create a dictionary where the key is the post path and the value is the
 	// the post object
@@ -32,41 +22,35 @@ exports.createPages = async function(e) {
 		context: { posts: posts }
 	})
 
-	createPage({ // Activities
-		path: '/activities',
-		component: require.resolve('./src/templates/index.js'),
-		context: { posts: activities }
-	})
+	// createPage({ // Activities
+	// 	path: '/activities',
+	// 	component: require.resolve('./src/templates/index.js'),
+	// 	context: { posts: activities }
+	// })
+	//
+	// createPage({ // Lesson Plan
+	// 	path: '/lesson-plans',
+	// 	component: require.resolve('./src/templates/index.js'),
+	// 	context: { posts: lessonPlans }
+	// })
+	//
+	// createPage({ // Explorations
+	// 	path: '/explorations',
+	// 	component: require.resolve('./src/templates/index.js'),
+	// 	context: { posts: explorations }
+	// })
 
-	createPage({ // Lesson Plan
-		path: '/lesson-plans',
-		component: require.resolve('./src/templates/index.js'),
-		context: { posts: lessonPlans }
-	})
-
-	createPage({ // Explorations
-		path: '/explorations',
-		component: require.resolve('./src/templates/index.js'),
-		context: { posts: explorations }
-	})
-
-	createPage({ // Drafts
-		path: '/drafts',
-		component: require.resolve('./src/templates/index.js'),
-		context: { posts: drafts }
-	})
-
-	products.forEach(function(product) {
-		let related = []
-		if (product.related) {
-			related = product.related.map((path) => postsHash[path])
-		}
-		createPage({
-			path: product.path,
-			component: require.resolve('./src/templates/product.js'),
-			context: { product: product, related: related }
-		})
-	})
+	// products.forEach(function(product) {
+	// 	let related = []
+	// 	if (product.related) {
+	// 		related = product.related.map((path) => postsHash[path])
+	// 	}
+	// 	createPage({
+	// 		path: product.path,
+	// 		component: require.resolve('./src/templates/product.js'),
+	// 		context: { product: product, related: related }
+	// 	})
+	// })
 
 	posts.forEach(function(post) { // All single posts
 		let related = []
@@ -75,19 +59,19 @@ exports.createPages = async function(e) {
 				return postsHash[postId]
 			})
 		}
-		let products = []
-		if (post.product && post.product.length) {
-			products = post.product.map((p) => {
-				return allProducts[p] || {}
-			})
-		}
+		// let products = []
+		// if (post.product && post.product.length) {
+		// 	products = post.product.map((p) => {
+		// 		return allProducts[p] || {}
+		// 	})
+		// }
 		createPage({ // Posts
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
 			context: {
 				post: post,
 				related: related,
-				products: products
+				// products: products
 			}
 		})
 	})
@@ -100,25 +84,25 @@ exports.createPages = async function(e) {
 		})
 	})
 
-	drafts.forEach(function(post) { // Drafts
-		let related = post.related.map((postId) => {
-			return postsHash[postId]
-		})
-		createPage({ // Pages
-			path: post.path,
-			component: require.resolve('./src/templates/post.js'),
-			context: { post: post, related: related }
-		})
-	})
+	// drafts.forEach(function(post) { // Drafts
+	// 	let related = post.related.map((postId) => {
+	// 		return postsHash[postId]
+	// 	})
+	// 	createPage({ // Pages
+	// 		path: post.path,
+	// 		component: require.resolve('./src/templates/post.js'),
+	// 		context: { post: post, related: related }
+	// 	})
+	// })
 
-	// Printable Strawbees Learning
-	createPage({
-		path: '/print',
-		component: require.resolve('./src/templates/printable.js'),
-		context: {
-			activities, lessonPlans, explorations, pages
-		}
-	})
+	// // Printable Strawbees Learning
+	// createPage({
+	// 	path: '/print',
+	// 	component: require.resolve('./src/templates/printable.js'),
+	// 	context: {
+	// 		activities, lessonPlans, explorations, pages
+	// 	}
+	// })
 
 	redirectBatch.forEach(function(redirect) { // Front end redirects
 		// Redirect without trailing slashes

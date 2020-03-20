@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, withPrefix } from 'gatsby'
+import { Link } from 'gatsby'
 import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../components/typography'
 import Palette from '../components/palette'
@@ -15,7 +15,8 @@ import '../globalStyles.css'
 Because the humans didn't write javascript we can't use it on `gatsby-node.js`
 so we have to add this here instead. :facepalm:
 */
-import mdToReact from '../utils/mdToReact'
+// import mdToReact from '../utils/mdToReact'
+import blocksToReact from '../utils/blocksToReact'
 import categoryColors from '../utils/categoryColors'
 
 const PostPage = (e) => {
@@ -23,13 +24,13 @@ const PostPage = (e) => {
 	const related = e.pageContext.related || []
 	const products = e.pageContext.products || []
 	// Convert markdown to react with our own components
-	let body = mdToReact(post.content)
+	let body = blocksToReact(post.content)
 	return (
 		<Grid container direction="column">
 			<SEO
 				title={post.title}
 				description={post.description}
-				image={withPrefix(post.thumbnail)}
+				image={post.thumbnail}
 				/>
 			<Grid item><LayoutMenu /></Grid>
 			<Grid item><LayoutHeroPost post={post} /></Grid>
@@ -37,21 +38,10 @@ const PostPage = (e) => {
 				<Box py={3}>
 					<Container maxWidth="md">
 						<div id="content">
-							<Typography>
-								{body}
-							</Typography>
+							{body}
 						</div>
 					</Container>
 				</Box>
-			</Grid>
-			<Grid item>
-				{post.downloads ? <Downloads files={post.downloads} /> : ''}
-			</Grid>
-			<Grid item>
-				{post.related ? <RelatedContent posts={related} /> : ''}
-			</Grid>
-			<Grid item>
-				{products.length ? <RelatedProduct products={products} /> : ''}
 			</Grid>
 			<Grid item><LayoutFooter /></Grid>
 		</Grid>
@@ -91,7 +81,7 @@ const RelatedContent = function(props) {
 								<Link to={p.path}>
 									<Card
 										hover
-										image={withPrefix(p.thumbnail)}
+										image={p.thumbnail}
 										labelText={p.category}
 										labelBgcolor={categoryColors[p.category]}>
 										<Box p={3}>

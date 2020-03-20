@@ -39,6 +39,7 @@
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^2.3.4",
     "gatsby-source-filesystem": "^2.1.39",
+    "gatsby-source-graphql": "^2.2.0",
     "gatsby-transformer-sharp": "^2.3.6",
     "gh-pages": "^2.1.1",
     "prop-types": "^15.7.2",
