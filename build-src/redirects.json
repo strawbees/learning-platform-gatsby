@@ -61,14 +61,18 @@
 	},
 	{
 		"f": "/product/steam",
-		"t": "/product/steamschoolkit"
+		"t": "/product/steam-school-kit"
 	},
 	{
 		"f": "/product/steamschool",
-		"t": "/product/steamschoolkit"
+		"t": "/product/steam-school-kit"
 	},
 	{
 		"f": "/product/school",
-		"t": "/product/steamschoolkit"
+		"t": "/product/steam-school-kit"
+	},
+	{
+		"f": "/product/steamschoolkit",
+		"t": "/product/steam-school-kit"
 	}
 ]
