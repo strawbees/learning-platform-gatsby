@@ -12,7 +12,7 @@ const postModel = (post) => {
 		description: post.excerpt.replace(regex, ""),
 		thumbnail: thumbnail.mediaItemUrl,
 		header: thumbnail.mediaItemUrl,
-		category: categories[0],
+		category: categories[0] !== 'Uncategorized' ? categories[0] : null,
 		content: post.blocksJSON
 	}
 }
