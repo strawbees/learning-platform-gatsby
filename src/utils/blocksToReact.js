@@ -1,12 +1,10 @@
 import React from "react"
 import { Grid, Box } from '@material-ui/core'
-import { Link, withPrefix } from "gatsby"
+import { Link } from "gatsby"
 import Typography from '../components/typography'
-import Button from '../components/button'
 import Youtube from '../components/youtubedisplay'
 import ImageDisplay from '../components/imagedisplay'
 import Gallery from '../components/gallery'
-import Hero from '../components/hero'
 import Card from '../components/card'
 
 const createMarkup = (content) => {
@@ -31,11 +29,31 @@ const Heading = (attr) => {
 	}
 }
 
+const Thumbnail = ({ post }) => {
+	let relativePath = post.link.replace(/^[a-z]{4,5}\:\/{2}[a-z]{1,}\:[0-9]{1,4}.(.*)/, '$1')
+	let image = post.featured_media_object ? post.featured_media_object.source_url : null
+	let excerpt = post.excerpt ? post.excerpt.raw : null
+	return (
+		<Link to={relativePath}>
+			<Card hover image={image}>
+					<Box p={3} pb={4}>
+						<Typography variant="card-h1">
+							{post.title.raw}
+						</Typography>
+						<Box pb={1} />
+						<Typography variant="card-body">
+							{excerpt}
+						</Typography>
+					</Box>
+			</Card>
+		</Link>
+	)
+}
+
 const parseBlocks = (blocks) => {
 	let components = []
 	blocks.forEach((block) => {
 		const attr = block.attributes
-		console.log(block.name, block)
 		switch (block.name) {
 			case 'core/group':
 				components.push(
@@ -78,13 +96,26 @@ const parseBlocks = (blocks) => {
 				const images = attr.images.map((img, i) => {
 					return <ImageDisplay key={i} src={img.url} alt={img.alt} />
 				})
-				components.push(<Gallery>{images}</Gallery>)
+				components.push(<Box my={3}><Gallery>{images}</Gallery></Box>)
 				break
 			case 'core/file':
 				components.push(<a href={attr.href}>File: {attr.fileName}</a>)
 				break
 			case 'core-embed/youtube':
-				components.push(<Box mb={3}><Youtube url={attr.url} /></Box>)
+				components.push(<Box my={3}><Youtube url={attr.url} /></Box>)
+				break
+			case 'strawbees-learning/related':
+				components.push(
+					<Box my={3}>
+						<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
+							{attr.related.map((related, i) => (
+								<Grid key={i} item xs={12} sm={6} md={4}>
+									<Thumbnail post={related} />
+								</Grid>
+							))}
+						</Grid>
+					</Box>
+				)
 				break
 			default:
 		}
