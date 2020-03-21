@@ -1,7 +1,6 @@
-// const getContent = require('./build-src/getContent.js')
+// const getContent = require('./build-src/getContentFromMd.js')
 const { getPages, getPosts } = require('./build-src/getContentFromGraphql.js')
 const redirectBatch = require('./build-src/redirects.json')
-const allProducts = require('./build-src/products.json')
 
 exports.createPages = async ({ actions, graphql }) => {
 	const { createPage, createRedirect } = actions
@@ -22,56 +21,12 @@ exports.createPages = async ({ actions, graphql }) => {
 		context: { posts: posts }
 	})
 
-	// createPage({ // Activities
-	// 	path: '/activities',
-	// 	component: require.resolve('./src/templates/index.js'),
-	// 	context: { posts: activities }
-	// })
-	//
-	// createPage({ // Lesson Plan
-	// 	path: '/lesson-plans',
-	// 	component: require.resolve('./src/templates/index.js'),
-	// 	context: { posts: lessonPlans }
-	// })
-	//
-	// createPage({ // Explorations
-	// 	path: '/explorations',
-	// 	component: require.resolve('./src/templates/index.js'),
-	// 	context: { posts: explorations }
-	// })
-
-	// products.forEach(function(product) {
-	// 	let related = []
-	// 	if (product.related) {
-	// 		related = product.related.map((path) => postsHash[path])
-	// 	}
-	// 	createPage({
-	// 		path: product.path,
-	// 		component: require.resolve('./src/templates/product.js'),
-	// 		context: { product: product, related: related }
-	// 	})
-	// })
-
 	posts.forEach(function(post) { // All single posts
-		let related = []
-		if (post.related) {
-			related = post.related.map((postId) => {
-				return postsHash[postId]
-			})
-		}
-		// let products = []
-		// if (post.product && post.product.length) {
-		// 	products = post.product.map((p) => {
-		// 		return allProducts[p] || {}
-		// 	})
-		// }
 		createPage({ // Posts
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
 			context: {
-				post: post,
-				related: related,
-				// products: products
+				post: post
 			}
 		})
 	})
@@ -83,26 +38,6 @@ exports.createPages = async ({ actions, graphql }) => {
 			context: { post: post }
 		})
 	})
-
-	// drafts.forEach(function(post) { // Drafts
-	// 	let related = post.related.map((postId) => {
-	// 		return postsHash[postId]
-	// 	})
-	// 	createPage({ // Pages
-	// 		path: post.path,
-	// 		component: require.resolve('./src/templates/post.js'),
-	// 		context: { post: post, related: related }
-	// 	})
-	// })
-
-	// // Printable Strawbees Learning
-	// createPage({
-	// 	path: '/print',
-	// 	component: require.resolve('./src/templates/printable.js'),
-	// 	context: {
-	// 		activities, lessonPlans, explorations, pages
-	// 	}
-	// })
 
 	redirectBatch.forEach(function(redirect) { // Front end redirects
 		// Redirect without trailing slashes
