@@ -59,7 +59,7 @@ function LayoutMenu() {
 					</Box>
 				</Grid>
 				<Grid item xs={12} md={'auto'}>
-					<Box pb={1} display="flex">
+					<Box mb={1} display="flex">
 						{menuItems.map((item, i) => (
 							<MyMenuItem
 								key={i}
@@ -80,15 +80,19 @@ function MyMenuItem({ url, label, menuItems, handleClose, linkStyle }) {
 		// Check if it's a local/relative or external url
 		if (url.indexOf('http') === -1 || url.indexOf(localUrl) !== -1 ) {
 			return (
-				<InternalLink to={makeRelativePath(url)} style={linkStyle}>
-					<Button variant="text">{label}</Button>
-				</InternalLink>
+				<Box p={1}>
+					<InternalLink to={makeRelativePath(url)} style={linkStyle}>
+						<Button variant="text">{label}</Button>
+					</InternalLink>
+				</Box>
 			)
 		} else {
 			return (
-				<a href={url} style={linkStyle} target="_blank" rel="noreferrer noopener">
-					<Button variant="text">{label}</Button>
-				</a>
+				<Box p={1}>
+					<a href={url} style={linkStyle} target="_blank" rel="noreferrer noopener">
+						<Button variant="text">{label}</Button>
+					</a>
+				</Box>
 			)
 		}
 	}
