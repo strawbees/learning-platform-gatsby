@@ -34,13 +34,9 @@ const PostPage = (e) => {
 			<Grid item><LayoutMenu /></Grid>
 			<Grid item><LayoutHeroPost post={post} /></Grid>
 			<Grid item>
-				<Box py={3}>
-					<Container maxWidth="md">
-						<div id="content">
-							{body}
-						</div>
-					</Container>
-				</Box>
+				<div id="content">
+					{body}
+				</div>
 			</Grid>
 			<Grid item><LayoutFooter /></Grid>
 		</Grid>
