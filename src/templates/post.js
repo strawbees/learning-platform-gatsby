@@ -9,7 +9,6 @@ import LayoutMenu from './partials/layoutmenu'
 import LayoutHero from './partials/layouthero'
 import LayoutFooter from './partials/layoutfooter'
 import ProductThumbnail from './partials/productthumbnail'
-import Downloads from './partials/downloads'
 import '../globalStyles.css'
 /*
 Because the humans didn't write javascript we can't use it on `gatsby-node.js`
@@ -65,65 +64,6 @@ const LayoutHeroPost = function({post}) {
 				</Typography>
 			</Box>
 		</LayoutHero>
-	)
-}
-const RelatedContent = function(props) {
-	return (
-		<Box py={6}>
-			<Container maxWidth="lg">
-				<Grid container spacing={3} justify="center">
-					<Grid item xs={12} style={{textAlign: 'center'}}>
-						<Typography><h1>Related content</h1></Typography>
-					</Grid>
-					{props.posts.map((p, i) => {
-						return (
-							<Grid key={i} item xs={12} sm={6} md={4}>
-								<Link to={p.path}>
-									<Card
-										hover
-										image={p.thumbnail}
-										labelText={p.category}
-										labelBgcolor={categoryColors[p.category]}>
-										<Box p={3}>
-											<Typography variant="card-h1">
-												{p.title}
-											</Typography>
-											<Box pb={1} />
-											<Typography variant="card-body">
-												{p.description}
-											</Typography>
-										</Box>
-									</Card>
-								</Link>
-							</Grid>
-						)
-					})}
-				</Grid>
-			</Container>
-		</Box>
-	)
-}
-const RelatedProduct = function(props) {
-	const products = props.products
-	return (
-		<Box py={6}>
-			<Container maxWidth="lg">
-				<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
-					<Grid item xs={12} style={{textAlign: 'center'}}>
-						<Typography><h1>Strawbees kits</h1></Typography>
-					</Grid>
-					{products.map((p, i) => {
-						return (
-							<Grid key={i} item xs={12} sm={6} md={4}>
-								<Link to={p.path}>
-									<ProductThumbnail {...p} />
-								</Link>
-							</Grid>
-						)
-					})}
-				</Grid>
-			</Container>
-		</Box>
 	)
 }
 
