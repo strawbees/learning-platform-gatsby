@@ -1,12 +1,49 @@
 import React from "react"
-import { Link as InternalLink } from "gatsby"
+import {
+	Link as InternalLink,
+	useStaticQuery,
+	graphql
+} from "gatsby"
 import { Container, Grid, Box, Menu, MenuItem } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import Typography from '../../components/typography.js'
 import Button from '../../components/button.js'
 import StrawbeesLogo from '../../images/learninglogo.svg'
+import makeRelativePath from '../../utils/makeRelativePath'
+
+let localUrl = ''
+const queryMenus = graphql`
+	query Menus {
+		wordpress {
+			allSettings {
+				generalSettingsUrl
+			}
+			menus {
+				nodes {
+					slug
+					menuItems {
+						nodes {
+							url
+							label
+							menuItems: childItems {
+								nodes {
+									url
+									label
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+`
 
 function LayoutMenu() {
+	const data = useStaticQuery(queryMenus)
+	const headerMenu = data.wordpress.menus.nodes.find(menu => menu.slug === 'header-menu')
+	const menuItems = headerMenu.menuItems.nodes
+	localUrl = data.wordpress.allSettings.generalSettingsUrl
 	return (
 		<Container maxWidth="lg">
 			<Grid container
@@ -23,19 +60,11 @@ function LayoutMenu() {
 				</Grid>
 				<Grid item xs={12} md={'auto'}>
 					<Box pb={1} display="flex">
-						<Box px={1}>
-							<InternalLink to="/">
-								<Button variant="text">Home</Button>
-							</InternalLink>
-						</Box>
-						<Box px={1}>
-							<ProductsDropdown />
-						</Box>
-						<Box px={1}>
-							<InternalLink to="/about">
-								<Button variant="text">About</Button>
-							</InternalLink>
-						</Box>
+						{menuItems.map((item, i) => (
+							<MyMenuItem
+								key={i}
+								{...item} />
+						))}
 					</Box>
 				</Grid>
 			</Grid>
@@ -43,7 +72,30 @@ function LayoutMenu() {
 	)
 }
 
-function ProductsDropdown(props) {
+// Render the menu item or a dropdown menu
+function MyMenuItem({ url, label, menuItems, handleClose, linkStyle }) {
+	if (menuItems && menuItems.nodes && menuItems.nodes.length) {
+		return <MyDropdown label={label} menuItems={menuItems.nodes} />
+	} else {
+		// Check if it's a local/relative or external url
+		if (url.indexOf('http') === -1 || url.indexOf(localUrl) !== -1 ) {
+			return (
+				<InternalLink to={makeRelativePath(url)} style={linkStyle}>
+					<Button variant="text">{label}</Button>
+				</InternalLink>
+			)
+		} else {
+			return (
+				<a href={url} style={linkStyle} target="_blank" rel="noreferrer noopener">
+					<Button variant="text">{label}</Button>
+				</a>
+			)
+		}
+	}
+}
+
+// Render dropdown menu with menu items bound to open and close menu
+function MyDropdown({ label, menuItems }) {
 	const [ anchorEl, setAnchorEl ] = React.useState(null)
 	const handleClick = event => setAnchorEl(event.currentTarget)
 	const handleClose = () => setAnchorEl(null)
@@ -58,11 +110,10 @@ function ProductsDropdown(props) {
 				onClick={handleClick}
 				style={{cursor: 'pointer'}}
 				>
-				<Button>Products</Button>
-				<ExpandMoreIcon />
+				<Button>{label}</Button>
+				<ExpandMoreIcon fontSize="small" />
 			</Box>
 			<Menu
-				id="products-menu"
 				anchorEl={anchorEl}
 				getContentAnchorEl={null}
 				elevation={0}
@@ -78,26 +129,13 @@ function ProductsDropdown(props) {
 				onClose={handleClose}
 				keepMounted
 				>
-				<MenuItem onClick={handleClose}>
-					<InternalLink to="/product/steamschoolkit" style={linkStyle}>
-						<Typography>STEAM School Kit</Typography>
-					</InternalLink>
-				</MenuItem>
-				<MenuItem onClick={handleClose}>
-					<InternalLink to="/product/bridges" style={linkStyle}>
-						<Typography>Bridges</Typography>
-					</InternalLink>
-				</MenuItem>
-				<MenuItem onClick={handleClose}>
-					<InternalLink to="/product/quirkbot" style={linkStyle}>
-						<Typography>Quirkbot</Typography>
-					</InternalLink>
-				</MenuItem>
-				<MenuItem onClick={handleClose}>
-					<InternalLink to="/product/microbit" style={linkStyle}>
-						<Typography>BBC micro:bit</Typography>
-					</InternalLink>
-				</MenuItem>
+				{menuItems.map((item, i) => (
+					<MyMenuItem
+						key={i}
+						linkStyle={linkStyle}
+						handleClose={handleClose}
+						{...item} />
+				))}
 			</Menu>
 		</React.Fragment>
 	)
