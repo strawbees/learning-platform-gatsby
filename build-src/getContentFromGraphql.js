@@ -21,9 +21,9 @@ const pageModel = (page) => {
 	// HACK: Remove html tags
 	const regex = /(<([^>]+)>)/ig
 	return {
+		isFrontPage: page.isFrontPage,
 		path: page.uri,
 		title: page.title,
-		// description: page.excerpt.replace(regex, ""),
 		thumbnail: thumbnail.mediaItemUrl,
 		header: thumbnail.mediaItemUrl,
 		content: page.blocksJSON
@@ -63,7 +63,9 @@ exports.getPages = async (graphql) => {
 		wordpress {
 			pages {
 				nodes {
+					isFrontPage
 					title
+					excerpt
 					uri
 					featuredImage {
 						altText

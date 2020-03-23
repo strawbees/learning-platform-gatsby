@@ -7,6 +7,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
 	const pages = await getPages(graphql)
 	const posts = await getPosts(graphql)
+	const frontPage = pages.find(page => page.isFrontPage)
 
 	// Create a dictionary where the key is the post path and the value is the
 	// the post object
@@ -15,19 +16,19 @@ exports.createPages = async ({ actions, graphql }) => {
 		postsHash[post.path] = post
 	})
 
-	createPage({ // Index
-		path: '/',
-		component: require.resolve('./src/templates/index.js'),
-		context: { posts: posts }
-	})
+	if (!frontPage) {
+		createPage({ // Index
+			path: '/',
+			component: require.resolve('./src/templates/index.js'),
+			context: { posts: posts }
+		})
+	}
 
 	posts.forEach(function(post) { // All single posts
 		createPage({ // Posts
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
-			context: {
-				post: post
-			}
+			context: { post: post }
 		})
 	})
 
