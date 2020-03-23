@@ -1,32 +1,14 @@
 // XXX: Hack to build multiple environment variables
-let pathPrefix, siteUrl, trackingId, buildEnv
-buildEnv = 'stage'
-// buildEnv = 'production'
-
-switch (buildEnv) {
-	case 'stage':
-		trackingId = 'UA-69443341-4'
-		pathPrefix = ''
-		siteUrl = 'https://learning-stage.strawbees.com'
-		break;
-	case 'production':
-		trackingId = 'UA-69443341-2'
-		pathPrefix = ''
-		siteUrl = 'https://learning.strawbees.com'
-		break;
-	case 'github':
-		pathPrefix = '/learning-platform-gatsby'
-		siteUrl = 'https://strawbees.github.io'
-		break;
-	case 'local':
-		pathPrefix = '/public'
-		siteUrl = 'http://localhost:8080'
-		break;
-	case 'development':
-	default:
-		pathPrefix = ''
-		siteUrl = 'http://localhost:8000'
-}
+const buildEnvironments = require('./build-src/buildEnvironments')
+const {
+	pathPrefix,
+	siteUrl,
+	trackingId,
+	graphqlUrl,
+	graphqlRefetchInterval
+} = buildEnvironments(
+	process.env.BUILD_ENVIRONEMNT || 'stage'
+)
 
 module.exports = {
 	pathPrefix: pathPrefix,
@@ -46,8 +28,8 @@ module.exports = {
 				// Field under which the remote schema will be accessible. You'll use this in your Gatsby query
 				fieldName: "wordpress",
 				// Url to query from
-				url: "http://localhost:8080/graphql",
-				refetchInterval: 60
+				url: graphqlUrl,
+				refetchInterval: graphqlRefetchInterval
 			},
 		},
 		{
