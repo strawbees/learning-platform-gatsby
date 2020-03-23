@@ -1,12 +1,9 @@
 # Strawbees Learning Platform (Gastby)
 
-This is a static website version of the [Strawbees Learning Platform](https://learning.strawbees.com/) built using [Gatsby](https://www.gatsbyjs.org/). This repository contains **content**, **components**, **templates** and **static assets** necessary for **building** a stand alone, static html website that is easy to deploy in different platforms as Heroku, Github Pages or Amazon S3 buckets.
+This is a static website version of the [Strawbees Learning Platform](https://learning.strawbees.com/) built using [Gatsby](https://www.gatsbyjs.org/). This repository contains source code for **building** a stand alone, static html website that is easy to deploy in different platforms as Heroku, Github Pages or Amazon S3 buckets.
 
 ## Quick start
 
-- If you are on Linux you might want to [increase the number of file watchers your OS allows](https://github.com/guard/listen/wiki/Increasing-the-amount-of-inotify-watchers#the-technical-details).
-	- `sudo sysctl fs.inotify.max_user_watches=524288`
-	- `sudo sysctl -p`
 - Clone repository: `git clone git@github.com:murilopolese/learning-platform-gatsby.git`
 - Navigate to the directory: `cd learning-platform-gatsby`
 - Install dependencies: `npm install`
@@ -21,9 +18,7 @@ This is a static website version of the [Strawbees Learning Platform](https://le
 
 ## Content
 
-The [`content`](https://github.com/murilopolese/learning-platform-gatsby/tree/develop/content) folder holds all the markdown files that represent the content for the Learning Platform. We use [Front Matter](https://jekyllrb.com/docs/front-matter/) to add metadata such as `title`, `description`, `thumbnail`, `header`, `category` and what is the `path` to that content.
-
-**Important**: The Activity cards inside the Lesson Plans are not loaded automatically from this. You will have to make sure to update all the Lesson Plans if you change the `title`, `description`, `path` or `thumbnail` of any Activity.
+Previous versions of this website sourced all content from markdown files. The current setup sources everything from a [Headless WordPress setup]([Strawbees Learning CMS](https://github.com/strawbees/learning-cms) through GraphQL.
 
 ## Components
 
