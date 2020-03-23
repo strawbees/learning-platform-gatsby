@@ -1,49 +1,17 @@
 import React from "react"
-import {
-	Link as InternalLink,
-	useStaticQuery,
-	graphql
-} from "gatsby"
+import { Link as InternalLink, useStaticQuery, graphql } from "gatsby"
 import { Container, Grid, Box, Menu, MenuItem } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import Typography from '../../components/typography.js'
 import Button from '../../components/button.js'
 import StrawbeesLogo from '../../images/learninglogo.svg'
 import makeRelativePath from '../../utils/makeRelativePath'
+import filterMenuBySlug from '../../utils/filterMenuBySlug.js'
 
 let localUrl = ''
-const queryMenus = graphql`
-	query Menus {
-		wordpress {
-			allSettings {
-				generalSettingsUrl
-			}
-			menus {
-				nodes {
-					slug
-					menuItems {
-						nodes {
-							url
-							label
-							menuItems: childItems {
-								nodes {
-									url
-									label
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-`
-
-function LayoutMenu() {
-	const data = useStaticQuery(queryMenus)
-	const headerMenu = data.wordpress.menus.nodes.find(menu => menu.slug === 'header-menu')
-	const menuItems = headerMenu.menuItems.nodes
-	localUrl = data.wordpress.allSettings.generalSettingsUrl
+function LayoutMenu({ data: graphqlMenuData }) {
+	const menuItems = filterMenuBySlug('header-menu', graphqlMenuData)
+	localUrl = graphqlMenuData.wordpress.allSettings.generalSettingsUrl
 	return (
 		<Container maxWidth="lg">
 			<Grid container
@@ -73,29 +41,35 @@ function LayoutMenu() {
 }
 
 // Render the menu item or a dropdown menu
-function MyMenuItem({ url, label, menuItems, handleClose, linkStyle }) {
+function MyMenuItem({ url, label, menuItems, handleClose }) {
 	if (menuItems && menuItems.nodes && menuItems.nodes.length) {
 		return <MyDropdown label={label} menuItems={menuItems.nodes} />
 	} else {
 		// Check if it's a local/relative or external url
 		if (url.indexOf('http') === -1 || url.indexOf(localUrl) !== -1 ) {
-			return (
-				<Box p={1}>
-					<InternalLink to={makeRelativePath(url)} style={linkStyle}>
-						<Button variant="text">{label}</Button>
-					</InternalLink>
-				</Box>
-			)
+			return <MyInternalLink url={url} label={label} />
 		} else {
-			return (
-				<Box p={1}>
-					<a href={url} style={linkStyle} target="_blank" rel="noreferrer noopener">
-						<Button variant="text">{label}</Button>
-					</a>
-				</Box>
-			)
+			return <MyExternalLink url={url} label={label} />
 		}
 	}
+}
+function MyInternalLink({ url, label }) {
+	return (
+		<Box p={1}>
+			<InternalLink to={makeRelativePath(url)}>
+				<Button variant="text">{label}</Button>
+			</InternalLink>
+		</Box>
+	)
+}
+function MyExternalLink({ url, label }) {
+	return (
+		<Box p={1}>
+			<a href={url} target="_blank" rel="noreferrer noopener">
+				<Button variant="text">{label}</Button>
+			</a>
+		</Box>
+	)
 }
 
 // Render dropdown menu with menu items bound to open and close menu

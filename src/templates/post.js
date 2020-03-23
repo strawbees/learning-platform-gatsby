@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../components/typography'
 import Palette from '../components/palette'
@@ -10,10 +10,6 @@ import LayoutHero from './partials/layouthero'
 import LayoutFooter from './partials/layoutfooter'
 import ProductThumbnail from './partials/productthumbnail'
 import '../globalStyles.css'
-/*
-Because the humans didn't write javascript we can't use it on `gatsby-node.js`
-so we have to add this here instead. :facepalm:
-*/
 // import mdToReact from '../utils/mdToReact'
 import blocksToReact from '../utils/blocksToReact'
 import categoryColors from '../utils/categoryColors'
@@ -22,6 +18,7 @@ const PostPage = (e) => {
 	const post = e.pageContext.post
 	const related = e.pageContext.related || []
 	const products = e.pageContext.products || []
+	const graphqlMenuData = useStaticQuery(queryMenus)
 	// Convert markdown to react with our own components
 	let body = blocksToReact(post.content)
 	return (
@@ -31,14 +28,12 @@ const PostPage = (e) => {
 				description={post.description}
 				image={post.thumbnail}
 				/>
-			<Grid item><LayoutMenu /></Grid>
+			<Grid item><LayoutMenu data={graphqlMenuData} /></Grid>
 			<Grid item><LayoutHeroPost post={post} /></Grid>
 			<Grid item>
-				<div id="content">
-					{body}
-				</div>
+				<div id="content">{body}</div>
 			</Grid>
-			<Grid item><LayoutFooter /></Grid>
+			<Grid item><LayoutFooter data={graphqlMenuData} /></Grid>
 		</Grid>
 	)
 }
@@ -65,3 +60,30 @@ const LayoutHeroPost = function({post}) {
 
 
 export default PostPage
+
+const queryMenus = graphql`
+	query Menus {
+		wordpress {
+			allSettings {
+				generalSettingsUrl
+			}
+			menus {
+				nodes {
+					slug
+					menuItems {
+						nodes {
+							url
+							label
+							menuItems: childItems {
+								nodes {
+									url
+									label
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+`
