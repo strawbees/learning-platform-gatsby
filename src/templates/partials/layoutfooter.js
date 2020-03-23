@@ -27,8 +27,8 @@ function LayoutFooter({ data: graphqlMenuData }) {
 					<Grid item xs={12} sm={4}>
 						<SocialMediaColumn />
 					</Grid>
-					{menuItems.map((item) => (
-						<Grid item xs={12} sm={2}>
+					{menuItems.map((item, i) => (
+						<Grid key={i} item xs={12} sm={2}>
 							<MenuColumn {...item} />
 						</Grid>
 					))}
@@ -116,11 +116,11 @@ function CopyrightRow() {
 		</Box>
 	)
 }
-function MyLink({url, label}) {
+function MyLink({url, label}, i) {
 	if (url.indexOf('http') === -1 || url.indexOf(localUrl) !== -1 ) {
-		return <MyInternalLink url={url} label={label} />
+		return <MyInternalLink key={i} url={url} label={label} />
 	} else {
-		return <MyExternalLink url={url} label={label} />
+		return <MyExternalLink key={i} url={url} label={label} />
 	}
 }
 function MyInternalLink({ url, label }) {

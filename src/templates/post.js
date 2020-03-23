@@ -1,14 +1,12 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from 'gatsby'
-import { Container, Grid, Box } from '@material-ui/core'
+import { useStaticQuery, graphql } from 'gatsby'
+import { Grid, Box } from '@material-ui/core'
 import Typography from '../components/typography'
 import Palette from '../components/palette'
-import Card from '../components/card'
 import SEO from '../components/seo'
 import LayoutMenu from './partials/layoutmenu'
 import LayoutHero from './partials/layouthero'
 import LayoutFooter from './partials/layoutfooter'
-import ProductThumbnail from './partials/productthumbnail'
 import '../globalStyles.css'
 // import mdToReact from '../utils/mdToReact'
 import blocksToReact from '../utils/blocksToReact'
@@ -16,8 +14,6 @@ import categoryColors from '../utils/categoryColors'
 
 const PostPage = (e) => {
 	const post = e.pageContext.post
-	const related = e.pageContext.related || []
-	const products = e.pageContext.products || []
 	const graphqlMenuData = useStaticQuery(queryMenus)
 	// Convert markdown to react with our own components
 	let body = blocksToReact(post.content)
@@ -29,7 +25,12 @@ const PostPage = (e) => {
 				image={post.thumbnail}
 				/>
 			<Grid item><LayoutMenu data={graphqlMenuData} /></Grid>
-			<Grid item><LayoutHeroPost post={post} /></Grid>
+			<Grid item>
+				{post.isFrontPage
+					? <LayoutHeroFrontPage post={post} />
+					: <LayoutHeroPost post={post} />
+				}
+			</Grid>
 			<Grid item>
 				<div id="content">{body}</div>
 			</Grid>
@@ -39,12 +40,34 @@ const PostPage = (e) => {
 }
 
 const LayoutHeroPost = function({post}) {
+	let categoryColor = categoryColors[post.category]
 	return (
 		<LayoutHero
 			bgImage={post.header}>
 			<Box p={4} style={{borderRadius: '1em'}}
-				color={Palette.black}
-				bgcolor="rgba(255, 255, 255, 0.85)"
+				color={categoryColor ? Palette.white : Palette.black}
+				bgcolor={categoryColor ? categoryColor : `rgba(255, 255, 255, 0.8)`}
+				textAlign={{xs: 'center', md: 'left'}}
+				>
+				<Typography variant="hero-h1">
+					{post.title}
+				</Typography>
+				<Typography variant="hero-body">
+					<p>{post.description}</p>
+				</Typography>
+			</Box>
+		</LayoutHero>
+	)
+}
+const LayoutHeroFrontPage = function({post}) {
+	return (
+		<LayoutHero
+			width={6}
+			shadeColor={Palette.darkGrey}
+			shadeOpacity={0.4}
+			bgImage={post.header}>
+			<Box py={4} style={{borderRadius: '1em'}}
+				color={Palette.white}
 				textAlign={{xs: 'center', md: 'left'}}
 				>
 				<Typography variant="hero-h1">

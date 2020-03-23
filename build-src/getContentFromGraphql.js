@@ -1,11 +1,11 @@
+// HACK: Remove html tags
+const regex = /(<([^>]+)>)/ig
 const postModel = (post) => {
 	const thumbnail = post.featuredImage || {}
 	let categories = []
 	if (post.categories && post.categories.nodes) {
 		categories = post.categories.nodes.map(node => node.name)
 	}
-	// HACK: Remove html tags
-	const regex = /(<([^>]+)>)/ig
 	return {
 		path: post.uri,
 		title: post.title,
@@ -22,6 +22,7 @@ const pageModel = (page) => {
 		isFrontPage: page.isFrontPage,
 		path: page.uri,
 		title: page.title,
+		description: page.excerpt.replace(regex, ""),
 		thumbnail: thumbnail.mediaItemUrl,
 		header: thumbnail.mediaItemUrl,
 		content: page.blocksJSON
