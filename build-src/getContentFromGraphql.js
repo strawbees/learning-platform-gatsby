@@ -18,8 +18,6 @@ const postModel = (post) => {
 }
 const pageModel = (page) => {
 	const thumbnail = page.featuredImage || {}
-	// HACK: Remove html tags
-	const regex = /(<([^>]+)>)/ig
 	return {
 		isFrontPage: page.isFrontPage,
 		path: page.uri,
