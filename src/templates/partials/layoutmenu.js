@@ -1,5 +1,5 @@
 import React from "react"
-import { Link as InternalLink, useStaticQuery, graphql } from "gatsby"
+import { Link as InternalLink } from "gatsby"
 import { Container, Grid, Box, Menu, MenuItem } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import Typography from '../../components/typography.js'
@@ -8,7 +8,7 @@ import StrawbeesLogo from '../../images/learninglogo.svg'
 import makeRelativePath from '../../utils/makeRelativePath'
 import filterMenuBySlug from '../../utils/filterMenuBySlug.js'
 
-let localUrl = ''
+let localUrl = '' // XXX!
 function LayoutMenu({ data: graphqlMenuData }) {
 	const menuItems = filterMenuBySlug('header-menu', graphqlMenuData)
 	localUrl = graphqlMenuData.wordpress.allSettings.generalSettingsUrl

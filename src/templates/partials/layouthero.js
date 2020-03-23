@@ -6,22 +6,21 @@ function LayoutHero({
 	shadeColor,
 	shadeOpacity,
 	bgImage,
+	bgColor,
 	children
 }) {
 	return (
 		<Hero
 			shadeColor={shadeColor}
 			shadeOpacity={shadeOpacity}
+			bgColor={bgColor}
 			bgImage={bgImage}>
 			<Box py={{xs: 4, md: 0}}>
 				<Container maxWidth="lg">
 					<Grid container direction="row" style={{minHeight: '400px'}}>
 						<Grid item container xs={12} md={6} direction="column" justify="center">
-							<Grid item>
-								{children}
-							</Grid>
+							{children}
 						</Grid>
-						<Grid item container xs={12} md={6} direction="column" justify="flex-end"></Grid>
 					</Grid>
 				</Container>
 			</Box>

@@ -9,6 +9,7 @@ import Card from '../components/card'
 import Button from '../components/button'
 import Palette from '../components/palette'
 import makeRelativePath from '../utils/makeRelativePath'
+import categoryColors from '../utils/categoryColors'
 
 const createMarkup = (content) => {
 	return { __html: content };
@@ -35,9 +36,16 @@ const Thumbnail = ({ post }) => {
 	let relativePath = makeRelativePath(post.link)
 	let image = post.featured_media_object ? post.featured_media_object.source_url : null
 	let excerpt = post.excerpt ? post.excerpt.raw : null
+	let category = ''
+	if (post.categories_objects && post.categories_objects[0]) {
+		category = post.categories_objects[0].name
+	}
 	return (
 		<Link to={relativePath}>
-			<Card hover image={image}>
+			<Card hover
+				labelText={category}
+				labelBgcolor={categoryColors[category]}
+				image={image}>
 					<Box p={3} pb={4}>
 						<Typography variant="card-h1">
 							{post.title.raw}

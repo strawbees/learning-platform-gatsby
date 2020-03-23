@@ -77,3 +77,23 @@ exports.getPages = async (graphql) => {
 	`)
 	return pagesQuery.data.wordpress.pages.nodes.map(pageModel)
 }
+
+exports.getCategories = async (graphql) => {
+	const categoriesQuery = await graphql(`
+		{
+			wordpress {
+				categories {
+					edges {
+						node {
+							id
+							name
+							uri
+							description
+						}
+					}
+				}
+			}
+		}
+	`)
+	return categoriesQuery.data.wordpress.categories.edges.map(edge => edge.node)
+}

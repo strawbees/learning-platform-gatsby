@@ -1,5 +1,7 @@
 // const getContent = require('./build-src/getContentFromMd.js')
-const { getPages, getPosts } = require('./build-src/getContentFromGraphql.js')
+const {
+	getPages, getPosts, getCategories
+} = require('./build-src/getContentFromGraphql.js')
 const redirectBatch = require('./build-src/redirects.json')
 
 exports.createPages = async ({ actions, graphql }) => {
@@ -7,6 +9,7 @@ exports.createPages = async ({ actions, graphql }) => {
 
 	const pages = await getPages(graphql)
 	const posts = await getPosts(graphql)
+	const categories = await getCategories(graphql)
 	const frontPage = pages.find(page => page.isFrontPage)
 
 	// Create a dictionary where the key is the post path and the value is the
@@ -37,6 +40,20 @@ exports.createPages = async ({ actions, graphql }) => {
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
 			context: { post: post }
+		})
+	})
+
+	categories.forEach(function(category) { // Category pages
+		let filteredPosts = posts.filter(function(post) {
+			return post.category === category.name
+		})
+		createPage({
+			path: category.uri,
+			component: require.resolve('./src/templates/index.js'),
+			context: {
+				posts: filteredPosts,
+				category: category
+			}
 		})
 	})
 

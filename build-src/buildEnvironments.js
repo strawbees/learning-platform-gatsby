@@ -5,7 +5,7 @@ const buildConfigs = {
 		siteUrl: 'https://learning-stage.strawbees.com',
 		graphqlUrl: 'http://localhost:8080/graphql',
 		// graphqlUrl: 'http://learning-cms-stage.strawbees.com/graphql',
-		graphqlRefetchInterval: 60
+		graphqlRefetchInterval: 20
 	},
 	'production': {
 		trackingId: 'UA-69443341-2',

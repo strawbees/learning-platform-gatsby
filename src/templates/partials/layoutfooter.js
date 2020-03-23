@@ -11,7 +11,7 @@ import Typography from '../../components/typography.js'
 import makeRelativePath from '../../utils/makeRelativePath.js'
 import filterMenuBySlug from '../../utils/filterMenuBySlug.js'
 
-let localUrl = ''
+let localUrl = '' // XXX!
 function LayoutFooter({ data: graphqlMenuData }) {
 	const menuItems = filterMenuBySlug('footer-menu', graphqlMenuData)
 	localUrl = graphqlMenuData.wordpress.allSettings.generalSettingsUrl

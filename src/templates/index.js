@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, useStaticQuery, graphql } from "gatsby"
 import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../components/typography.js'
 import Card from '../components/card.js'
@@ -14,12 +14,14 @@ import categoryColors from '../utils/categoryColors'
 
 const IndexPage = (e) => {
 	const posts = e.pageContext.posts
+	const category = e.pageContext.category
+	const graphqlMenuData = useStaticQuery(queryMenus)
 	return (
 		<Grid container direction="column">
-			<Grid item><LayoutMenu /></Grid>
-			<Grid item><LayoutIndexHero /></Grid>
+			<Grid item><LayoutMenu data={graphqlMenuData} /></Grid>
+			<Grid item><LayoutIndexHero {...category} /></Grid>
 			<Grid item><LayoutFeed posts={posts} /></Grid>
-			<Grid item><LayoutFooter /></Grid>
+			<Grid item><LayoutFooter data={graphqlMenuData} /></Grid>
 		</Grid>
 	)
 }
@@ -62,22 +64,20 @@ function LayoutFeed({ posts }) {
 		</Box>
 	)
 }
-function LayoutIndexHero() {
+function LayoutIndexHero({ name, description }) {
 	return (
 		<LayoutHero
-			shadeColor="#525252"
-			shadeOpacity={0.5}
-			bgImage="/homepageheader.jpg"
+			bgColor={categoryColors[name]}
 			>
 			<Box
 				textAlign={{xs: 'center', md: 'left'}}
 				color="white"
 				px={2}>
 				<Typography variant="hero-h1">
-					Welcome to Strawbees Learning
+					{name}
 				</Typography>
 				<Typography variant="hero-body">
-					<p>Explore our virtual oasis for innovative teachers who embrace creative thinking and hands-on learning with Strawbees.</p>
+					{description}
 				</Typography>
 			</Box>
 		</LayoutHero>
@@ -85,3 +85,30 @@ function LayoutIndexHero() {
 }
 
 export default IndexPage
+
+const queryMenus = graphql`
+	{
+		wordpress {
+			allSettings {
+				generalSettingsUrl
+			}
+			menus {
+				nodes {
+					slug
+					menuItems {
+						nodes {
+							url
+							label
+							menuItems: childItems {
+								nodes {
+									url
+									label
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+`

@@ -62,7 +62,7 @@ const LayoutHeroPost = function({post}) {
 export default PostPage
 
 const queryMenus = graphql`
-	query Menus {
+	{
 		wordpress {
 			allSettings {
 				generalSettingsUrl

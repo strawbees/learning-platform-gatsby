@@ -74,5 +74,21 @@
 	{
 		"f": "/product/steamschoolkit",
 		"t": "/product/steam-school-kit"
+	},
+	{
+		"f": "/products",
+		"t": "/category/product"
+	},
+	{
+		"f": "/activities",
+		"t": "/category/activity"
+	},
+	{
+		"f": "/explorations",
+		"t": "/category/exploration"
+	},
+	{
+		"f": "/lesson-plans",
+		"t": "/category/lesson-plan"
 	}
 ]
