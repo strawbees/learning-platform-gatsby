@@ -26,9 +26,8 @@ const Heading = (attr) => {
 			return <h4 dangerouslySetInnerHTML={createMarkup(attr.content)}></h4>
 		case 5:
 			return <h5 dangerouslySetInnerHTML={createMarkup(attr.content)}></h5>
-			break;
 		default:
-		return attr.content
+			return attr.content
 	}
 }
 
