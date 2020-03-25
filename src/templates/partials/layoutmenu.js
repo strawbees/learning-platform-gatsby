@@ -1,17 +1,14 @@
 import React from "react"
 import { Link as InternalLink } from "gatsby"
-import { Container, Grid, Box, Menu, MenuItem } from '@material-ui/core'
+import { Container, Grid, Box, Menu } from '@material-ui/core'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
-import Typography from '../../components/typography.js'
 import Button from '../../components/button.js'
 import StrawbeesLogo from '../../images/learninglogo.svg'
 import makeRelativePath from '../../utils/makeRelativePath'
-import filterMenuBySlug from '../../utils/filterMenuBySlug.js'
 
 let localUrl = '' // XXX!
-function LayoutMenu({ data: graphqlMenuData }) {
-	const menuItems = filterMenuBySlug('header-menu', graphqlMenuData)
-	localUrl = 'https://localhost:8080'
+function LayoutMenu({ data: menuItems }) {
+	localUrl = 'http://localhost:8080'
 	return (
 		<Container maxWidth="lg">
 			<Grid container
@@ -42,8 +39,8 @@ function LayoutMenu({ data: graphqlMenuData }) {
 
 // Render the menu item or a dropdown menu
 function MyMenuItem({ url, label, menuItems, handleClose }) {
-	if (menuItems && menuItems.nodes && menuItems.nodes.length) {
-		return <MyDropdown label={label} menuItems={menuItems.nodes} />
+	if (menuItems) {
+		return <MyDropdown label={label} menuItems={menuItems} />
 	} else {
 		// Check if it's a local/relative or external url
 		if (url.indexOf('http') === -1 || url.indexOf(localUrl) !== -1 ) {

@@ -1,5 +1,4 @@
 import React from "react"
-import { useStaticQuery, graphql } from 'gatsby'
 import { Grid, Box } from '@material-ui/core'
 import Typography from '../components/typography'
 import Palette from '../components/palette'
@@ -13,7 +12,8 @@ import categoryColors from '../utils/categoryColors'
 
 const PostPage = (e) => {
 	const post = e.pageContext.post
-	const graphqlMenuData = []
+	const headerMenu = e.pageContext.headerMenu
+	const footerMenu = e.pageContext.footerMenu
 	let body = htmlToReact(post.content)
 	return (
 		<Grid container direction="column">
@@ -22,7 +22,7 @@ const PostPage = (e) => {
 				description={post.description}
 				image={post.thumbnail}
 				/>
-			<Grid item><LayoutMenu data={graphqlMenuData} /></Grid>
+			<Grid item><LayoutMenu data={headerMenu} /></Grid>
 			<Grid item>
 				{post.isFrontPage
 					? <LayoutHeroFrontPage post={post} />
@@ -32,7 +32,7 @@ const PostPage = (e) => {
 			<Grid item>
 				<div id="content">{body}</div>
 			</Grid>
-			<Grid item><LayoutFooter data={graphqlMenuData} /></Grid>
+			<Grid item><LayoutFooter data={footerMenu} /></Grid>
 		</Grid>
 	)
 }

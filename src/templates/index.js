@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../components/typography.js'
 import Card from '../components/card.js'
@@ -15,13 +15,14 @@ import categoryColors from '../utils/categoryColors'
 const IndexPage = (e) => {
 	const posts = e.pageContext.posts
 	const category = e.pageContext.category
-	const graphqlMenuData = []
+	const headerMenu = e.pageContext.headerMenu
+	const footerMenu = e.pageContext.footerMenu
 	return (
 		<Grid container direction="column">
-			<Grid item><LayoutMenu data={graphqlMenuData} /></Grid>
+			<Grid item><LayoutMenu data={headerMenu} /></Grid>
 			<Grid item><LayoutIndexHero {...category} /></Grid>
 			<Grid item><LayoutFeed posts={posts} /></Grid>
-			<Grid item><LayoutFooter data={graphqlMenuData} /></Grid>
+			<Grid item><LayoutFooter data={footerMenu} /></Grid>
 		</Grid>
 	)
 }

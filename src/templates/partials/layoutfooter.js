@@ -9,12 +9,10 @@ import StrawbeesLogo from '../../images/learninglogowhite.svg'
 import Palette from '../../components/palette.js'
 import Typography from '../../components/typography.js'
 import makeRelativePath from '../../utils/makeRelativePath.js'
-import filterMenuBySlug from '../../utils/filterMenuBySlug.js'
 
 let localUrl = '' // XXX!
-function LayoutFooter({ data: graphqlMenuData }) {
-	const menuItems = filterMenuBySlug('footer-menu', graphqlMenuData)
-	localUrl = 'https://localhost:8080'
+function LayoutFooter({ data: menuItems }) {
+	localUrl = 'http://localhost:8080'
 	return (
 		<Box
 			py={8}
@@ -91,7 +89,7 @@ function MenuColumn({ label, url, menuItems }) {
 		<Box textAlign="left">
 			<Typography>
 				<p><strong>{label.toUpperCase()}</strong></p>
-				{menuItems.nodes.map(MyLink)}
+				{menuItems.map(MyLink)}
 			</Typography>
 		</Box>
 	)

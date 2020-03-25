@@ -9,8 +9,9 @@ exports.createPages = async ({ actions, graphql }) => {
 
 	const pages = result.data.allWordpressPage.nodes.map(models.getPage)
 	const posts = result.data.allWordpressPost.nodes.map(models.getPost)
-	const categories = []
-
+	const categories = result.data.allWordpressCategory.nodes.map(models.getCategory)
+	const headerMenu = models.getMenu(result.data.allWordpressWpHeaderMenu.nodes)
+	const footerMenu = models.getMenu(result.data.allWordpressWpFooterMenu.nodes)
 	// Create a dictionary where the key is the post path and the value is the
 	// the post object
 	let postsHash = {}
@@ -22,7 +23,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		createPage({ // Posts
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
-			context: { post: post }
+			context: { post: post, headerMenu: headerMenu, footerMenu: footerMenu }
 		})
 	})
 
@@ -30,7 +31,7 @@ exports.createPages = async ({ actions, graphql }) => {
 		createPage({ // Pages
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
-			context: { post: post }
+			context: { post: post, headerMenu: headerMenu, footerMenu: footerMenu }
 		})
 	})
 
@@ -39,11 +40,13 @@ exports.createPages = async ({ actions, graphql }) => {
 			return post.category === category.name
 		})
 		createPage({
-			path: category.uri,
+			path: category.path,
 			component: require.resolve('./src/templates/index.js'),
 			context: {
 				posts: filteredPosts,
-				category: category
+				category: category,
+				headerMenu: headerMenu,
+				footerMenu: footerMenu
 			}
 		})
 	})
