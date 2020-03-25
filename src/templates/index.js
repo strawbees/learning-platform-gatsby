@@ -15,7 +15,7 @@ import categoryColors from '../utils/categoryColors'
 const IndexPage = (e) => {
 	const posts = e.pageContext.posts
 	const category = e.pageContext.category
-	const graphqlMenuData = useStaticQuery(queryMenus)
+	const graphqlMenuData = []
 	return (
 		<Grid container direction="column">
 			<Grid item><LayoutMenu data={graphqlMenuData} /></Grid>
@@ -85,30 +85,3 @@ function LayoutIndexHero({ name, description }) {
 }
 
 export default IndexPage
-
-const queryMenus = graphql`
-	{
-		wordpress {
-			allSettings {
-				generalSettingsUrl
-			}
-			menus {
-				nodes {
-					slug
-					menuItems {
-						nodes {
-							url
-							label
-							menuItems: childItems {
-								nodes {
-									url
-									label
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-`

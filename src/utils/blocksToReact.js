@@ -66,7 +66,6 @@ const parseBlocks = (blocks) => {
 		const attr = block.attributes
 		switch (block.name) {
 			case 'core/group':
-
 				components.push(
 					<Container maxWidth="md">
 						{parseBlocks(block.innerBlocks)}
@@ -190,8 +189,7 @@ const parseBlocks = (blocks) => {
 	return components
 }
 
-const blocksToReact = (rawBlock) => {
-	const blocks = JSON.parse(rawBlock)
+const blocksToReact = (blocks) => {
 	return parseBlocks(blocks)
 }
 

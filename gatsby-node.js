@@ -1,16 +1,15 @@
-// const getContent = require('./build-src/getContentFromMd.js')
-const {
-	getPages, getPosts, getCategories
-} = require('./build-src/getContentFromGraphql.js')
+const getContentFromGraphql = require('./build-src/getContentFromGraphql.js')
 const redirectBatch = require('./build-src/redirects.json')
+const models = require('./build-src/models')
 
 exports.createPages = async ({ actions, graphql }) => {
 	const { createPage, createRedirect } = actions
 
-	const pages = await getPages(graphql)
-	const posts = await getPosts(graphql)
-	const categories = await getCategories(graphql)
-	const frontPage = pages.find(page => page.isFrontPage)
+	const result = await getContentFromGraphql(graphql)
+
+	const pages = result.data.allWordpressPage.nodes.map(models.getPage)
+	const posts = result.data.allWordpressPost.nodes.map(models.getPost)
+	const categories = []
 
 	// Create a dictionary where the key is the post path and the value is the
 	// the post object
@@ -18,14 +17,6 @@ exports.createPages = async ({ actions, graphql }) => {
 	posts.forEach((post) => {
 		postsHash[post.path] = post
 	})
-
-	if (!frontPage) {
-		createPage({ // Index
-			path: '/',
-			component: require.resolve('./src/templates/index.js'),
-			context: { posts: posts }
-		})
-	}
 
 	posts.forEach(function(post) { // All single posts
 		createPage({ // Posts

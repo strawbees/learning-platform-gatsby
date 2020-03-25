@@ -11,7 +11,7 @@ import filterMenuBySlug from '../../utils/filterMenuBySlug.js'
 let localUrl = '' // XXX!
 function LayoutMenu({ data: graphqlMenuData }) {
 	const menuItems = filterMenuBySlug('header-menu', graphqlMenuData)
-	localUrl = graphqlMenuData.wordpress.allSettings.generalSettingsUrl
+	localUrl = 'https://localhost:8080'
 	return (
 		<Container maxWidth="lg">
 			<Grid container

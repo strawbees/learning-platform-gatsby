@@ -1,8 +1,7 @@
-const filterMenuBySlug = (slug, data) => {
-	if (!data) {
+const filterMenuBySlug = (slug, menus) => {
+	if (!menus) {
 		return []
 	}
-	const menus = data.wordpress.menus.nodes
 	const menu = menus.find(m => m.slug === slug)
 	let menuItems = []
 	if (menu && menu.menuItems && menu.menuItems.nodes) {

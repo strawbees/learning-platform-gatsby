@@ -8,15 +8,13 @@ import LayoutMenu from './partials/layoutmenu'
 import LayoutHero from './partials/layouthero'
 import LayoutFooter from './partials/layoutfooter'
 import '../globalStyles.css'
-// import mdToReact from '../utils/mdToReact'
-import blocksToReact from '../utils/blocksToReact'
+import htmlToReact from '../utils/htmlToReact'
 import categoryColors from '../utils/categoryColors'
 
 const PostPage = (e) => {
 	const post = e.pageContext.post
-	const graphqlMenuData = useStaticQuery(queryMenus)
-	// Convert markdown to react with our own components
-	let body = blocksToReact(post.content)
+	const graphqlMenuData = []
+	let body = htmlToReact(post.content)
 	return (
 		<Grid container direction="column">
 			<SEO
@@ -83,30 +81,3 @@ const LayoutHeroFrontPage = function({post}) {
 
 
 export default PostPage
-
-const queryMenus = graphql`
-	{
-		wordpress {
-			allSettings {
-				generalSettingsUrl
-			}
-			menus {
-				nodes {
-					slug
-					menuItems {
-						nodes {
-							url
-							label
-							menuItems: childItems {
-								nodes {
-									url
-									label
-								}
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-`

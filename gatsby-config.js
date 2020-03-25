@@ -21,16 +21,25 @@ module.exports = {
 	plugins: [
 		`gatsby-plugin-react-helmet`,
 		{
-			resolve: "gatsby-source-graphql",
+			resolve: `gatsby-source-wordpress`,
 			options: {
-				// Arbitrary name for the remote schema Query type
-				typeName: "WordPress",
-				// Field under which the remote schema will be accessible. You'll use this in your Gatsby query
-				fieldName: "wordpress",
-				// Url to query from
-				url: graphqlUrl,
-				refetchInterval: graphqlRefetchInterval
-			},
+				baseUrl: `localhost:8080`,
+				protocol: `http`,
+				hostingWPCOM: false,
+				useACF: false,
+				includedRoutes: [
+          "**/categories",
+          "**/posts",
+          "**/pages",
+          "**/media",
+          "**/tags",
+          "**/taxonomies",
+          "**/users",
+          "**/frontpage",
+          "**/header-menu",
+          "**/footer-menu",
+        ],
+			}
 		},
 		{
 			resolve: `gatsby-source-filesystem`,
@@ -60,6 +69,6 @@ module.exports = {
 			}
 		},
 		`gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+		`gatsby-transformer-sharp`,
 	],
 }

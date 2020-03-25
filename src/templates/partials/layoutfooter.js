@@ -14,7 +14,7 @@ import filterMenuBySlug from '../../utils/filterMenuBySlug.js'
 let localUrl = '' // XXX!
 function LayoutFooter({ data: graphqlMenuData }) {
 	const menuItems = filterMenuBySlug('footer-menu', graphqlMenuData)
-	localUrl = graphqlMenuData.wordpress.allSettings.generalSettingsUrl
+	localUrl = 'https://localhost:8080'
 	return (
 		<Box
 			py={8}
