@@ -1,51 +1,57 @@
 module.exports = async (graphql) => {
-	let result = await graphql(`
+	return await graphql(`
 query Query {
-  allWordpressPost {
-    nodes {
+	allWordpressPost {
+		nodes {
+			path
+			slug
+			title
+			excerpt
+			categories {
+				name
+			}
+			featured_media {
+				source_url
+			}
+			content
+		}
+	}
+	allWordpressPage {
+		nodes {
+			path
+			slug
+			title
+			excerpt
+			featured_media {
+				source_url
+			}
+			content
+		}
+	}
+	allWordpressWpHeaderMenu {
+		nodes {
+			db_id
+			menu_item_parent
+			title
+			url
+		}
+	}
+	allWordpressWpFooterMenu {
+		nodes {
+			db_id
+			menu_item_parent
+			title
+			url
+		}
+	}
+	allWordpressCategory {
+		nodes {
+			name
       path
-      slug
-      title
-      excerpt
-      categories {
-        name
-      }
-      featured_media {
-        source_url
-      }
-      content
-    }
-  }
-  allWordpressPage {
-    nodes {
-      path
-      slug
-      title
-      excerpt
-      featured_media {
-        source_url
-      }
-      content
-    }
-  }
-  allWordpressWpHeaderMenu {
-    nodes {
-      db_id
-      menu_item_parent
-      title
-      url
-    }
-  }
-  allWordpressWpFooterMenu {
-    nodes {
-      db_id
-      menu_item_parent
-      title
-      url
-    }
-  }
+      description
+		}
+	}
 }
 
 `)
-	return result
 }
