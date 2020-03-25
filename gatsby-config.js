@@ -3,9 +3,7 @@ const buildEnvironments = require('./build-src/buildEnvironments')
 const {
 	pathPrefix,
 	siteUrl,
-	trackingId,
-	graphqlUrl,
-	graphqlRefetchInterval
+	trackingId
 } = buildEnvironments(
 	process.env.BUILD_ENVIRONEMNT || 'stage'
 )
