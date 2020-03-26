@@ -3,6 +3,7 @@ import { Box } from '@material-ui/core'
 import Hero from '../src/components/hero'
 import Typography from '../src/components/typography'
 import Palette from '../src/components/palette'
+import '../src/globalStyles.css'
 
 import Image from '../static/header-sierpinski.png'
 

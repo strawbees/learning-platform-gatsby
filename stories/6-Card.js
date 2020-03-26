@@ -7,6 +7,7 @@ import Palette from '../src/components/palette'
 import Image from '../static/mechanicalinventions.jpg'
 import ProductImage from '../static/bridgekit.png'
 import GradientImage from '../static/steamschoolgradient.svg'
+import '../src/globalStyles.css'
 
 export default {
 	title: 'Card'

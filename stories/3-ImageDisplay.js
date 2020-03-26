@@ -1,6 +1,7 @@
 import React from 'react';
 import ImageDisplay from '../src/components/imagedisplay'
 import Image from '../static/mechanicalinventions.jpg'
+import '../src/globalStyles.css'
 
 export default {
 	title: 'Image Display'

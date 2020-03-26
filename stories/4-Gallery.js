@@ -3,6 +3,7 @@ import ImageDisplay from '../src/components/imagedisplay'
 import Gallery from '../src/components/gallery'
 import Image from '../static/mechanicalinventions.jpg'
 import Image2 from '../static/connectors.jpg'
+import '../src/globalStyles.css'
 
 export default {
 	title: 'Image Gallery'
