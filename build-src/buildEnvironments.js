@@ -3,30 +3,29 @@ const buildConfigs = {
 		trackingId: 'UA-69443341-4',
 		pathPrefix: '',
 		siteUrl: 'https://learning-stage.strawbees.com',
-		// graphqlUrl: 'http://localhost:8080/graphql',
-		graphqlUrl: 'http://strawbees-learning.herokuapp.com/graphql',
-		graphqlRefetchInterval: null
+		headlessWordpress: 'strawbees-learning.herokuapp.com',
+		headlessWordpressProtocol: 'http',
 	},
 	'production': {
 		trackingId: 'UA-69443341-2',
 		pathPrefix: '',
 		siteUrl: 'https://learning.strawbees.com',
-		graphqlUrl: 'http://strawbees-learning.herokuapp.com/graphql',
-		graphqlRefetchInterval: null
+		headlessWordpress: 'strawbees-learning.herokuapp.com',
+		headlessWordpressProtocol: 'https',
 	},
 	'github': {
 		trackingId: '',
 		pathPrefix: '/learning-platform-gatsby',
 		siteUrl: 'https://strawbees.github.io',
-		graphqlUrl: 'http://strawbees-learning.herokuapp.com/graphql',
-		graphqlRefetchInterval: 60
+		headlessWordpress: 'strawbees-learning.herokuapp.com',
+		headlessWordpressProtocol: 'http',
 	},
 	'local': {
 		trackingId: '',
-		pathPrefix: '/public',
-		siteUrl: 'http://localhost:9000',
-		graphqlUrl: 'http://localhost:8080/graphql',
-		graphqlRefetchInterval: 10
+		pathPrefix: '/',
+		siteUrl: 'http://localhost:8000',
+		headlessWordpress: 'localhost:8080',
+		headlessWordpressProtocol: 'http',
 	},
 }
 

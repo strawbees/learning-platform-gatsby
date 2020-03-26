@@ -3,9 +3,11 @@ const buildEnvironments = require('./build-src/buildEnvironments')
 const {
 	pathPrefix,
 	siteUrl,
+	headlessWordpress,
+	headlessWordpressProtocol,
 	trackingId
 } = buildEnvironments(
-	process.env.BUILD_ENVIRONEMNT || 'stage'
+	process.env.BUILD_ENVIRONEMNT || 'local'
 )
 
 module.exports = {
@@ -21,8 +23,8 @@ module.exports = {
 		{
 			resolve: `gatsby-source-wordpress`,
 			options: {
-				baseUrl: `localhost:8080`,
-				protocol: `http`,
+				baseUrl: headlessWordpress,
+				protocol: headlessWordpressProtocol,
 				hostingWPCOM: false,
 				useACF: false,
 				includedRoutes: [
@@ -33,7 +35,6 @@ module.exports = {
           "**/tags",
           "**/taxonomies",
           "**/users",
-          "**/frontpage",
           "**/header-menu",
           "**/footer-menu",
         ],
