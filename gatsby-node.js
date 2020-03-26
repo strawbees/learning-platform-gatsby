@@ -12,12 +12,6 @@ exports.createPages = async ({ actions, graphql }) => {
 	const categories = result.data.allWordpressCategory.nodes.map(models.getCategory)
 	const headerMenu = models.getMenu(result.data.allWordpressWpHeaderMenu.nodes)
 	const footerMenu = models.getMenu(result.data.allWordpressWpFooterMenu.nodes)
-	// Create a dictionary where the key is the post path and the value is the
-	// the post object
-	let postsHash = {}
-	posts.forEach((post) => {
-		postsHash[post.path] = post
-	})
 
 	posts.forEach(function(post) { // All single posts
 		createPage({ // Posts
