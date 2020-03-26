@@ -1,6 +1,7 @@
 const regex = /(<([^>]+)>)/ig
 exports.getPage = function(data) {
 	return {
+		isFrontPage: data.path === '/',
 		path: data.path,
 		title: data.title,
 		description: data.excerpt.replace(regex, ''),
