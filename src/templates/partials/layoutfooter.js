@@ -11,7 +11,7 @@ import Typography from '../../components/typography.js'
 import makeRelativePath from '../../utils/makeRelativePath.js'
 
 let localUrl = '' // XXX!
-function LayoutFooter({ data: menuItems }) {
+function LayoutFooter({ data: menuItems = [] }) {
 	localUrl = 'http://localhost:8080'
 	return (
 		<Box
@@ -84,7 +84,7 @@ function SocialMediaColumn() {
 		</React.Fragment>
 	)
 }
-function MenuColumn({ label, url, menuItems }) {
+function MenuColumn({ label, url, menuItems=[] }) {
 	return (
 		<Box textAlign="left">
 			<Typography>
