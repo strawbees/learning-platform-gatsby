@@ -47,11 +47,18 @@ query Query {
 	allWordpressCategory {
 		nodes {
 			name
-      path
-      description
+			path
+			description
+		}
+	}
+	allWordpressSiteMetadata {
+		nodes {
+			description
+			home
+			name
+			url
 		}
 	}
 }
-
 `)
 }

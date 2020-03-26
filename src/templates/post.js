@@ -14,15 +14,16 @@ const PostPage = (e) => {
 	const post = e.pageContext.post
 	const headerMenu = e.pageContext.headerMenu
 	const footerMenu = e.pageContext.footerMenu
-	let body = htmlToReact(post.content)
+	const siteMeta = e.pageContext.siteMeta
+	let body = htmlToReact(post.content, siteMeta)
 	return (
 		<Grid container direction="column">
 			<SEO
-				title={post.title}
+				title={`${siteMeta.name} - ${post.title}`}
 				description={post.description}
 				image={post.thumbnail}
 				/>
-			<Grid item><LayoutMenu data={headerMenu} /></Grid>
+			<Grid item><LayoutMenu data={headerMenu} siteMeta={siteMeta} /></Grid>
 			<Grid item>
 				{post.isFrontPage
 					? <LayoutHeroFrontPage post={post} />
@@ -32,7 +33,7 @@ const PostPage = (e) => {
 			<Grid item>
 				<div id="content">{body}</div>
 			</Grid>
-			<Grid item><LayoutFooter data={footerMenu} /></Grid>
+			<Grid item><LayoutFooter data={footerMenu} siteMeta={siteMeta} /></Grid>
 		</Grid>
 	)
 }

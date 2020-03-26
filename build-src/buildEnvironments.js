@@ -4,7 +4,7 @@ const buildConfigs = {
 		pathPrefix: '',
 		siteUrl: 'https://learning-stage.strawbees.com',
 		headlessWordpress: 'strawbees-learning.herokuapp.com',
-		headlessWordpressProtocol: 'http',
+		headlessWordpressProtocol: 'https',
 	},
 	'production': {
 		trackingId: 'UA-69443341-2',
@@ -18,7 +18,7 @@ const buildConfigs = {
 		pathPrefix: '/learning-platform-gatsby',
 		siteUrl: 'https://strawbees.github.io',
 		headlessWordpress: 'strawbees-learning.herokuapp.com',
-		headlessWordpressProtocol: 'http',
+		headlessWordpressProtocol: 'https',
 	},
 	'local': {
 		trackingId: '',

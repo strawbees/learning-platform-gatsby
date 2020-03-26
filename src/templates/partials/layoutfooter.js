@@ -11,8 +11,8 @@ import Typography from '../../components/typography.js'
 import makeRelativePath from '../../utils/makeRelativePath.js'
 
 let localUrl = '' // XXX!
-function LayoutFooter({ data: menuItems = [] }) {
-	localUrl = 'http://localhost:8080'
+function LayoutFooter({ data: menuItems = [], siteMeta = {} }) {
+	localUrl = siteMeta.url
 	return (
 		<Box
 			py={8}

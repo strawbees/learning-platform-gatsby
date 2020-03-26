@@ -12,12 +12,18 @@ exports.createPages = async ({ actions, graphql }) => {
 	const categories = result.data.allWordpressCategory.nodes.map(models.getCategory)
 	const headerMenu = models.getMenu(result.data.allWordpressWpHeaderMenu.nodes)
 	const footerMenu = models.getMenu(result.data.allWordpressWpFooterMenu.nodes)
+	const siteMeta = result.data.allWordpressSiteMetadata.nodes[0]
 
 	posts.forEach(function(post) { // All single posts
 		createPage({ // Posts
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
-			context: { post: post, headerMenu: headerMenu, footerMenu: footerMenu }
+			context: {
+				post: post,
+				headerMenu: headerMenu,
+				footerMenu: footerMenu,
+				siteMeta: siteMeta
+			}
 		})
 	})
 
@@ -25,7 +31,12 @@ exports.createPages = async ({ actions, graphql }) => {
 		createPage({ // Pages
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
-			context: { post: post, headerMenu: headerMenu, footerMenu: footerMenu }
+			context: {
+				post: post,
+				headerMenu: headerMenu,
+				footerMenu: footerMenu,
+				siteMeta: siteMeta
+			}
 		})
 	})
 
@@ -40,7 +51,8 @@ exports.createPages = async ({ actions, graphql }) => {
 				posts: filteredPosts,
 				category: category,
 				headerMenu: headerMenu,
-				footerMenu: footerMenu
+				footerMenu: footerMenu,
+				siteMeta: siteMeta
 			}
 		})
 	})
