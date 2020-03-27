@@ -1,3 +1,5 @@
+const htmlToJson = require('./htmlToJson.js')
+
 const regex = /(<([^>]+)>)/ig
 exports.getPage = function(data) {
 	return {
@@ -7,7 +9,8 @@ exports.getPage = function(data) {
 		description: data.excerpt.replace(regex, ''),
 		thumbnail: data.featured_media ? data.featured_media.source_url : '',
 		header: data.featured_media ? data.featured_media.source_url : '',
-		content: data.content
+		content: data.content,
+		contentJson: htmlToJson(data.content)
 	}
 }
 exports.getPost = function(data) {
@@ -22,7 +25,8 @@ exports.getPost = function(data) {
 		thumbnail: data.featured_media ? data.featured_media.source_url : '',
 		header: data.featured_media ? data.featured_media.source_url : '',
 		category: category !== 'Uncategorized' ? category : null,
-		content: data.content
+		content: data.content,
+		contentJson: htmlToJson(data.content)
 	}
 }
 exports.getMenu = function(menu) {

@@ -7,7 +7,7 @@ import StrawbeesLogo from '../../images/learninglogo.svg'
 import makeRelativePath from '../../utils/makeRelativePath'
 
 let localUrl = '' // XXX!
-function LayoutMenu({ data: menuItems, siteMeta = {} }) {
+function LayoutMenu({ menuItems = [], siteMeta = {} }) {
 	localUrl = siteMeta.url
 	return (
 		<Container maxWidth="lg">
@@ -42,7 +42,6 @@ function MyMenuItem({ url, label, menuItems, handleClose }) {
 	if (menuItems) {
 		return <MyDropdown label={label} menuItems={menuItems} />
 	} else {
-		console.log(label, 'url', url, 'localUrl', localUrl)
 		// Check if it's a local/relative or external url
 		if (url.indexOf('http') === -1 || url.indexOf(localUrl) !== -1 ) {
 			return <MyInternalLink url={url} label={label} />

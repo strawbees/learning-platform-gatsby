@@ -10,24 +10,14 @@ import ImageDisplay from '../components/imagedisplay'
 import Gallery from '../components/gallery'
 import categoryColors from './categoryColors'
 import makeRelativePath from './makeRelativePath'
+import {
+	querySelectorAll, querySelector, contains
+} from './jsonSelector'
 
-const mapCollection = (collection, cb) => {
-	const response = []
-	for (let i = 0; i < collection.length; i++) {
-		response.push(
-			cb( collection.item(i), i )
-		)
-	}
-	return response
-}
-
-const htmlToReact = (el) => {
+const jsonToReact = (el) => {
 	switch(el.tagName.toLowerCase()) {
 		case 'body':
-			return mapCollection(
-				el.children,
-				htmlToReact
-			)
+			return el.children.map(jsonToReact)
 		case 'iframe':
 		case 'figure':
 		case 'div':
@@ -129,12 +119,12 @@ const MySection = ({ el }) => {
 	}
 
 	// Related posts container
-	if (el.classList.contains('wp-block-strawbees-learning-related')) {
+	if (contains(el.classList, 'wp-block-strawbees-learning-related')) {
 		return (
 			<Container maxWidth="lg">
 				<Box my={3}>
 					<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
-						{mapCollection(el.children, htmlToReact)}
+						{el.children.map(jsonToReact)}
 					</Grid>
 				</Box>
 			</Container>
@@ -142,16 +132,13 @@ const MySection = ({ el }) => {
 	}
 
 	// Gallery
-	if (el.classList.contains('wp-block-gallery')) {
-		let images = el.querySelectorAll('.blocks-gallery-item img')
+	if (contains(el.classList, 'wp-block-gallery')) {
+		let images = querySelectorAll(el, 'img')
 		return (
 			<Container maxWidth="md">
 				<Box my={3}>
 					<Gallery>
-						{mapCollection(
-							images,
-							image => <ImageDisplay src={image.src} alt={image.alt} />
-						)}
+						{images.map(image => <ImageDisplay src={image.src} alt={image.alt} />)}
 					</Gallery>
 				</Box>
 			</Container>
@@ -159,11 +146,11 @@ const MySection = ({ el }) => {
 	}
 
 	// Related post item/card
-	if (el.classList.contains('related-post')) {
-		let title = el.querySelector('.title')
-		let image = el.querySelector('.featured-media')
-		let excerpt = el.querySelector('.excerpt')
-		let category = el.querySelector('.category')
+	if (contains(el.classList, 'related-post')) {
+		let title = querySelector(el, '.title')
+		let image = querySelector(el, '.featured-media')
+		let excerpt = querySelector(el, '.excerpt')
+		let category = querySelector(el, '.category')
 		return (
 			<Grid item xs={12} sm={6} md={4}>
 				<Link to={makeRelativePath(title.href)}>
@@ -187,19 +174,19 @@ const MySection = ({ el }) => {
 	}
 
 	// Horizontal grey section
-	if (el.classList.contains('wp-block-strawbees-learning-horizontal')) {
+	if (contains(el.classList, 'wp-block-strawbees-learning-horizontal')) {
 		return (
 			<Box py={3} bgcolor={Palette.lightGrey}>
 				<Container maxWidth="md" align='center'>
-					{mapCollection(el.children, htmlToReact)}
+					{el.children.map(jsonToReact)}
 				</Container>
 			</Box>
 		)
 	}
 
 	// Download block
-	if (el.classList.contains('wp-block-file')) {
-		let download = el.children.item(0)
+	if (contains(el.classList, 'wp-block-file')) {
+		let download = el.children[0]
 		return (
 			<Box m={1} component="span">
 				<a href={download.href} target="_blank" rel="noreferrer noopener">
@@ -212,12 +199,12 @@ const MySection = ({ el }) => {
 	}
 
 	// Button block
-	if (el.classList.contains('wp-block-button')) {
-		let download = el.children.item(0)
+	if (contains(el.classList, 'wp-block-button')) {
+		let download = el.children[0]
 		return (
 			<Box p={3}>
 				<a href={download.href} target="_blank" rel="noreferrer noopener">
-					<Button icon="download">
+					<Button>
 						{download.innerText}
 					</Button>
 				</a>
@@ -227,18 +214,13 @@ const MySection = ({ el }) => {
 
 	// generic div
 	if (el.children) {
-		return mapCollection(el.children, htmlToReact)
+		return el.children.map(jsonToReact)
 	}
 
 	// In doubt, put in a div
 	return <div dangerouslySetInnerHTML={{__html:el.innerHTML}}></div>
 }
 
-const parseHtml = (html) => {
-	const parser = new DOMParser()
-	const tree = parser.parseFromString(html, 'text/html')
-	const body = tree.children[0].children.item(1)
-	return htmlToReact(body)
+export {
+	jsonToReact
 }
-
-export default parseHtml

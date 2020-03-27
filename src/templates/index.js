@@ -19,10 +19,10 @@ const IndexPage = (e) => {
 	const footerMenu = e.pageContext.footerMenu
 	return (
 		<Grid container direction="column">
-			<Grid item><LayoutMenu data={headerMenu} /></Grid>
+			<Grid item><LayoutMenu menuItems={headerMenu} /></Grid>
 			<Grid item><LayoutIndexHero {...category} /></Grid>
 			<Grid item><LayoutFeed posts={posts} /></Grid>
-			<Grid item><LayoutFooter data={footerMenu} /></Grid>
+			<Grid item><LayoutFooter menuItems={footerMenu} /></Grid>
 		</Grid>
 	)
 }

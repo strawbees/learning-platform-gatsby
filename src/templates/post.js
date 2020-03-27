@@ -7,7 +7,7 @@ import LayoutMenu from './partials/layoutmenu'
 import LayoutHero from './partials/layouthero'
 import LayoutFooter from './partials/layoutfooter'
 import '../globalStyles.css'
-import htmlToReact from '../utils/htmlToReact'
+import { jsonToReact } from '../utils/jsonToReact'
 import categoryColors from '../utils/categoryColors'
 
 const PostPage = (e) => {
@@ -15,7 +15,7 @@ const PostPage = (e) => {
 	const headerMenu = e.pageContext.headerMenu
 	const footerMenu = e.pageContext.footerMenu
 	const siteMeta = e.pageContext.siteMeta
-	let body = htmlToReact(post.content, siteMeta)
+	let body = jsonToReact(post.contentJson, siteMeta)
 	return (
 		<Grid container direction="column">
 			<SEO
@@ -23,7 +23,7 @@ const PostPage = (e) => {
 				description={post.description}
 				image={post.thumbnail}
 				/>
-			<Grid item><LayoutMenu data={headerMenu} siteMeta={siteMeta} /></Grid>
+			<Grid item><LayoutMenu menuItems={headerMenu} siteMeta={siteMeta} /></Grid>
 			<Grid item>
 				{post.isFrontPage
 					? <LayoutHeroFrontPage post={post} />
@@ -33,7 +33,7 @@ const PostPage = (e) => {
 			<Grid item>
 				<div id="content">{body}</div>
 			</Grid>
-			<Grid item><LayoutFooter data={footerMenu} siteMeta={siteMeta} /></Grid>
+			<Grid item><LayoutFooter menuItems={footerMenu} siteMeta={siteMeta} /></Grid>
 		</Grid>
 	)
 }
