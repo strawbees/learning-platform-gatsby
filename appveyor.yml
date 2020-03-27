@@ -1,0 +1,44 @@
+# version format
+version: 0.1.{build}-{branch}
+
+# you can use {branch} name in version format too
+# version: 1.0.{build}-{branch}
+
+# branches to build
+branches:
+  only:
+    - appveyor-build
+
+max_jobs: 1
+image: Ubuntu
+
+shallow_clone: true
+clone_depth: 1
+environment:
+  BUILD_ENVIRONEMNT: 'stage'
+  S3_KEY:
+    secure: Fr/9DV5OyJfjgQYKpSI88Mx6rvTHGKNymAuRdTbyOUE=
+  S3_SECRET:
+    secure: 5Qz3Pa6Hm3voaRbab0Y9SpcpRem7O0ybXdSufERaQmyfLcgR0EOS/gyiXw+dFAbx
+
+cache:
+  - node_modules
+
+install:
+  - npm install
+build_script:
+  - BUILD_ENVIRONEMNT=stage npm run build
+artifacts:
+  - path: 'public/**'
+
+# on successful build
+on_success:
+  - cmd: echo "BUILD LOG => Success"
+
+# on build failure
+on_failure:
+  - cmd: echo "BUILD LOG => Failed"
+
+# after build failure or success
+on_finish:
+  - cmd: echo "BUILD LOG => Finished"

@@ -10,6 +10,11 @@ const {
 	process.env.BUILD_ENVIRONEMNT || 'local'
 )
 
+console.log('BUILD_ENVIRONEMNT', process.env.BUILD_ENVIRONEMNT)
+console.log('site url', siteUrl)
+console.log('headless wordpress', headlessWordpress)
+console.log('GAID', trackingId)
+
 module.exports = {
 	pathPrefix: pathPrefix,
 	siteMetadata: {
