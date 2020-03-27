@@ -3,17 +3,16 @@ version: 0.1.{build}-{branch}
 
 # you can use {branch} name in version format too
 # version: 1.0.{build}-{branch}
+image: Ubuntu
+max_jobs: 1
 
 # branches to build
 branches:
   only:
     - appveyor-build
-
-max_jobs: 1
-image: Ubuntu
-
 shallow_clone: true
 clone_depth: 1
+
 environment:
   BUILD_ENVIRONEMNT: 'stage'
   S3_KEY:
@@ -21,15 +20,18 @@ environment:
   S3_SECRET:
     secure: 5Qz3Pa6Hm3voaRbab0Y9SpcpRem7O0ybXdSufERaQmyfLcgR0EOS/gyiXw+dFAbx
 
-cache:
-  - node_modules
-
+init:
+  - nvm use 13.9.0
 install:
   - npm install
 build_script:
   - BUILD_ENVIRONEMNT=stage npm run build
+after_build:
+  - zip -r dist.zip public
+cache:
+  - node_modules
 artifacts:
-  - path: 'public/**'
+  - path: 'dist.zip'
 
 # on successful build
 on_success:
