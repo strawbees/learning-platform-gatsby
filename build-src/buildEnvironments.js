@@ -3,8 +3,8 @@ const buildConfigs = {
 		trackingId: 'UA-69443341-4',
 		pathPrefix: '',
 		siteUrl: 'https://learning-stage.strawbees.com',
-		headlessWordpress: 'strawbees-learning.herokuapp.com',
-		headlessWordpressProtocol: 'https',
+		headlessWordpress: '3.11.96.189',
+		headlessWordpressProtocol: 'http',
 	},
 	'production': {
 		trackingId: 'UA-69443341-2',
