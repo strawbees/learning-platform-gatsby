@@ -24,88 +24,73 @@ const jsonToReact = (el) => {
 			return <MySection el={el} />
 		case 'a':
 			return (
-				<Container maxWidth="md">
-					<Typography>
+				<TypographyWrap>
 						<a href={el.href} dangerouslySetInnerHTML={{__html:el.innerHTML}}></a>
-					</Typography>
-				</Container>
+				</TypographyWrap>
 			)
 		case 'h1':
 			return (
-			<Container maxWidth="md">
-				<Typography>
+				<TypographyWrap>
 					<h1 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h1>
-				</Typography>
-			</Container>
+			</TypographyWrap>
 			)
 		case 'h2':
 			return (
-			<Container maxWidth="md">
-				<Typography>
+				<TypographyWrap>
 					<h2 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h2>
-				</Typography>
-			</Container>
+			</TypographyWrap>
 			)
 		case 'h3':
 			return (
-			<Container maxWidth="md">
-				<Typography>
+				<TypographyWrap>
 					<h3 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h3>
-				</Typography>
-			</Container>
+			</TypographyWrap>
 			)
 		case 'h4':
 			return (
-			<Container maxWidth="md">
-				<Typography>
+				<TypographyWrap>
 					<h4 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h4>
-				</Typography>
-			</Container>
+			</TypographyWrap>
 			)
 		case 'h5':
 			return (
-			<Container maxWidth="md">
-				<Typography>
+				<TypographyWrap>
 					<h5 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h5>
-				</Typography>
-			</Container>
+			</TypographyWrap>
 			)
 		case 'p':
 			return (
-			<Container maxWidth="md">
-				<Typography>
+				<TypographyWrap>
 					<p dangerouslySetInnerHTML={{__html:el.innerHTML}}></p>
-				</Typography>
-			</Container>
+			</TypographyWrap>
 			)
 		case 'ul':
 			return (
-			<Container maxWidth="md">
-				<Typography>
+				<TypographyWrap>
 					<ul dangerouslySetInnerHTML={{__html:el.innerHTML}}></ul>
-				</Typography>
-			</Container>
+			</TypographyWrap>
 			)
 		case 'ol':
 			return (
-			<Container maxWidth="md">
-				<Typography>
+				<TypographyWrap>
 					<ol dangerouslySetInnerHTML={{__html:el.innerHTML}}></ol>
-				</Typography>
-			</Container>
-			)
-		case 'img':
-			return (
-			<Container maxWidth="md">
-				<Typography>
-					<img width="100%" src={el.src} alt={el.alt} />
-				</Typography>
-			</Container>
+			</TypographyWrap>
 			)
 		default:
-			return <div>{el.tagName} {el.className} {el.innerHTML}</div>
+			// return <div>{el.tagName} {el.className} {el.innerHTML}</div>
+			return null
 	}
 }
+const TypographyWrap = ({maxWidth="md", children}) => {
+	return (
+		<Container maxWidth={maxWidth}>
+			<Typography>
+				{children}
+			</Typography>
+		</Container>
+	)
+}
+
 const MySection = ({ el }) => {
 	// Youtube display
 	if (el.tagName.toLowerCase() === 'iframe') {

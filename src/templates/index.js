@@ -17,12 +17,13 @@ const IndexPage = (e) => {
 	const category = e.pageContext.category
 	const headerMenu = e.pageContext.headerMenu
 	const footerMenu = e.pageContext.footerMenu
+	const siteMeta = e.pageContext.siteMeta
 	return (
 		<Grid container direction="column">
-			<Grid item><LayoutMenu menuItems={headerMenu} /></Grid>
+			<Grid item><LayoutMenu menuItems={headerMenu} siteMeta={siteMeta} /></Grid>
 			<Grid item><LayoutIndexHero {...category} /></Grid>
 			<Grid item><LayoutFeed posts={posts} /></Grid>
-			<Grid item><LayoutFooter menuItems={footerMenu} /></Grid>
+			<Grid item><LayoutFooter menuItems={footerMenu} siteMeta={siteMeta} /></Grid>
 		</Grid>
 	)
 }
