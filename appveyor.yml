@@ -25,12 +25,11 @@ init:
 install:
   - npm install
 build_script:
-  - BUILD_ENVIRONEMNT=stage npm run build
-after_build:
   - BUILD_ENVIRONEMNT=stage npm run deploy-s3
+after_build:
   - zip -r dist.zip public
-# cache:
-#   - node_modules
+cache:
+  # - node_modules
 artifacts:
   - path: 'dist.zip'
 
