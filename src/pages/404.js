@@ -1,6 +1,5 @@
 import React from "react"
-import { graphql } from 'gatsby'
-import { Container, Grid, Box } from '@material-ui/core'
+import { Grid, Box } from '@material-ui/core'
 import SEO from '../components/seo.js'
 import Typography from '../components/typography.js'
 import '../globalStyles.css'
