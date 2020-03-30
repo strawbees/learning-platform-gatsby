@@ -6,13 +6,12 @@
   "scripts": {
     "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop",
-    "start": "npm run develop",
+    "start": "npm run develop -p $PORT",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy-gh": "gatsby build --prefix-paths && gh-pages -d public",
     "deploy-s3": "gatsby build --prefix-paths && strawbees-s3-publisher -b strawbees-learning-stage -s ./public --sync",
     "deploy-s3-prod": "gatsby build --prefix-paths && strawbees-s3-publisher -b strawbees-learning-production -s ./public --sync",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
