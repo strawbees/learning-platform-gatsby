@@ -6,7 +6,7 @@
   "scripts": {
     "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop -p $PORT",
-    "start": "gatsby build && gatsby serve -p $PORT",
+    "start": "gatsby develop -p $PORT",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy-gh": "gatsby build --prefix-paths && gh-pages -d public",
