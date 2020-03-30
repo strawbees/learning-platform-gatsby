@@ -5,8 +5,8 @@
   "version": "0.1.0",
   "scripts": {
     "build": "gatsby build --prefix-paths",
-    "develop": "gatsby develop",
-    "start": "npm run develop -p $PORT",
+    "develop": "gatsby develop -p $PORT",
+    "start": "gatsby build && gatsby serve -p $PORT",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy-gh": "gatsby build --prefix-paths && gh-pages -d public",
