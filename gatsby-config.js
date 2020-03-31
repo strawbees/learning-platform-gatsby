@@ -7,10 +7,10 @@ const {
 	headlessWordpressProtocol,
 	trackingId
 } = buildEnvironments(
-	process.env.BUILD_ENVIRONEMNT || 'local'
+	process.env.BUILD_ENVIRONMENT || 'local'
 )
 
-console.log('BUILD_ENVIRONEMNT', process.env.BUILD_ENVIRONEMNT)
+console.log('BUILD_ENVIRONMENT', process.env.BUILD_ENVIRONMENT)
 console.log('site url', siteUrl)
 console.log('headless wordpress', headlessWordpress)
 console.log('GAID', trackingId)
