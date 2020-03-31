@@ -9,12 +9,12 @@ max_jobs: 1
 # branches to build
 branches:
   only:
-    - appveyor-build
+    - develop
 shallow_clone: true
 clone_depth: 1
 
 environment:
-  BUILD_ENVIRONEMNT: 'stage'
+  BUILD_ENVIRONMENT: 'stage'
   S3_KEY:
     secure: Fr/9DV5OyJfjgQYKpSI88Mx6rvTHGKNymAuRdTbyOUE=
   S3_SECRET:
@@ -25,7 +25,7 @@ init:
 install:
   - npm install
 build_script:
-  - BUILD_ENVIRONEMNT=stage npm run deploy-s3
+  - BUILD_ENVIRONMENT=stage npm run deploy-s3
 after_build:
   - zip -r dist.zip public
 cache:
