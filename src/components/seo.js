@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import favicon from '../images/favicon.png'
-import config from '../../gatsby-config.js'
 
 function SEO({ description, lang, meta, title, image }) {
 	return (
@@ -26,7 +25,7 @@ function SEO({ description, lang, meta, title, image }) {
 				},
 				{
 					property: `og:image`,
-					content: `${config.siteMetadata.siteUrl}${image}`,
+					content: image,
 				},
 				{
 					property: `og:type`,
