@@ -2,12 +2,13 @@
 
 This is a static website version of the [Strawbees Learning Platform](https://learning.strawbees.com/) built using [Gatsby](https://www.gatsbyjs.org/). This repository contains source code for **building** a stand alone, static html website that is easy to deploy in different platforms as Heroku, Github Pages or Amazon S3 buckets.
 
-## Quick start
+## Shortcuts
 
 - Clone repository: `git clone git@github.com:murilopolese/learning-platform-gatsby.git`
 - Navigate to the directory: `cd learning-platform-gatsby`
 - Install dependencies: `npm install`
 - Start development server: `npm run develop`
+- Set your `BUILD_ENVIRONMENT` accordingly: `export BUILD_ENVIRONMENT=stage`
 - Build website: `npm run build`
 - Deploy to Github Pages:
 	- Set the correct `pathPrefix` on `build-src/buildEnvironments.js`
@@ -28,17 +29,27 @@ This is a static website version of the [Strawbees Learning Platform](https://le
 
 Previous versions of this website sourced all content from markdown files. The current setup sources everything from a [Headless WordPress setup]([Strawbees Learning CMS](https://github.com/strawbees/learning-cms).
 
+Because of this convenience, the process of source and transform content into pages became a bit more convoluted with a sequence of almost nonsense tree transformations that defy its own existence:
+
+1. Content from WordPress is sourced as text string containing html code is loaded on GraphQL
+1. After querying all data from GraphQL, `gatsby-node.js` maps all entities with models for all content to be displayed so content can come from different sources. You can check them at `build-src/models.js`
+1. When mapping posts and pages, the model will parse the html string and serialise the DOM tree to JSON for better data transportation. You can find the code at `build-src/htmlToJson.js`
+1. All templates have access to this JSON representation of the html content. The template can feeds this tree into a helper function that traverses and transforms the JSON tree into a React component tree that can be simply rendered.
+1. Then Gatsby transforms this React tree again into html strings and it feels like we only go backwards.
+
 ## Components
 
-Inside the folder [`src/components`](https://github.com/murilopolese/learning-platform-gatsby/tree/develop/src/components) you will find all UI components used to build the Learning Platform. They are an adaptation of https://github.com/strawbees/learning-ui-components.
+Inside the folder [`src/components`](https://github.com/murilopolese/learning-platform-gatsby/tree/develop/src/components) you will find all UI components used to build the Learning Platform. You can browse them as well as their variations running storybook:
+
+```
+npm run storybook
+```
 
 The components should be as self contained as possible, preferably not depending on nothing else then `@material-ui/core` and `react`.
 
 ## Templates
 
-The templates in which `content` is rendered are in the [`src/templates`](https://github.com/murilopolese/learning-platform-gatsby/tree/develop/src/templates) folder and they make use of partial templates such as the header, hero and footer. You can find them at [`src/templates/partials`](https://github.com/murilopolese/learning-platform-gatsby/tree/develop/src/templates/partials).
-
-Make sure to always refer to static images with `withPrefix` so the website can be deployed on paths that are not the root of the domain.
+The templates in which content is rendered are in the [`src/templates`](https://github.com/murilopolese/learning-platform-gatsby/tree/develop/src/templates) folder and they make use of `partial` templates such as the header, hero and footer. You can find them at [`src/templates/partials`](https://github.com/murilopolese/learning-platform-gatsby/tree/develop/src/templates/partials).
 
 ## Static assets
 
@@ -59,14 +70,16 @@ You can change the path to prefix it by editing the property `pathPrefix` on `ga
 
 ## Building
 
-Gatsby offer a fancy GraphQL and Remark (markdown) way to consume content but it's more complicated than it needs to be so we do it manually. The code that loads the content files and generate the sites through the templates lives in `gastby-node.js` and `src/utils`.
+The `gatsby-source-wordpress` plugin is used to grab data from WordPress and lead up GraphQL with it. The configuration is done where you would expect on a gatsby project: `gatsby-config.js`.
+
+The only auto-generated page is the 404 located at `src/pages/404.js`.
+
+All other pages are built by `gatsby-node.js` that uses a series of utility modules located in folder `build-src`.
+
+The build process is rather simple and queries once GraphQL for all data it needs. This query is at `build-src/getContentFromGraphql.js`. All pages are built by simple iterations of this query result.
 
 Build the website with `npm run build`. It will already build with `--path-prefix`.
 
-## Utils
-
-### `build-src/htmlToJson.js`
-### `src/utils/jsonToReact.js`
 
 ## Deploying
 
@@ -85,19 +98,27 @@ Be sure to use the correct `BUILD_ENVIRONMENT` in order to pull the correct data
 If you are working on a headless CMS you will soon want to rebuild your pages without having to restart the entire build. For that you can start the development server with the `ENABLE_GATSBY_REFRESH_ENDPOINT` environment variable set to `true`:
 
 ```
-ENABLE_GATSBY_REFRESH_ENDPOINT=true BUILD_ENVIRONMENT=stage npm run develop
+ENABLE_GATSBY_REFRESH_ENDPOINT=true \
+BUILD_ENVIRONMENT=stage \
+gatsby develop -H 0.0.0.0 -p $PORT
+```
+
+Or just
+
+```
+ENABLE_GATSBY_REFRESH_ENDPOINT=true \
+BUILD_ENVIRONMENT=stage \
+npm start
 ```
 
 From this point on if you post to the endpoint `https://localhost:8000/__refresh`, the graphql data will be refetched and the pages rebuilt much faster.
 
-Deploying this app to run `gatsby develop` was a challenge and the solution was to create a Docker container to be deployed ~ a n y w h e r e ~ .
+Deploying this app to run `gatsby develop` was a challenge and if you are struggling, there is a Docker container to be deployed ~ a n y w h e r e ~ .
 
-You can use `murilopolese/learning-platform-gatsby` image from Dockerhub or build your own from this source:
+## Automationism
 
-```
-docker build -t yourname/learning-platform-gatsby .
-docker push yourname/learning-platform-gatsby
-```
+- [Appveyor](https://ci.appveyor.com/project/strawbees/learning-platform-gatsby) build and deploy to [Strawbees Learning Stage](https://learning-stage.strawbees.com) when pushing to `develop` on this repo.
+- Preview most changes on this [Heroku (free tier) development server](https://strawbees-learning-preview.herokuapp.com) that will repopulate the internal Gatsby GraphQL with data from the CMS and rebuild pages. This is not a reliable service but it's a fair price.
 
 ## Roadmap
 
