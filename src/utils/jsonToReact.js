@@ -22,68 +22,85 @@ const jsonToReact = (el) => {
 		case 'figure':
 		case 'div':
 			return <MySection el={el} />
+		case 'img':
+			return (
+				<Container maxWidth="md">
+					<Box mb={3}>
+						<ImageDisplay src={el.src} />
+					</Box>
+				</Container>
+			)
 		case 'a':
 			return (
-				<TypographyWrap>
-						<a href={el.href} dangerouslySetInnerHTML={{__html:el.innerHTML}}></a>
+				<TypographyWrap el={el}>
+					<a href={el.href} dangerouslySetInnerHTML={{__html:el.innerHTML}}></a>
 				</TypographyWrap>
 			)
 		case 'h1':
 			return (
-				<TypographyWrap>
+				<TypographyWrap el={el}>
 					<h1 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h1>
-			</TypographyWrap>
+				</TypographyWrap>
 			)
 		case 'h2':
 			return (
-				<TypographyWrap>
+				<TypographyWrap el={el}>
 					<h2 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h2>
-			</TypographyWrap>
+				</TypographyWrap>
 			)
 		case 'h3':
 			return (
-				<TypographyWrap>
+				<TypographyWrap el={el}>
 					<h3 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h3>
-			</TypographyWrap>
+				</TypographyWrap>
 			)
 		case 'h4':
 			return (
-				<TypographyWrap>
+				<TypographyWrap el={el}>
 					<h4 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h4>
-			</TypographyWrap>
+				</TypographyWrap>
 			)
 		case 'h5':
 			return (
-				<TypographyWrap>
+				<TypographyWrap el={el}>
 					<h5 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h5>
-			</TypographyWrap>
+				</TypographyWrap>
 			)
 		case 'p':
-			return (
-				<TypographyWrap>
-					<p dangerouslySetInnerHTML={{__html:el.innerHTML}}></p>
-			</TypographyWrap>
-			)
+			if (el.innerHTML) {
+				return (
+					<TypographyWrap el={el}>
+						<p dangerouslySetInnerHTML={{__html:el.innerHTML}}></p>
+					</TypographyWrap>
+				)
+			} else { return null }
 		case 'ul':
 			return (
-				<TypographyWrap>
+				<TypographyWrap el={el}>
 					<ul dangerouslySetInnerHTML={{__html:el.innerHTML}}></ul>
-			</TypographyWrap>
+				</TypographyWrap>
 			)
 		case 'ol':
 			return (
-				<TypographyWrap>
+				<TypographyWrap el={el}>
 					<ol dangerouslySetInnerHTML={{__html:el.innerHTML}}></ol>
-			</TypographyWrap>
+				</TypographyWrap>
 			)
 		default:
 			// return <div>{el.tagName} {el.className} {el.innerHTML}</div>
 			return null
 	}
 }
-const TypographyWrap = ({maxWidth="md", children}) => {
+
+const TypographyWrap = ({children, el}) => {
+	let align = 'left'
+	if (contains(el.classList, 'has-text-align-center')) {
+		align = 'center'
+	} else if (contains(el.classList, 'has-text-align-right')) {
+		align = 'right'
+	}
 	return (
-		<Container maxWidth={maxWidth}>
+		<Container maxWidth='md' align={align}>
 			<Typography>
 				{children}
 			</Typography>
@@ -96,7 +113,7 @@ const MySection = ({ el }) => {
 	if (el.tagName.toLowerCase() === 'iframe') {
 		return (
 			<Container maxWidth="md">
-				<Box py={3}>
+				<Box pb={3}>
 					<Youtube url={el.src} />
 				</Box>
 			</Container>
@@ -107,7 +124,7 @@ const MySection = ({ el }) => {
 	if (contains(el.classList, 'wp-block-strawbees-learning-related')) {
 		return (
 			<Container maxWidth="lg">
-				<Box my={3}>
+				<Box py={3} mb={3}>
 					<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
 						{el.children.map(jsonToReact)}
 					</Grid>
@@ -121,7 +138,7 @@ const MySection = ({ el }) => {
 		let images = querySelectorAll(el, 'img')
 		return (
 			<Container maxWidth="md">
-				<Box my={3}>
+				<Box pb={3}>
 					<Gallery>
 						{images.map(image => <ImageDisplay src={image.src} alt={image.alt} />)}
 					</Gallery>
@@ -143,14 +160,14 @@ const MySection = ({ el }) => {
 						labelText={category.innerText}
 						labelBgcolor={categoryColors[category.innerText]}
 						image={image.src}>
-							<Box p={3} pb={4}>
-								<Typography variant="card-h1">
-									{title.innerText}
-								</Typography>
-								<Box pb={1} />
-								<Typography variant="card-body">
-									{excerpt.innerText}
-								</Typography>
+							<Box px={3} py={3} pb={4}>
+									<Typography variant="card-h1">
+										{title.innerText}
+									</Typography>
+									<Box pb={1} />
+									<Typography variant="card-body">
+										{excerpt.innerText}
+									</Typography>
 							</Box>
 					</Card>
 				</Link>
@@ -161,7 +178,7 @@ const MySection = ({ el }) => {
 	// Horizontal grey section
 	if (contains(el.classList, 'wp-block-strawbees-learning-horizontal')) {
 		return (
-			<Box py={3} bgcolor={Palette.lightGrey}>
+			<Box className="horizontal" py={6} mb={3} bgcolor={Palette.lightGrey}>
 				<Container maxWidth="md" align='center'>
 					{el.children.map(jsonToReact)}
 				</Container>
@@ -169,11 +186,11 @@ const MySection = ({ el }) => {
 		)
 	}
 
-	// Download block
+	// File block (Download)
 	if (contains(el.classList, 'wp-block-file')) {
 		let download = el.children[0]
 		return (
-			<Box m={1} component="span">
+			<Box p={1} display="inline-block">
 				<a href={download.href} target="_blank" rel="noreferrer noopener">
 					<Button icon="download">
 						{download.innerText}
@@ -185,21 +202,29 @@ const MySection = ({ el }) => {
 
 	// Button block
 	if (contains(el.classList, 'wp-block-button')) {
+		let align = 'center'
+		if (contains(el.classList, 'alignleft')) {
+			align = 'left'
+		} else if (contains(el.classList, 'alignright')) {
+			align = 'right'
+		}
 		let download = el.children[0]
 		return (
-			<Box p={3}>
-				<a href={download.href} target="_blank" rel="noreferrer noopener">
-					<Button>
-						{download.innerText}
-					</Button>
-				</a>
-			</Box>
+			<Container maxWidth="md" align={align}>
+				<Box p={1}>
+					<a href={download.href} target="_blank" rel="noreferrer noopener">
+						<Button outline={contains(el.classList, 'is-style-outline')}>
+							<span dangerouslySetInnerHTML={{__html: download.innerHTML}} />
+						</Button>
+					</a>
+				</Box>
+			</Container>
 		)
 	}
 
-	// generic div
+	// generic container
 	if (el.children) {
-		return el.children.map(jsonToReact)
+		return <div>{el.children.map(jsonToReact)}</div>
 	}
 
 	// In doubt, put in a div

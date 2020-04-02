@@ -1,7 +1,7 @@
 module.exports = async (graphql) => {
 	return await graphql(`
 query Query {
-	allWordpressPost {
+	allWordpressPost(sort: {fields: date, order: ASC}) {
 		nodes {
 			path
 			slug

@@ -7,8 +7,11 @@ This is a static website version of the [Strawbees Learning Platform](https://le
 - Clone repository: `git clone git@github.com:murilopolese/learning-platform-gatsby.git`
 - Navigate to the directory: `cd learning-platform-gatsby`
 - Install dependencies: `npm install`
+- Export environment variable so you don't have to write it every time:
+	- `export PORT=8000`
+	- `export BUILD_ENVIRONMENT=stage` (to grab content from WordPress)
+	- `export ENABLE_GATSBY_REFRESH_ENDPOINT=true`
 - Start development server: `npm run develop`
-- Set your `BUILD_ENVIRONMENT` accordingly: `export BUILD_ENVIRONMENT=stage`
 - Build website: `npm run build`
 - Deploy to Github Pages:
 	- Set the correct `pathPrefix` on `build-src/buildEnvironments.js`

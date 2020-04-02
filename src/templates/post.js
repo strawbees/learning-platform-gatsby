@@ -6,6 +6,7 @@ import SEO from '../components/seo'
 import LayoutMenu from './partials/layoutmenu'
 import LayoutHero from './partials/layouthero'
 import LayoutFooter from './partials/layoutfooter'
+import '../normalize.css'
 import '../globalStyles.css'
 import { jsonToReact } from '../utils/jsonToReact'
 import categoryColors from '../utils/categoryColors'
@@ -31,7 +32,9 @@ const PostPage = (e) => {
 				}
 			</Grid>
 			<Grid item>
-				<div id="content">{body}</div>
+				<Box pt={3}>
+					<div id="content">{body}</div>
+				</Box>
 			</Grid>
 			<Grid item><LayoutFooter menuItems={footerMenu} siteMeta={siteMeta} /></Grid>
 		</Grid>
@@ -42,6 +45,7 @@ const LayoutHeroPost = function({post}) {
 	let categoryColor = categoryColors[post.category]
 	return (
 		<LayoutHero
+			width={6}
 			bgImage={post.header}>
 			<Box p={4} style={{borderRadius: '1em'}}
 				color={categoryColor ? Palette.white : Palette.black}
@@ -51,6 +55,7 @@ const LayoutHeroPost = function({post}) {
 				<Typography variant="hero-h1">
 					{post.title}
 				</Typography>
+				<Box pb={1} />
 				<Typography variant="hero-body">
 					<p>{post.description}</p>
 				</Typography>
@@ -72,6 +77,7 @@ const LayoutHeroFrontPage = function({post}) {
 				<Typography variant="hero-h1">
 					{post.title}
 				</Typography>
+				<Box pb={1} />
 				<Typography variant="hero-body">
 					<p>{post.description}</p>
 				</Typography>

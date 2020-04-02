@@ -11,7 +11,7 @@ function Card(props) {
 			width: '100%',
 			height: '100%',
 			boxShadow: `0px 4px 4px rgba(0, 0, 0, 0.25)`,
-			borderRadius: '1em',
+			borderRadius: '24px',
 			overflow: 'hidden',
 			color: props.bgColor ? Palette.white : 'inherit',
 			backgroundColor: props.bgColor ? props.bgColor : Palette.white,

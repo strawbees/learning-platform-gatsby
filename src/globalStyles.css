@@ -18,3 +18,43 @@ a:hover {
 #content a:link {
 	text-decoration: underline;
 }
+
+p {
+	margin: 0 0 1em 0;
+}
+
+h1, h2, h3, h4, h5 {
+	margin: 0 0 0.5em 0;
+}
+
+h1 {
+	font-style: normal;
+	font-weight: 900;
+	font-size: 64px;
+	line-height: 1em;
+}
+
+h2 {
+	font-style: normal;
+	font-weight: 900;
+	font-size: 50px;
+	line-height: 1em;
+}
+
+h3 {
+	font-style: normal;
+	font-weight: 900;
+	font-size: 36px;
+	line-height: 1em;
+}
+
+#content > :last-child {
+	margin-bottom: 2em;
+}
+#content > :first-child {
+	margin-top: 1em;
+}
+
+#content > .horizontal:last-child {
+	margin-bottom: 0;
+}

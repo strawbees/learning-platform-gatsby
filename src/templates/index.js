@@ -4,6 +4,7 @@ import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../components/typography.js'
 import Card from '../components/card.js'
 import SEO from '../components/seo.js'
+import '../normalize.css'
 import '../globalStyles.css'
 
 import LayoutMenu from './partials/layoutmenu'
@@ -70,14 +71,16 @@ function LayoutIndexHero({ name, description }) {
 	return (
 		<LayoutHero
 			bgColor={categoryColors[name]}
+			align="center"
 			>
 			<Box
-				textAlign={{xs: 'center', md: 'left'}}
+				textAlign={{xs: 'center'}}
 				color="white"
 				px={2}>
 				<Typography variant="hero-h1">
 					{name}
 				</Typography>
+				<Box pb={1} />
 				<Typography variant="hero-body">
 					{description}
 				</Typography>

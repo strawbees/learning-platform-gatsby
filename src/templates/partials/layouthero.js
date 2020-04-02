@@ -8,6 +8,7 @@ function LayoutHero({
 	bgImage,
 	bgColor,
 	width=6,
+	align,
 	children
 }) {
 	return (
@@ -18,8 +19,11 @@ function LayoutHero({
 			bgImage={bgImage}>
 			<Box py={4}>
 				<Container maxWidth="lg">
-					<Grid container direction="row" style={{minHeight: '400px'}}>
-						<Grid item container xs={12} md={width} direction="column" justify="center">
+					<Grid container
+						style={{minHeight: '400px'}}
+						justify={align}
+						alignItems="center">
+						<Grid item container xs={12} md={width}>
 							{children}
 						</Grid>
 					</Grid>
