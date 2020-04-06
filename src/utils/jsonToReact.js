@@ -22,11 +22,7 @@ const jsonToReact = (el, posts) => {
 			return <MySection el={el} posts={posts} />
 		case 'img':
 			return (
-				<Container maxWidth="md">
-					<Box mb={3}>
-						<ImageDisplay src={el.src} />
-					</Box>
-				</Container>
+					<ImageDisplay src={el.src} alt={el.alt} />
 			)
 		case 'a':
 			return (
@@ -118,14 +114,30 @@ const MySection = ({ el, posts }) => {
 		)
 	}
 
+	// Single image
+	if (contains(el.classList, 'wp-block-image')) {
+		let image = querySelector(el, 'img')
+		let caption = querySelector(el, 'figcaption')
+		return (
+			<Container maxWidth="md">
+				<Box pb={3}>
+					<ImageDisplay src={image.src} alt={caption.innerHTML} />
+				</Box>
+			</Container>
+		)
+	}
 	// Gallery
 	if (contains(el.classList, 'wp-block-gallery')) {
-		let images = querySelectorAll(el, 'img')
+		let figures = querySelectorAll(el, '.blocks-gallery-item')
 		return (
 			<Container maxWidth="md">
 				<Box pb={3}>
 					<Gallery>
-						{images.map(image => <ImageDisplay src={image.src} alt={image.alt} />)}
+						{figures.map((figure) => {
+							let image = querySelector(figure, 'img')
+							let caption = querySelector(figure, 'figcaption')
+							return <ImageDisplay src={image.src} alt={caption.innerHTML} />
+						})}
 					</Gallery>
 				</Box>
 			</Container>
@@ -215,13 +227,13 @@ const MySection = ({ el, posts }) => {
 	if (contains(el.classList, 'wp-block-button')) {
 		let download = el.children[0]
 		return (
-				<Box px={1} py={2} component="span">
-					<a href={download.href} target={download.target} rel="noreferrer noopener">
-						<Button outline={contains(el.classList, 'is-style-outline')}>
-							<span dangerouslySetInnerHTML={{__html: download.innerHTML}} />
-						</Button>
-					</a>
-				</Box>
+			<Box px={1} py={2} component="span">
+				<a href={download.href} target={download.target} rel="noreferrer noopener">
+					<Button outline={contains(el.classList, 'is-style-outline')}>
+						<span dangerouslySetInnerHTML={{__html: download.innerHTML}} />
+					</Button>
+				</a>
+			</Box>
 		)
 	}
 

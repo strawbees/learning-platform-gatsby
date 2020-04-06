@@ -34,7 +34,9 @@ function ImageDisplay(props) {
 				bottom="0"
 				left="0">
 				<Box component="span" p={2} textAlign="left">
-					<Typography>{props.alt}</Typography>
+					<Typography>
+						<span dangerouslySetInnerHTML={{__html: props.alt}} />
+					</Typography>
 				</Box>
 			</Box>
 
