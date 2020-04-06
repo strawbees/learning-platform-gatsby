@@ -13,10 +13,11 @@ import categoryColors from '../utils/categoryColors'
 
 const PostPage = (e) => {
 	const post = e.pageContext.post
+	const posts = e.pageContext.posts
 	const headerMenu = e.pageContext.headerMenu
 	const footerMenu = e.pageContext.footerMenu
 	const siteMeta = e.pageContext.siteMeta
-	let body = jsonToReact(post.contentJson, siteMeta)
+	const body = jsonToReact(post.contentJson, posts)
 	return (
 		<Grid container direction="column">
 			<SEO
@@ -63,6 +64,7 @@ const LayoutHeroPost = function({post}) {
 		</LayoutHero>
 	)
 }
+
 const LayoutHeroFrontPage = function({post}) {
 	return (
 		<LayoutHero

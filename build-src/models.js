@@ -3,6 +3,7 @@ const htmlToJson = require('./htmlToJson.js')
 const regex = /(<([^>]+)>)/ig
 exports.getPage = function(data) {
 	return {
+		id: data.id,
 		isFrontPage: data.path === '/',
 		path: data.path,
 		title: data.title,
@@ -19,6 +20,7 @@ exports.getPost = function(data) {
 		category = data.categories[0].name
 	}
 	return {
+		id: data.id,
 		path: data.path,
 		title: data.title,
 		description: data.excerpt.replace(regex, ''),

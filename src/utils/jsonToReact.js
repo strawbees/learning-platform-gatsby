@@ -10,18 +10,16 @@ import ImageDisplay from '../components/imagedisplay'
 import Gallery from '../components/gallery'
 import categoryColors from './categoryColors'
 import makeRelativePath from './makeRelativePath'
-import {
-	querySelectorAll, querySelector, contains
-} from './jsonSelector'
+import { querySelectorAll, querySelector, contains } from './jsonSelector'
 
-const jsonToReact = (el) => {
+const jsonToReact = (el, posts) => {
 	switch(el.tagName.toLowerCase()) {
 		case 'body':
-			return el.children.map(jsonToReact)
+			return el.children.map((child) => jsonToReact(child, posts))
 		case 'iframe':
 		case 'figure':
 		case 'div':
-			return <MySection el={el} />
+			return <MySection el={el} posts={posts} />
 		case 'img':
 			return (
 				<Container maxWidth="md">
@@ -108,26 +106,13 @@ const TypographyWrap = ({children, el}) => {
 	)
 }
 
-const MySection = ({ el }) => {
+const MySection = ({ el, posts }) => {
 	// Youtube display
 	if (el.tagName.toLowerCase() === 'iframe') {
 		return (
 			<Container maxWidth="md">
 				<Box pb={3}>
 					<Youtube url={el.src} />
-				</Box>
-			</Container>
-		)
-	}
-
-	// Related posts container
-	if (contains(el.classList, 'wp-block-strawbees-learning-related')) {
-		return (
-			<Container maxWidth="lg">
-				<Box py={3} mb={3}>
-					<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
-						{el.children.map(jsonToReact)}
-					</Grid>
 				</Box>
 			</Container>
 		)
@@ -147,28 +132,40 @@ const MySection = ({ el }) => {
 		)
 	}
 
+	// Related posts container
+	if (contains(el.classList, 'wp-block-strawbees-learning-related')) {
+		return (
+			<Container maxWidth="lg">
+				<Box py={3} mb={3}>
+					<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
+						{el.children.map((child) => jsonToReact(child, posts))}
+					</Grid>
+				</Box>
+			</Container>
+		)
+	}
+
 	// Related post item/card
 	if (contains(el.classList, 'related-post')) {
-		let title = querySelector(el, '.title')
-		let image = querySelector(el, '.featured-media')
-		let excerpt = querySelector(el, '.excerpt')
-		let category = querySelector(el, '.category')
+		let id = querySelector(el, '.id')
+		let post = posts.find(p => p.id === parseInt(id.innerText))
+		if (!post) return null
 		return (
 			<Grid item xs={12} sm={6} md={4}>
-				<Link to={title.href}>
+				<Link to={post.path}>
 					<Card hover
-						labelText={category.innerText}
-						labelBgcolor={categoryColors[category.innerText]}
-						image={image.src}>
-							<Box px={3} py={3} pb={4}>
-									<Typography variant="card-h1">
-										{title.innerText}
-									</Typography>
-									<Box pb={1} />
-									<Typography variant="card-body">
-										{excerpt.innerText}
-									</Typography>
-							</Box>
+						labelText={post.category}
+						labelBgcolor={categoryColors[post.category]}
+						image={post.thumbnail}>
+						<Box px={3} py={3} pb={4}>
+							<Typography variant="card-h1">
+								{post.title}
+							</Typography>
+							<Box pb={1} />
+							<Typography variant="card-body">
+								{post.description}
+							</Typography>
+						</Box>
 					</Card>
 				</Link>
 			</Grid>
@@ -180,7 +177,7 @@ const MySection = ({ el }) => {
 		return (
 			<Box className="horizontal" py={6} mb={3} bgcolor={Palette.lightGrey}>
 				<Container maxWidth="md" align='center'>
-					{el.children.map(jsonToReact)}
+					{el.children.map((child) => jsonToReact(child, posts))}
 				</Container>
 			</Box>
 		)
@@ -211,7 +208,7 @@ const MySection = ({ el }) => {
 		let download = el.children[0]
 		return (
 			<Container maxWidth="md" align={align}>
-				{el.children.map(jsonToReact)}
+				{el.children.map((child) => jsonToReact(child, posts))}
 			</Container>
 		)
 	}
@@ -230,11 +227,11 @@ const MySection = ({ el }) => {
 
 	// generic container
 	if (el.children) {
-		return <div>{el.children.map(jsonToReact)}</div>
+		return <div className={el.className}>{el.children.map(jsonToReact)}</div>
 	}
 
 	// In doubt, put in a div
-	return <div dangerouslySetInnerHTML={{__html:el.innerHTML}}></div>
+	return <div className={el.className} dangerouslySetInnerHTML={{__html:el.innerHTML}}></div>
 }
 
 export {

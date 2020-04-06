@@ -3,6 +3,7 @@ module.exports = async (graphql) => {
 query Query {
 	allWordpressPost(sort: {fields: date, order: ASC}) {
 		nodes {
+			id: wordpress_id
 			path
 			slug
 			title
@@ -18,6 +19,7 @@ query Query {
 	}
 	allWordpressPage {
 		nodes {
+			wordpress_id
 			path
 			slug
 			title

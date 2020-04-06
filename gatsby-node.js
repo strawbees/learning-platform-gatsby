@@ -4,7 +4,6 @@ const models = require('./build-src/models')
 
 exports.createPages = async ({ actions, graphql }) => {
 	const { createPage, createRedirect } = actions
-
 	const result = await getContentFromGraphql(graphql)
 
 	const pages = result.data.allWordpressPage.nodes.map(models.getPage)
@@ -19,6 +18,7 @@ exports.createPages = async ({ actions, graphql }) => {
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
 			context: {
+				posts: posts,
 				post: post,
 				headerMenu: headerMenu,
 				footerMenu: footerMenu,
@@ -32,6 +32,7 @@ exports.createPages = async ({ actions, graphql }) => {
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
 			context: {
+				posts: posts,
 				post: post,
 				headerMenu: headerMenu,
 				footerMenu: footerMenu,
