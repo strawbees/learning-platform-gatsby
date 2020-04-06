@@ -155,7 +155,7 @@ const MySection = ({ el }) => {
 		let category = querySelector(el, '.category')
 		return (
 			<Grid item xs={12} sm={6} md={4}>
-				<Link to={makeRelativePath(title.href)}>
+				<Link to={title.href}>
 					<Card hover
 						labelText={category.innerText}
 						labelBgcolor={categoryColors[category.innerText]}
@@ -201,7 +201,7 @@ const MySection = ({ el }) => {
 	}
 
 	// Button block
-	if (contains(el.classList, 'wp-block-button')) {
+	if (contains(el.classList, 'wp-block-buttons')) {
 		let align = 'center'
 		if (contains(el.classList, 'alignleft')) {
 			align = 'left'
@@ -211,14 +211,20 @@ const MySection = ({ el }) => {
 		let download = el.children[0]
 		return (
 			<Container maxWidth="md" align={align}>
-				<Box p={1}>
-					<a href={download.href} target="_blank" rel="noreferrer noopener">
+				{el.children.map(jsonToReact)}
+			</Container>
+		)
+	}
+	if (contains(el.classList, 'wp-block-button')) {
+		let download = el.children[0]
+		return (
+				<Box px={1} py={2} component="span">
+					<a href={download.href} target={download.target} rel="noreferrer noopener">
 						<Button outline={contains(el.classList, 'is-style-outline')}>
 							<span dangerouslySetInnerHTML={{__html: download.innerHTML}} />
 						</Button>
 					</a>
 				</Box>
-			</Container>
 		)
 	}
 
