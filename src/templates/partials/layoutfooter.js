@@ -21,12 +21,12 @@ function LayoutFooter({ menuItems = [], siteMeta = {} }) {
 			color={Palette.white}
 			>
 			<Container>
-				<Grid container spacing={2} direction="row" justify="center">
-					<Grid item xs={12} sm={4}>
+				<Grid container spacing={3} direction="row" justify="center">
+					<Grid item xs={12} sm={3}>
 						<SocialMediaColumn />
 					</Grid>
 					{menuItems.map((item, i) => (
-						<Grid key={i} item style={{maxWidth: 210, minWidth: 150}}>
+						<Grid key={i} item xs={12} sm={2}>
 							<MenuColumn {...item} />
 						</Grid>
 					))}
