@@ -9,7 +9,6 @@ import Youtube from '../components/youtubedisplay'
 import ImageDisplay from '../components/imagedisplay'
 import Gallery from '../components/gallery'
 import categoryColors from './categoryColors'
-import makeRelativePath from './makeRelativePath'
 import { querySelectorAll, querySelector, contains } from './jsonSelector'
 
 const jsonToReact = (el, posts) => {
@@ -217,7 +216,6 @@ const MySection = ({ el, posts }) => {
 		} else if (contains(el.classList, 'alignright')) {
 			align = 'right'
 		}
-		let download = el.children[0]
 		return (
 			<Container maxWidth="md" align={align}>
 				{el.children.map((child) => jsonToReact(child, posts))}
