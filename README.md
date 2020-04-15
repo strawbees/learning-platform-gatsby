@@ -4,6 +4,9 @@ This is a static website version of the [Strawbees Learning Platform](https://le
 
 ## Shortcuts
 
+- If you are on Linux you might want to increase the number of file watchers your OS allows.
+	- `sudo sysctl fs.inotify.max_user_watches=524288`
+	- `sudo sysctl -p`
 - Clone repository: `git clone git@github.com:murilopolese/learning-platform-gatsby.git`
 - Navigate to the directory: `cd learning-platform-gatsby`
 - Install dependencies: `npm install`
@@ -117,6 +120,23 @@ npm start
 From this point on if you post to the endpoint `https://localhost:8000/__refresh`, the graphql data will be refetched and the pages rebuilt much faster.
 
 Deploying this app to run `gatsby develop` was a challenge and if you are struggling, there is a Docker container to be deployed ~ a n y w h e r e ~ .
+
+If you are deploying on your own you might want to [increase the swap of your cheap machine](http://dokku.viewdocs.io/dokku/getting-started/advanced-installation/#vms-with-less-than-1-gb-of-memory):
+
+```
+cd /var
+touch swap.img
+chmod 600 swap.img
+
+dd if=/dev/zero of=/var/swap.img bs=1024k count=1000
+mkswap /var/swap.img
+swapon /var/swap.img
+free
+
+echo "/var/swap.img    none    swap    sw    0    0" >> /etc/fstab
+```
+
+And if you want to run it on port 80, [read this article](https://www.digitalocean.com/community/tutorials/how-to-use-pm2-to-setup-a-node-js-production-environment-on-an-ubuntu-vps#give-safe-user-permission-to-use-port-80)
 
 ## Automationism
 
