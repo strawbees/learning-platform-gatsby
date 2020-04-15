@@ -86,7 +86,6 @@ The build process is rather simple and queries once GraphQL for all data it need
 
 Build the website with `npm run build`. It will already build with `--path-prefix`.
 
-
 ## Deploying
 
 After building, the static website will be created inside the `public` folder (git ignored). You can manually deploy this content on a http server, making sure to build with the correct `prefixPath` in case website won't live in the root path.
