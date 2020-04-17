@@ -12,14 +12,17 @@ const mapCollection = (collection, cb) => {
 
 const getImageSource = (node) => {
 	let src = node.src
-	if (node.tagName.toLowerCase() === 'img' && node.srcset) {
-		src = node.srcset.split(' ')[0]
+	if (
+		node.tagName.toLowerCase() === 'img'
+		&& node.srcset
+		&& node.srcset !== 'null'
+	) {
+		src = node.srcset.split(' ')[0] || ''
 	}
 	return src
 }
 
 const domToJson = (node) => {
-
 	return {
 		id: node.id,
 		href: node.href || node.getAttribute('href'),
