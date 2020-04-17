@@ -10,11 +10,20 @@ const mapCollection = (collection, cb) => {
 	return response
 }
 
+const getImageSource = (node) => {
+	let src = node.src
+	if (node.tagName.toLowerCase() === 'img' && node.srcset) {
+		src = node.srcset.split(' ')[0]
+	}
+	return src
+}
+
 const domToJson = (node) => {
+
 	return {
 		id: node.id,
 		href: node.href || node.getAttribute('href'),
-		src: node.src || node.getAttribute('src'),
+		src: getImageSource(node),
 		innerHTML: node.innerHTML,
 		innerText: node.innerText || node.innerHTML,
 		tagName: node.tagName.toLowerCase(),
