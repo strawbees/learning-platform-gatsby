@@ -2,7 +2,7 @@ const buildConfigs = {
 	'stage': {
 		trackingId: 'UA-69443341-4',
 		pathPrefix: '',
-		headlessWordpress: '3.11.96.189',
+		headlessWordpress: 'learning-cms.strawbees.com',
 		headlessWordpressProtocol: 'http',
 	},
 	'production': {
