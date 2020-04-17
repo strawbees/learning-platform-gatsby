@@ -21,6 +21,7 @@ environment:
     secure: 5Qz3Pa6Hm3voaRbab0Y9SpcpRem7O0ybXdSufERaQmyfLcgR0EOS/gyiXw+dFAbx
 
 init:
+  - nvm install 13.9.0
   - nvm use 13.9.0
 install:
   - npm install
