@@ -10,6 +10,7 @@ max_jobs: 1
 branches:
   only:
     - develop
+    - master
 shallow_clone: true
 clone_depth: 1
 
@@ -26,7 +27,7 @@ init:
 install:
   - npm install
 build_script:
-  - BUILD_ENVIRONMENT=stage npm run deploy-s3
+  - npm run deploy-s3
 after_build:
   - zip -r dist.zip public
 cache:
@@ -45,3 +46,14 @@ on_failure:
 # after build failure or success
 on_finish:
   - cmd: echo "BUILD LOG => Finished"
+
+# override settings for `master` branch
+for:
+-
+  branches:
+    only:
+      - master
+  environment:
+    BUILD_ENVIRONMENT: 'stage'
+  build_script:
+    - npm run deploy-s3-prod
