@@ -163,7 +163,7 @@ const MySection = ({ el, posts }) => {
 		if (!post) return null
 		return (
 			<Grid item xs={12} sm={6} md={4}>
-				<Link to={post.path}>
+				<a href={post.path}>
 					<Card hover
 						labelText={post.category}
 						labelBgcolor={categoryColors[post.category]}
@@ -178,7 +178,7 @@ const MySection = ({ el, posts }) => {
 							</Typography>
 						</Box>
 					</Card>
-				</Link>
+				</a>
 			</Grid>
 		)
 	}

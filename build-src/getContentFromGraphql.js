@@ -1,3 +1,28 @@
+const thumbnail = `
+thumbnail: fluid(maxWidth: 420, quality: 100) {
+	aspectRatio
+	src
+	srcSet
+	sizes
+}
+`
+const header = `
+header: fluid(maxWidth: 3840, quality: 100) {
+	aspectRatio
+	src
+	srcSet
+	sizes
+}
+`
+const content = `
+content: fluid(maxWidth: 900, quality: 100) {
+	aspectRatio
+	src
+	srcSet
+	sizes
+}
+`
+
 module.exports = async (graphql) => {
 	return await graphql(`
 query Query {
@@ -13,6 +38,13 @@ query Query {
 			}
 			featured_media {
 				source_url
+				localFile {
+					publicURL
+					childImageSharp {
+						${thumbnail}
+						${header}
+					}
+				}
 			}
 			content
 		}
@@ -26,6 +58,13 @@ query Query {
 			excerpt
 			featured_media {
 				source_url
+				localFile {
+					publicURL
+					childImageSharp {
+						${thumbnail}
+						${header}
+					}
+				}
 			}
 			content
 		}
@@ -59,6 +98,17 @@ query Query {
 			home
 			name
 			url
+		}
+	}
+	allWordpressWpMedia {
+		nodes {
+			source_url
+			localFile {
+				publicURL
+				childImageSharp {
+					${content}
+				}
+			}
 		}
 	}
 }

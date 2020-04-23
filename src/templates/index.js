@@ -42,7 +42,7 @@ function LayoutFeed({ posts }) {
 					{posts.map((post, i) => {
 						return (
 							<Grid key={i} item xs={12} sm={6} md={4}>
-								<Link to={post.path}>
+								<a href={post.path}>
 									<Card
 										hover
 										image={post.thumbnail}
@@ -58,7 +58,7 @@ function LayoutFeed({ posts }) {
 												</Typography>
 											</Box>
 									</Card>
-								</Link>
+								</a>
 							</Grid>
 						)
 					})}

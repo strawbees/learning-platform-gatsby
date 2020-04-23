@@ -5,9 +5,28 @@ const models = require('./build-src/models')
 exports.createPages = async ({ actions, graphql }) => {
 	const { createPage, createRedirect } = actions
 	const result = await getContentFromGraphql(graphql)
+	const images = result.data.allWordpressWpMedia.nodes.reduce(
+		function(acc, node) {
+			if (node.localFile) {
+				if (node.localFile.childImageSharp) {
+					acc[node.source_url] = node.localFile.childImageSharp.content.src
+				} else {
+					acc[node.source_url] = node.localFile.publicURL
+				}
+			} else {
+				acc[node.source_url] = node.source_url
+			}
+			return acc
+		},
+		{}
+	)
 
-	const pages = result.data.allWordpressPage.nodes.map(models.getPage)
-	const posts = result.data.allWordpressPost.nodes.map(models.getPost)
+	const pages = result.data.allWordpressPage.nodes.map(
+		function(data) { return models.getPage(data, images) }
+	)
+	const posts = result.data.allWordpressPost.nodes.map(
+		function(data) { return models.getPost(data, images) }
+	)
 	const categories = result.data.allWordpressCategory.nodes.map(models.getCategory)
 	const headerMenu = models.getMenu(result.data.allWordpressWpHeaderMenu.nodes)
 	const footerMenu = models.getMenu(result.data.allWordpressWpFooterMenu.nodes)
