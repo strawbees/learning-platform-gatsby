@@ -53,6 +53,8 @@ npm run storybook
 
 The components should be as self contained as possible, preferably not depending on nothing else then `@material-ui/core` and `react`.
 
+There is one exception: `gatsby-image`.
+
 ## Templates
 
 The templates in which content is rendered are in the [`src/templates`](https://github.com/murilopolese/learning-platform-gatsby/tree/develop/src/templates) folder and they make use of `partial` templates such as the header, hero and footer. You can find them at [`src/templates/partials`](https://github.com/murilopolese/learning-platform-gatsby/tree/develop/src/templates/partials).

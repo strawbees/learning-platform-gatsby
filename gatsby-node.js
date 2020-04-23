@@ -2,13 +2,35 @@ const getContentFromGraphql = require('./build-src/getContentFromGraphql.js')
 const redirectBatch = require('./build-src/redirects.json')
 const models = require('./build-src/models')
 
+function reduceImage(acc, node) {
+	acc[node.source_url] =  {
+		src: node.source_url
+	}
+	// image is local but not processed
+	if (node.localFile) {
+		acc[node.source_url] = {
+			publicURL: node.localFile.publicURL
+		}
+	}
+	return acc
+}
+
 exports.createPages = async ({ actions, graphql }) => {
 	const { createPage, createRedirect } = actions
 	const result = await getContentFromGraphql(graphql)
 
-	const pages = result.data.allWordpressPage.nodes.map(models.getPage)
-	const posts = result.data.allWordpressPost.nodes.map(models.getPost)
-	const categories = result.data.allWordpressCategory.nodes.map(models.getCategory)
+	// Dictionary/hashtable of images
+	const images = result.data.allWordpressWpMedia.nodes.reduce(reduceImage)
+
+	const pages = result.data.allWordpressPage.nodes.map(
+		(child) => models.getPage(child, images)
+	)
+	const posts = result.data.allWordpressPost.nodes.map(
+		(child) => models.getPost(child, images)
+	)
+	const categories = result.data.allWordpressCategory.nodes.map(
+		(child) => models.getCategory(child, images)
+	)
 	const headerMenu = models.getMenu(result.data.allWordpressWpHeaderMenu.nodes)
 	const footerMenu = models.getMenu(result.data.allWordpressWpFooterMenu.nodes)
 	const siteMeta = result.data.allWordpressSiteMetadata.nodes[0]
@@ -22,7 +44,8 @@ exports.createPages = async ({ actions, graphql }) => {
 				post: post,
 				headerMenu: headerMenu,
 				footerMenu: footerMenu,
-				siteMeta: siteMeta
+				siteMeta: siteMeta,
+				images: images
 			}
 		})
 	})
@@ -36,7 +59,8 @@ exports.createPages = async ({ actions, graphql }) => {
 				post: post,
 				headerMenu: headerMenu,
 				footerMenu: footerMenu,
-				siteMeta: siteMeta
+				siteMeta: siteMeta,
+				images: images
 			}
 		})
 	})
@@ -53,7 +77,8 @@ exports.createPages = async ({ actions, graphql }) => {
 				category: category,
 				headerMenu: headerMenu,
 				footerMenu: footerMenu,
-				siteMeta: siteMeta
+				siteMeta: siteMeta,
+				images: images
 			}
 		})
 	})

@@ -61,6 +61,30 @@ query Query {
 			url
 		}
 	}
+	allWordpressWpMedia(filter: {localFile: {extension: {nin: ["pdf"]}}}) {
+		nodes {
+			source_url
+			localFile {
+				publicURL
+				# childImageSharp {
+				# 	thumbnail: fluid(maxWidth: 440) {
+				# 		tracedSVG
+				# 		aspectRatio
+				# 		src
+				# 		srcSet
+				# 		sizes
+				# 	}
+				# 	image: fluid(maxWidth: 900) {
+				# 		tracedSVG
+				# 		aspectRatio
+				# 		src
+				# 		srcSet
+				# 		sizes
+				# 	}
+				# }
+			}
+		}
+	}
 }
 `)
 }

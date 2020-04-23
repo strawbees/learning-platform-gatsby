@@ -19,6 +19,7 @@ const IndexPage = (e) => {
 	const headerMenu = e.pageContext.headerMenu
 	const footerMenu = e.pageContext.footerMenu
 	const siteMeta = e.pageContext.siteMeta
+	const images = e.pageContext.images
 	return (
 		<Grid container direction="column">
 			<Grid item><LayoutMenu menuItems={headerMenu} siteMeta={siteMeta} /></Grid>
@@ -29,7 +30,7 @@ const IndexPage = (e) => {
 	)
 }
 
-function LayoutFeed({ posts }) {
+function LayoutFeed({ posts}) {
 	return (
 		<Box py={4}>
 			<SEO

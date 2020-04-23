@@ -1,20 +1,32 @@
 const htmlToJson = require('./htmlToJson.js')
 
 const regex = /(<([^>]+)>)/ig
-exports.getPage = function(data) {
+
+function getImage(data, images) {
+	if (data.featured_media) {
+		if (images[data.featured_media.data.featured_media.source_url]) {
+			return images[data.featured_media.data.featured_media.source_url]
+		} else {
+			return data.featured_media.source_url
+		}
+	}
+	return ''
+}
+
+exports.getPage = function(data, images) {
 	return {
 		id: data.id,
 		isFrontPage: data.path === '/',
 		path: data.path,
 		title: data.title,
 		description: data.excerpt.replace(regex, ''),
-		thumbnail: data.featured_media ? data.featured_media.source_url : '',
-		header: data.featured_media ? data.featured_media.source_url : '',
+		thumbnail: getImage(data, images),
+		header: getImage(data, images),
 		content: data.content,
 		contentJson: htmlToJson(data.content)
 	}
 }
-exports.getPost = function(data) {
+exports.getPost = function(data, images) {
 	let category = 'Uncategorized'
 	if (data.categories && data.categories.length) {
 		category = data.categories[0].name
@@ -24,8 +36,8 @@ exports.getPost = function(data) {
 		path: data.path,
 		title: data.title,
 		description: data.excerpt.replace(regex, ''),
-		thumbnail: data.featured_media ? data.featured_media.source_url : '',
-		header: data.featured_media ? data.featured_media.source_url : '',
+		thumbnail: getImage(data, images),
+		header: getImage(data, images),
 		category: category !== 'Uncategorized' ? category : null,
 		content: data.content,
 		contentJson: htmlToJson(data.content)

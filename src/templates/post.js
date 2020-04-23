@@ -17,7 +17,8 @@ const PostPage = (e) => {
 	const headerMenu = e.pageContext.headerMenu
 	const footerMenu = e.pageContext.footerMenu
 	const siteMeta = e.pageContext.siteMeta
-	const body = jsonToReact(post.contentJson, posts)
+	const images = e.pageContext.images
+	const body = jsonToReact(post.contentJson, posts, images)
 	return (
 		<Grid container direction="column">
 			<SEO
