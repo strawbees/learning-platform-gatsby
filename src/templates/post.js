@@ -10,6 +10,8 @@ import '../normalize.css'
 import '../globalStyles.css'
 import { jsonToReact } from '../utils/jsonToReact'
 import categoryColors from '../utils/categoryColors'
+import createMarkup from '../utils/createMarkup'
+import removeHtmlTags from '../utils/removeHtmlTags'
 
 const PostPage = (e) => {
 	const post = e.pageContext.post
@@ -22,7 +24,7 @@ const PostPage = (e) => {
 		<Grid container direction="column">
 			<SEO
 				title={`${siteMeta.name} - ${post.title}`}
-				description={post.description}
+				description={removeHtmlTags(post.description)}
 				image={post.thumbnail}
 				/>
 			<Grid item><LayoutMenu menuItems={headerMenu} siteMeta={siteMeta} /></Grid>
@@ -58,7 +60,7 @@ const LayoutHeroPost = function({post}) {
 				</Typography>
 				<Box pb={1} />
 				<Typography variant="hero-body">
-					<p>{post.description}</p>
+					<div dangerouslySetInnerHTML={createMarkup(post.description)} />
 				</Typography>
 			</Box>
 		</LayoutHero>
@@ -81,7 +83,7 @@ const LayoutHeroFrontPage = function({post}) {
 				</Typography>
 				<Box pb={1} />
 				<Typography variant="hero-body">
-					<p>{post.description}</p>
+					<div dangerouslySetInnerHTML={createMarkup(post.description)} />
 				</Typography>
 			</Box>
 		</LayoutHero>

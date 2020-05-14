@@ -2,7 +2,7 @@
   "name": "learning-platform-gatsby",
   "private": true,
   "description": "Strawbees Learning Platform (Static site version)",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "scripts": {
     "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop -H 0.0.0.0 -p $PORT",
@@ -39,6 +39,7 @@
     "gatsby-source-filesystem": "^2.1.39",
     "gatsby-source-wordpress": "^3.2.2",
     "gatsby-transformer-sharp": "^2.3.6",
+    "he": "^1.2.0",
     "jsdom": "^16.2.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

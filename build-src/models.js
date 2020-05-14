@@ -1,34 +1,68 @@
+const he = require('he')
 const htmlToJson = require('./htmlToJson.js')
 
-const regex = /(<([^>]+)>)/ig
-exports.getPage = function(data) {
+function getThumbnail(data) {
+	return (
+		(data.featured_media && data.featured_media.localFile)
+		? (
+			(data.featured_media.localFile.childImageSharp)
+			? data.featured_media.localFile.childImageSharp.thumbnail
+			: data.featured_media.localFile.publicURL
+		)
+		: (
+			(data.featured_media)
+			? data.featured_media.source_url
+			: ''
+		)
+	)
+}
+function getHeader(data) {
+	return (
+		(data.featured_media && data.featured_media.localFile)
+		? (
+			(data.featured_media.localFile.childImageSharp)
+			? data.featured_media.localFile.childImageSharp.header
+			: data.featured_media.localFile.publicURL
+		)
+		: (
+			(data.featured_media)
+			? data.featured_media.source_url
+			: ''
+		)
+	)
+}
+exports.getPage = function(data, images) {
+	let thumbnail = getThumbnail(data)
+	let header = getHeader(data)
 	return {
 		id: data.id,
 		isFrontPage: data.path === '/',
 		path: data.path,
-		title: data.title,
-		description: data.excerpt.replace(regex, ''),
-		thumbnail: data.featured_media ? data.featured_media.source_url : '',
-		header: data.featured_media ? data.featured_media.source_url : '',
+		title: he.decode(data.title),
+		description: data.excerpt,
+		thumbnail: thumbnail.src,
+		header: header.src,
 		content: data.content,
-		contentJson: htmlToJson(data.content)
+		contentJson: htmlToJson(data.content, images)
 	}
 }
-exports.getPost = function(data) {
+exports.getPost = function(data, images) {
 	let category = 'Uncategorized'
+	let thumbnail = getThumbnail(data)
+	let header = getHeader(data)
 	if (data.categories && data.categories.length) {
-		category = data.categories[0].name
+		category = he.decode(data.categories[0].name)
 	}
 	return {
 		id: data.id,
 		path: data.path,
-		title: data.title,
-		description: data.excerpt.replace(regex, ''),
-		thumbnail: data.featured_media ? data.featured_media.source_url : '',
-		header: data.featured_media ? data.featured_media.source_url : '',
+		title: he.decode(data.title),
+		description: data.excerpt,
+		thumbnail: thumbnail.src,
+		header: header.src,
 		category: category !== 'Uncategorized' ? category : null,
 		content: data.content,
-		contentJson: htmlToJson(data.content)
+		contentJson: htmlToJson(data.content, images)
 	}
 }
 exports.getMenu = function(menu) {
@@ -36,7 +70,7 @@ exports.getMenu = function(menu) {
 		return {
 			id: m.db_id,
 			url: m.url,
-			label: m.title,
+			label: he.decode(m.title),
 			menuItems: null
 		}
 	}
@@ -57,8 +91,8 @@ exports.getMenu = function(menu) {
 }
 exports.getCategory = function(category) {
 	return {
-		name: category.name,
+		name: he.decode(category.name),
 		path: category.path,
-		description: category.description
+		description: he.decode(category.description)
 	}
 }

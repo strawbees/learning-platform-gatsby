@@ -26,7 +26,7 @@ function LayoutFooter({ menuItems = [], siteMeta = {} }) {
 						<SocialMediaColumn />
 					</Grid>
 					{menuItems.map((item, i) => (
-						<Grid key={i} item xs={12} sm={2}>
+						<Grid key={i} item xs={12} sm={3}>
 							<MenuColumn {...item} />
 						</Grid>
 					))}

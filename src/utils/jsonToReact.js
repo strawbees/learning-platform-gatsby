@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, Grid, Box } from '@material-ui/core'
-import { Link } from "gatsby"
 import Palette from '../components/palette'
 import Typography from '../components/typography'
 import Card from '../components/card'
@@ -9,73 +8,74 @@ import Youtube from '../components/youtubedisplay'
 import ImageDisplay from '../components/imagedisplay'
 import Gallery from '../components/gallery'
 import categoryColors from './categoryColors'
+import createMarkup from '../utils/createMarkup'
 import { querySelectorAll, querySelector, contains } from './jsonSelector'
 
-const jsonToReact = (el, posts) => {
+const jsonToReact = (el, posts, key) => {
 	switch(el.tagName.toLowerCase()) {
 		case 'body':
-			return el.children.map((child) => jsonToReact(child, posts))
+			return el.children.map((child, i) => jsonToReact(child, posts, i))
 		case 'iframe':
 		case 'figure':
 		case 'div':
-			return <MySection el={el} posts={posts} />
+			return <MySection el={el} posts={posts} key={key}/>
 		case 'img':
 			return (
 					<ImageDisplay src={el.src} alt={el.alt} />
 			)
 		case 'a':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<a href={el.href} dangerouslySetInnerHTML={{__html:el.innerHTML}}></a>
 				</TypographyWrap>
 			)
 		case 'h1':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<h1 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h1>
 				</TypographyWrap>
 			)
 		case 'h2':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<h2 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h2>
 				</TypographyWrap>
 			)
 		case 'h3':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<h3 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h3>
 				</TypographyWrap>
 			)
 		case 'h4':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<h4 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h4>
 				</TypographyWrap>
 			)
 		case 'h5':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<h5 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h5>
 				</TypographyWrap>
 			)
 		case 'p':
 			if (el.innerHTML) {
 				return (
-					<TypographyWrap el={el}>
+					<TypographyWrap el={el} key={key}>
 						<p dangerouslySetInnerHTML={{__html:el.innerHTML}}></p>
 					</TypographyWrap>
 				)
 			} else { return null }
 		case 'ul':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<ul dangerouslySetInnerHTML={{__html:el.innerHTML}}></ul>
 				</TypographyWrap>
 			)
 		case 'ol':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<ol dangerouslySetInnerHTML={{__html:el.innerHTML}}></ol>
 				</TypographyWrap>
 			)
@@ -149,7 +149,7 @@ const MySection = ({ el, posts }) => {
 			<Container maxWidth="lg">
 				<Box py={3} mb={3}>
 					<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
-						{el.children.map((child) => jsonToReact(child, posts))}
+						{el.children.map((child, i) => jsonToReact(child, posts, i))}
 					</Grid>
 				</Box>
 			</Container>
@@ -163,7 +163,7 @@ const MySection = ({ el, posts }) => {
 		if (!post) return null
 		return (
 			<Grid item xs={12} sm={6} md={4}>
-				<Link to={post.path}>
+				<a href={post.path}>
 					<Card hover
 						labelText={post.category}
 						labelBgcolor={categoryColors[post.category]}
@@ -174,11 +174,11 @@ const MySection = ({ el, posts }) => {
 							</Typography>
 							<Box pb={1} />
 							<Typography variant="card-body">
-								{post.description}
+								<div dangerouslySetInnerHTML={createMarkup(post.description)} />
 							</Typography>
 						</Box>
 					</Card>
-				</Link>
+				</a>
 			</Grid>
 		)
 	}
@@ -188,7 +188,7 @@ const MySection = ({ el, posts }) => {
 		return (
 			<Box className="horizontal" py={6} mb={3} bgcolor={Palette.lightGrey}>
 				<Container maxWidth="md" align='center'>
-					{el.children.map((child) => jsonToReact(child, posts))}
+					{el.children.map((child, i) => jsonToReact(child, posts, i))}
 				</Container>
 			</Box>
 		)
@@ -218,7 +218,7 @@ const MySection = ({ el, posts }) => {
 		}
 		return (
 			<Container maxWidth="md" align={align}>
-				{el.children.map((child) => jsonToReact(child, posts))}
+				{el.children.map((child, i) => jsonToReact(child, posts, i))}
 			</Container>
 		)
 	}
@@ -237,7 +237,7 @@ const MySection = ({ el, posts }) => {
 
 	// generic container
 	if (el.children) {
-		return <div className={el.className}>{el.children.map(jsonToReact)}</div>
+		return <div className={el.className}>{el.children.map((child, i) => jsonToReact(child, null, i))}</div>
 	}
 
 	// In doubt, put in a div

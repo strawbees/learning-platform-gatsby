@@ -17,7 +17,8 @@ const getImageSource = (node) => {
 		&& node.srcset
 		&& node.srcset !== 'null'
 	) {
-		src = node.srcset.split(' ')[0] || ''
+		let remote_src = node.srcset.split(' ').slice(-2)[0]
+		src = imgs[remote_src] || node.src
 	}
 	return src
 }
@@ -36,7 +37,9 @@ const domToJson = (node) => {
 	}
 }
 
-const htmlToJson = (html) => {
+let imgs = {} // XXX
+const htmlToJson = (html, images) => {
+	imgs = {...images}
 	const dom = new JSDOM(html)
 	return domToJson(dom.window.document.body)
 }
