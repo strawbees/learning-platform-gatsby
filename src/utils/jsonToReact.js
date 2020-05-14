@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container, Grid, Box } from '@material-ui/core'
-import { Link } from "gatsby"
 import Palette from '../components/palette'
 import Typography from '../components/typography'
 import Card from '../components/card'
@@ -9,6 +8,7 @@ import Youtube from '../components/youtubedisplay'
 import ImageDisplay from '../components/imagedisplay'
 import Gallery from '../components/gallery'
 import categoryColors from './categoryColors'
+import createMarkup from '../utils/createMarkup'
 import { querySelectorAll, querySelector, contains } from './jsonSelector'
 
 const jsonToReact = (el, posts, key) => {
@@ -174,7 +174,7 @@ const MySection = ({ el, posts }) => {
 							</Typography>
 							<Box pb={1} />
 							<Typography variant="card-body">
-								{post.description}
+								<div dangerouslySetInnerHTML={createMarkup(post.description)} />
 							</Typography>
 						</Box>
 					</Card>

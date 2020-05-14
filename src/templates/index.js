@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Container, Grid, Box } from '@material-ui/core'
 import Typography from '../components/typography.js'
 import Card from '../components/card.js'
@@ -12,6 +11,7 @@ import LayoutHero from './partials/layouthero'
 import LayoutFooter from './partials/layoutfooter'
 
 import categoryColors from '../utils/categoryColors'
+import createMarkup from '../utils/createMarkup'
 
 const IndexPage = (e) => {
 	const posts = e.pageContext.posts
@@ -54,7 +54,7 @@ function LayoutFeed({ posts }) {
 												</Typography>
 												<Box pb={1} />
 												<Typography variant="card-body">
-													{post.description}
+													<div dangerouslySetInnerHTML={createMarkup(post.description)} />
 												</Typography>
 											</Box>
 									</Card>
@@ -82,7 +82,7 @@ function LayoutIndexHero({ name, description }) {
 				</Typography>
 				<Box pb={1} />
 				<Typography variant="hero-body">
-					{description}
+					<div dangerouslySetInnerHTML={createMarkup(description)} />
 				</Typography>
 			</Box>
 		</LayoutHero>
