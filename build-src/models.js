@@ -1,6 +1,6 @@
+const he = require('he')
 const htmlToJson = require('./htmlToJson.js')
 
-const regex = /(<([^>]+)>)/ig
 function getThumbnail(data) {
 	return (
 		(data.featured_media && data.featured_media.localFile)
@@ -38,8 +38,8 @@ exports.getPage = function(data, images) {
 		id: data.id,
 		isFrontPage: data.path === '/',
 		path: data.path,
-		title: data.title,
-		description: data.excerpt.replace(regex, ''),
+		title: he.decode(data.title),
+		description: data.excerpt,
 		thumbnail: thumbnail.src,
 		header: header.src,
 		content: data.content,
@@ -51,13 +51,13 @@ exports.getPost = function(data, images) {
 	let thumbnail = getThumbnail(data)
 	let header = getHeader(data)
 	if (data.categories && data.categories.length) {
-		category = data.categories[0].name
+		category = he.decode(data.categories[0].name)
 	}
 	return {
 		id: data.id,
 		path: data.path,
-		title: data.title,
-		description: data.excerpt.replace(regex, ''),
+		title: he.decode(data.title),
+		description: data.excerpt,
 		thumbnail: thumbnail.src,
 		header: header.src,
 		category: category !== 'Uncategorized' ? category : null,
@@ -70,7 +70,7 @@ exports.getMenu = function(menu) {
 		return {
 			id: m.db_id,
 			url: m.url,
-			label: m.title,
+			label: he.decode(m.title),
 			menuItems: null
 		}
 	}
@@ -91,8 +91,8 @@ exports.getMenu = function(menu) {
 }
 exports.getCategory = function(category) {
 	return {
-		name: category.name,
+		name: he.decode(category.name),
 		path: category.path,
-		description: category.description
+		description: he.decode(category.description)
 	}
 }
