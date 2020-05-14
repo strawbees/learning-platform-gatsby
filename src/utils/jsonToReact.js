@@ -11,71 +11,71 @@ import Gallery from '../components/gallery'
 import categoryColors from './categoryColors'
 import { querySelectorAll, querySelector, contains } from './jsonSelector'
 
-const jsonToReact = (el, posts) => {
+const jsonToReact = (el, posts, key) => {
 	switch(el.tagName.toLowerCase()) {
 		case 'body':
-			return el.children.map((child) => jsonToReact(child, posts))
+			return el.children.map((child, i) => jsonToReact(child, posts, i))
 		case 'iframe':
 		case 'figure':
 		case 'div':
-			return <MySection el={el} posts={posts} />
+			return <MySection el={el} posts={posts} key={key}/>
 		case 'img':
 			return (
 					<ImageDisplay src={el.src} alt={el.alt} />
 			)
 		case 'a':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<a href={el.href} dangerouslySetInnerHTML={{__html:el.innerHTML}}></a>
 				</TypographyWrap>
 			)
 		case 'h1':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<h1 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h1>
 				</TypographyWrap>
 			)
 		case 'h2':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<h2 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h2>
 				</TypographyWrap>
 			)
 		case 'h3':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<h3 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h3>
 				</TypographyWrap>
 			)
 		case 'h4':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<h4 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h4>
 				</TypographyWrap>
 			)
 		case 'h5':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<h5 dangerouslySetInnerHTML={{__html:el.innerHTML}}></h5>
 				</TypographyWrap>
 			)
 		case 'p':
 			if (el.innerHTML) {
 				return (
-					<TypographyWrap el={el}>
+					<TypographyWrap el={el} key={key}>
 						<p dangerouslySetInnerHTML={{__html:el.innerHTML}}></p>
 					</TypographyWrap>
 				)
 			} else { return null }
 		case 'ul':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<ul dangerouslySetInnerHTML={{__html:el.innerHTML}}></ul>
 				</TypographyWrap>
 			)
 		case 'ol':
 			return (
-				<TypographyWrap el={el}>
+				<TypographyWrap el={el} key={key}>
 					<ol dangerouslySetInnerHTML={{__html:el.innerHTML}}></ol>
 				</TypographyWrap>
 			)
@@ -149,7 +149,7 @@ const MySection = ({ el, posts }) => {
 			<Container maxWidth="lg">
 				<Box py={3} mb={3}>
 					<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
-						{el.children.map((child) => jsonToReact(child, posts))}
+						{el.children.map((child, i) => jsonToReact(child, posts, i))}
 					</Grid>
 				</Box>
 			</Container>
@@ -188,7 +188,7 @@ const MySection = ({ el, posts }) => {
 		return (
 			<Box className="horizontal" py={6} mb={3} bgcolor={Palette.lightGrey}>
 				<Container maxWidth="md" align='center'>
-					{el.children.map((child) => jsonToReact(child, posts))}
+					{el.children.map((child, i) => jsonToReact(child, posts, i))}
 				</Container>
 			</Box>
 		)
@@ -218,7 +218,7 @@ const MySection = ({ el, posts }) => {
 		}
 		return (
 			<Container maxWidth="md" align={align}>
-				{el.children.map((child) => jsonToReact(child, posts))}
+				{el.children.map((child, i) => jsonToReact(child, posts, i))}
 			</Container>
 		)
 	}
@@ -237,7 +237,7 @@ const MySection = ({ el, posts }) => {
 
 	// generic container
 	if (el.children) {
-		return <div className={el.className}>{el.children.map(jsonToReact)}</div>
+		return <div className={el.className}>{el.children.map((child, i) => jsonToReact(child, null, i))}</div>
 	}
 
 	// In doubt, put in a div
