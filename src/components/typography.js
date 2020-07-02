@@ -14,8 +14,8 @@ const variants = {
 	'hero-h1': {
 		fontStyle: 'normal',
 		fontWeight: '900',
-		fontSize: '64px',
-		lineHeight: '65px'
+		fontSize: '50px',
+		lineHeight: '51px'
 	},
 	'hero-h2': {
 		fontStyle: 'normal',
