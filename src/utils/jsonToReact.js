@@ -167,7 +167,8 @@ const MySection = ({ el, posts }) => {
 					<Card hover
 						labelText={post.category}
 						labelBgcolor={categoryColors[post.category]}
-						image={post.thumbnail}>
+						image={post.thumbnail}
+						tags={post.tags}>
 						<Box px={3} py={3} pb={4}>
 							<Typography variant="card-h1">
 								{post.title}

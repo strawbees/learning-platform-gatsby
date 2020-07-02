@@ -4,6 +4,13 @@ import { Box } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from './typography.js'
 import Palette from './palette.js'
+import LabelQuirkbot from '../images/labels/quirkbot.svg'
+import LabeMicrobit from '../images/labels/microbit.svg'
+
+const labels = {
+	microbit : LabeMicrobit,
+	quirkbot : LabelQuirkbot
+}
 
 function Card(props) {
 	const variants = {
@@ -43,6 +50,16 @@ function Card(props) {
 			padding: '5px 10px',
 			textTransform: 'uppercase'
 		},
+		tags: {
+			position: 'absolute',
+			right: 0,
+			bottom: 0,
+		},
+		tag: {
+			margin: '0 5px 5px 0',
+			width: '40px',
+			height: '40px'
+		},
 		largeImage: {
 			height: '290px',
 			backgroundSize: 'cover'
@@ -65,6 +82,17 @@ function Card(props) {
 				<Box className={classes.label}>
 					<Typography variant="card-label">{props.labelText}</Typography>
 				</Box>
+				<Box className={classes.tags}>
+					{props.tags && props.tags.length > 0 && props.tags.map(tag => {
+						if (tag === 'quirkbot' || tag === 'microbit') {
+							return (
+								<img className={classes.tag} src={labels[tag]} alt={tag} />
+							)
+						}
+						return null
+					})}
+				</Box>
+
 			</Box>
 			<Box>
 				{props.children}
@@ -80,6 +108,7 @@ Card.propTypes = {
 	labelText: PropTypes.string,
 	labelColor: PropTypes.string,
 	labelBgcolor: PropTypes.string,
+	tags: PropTypes.arrayOf(PropTypes.string),
 	image: PropTypes.string,
 	imageBg: PropTypes.string,
 	variant: PropTypes.oneOf(

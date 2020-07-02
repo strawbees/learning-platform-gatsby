@@ -48,11 +48,16 @@ exports.getPage = function(data, images) {
 }
 exports.getPost = function(data, images) {
 	let category = 'Uncategorized'
+	let tags = []
 	let thumbnail = getThumbnail(data)
 	let header = getHeader(data)
 	if (data.categories && data.categories.length) {
 		category = he.decode(data.categories[0].name)
 	}
+	if (data.tags && data.tags.length) {
+		tags = data.tags.map(tag => he.decode(tag.name))
+	}
+	console.log(tags)
 	return {
 		id: data.id,
 		path: data.path,
@@ -61,6 +66,7 @@ exports.getPost = function(data, images) {
 		thumbnail: thumbnail.src,
 		header: header.src,
 		category: category !== 'Uncategorized' ? category : null,
+		tags: tags,
 		content: data.content,
 		contentJson: htmlToJson(data.content, images)
 	}

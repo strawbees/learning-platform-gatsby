@@ -47,7 +47,8 @@ function LayoutFeed({ posts }) {
 										hover
 										image={post.thumbnail}
 										labelText={post.category}
-										labelBgcolor={categoryColors[post.category]}>
+										labelBgcolor={categoryColors[post.category]}
+										tags={post.tags}>
 											<Box p={3} pb={4}>
 												<Typography variant="card-h1">
 													{post.title}

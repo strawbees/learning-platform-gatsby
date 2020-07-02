@@ -36,6 +36,9 @@ query Query {
 			categories {
 				name
 			}
+			tags {
+				name
+			}
 			featured_media {
 				source_url
 				localFile {
