@@ -48,13 +48,15 @@ h3 {
 	line-height: 1em;
 }
 
-#content > :last-child {
-	margin-bottom: 2em;
-}
 #content > :first-child {
-	margin-top: 1em;
+	padding-top: 2em;
+}
+#content > :last-child {
+	padding-bottom: 2em;
 }
 
+/*
 #content > .horizontal:last-child {
 	margin-bottom: 0;
 }
+*/

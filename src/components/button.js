@@ -34,7 +34,7 @@ const variants = {
 	baseStyle: {
 		background: Palette.white,
 		margin: '0',
-		padding: '7.5px',
+		padding: '7.5px 15px',
 		borderRadius: '15px',
 		color: Palette.black,
 		border: 'solid 1px rgba(0, 0, 0, 0)',

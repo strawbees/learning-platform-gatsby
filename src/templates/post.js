@@ -26,7 +26,7 @@ const PostPage = (e) => {
 				title={`${siteMeta.name} - ${post.title}`}
 				description={removeHtmlTags(post.description)}
 				image={post.thumbnail}
-				/>
+			/>
 			<Grid item><LayoutMenu menuItems={headerMenu} siteMeta={siteMeta} /></Grid>
 			<Grid item>
 				{post.isFrontPage
@@ -35,9 +35,7 @@ const PostPage = (e) => {
 				}
 			</Grid>
 			<Grid item>
-				<Box pt={3}>
-					<div id="content">{body}</div>
-				</Box>
+				<div id="content">{body}</div>
 			</Grid>
 			<Grid item><LayoutFooter menuItems={footerMenu} siteMeta={siteMeta} /></Grid>
 		</Grid>

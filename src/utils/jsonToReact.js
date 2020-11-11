@@ -11,6 +11,26 @@ import categoryColors from './categoryColors'
 import createMarkup from '../utils/createMarkup'
 import { querySelectorAll, querySelector, contains } from './jsonSelector'
 
+const resolveColorFromClass = (el, prefix, fallback = 'transparent') => {
+	const color = getColorNameFromClass(el, prefix)
+	if (Palette[color]) {
+		return Palette[color]
+	}
+	return fallback
+}
+
+const getColorNameFromClass = (el, prefix, fallback) => {
+	let color
+	for (let i = 0; i < el.classList.length; i++) {
+		const c = el.classList[i]
+		if (c.indexOf(prefix) === 0) {
+			color = c.replace(prefix, '')
+			break
+		}
+	}
+	return color || fallback
+}
+
 const jsonToReact = (el, posts, key) => {
 	switch(el.tagName.toLowerCase()) {
 		case 'body':
@@ -92,24 +112,32 @@ const TypographyWrap = ({children, el}) => {
 	} else if (contains(el.classList, 'has-text-align-right')) {
 		align = 'right'
 	}
+	const bgcolor = resolveColorFromClass(el, 'bgcolor-')
+	const textcolor = resolveColorFromClass(el, 'textcolor-', Palette.black)
 	return (
-		<Container maxWidth='md' align={align}>
-			<Typography>
-				{children}
-			</Typography>
-		</Container>
+		<Box bgcolor={bgcolor} color={textcolor}>
+			<Container maxWidth='md' align={align}>
+				<Typography>
+					{children}
+				</Typography>
+			</Container>
+		</Box>
 	)
 }
 
 const MySection = ({ el, posts }) => {
+	let bgcolor = resolveColorFromClass(el, 'bgcolor-', 'transparent')
+	let textcolor = resolveColorFromClass(el, 'textcolor-', Palette.black)
 	// Youtube display
 	if (el.tagName.toLowerCase() === 'iframe') {
 		return (
-			<Container maxWidth="md">
-				<Box pb={3}>
-					<Youtube url={el.src} />
-				</Box>
-			</Container>
+			<Box py={3} m={0} bgcolor={bgcolor}>
+				<Container maxWidth="md">
+					<Box>
+						<Youtube url={el.src} />
+					</Box>
+				</Container>
+			</Box>
 		)
 	}
 
@@ -118,41 +146,48 @@ const MySection = ({ el, posts }) => {
 		let image = querySelector(el, 'img')
 		let caption = querySelector(el, 'figcaption')
 		return (
-			<Container maxWidth="md">
-				<Box pb={3}>
-					<ImageDisplay src={image.src} alt={caption.innerHTML} />
-				</Box>
-			</Container>
+			<Box py={3} m={0} bgcolor={bgcolor}>
+				<Container maxWidth="md">
+					<Box>
+						<ImageDisplay src={image.src} alt={caption.innerHTML} />
+					</Box>
+				</Container>
+			</Box>
 		)
 	}
+
 	// Gallery
 	if (contains(el.classList, 'wp-block-gallery')) {
 		let figures = querySelectorAll(el, '.blocks-gallery-item')
 		return (
-			<Container maxWidth="md">
-				<Box pb={3}>
-					<Gallery>
-						{figures.map((figure) => {
-							let image = querySelector(figure, 'img')
-							let caption = querySelector(figure, 'figcaption')
-							return <ImageDisplay src={image.src} alt={caption.innerHTML} />
-						})}
-					</Gallery>
-				</Box>
-			</Container>
-		)
+			<Box py={3} m={0} bgcolor={bgcolor}>
+				<Container maxWidth="md">
+					<Box>
+						<Gallery>
+							{figures.map((figure) => {
+								let image = querySelector(figure, 'img')
+								let caption = querySelector(figure, 'figcaption')
+								return <ImageDisplay src={image.src} alt={caption.innerHTML} />
+							})}
+						</Gallery>
+					</Box>
+				</Container>
+			</Box>
+				)
 	}
 
 	// Related posts container
 	if (contains(el.classList, 'wp-block-strawbees-learning-related')) {
 		return (
-			<Container maxWidth="lg">
-				<Box py={3} mb={3}>
-					<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
-						{el.children.map((child, i) => jsonToReact(child, posts, i))}
-					</Grid>
-				</Box>
-			</Container>
+			<Box py={3} m={0} bgcolor={bgcolor}>
+				<Container maxWidth="lg">
+					<Box>
+						<Grid container spacing={3} direction="row" wrap="wrap" justify="center">
+							{el.children.map((child, i) => jsonToReact(child, posts, i))}
+						</Grid>
+					</Box>
+				</Container>
+			</Box>
 		)
 	}
 
@@ -184,10 +219,14 @@ const MySection = ({ el, posts }) => {
 		)
 	}
 
-	// Horizontal grey section
+	// Horizontal section
 	if (contains(el.classList, 'wp-block-strawbees-learning-horizontal')) {
+		let resolvedBgcolor = Palette.lightGrey
+		if (getColorNameFromClass(el, 'bgcolor-')) {
+			resolvedBgcolor = bgcolor
+		}
 		return (
-			<Box className="horizontal" py={6} mb={3} bgcolor={Palette.lightGrey}>
+			<Box className="horizontal" py={3} m={0} bgcolor={resolvedBgcolor}>
 				<Container maxWidth="md" align='center'>
 					{el.children.map((child, i) => jsonToReact(child, posts, i))}
 				</Container>
@@ -198,10 +237,14 @@ const MySection = ({ el, posts }) => {
 	// File block (Download)
 	if (contains(el.classList, 'wp-block-file')) {
 		let download = el.children[0]
+		bgcolor = resolveColorFromClass(el, 'bgcolor-', Palette.white)
 		return (
 			<Box p={1} display="inline-block">
 				<a href={download.href} target="_blank" rel="noreferrer noopener">
-					<Button icon="download">
+					<Button
+						icon="download"
+						foregroundColor={textcolor}
+						backgroundColor={bgcolor}>
 						{download.innerText}
 					</Button>
 				</a>
@@ -218,17 +261,24 @@ const MySection = ({ el, posts }) => {
 			align = 'right'
 		}
 		return (
-			<Container maxWidth="md" align={align}>
-				{el.children.map((child, i) => jsonToReact(child, posts, i))}
-			</Container>
+
+				<Container maxWidth="md" align={align}>
+					{el.children.map((child, i) => jsonToReact(child, posts, i))}
+				</Container>
+
 		)
 	}
+
 	if (contains(el.classList, 'wp-block-button')) {
 		let download = el.children[0]
+		bgcolor = resolveColorFromClass(el, 'bgcolor-', Palette.white)
 		return (
-			<Box px={1} py={2} component="span">
+			<Box px={1} component="span">
 				<a href={download.href} target={download.target} rel="noreferrer noopener">
-					<Button outline={contains(el.classList, 'is-style-outline')}>
+					<Button
+						outline={contains(el.classList, 'is-style-outline')}
+						foregroundColor={textcolor}
+						backgroundColor={bgcolor}>
 						<span dangerouslySetInnerHTML={{__html: download.innerHTML}} />
 					</Button>
 				</a>
