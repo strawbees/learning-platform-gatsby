@@ -9,6 +9,7 @@ This is a static website version of the [Strawbees Learning Platform](https://le
 	- `sudo sysctl -p`
 - Clone repository: `git clone git@github.com:murilopolese/learning-platform-gatsby.git`
 - Navigate to the directory: `cd learning-platform-gatsby`
+- Use node 13.9.0 (Paulo: for some reason it is failing with node 14): `nvm use 13.9.0`
 - Install dependencies: `npm install`
 - Export environment variable so you don't have to write it every time:
 	- `export PORT=8000`
