@@ -28,12 +28,6 @@ install:
   - npm install
 build_script:
   - npm run deploy-s3
-after_build:
-  - zip -r dist.zip public
-cache:
-  # - node_modules
-artifacts:
-  - path: 'dist.zip'
 
 # on successful build
 on_success:
