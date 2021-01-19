@@ -58,7 +58,6 @@ exports.getPost = function(data, images) {
 	if (data.tags && data.tags.length) {
 		tags = data.tags.map(tag => he.decode(tag.name))
 	}
-	console.log(tags)
 	return {
 		id: data.id,
 		path: data.path,
