@@ -35,13 +35,14 @@ exports.getPage = function(data, images) {
 	let thumbnail = getThumbnail(data)
 	let header = getHeader(data)
 	return {
-		id: data.id,
+		id: data.wordpress_id,
 		isFrontPage: data.path === '/',
 		path: data.path,
 		title: he.decode(data.title),
 		description: data.excerpt,
 		thumbnail: thumbnail.src,
 		header: header.src,
+		category: 'Support',
 		content: data.content,
 		contentJson: htmlToJson(data.content, images)
 	}

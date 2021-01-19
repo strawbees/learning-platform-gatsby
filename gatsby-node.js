@@ -37,7 +37,7 @@ exports.createPages = async ({ actions, graphql }) => {
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
 			context: {
-				posts: posts,
+				posts: [...posts, ...pages],
 				post: post,
 				headerMenu: headerMenu,
 				footerMenu: footerMenu,
@@ -51,7 +51,7 @@ exports.createPages = async ({ actions, graphql }) => {
 			path: post.path,
 			component: require.resolve('./src/templates/post.js'),
 			context: {
-				posts: posts,
+				posts: [...posts, ...pages],
 				post: post,
 				headerMenu: headerMenu,
 				footerMenu: footerMenu,

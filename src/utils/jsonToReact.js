@@ -194,6 +194,7 @@ const MySection = ({ el, posts }) => {
 	// Related post item/card
 	if (contains(el.classList, 'related-post')) {
 		let id = querySelector(el, '.id')
+		console.log(id, posts)
 		let post = posts.find(p => p.id === parseInt(id.innerText))
 		if (!post) return null
 		return (
