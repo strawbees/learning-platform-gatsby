@@ -2,7 +2,7 @@
   "name": "learning-platform-gatsby",
   "private": true,
   "description": "Strawbees Learning Platform (Static site version)",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "scripts": {
     "build": "gatsby build --prefix-paths",
     "develop": "gatsby develop -H 0.0.0.0 -p $PORT",
