@@ -34,7 +34,7 @@ This is a static website version of the [Strawbees Learning Platform](https://le
 
 ## Content
 
-Previous versions of this website sourced all content from markdown files. The current setup sources everything from a [Headless WordPress setup]([Strawbees Learning CMS](https://github.com/strawbees/learning-cms).
+Previous versions of this website sourced all content from markdown files. The current setup sources everything from [Strawbees Learning CMS](https://github.com/strawbees/learning-cms).
 
 Because of this convenience, the process of source and transform content into pages became a bit more convoluted with a sequence of almost nonsense tree transformations that defy its own existence:
 
