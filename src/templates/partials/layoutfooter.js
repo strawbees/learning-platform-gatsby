@@ -13,13 +13,21 @@ import makeRelativePath from '../../utils/makeRelativePath.js'
 let localUrl = '' // XXX!
 function LayoutFooter({ menuItems = [], siteMeta = {} }) {
 	localUrl = siteMeta.url
+	const popupRef = React.useRef(null)
+
+	React.useEffect(() => {
+		if(Date.now() - parseInt(localStorage.getItem('hide-classroom-pop-up')) < (3600000 * 24) ){ // hide for 24 hours
+			popupRef.current.style.display = 'none';
+		}
+	}, [])
+
 	return (
 		<Box
 			py={8}
 			textAlign={{xs:'center', md:'left'}}
 			bgcolor={Palette.darkGrey}
 			color={Palette.white}
-			>
+		>
 			<Container>
 				<Grid container spacing={3} direction="row" justify="center">
 					<Grid item xs={12} sm={3}>
@@ -36,6 +44,30 @@ function LayoutFooter({ menuItems = [], siteMeta = {} }) {
 					</Grid>
 				</Grid>
 			</Container>
+			<div id="classroom-popup" ref={popupRef}>
+				<div className="box">
+					<img src="https://classroom.strawbees.com/media/home_og.jpg"/>
+					<div className="info">
+						<h2>Drum roll, please!</h2>
+						<p>From January 2022, Strawbees Learning will become… Strawbees&nbsp;Classroom!</p>
+						<p>A mixture of inspiration, imagination and a whole lot of STEAM, this amazing
+							online resource offers a huge library of learning experiences. Curriculum-aligned,
+							class-ready lessons. Time-saving teaching guides. Professional development
+						resources.</p>
+						<p>STEAM teaching has never been smarter, easier or funner.</p>
+						<p>Free trial lasts until August.</p>
+						<div className="actions">
+							<a className="n" href="#" onClick={(e) => {
+								e.preventDefault();
+								popupRef.current.style.display = 'none';
+								localStorage.setItem('hide-classroom-pop-up', Date.now());
+							}}>Continue with Strawbees Learning</a>
+							<a className="y" href="https://classroom.strawbees.com/?ref=learning-popup">Yes I'd like a free trial!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			/>
 		</Box>
 	)
 }
