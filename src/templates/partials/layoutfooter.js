@@ -62,7 +62,7 @@ function LayoutFooter({ menuItems = [], siteMeta = {} }) {
 								popupRef.current.style.display = 'none';
 								localStorage.setItem('hide-classroom-pop-up', Date.now());
 							}}>Continue with Strawbees Learning</a>
-							<a className="y" href="https://classroom.strawbees.com/?ref=learning-popup">Yes I'd like a free trial!</a>
+							<a className="y" href="https://classroom.strawbees.com/?utm_medium=Website&utm_source=learning.strawbees.com&utm_campaign=Classroom%20Modal">Yes I'd like a free trial!</a>
 						</div>
 					</div>
 				</div>
